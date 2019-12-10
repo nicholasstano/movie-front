@@ -25,7 +25,7 @@ export class MovieForm extends Component {
             <form onSubmit={this.handleMovieReviewSubmit}>
                 <label>Name<input type="text" name="name" value={this.state.name} placeholder="name" onChange={this.handleMovieReviewChange} />
                 </label>
-                <label>Notes<input type="text" name="notes" value={this.state.notes} placeholder="notes" onChange={this.handleMovieReviewChange} />
+                <label>Notes<textarea name="notes" value={this.state.notes} placeholder="notes" onChange={this.handleMovieReviewChange} />
                 </label>
                 <button>Submit</button>
             </form>

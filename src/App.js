@@ -8,30 +8,35 @@ export class App extends Component {
   state = { movieReviews: [] }
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/movies')
-      .then(response => response.json())
-      .then(movies => this.setState({ movieReviews: movies }));
+    if (this.state) {
+      fetch('http://localhost:3000/api/v1/movies')
+        .then(response => response.json())
+        .then(movies => this.setState({ movieReviews: movies }));
+    }
   }
 
-  handleFormSubmit(movie) {
-    fetch('http://localhost:3000/api/v1/movies', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ movie: { name: movie.name, notes: movie.notes } })
-    }).then(response => response.json())
-      .then(movie => this.addNewMovie(movie))
-  }
-
-  addNewMovie(movie) {
+  addNewMovie = function (movie) {
+    const newMovie = movie
     this.setState({
-      movieReviews: [...this.state.movieReviews, movie]
+      movieReviews: [...this.state.movieReviews, newMovie],
     })
   }
 
+  handleFormSubmit = (movie) => {
+    fetch('http://localhost:3000/api/v1/movies', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ name: movie.name, notes: movie.notes })
+    }).then(response => response.json())
+      .then(movie =>
+        this.addNewMovie(movie)
+      )
+  }
+
   render() {
-    console.log(this.state.movieReviews)
     return (
       <div>
         <MovieForm handleFormSubmit={this.handleFormSubmit} />
