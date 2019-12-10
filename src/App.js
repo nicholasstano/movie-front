@@ -29,7 +29,7 @@ export class App extends Component {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify({ name: movie.name, notes: movie.notes })
+      body: JSON.stringify({ date: movie.date, name: movie.name, notes: movie.notes, director: movie.director, year: movie.year, rating: movie.rating })
     }).then(response => response.json())
       .then(movie =>
         this.addNewMovie(movie)
