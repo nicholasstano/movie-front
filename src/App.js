@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
-import Movie from '../src/components/Movie.js'
+import MovieContainer from '../src/containers/MovieContainer.js'
 import MovieForm from '../src/components/MovieForm.js'
 
 
@@ -40,7 +40,7 @@ export class App extends Component {
     return (
       <div>
         <MovieForm handleFormSubmit={this.handleFormSubmit} />
-        <Movie movieReviews={this.state.movieReviews} />
+        <MovieContainer movieReviews={this.state.movieReviews} />
       </div>
     )
   }
