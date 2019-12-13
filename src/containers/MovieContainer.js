@@ -7,9 +7,8 @@ export class MovieContainer extends Component {
         var movies = this.props.movieReviews.map((movie => {
             return (
 
-
                 <div key={movie.id}>
-                    <h6>I watched {movie.name} ({movie.year}) directed by {movie.director} on {movie.date} with the following notes: {movie.notes}. I rate thee: {movie.rating}</h6>
+                    <h6>I watched {movie.name} ({movie.year}) directed by {movie.director} on {movie.month_day_watched} {movie.year_watched} with the following notes: {movie.notes}. I rate thee: {movie.rating}</h6>
                     <img src={movie.image} alt={movie.name} />
                 </div>
             )
@@ -18,7 +17,7 @@ export class MovieContainer extends Component {
             <div>
                 {movies}
             </div>
-        )
+        );
     }
 }
 
