@@ -3,12 +3,14 @@ import React, { Component } from 'react'
 export class MovieForm extends Component {
 
     state = {
-        date: "",
+        monthWatched: "",
+        yearWatched: "",
         name: "",
         notes: "",
         year: "",
         director: "",
-        rating: ""
+        rating: "",
+        image: ""
     }
 
     handleMovieReviewChange = (event) => {
@@ -19,25 +21,31 @@ export class MovieForm extends Component {
         event.preventDefault()
         this.props.handleFormSubmit(this.state)
         this.setState({
-            date: "",
+            monthWatched: "",
+            yearWatched: "",
             name: "",
             notes: "",
             year: "",
             director: "",
-            rating: ""
+            rating: "",
+            image: ""
         })
     }
 
     render() {
         return (
             <form onSubmit={this.handleMovieReviewSubmit}>
-                <label>Date Watched<input type="text" name="date" value={this.state.date} placeholder="12/31/1999" onChange={this.handleMovieReviewChange} />
+                <label>Month and Day Watched<input type="text" name="monthWatched" value={this.state.monthWatched} placeholder="12/31" onChange={this.handleMovieReviewChange} />
+                </label>
+                <label>Year Watched<input type="text" name="yearWatched" value={this.state.yearWatched} placeholder="1999" onChange={this.handleMovieReviewChange} />
                 </label>
                 <label>Name<input type="text" name="name" value={this.state.name} placeholder="Casablanca" onChange={this.handleMovieReviewChange} />
                 </label>
                 <label>Director<input type="text" name="director" value={this.state.director} placeholder="Michael Curtiz" onChange={this.handleMovieReviewChange} />
                 </label>
                 <label>Year<input type="text" name="year" value={this.state.year} placeholder="1942" onChange={this.handleMovieReviewChange} />
+                </label>
+                <label>Movie Poster<input type="text" name="image" value={this.state.image} placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/CasablancaPoster-Gold.jpg/440px-CasablancaPoster-Gold.jpg" onChange={this.handleMovieReviewChange} />
                 </label>
                 <label>Rating<input type="text" name="rating" value={this.state.rating} placeholder="5/5" onChange={this.handleMovieReviewChange} />
                 </label>

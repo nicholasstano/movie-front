@@ -11,14 +11,14 @@ export class App extends Component {
     if (this.state) {
       fetch('http://localhost:3000/api/v1/movies')
         .then(response => response.json())
-        .then(movies => this.setState({ movieReviews: movies }));
+        .then(movies => this.setState({ movieReviews: movies.reverse() }));
     }
   }
 
   addNewMovie = function (movie) {
     const newMovie = movie
     this.setState({
-      movieReviews: [...this.state.movieReviews, newMovie],
+      movieReviews: [newMovie, ...this.state.movieReviews],
     })
   }
 
@@ -29,10 +29,18 @@ export class App extends Component {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify({ date: movie.date, name: movie.name, notes: movie.notes, director: movie.director, year: movie.year, rating: movie.rating })
+      body: JSON.stringify({
+        name: movie.name,
+        month_day_watched: movie.monthWatched,
+        year_watched: movie.yearWatched,
+        notes: movie.notes,
+        director: movie.director,
+        year: movie.year,
+        rating: movie.rating,
+        image: movie.image
+      })
     }).then(response => response.json())
-      .then(movie =>
-        this.addNewMovie(movie)
+      .then(movie => this.addNewMovie(movie)
       )
   }
 
