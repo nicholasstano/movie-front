@@ -3,19 +3,27 @@ import React, { Component } from 'react'
 export class MovieContainer extends Component {
 
     render() {
-
-        var movies = this.props.movieReviews.map((movie => {
+        var movieReviews = this.props.movieReviews.map((movie => {
             return (
-
-                <div key={movie.id}>
-                    <h6>I watched {movie.name} ({movie.year}) directed by {movie.director} on {movie.month_day_watched} {movie.year_watched} with the following notes: {movie.notes}. I rate thee: {movie.rating}</h6>
-                    <img src={movie.image} alt={movie.name} />
+                <div className="movieReviews" key={movie.id}>
+                    <div className="movieReviewsTop">
+                        <p>Year Watched: {movie.year_watched}</p>
+                        <p>Date Watched: {movie.month_day_watched}</p>
+                        <p>Movie Name: {movie.name}</p>
+                        <p>Director: {movie.director}</p>
+                        <p>Year Released: {movie.year}</p>
+                    </div>
+                    <div className="movieReviewsPosterRatingNotes">
+                        <img src={movie.image} alt={movie.name} />
+                        <p>Rating: {movie.rating}</p>
+                        <p>Notes: {movie.notes}</p>
+                    </div>
                 </div>
             )
         }))
         return (
             <div>
-                {movies}
+                {movieReviews}
             </div>
         );
     }
