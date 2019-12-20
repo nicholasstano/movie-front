@@ -2,9 +2,7 @@
 .movieReviews {
   border-style: solid;
   display: grid;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
+  margin: 10px;
 }
 
 .movieReviews img {
@@ -14,12 +12,15 @@
 
 .movieReviewsTop {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
   justify-content: space-between;
   align-items: center;
+  margin: 5px;
 }
 
 .movieReviewsPosterRatingNotes {
   display: grid;
   grid-template-columns: 20% 20% 60%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
 }

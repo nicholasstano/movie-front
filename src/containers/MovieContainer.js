@@ -1,30 +1,15 @@
 import React, { Component } from 'react'
+import MovieReviewCard from '../components/MovieReviewCard.js'
 
 export class MovieContainer extends Component {
 
     render() {
-        var movieReviews = this.props.movieReviews.map((movie => {
-            return (
-                <div className="movieReviews" key={movie.id}>
-                    <div className="movieReviewsTop">
-                        <p>Year Watched: {movie.year_watched}</p>
-                        <p>Date Watched: {movie.month_day_watched}</p>
-                        <p>Movie Name: {movie.name}</p>
-                        <p>Director: {movie.director}</p>
-                        <p>Year Released: {movie.year}</p>
-                    </div>
-                    <div className="movieReviewsPosterRatingNotes">
-                        <img src={movie.image} alt={movie.name} />
-                        <p>Rating: {movie.rating}</p>
-                        <p>Notes: {movie.notes}</p>
-                    </div>
-                </div>
-            )
-        }))
+        let movieReviews = this.props.movieReviews.map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
         return (
             <div>
+                {/* {this.props.movieReviews.length > 0 ? movieReviews : <h1>loading</h1>} */}
                 {movieReviews}
-            </div>
+            </div >
         );
     }
 }
