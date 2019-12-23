@@ -4,10 +4,15 @@
   grid-template-columns: 25% 25% 25% 25%;
   margin: 25px;
   padding: 12px;
+  background-color: lightsalmon
+}
+
+.movieReviewCard:nth-child(even) {
+  background-color: lightgoldenrodyellow
 }
 
 .movieReviewCard img {
-  width: 50%;
+  width: 75%;
   height: auto;
 }
 
