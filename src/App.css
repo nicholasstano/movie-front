@@ -1,26 +1,25 @@
-
-.movieReviews {
+.movieReviewCard {
   border-style: solid;
   display: grid;
-  margin: 10px;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 25px;
+  padding: 12px;
 }
 
-.movieReviews img {
+.movieReviewCard img {
   width: 50%;
   height: auto;
 }
 
-.movieReviewsTop {
+.movieReviewContainer {
   display: grid;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5px;
 }
 
-.movieReviewsPosterRatingNotes {
+.movieForm {
+  border-style: solid;
+  margin: 25px;
+  padding: 12 px;
   display: grid;
-  grid-template-columns: 20% 20% 60%;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 25%);
 }
