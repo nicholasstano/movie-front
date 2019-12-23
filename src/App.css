@@ -1,18 +1,22 @@
 .movieReviewCard {
   border-style: solid;
+  border-color: black;
+  border-radius: 5%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  margin: 25px;
-  padding: 12px;
-  background-color: lightsalmon
+  margin: 2.25%;
+  padding: 1.25%;
+  background-color: gold;
+  color: black;
 }
 
 .movieReviewCard:nth-child(even) {
-  background-color: lightgoldenrodyellow
+  background-color: black;
+  color: gold;
 }
 
 .movieReviewCard img {
-  width: 75%;
+  width: 100%;
   height: auto;
 }
 
@@ -22,8 +26,9 @@
 
 .movieForm {
   border-style: solid;
-  margin: 25px;
-  padding: 12 px;
+  border-radius: 5%;
+  margin: 2.25%;
+  padding: 1.25%;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 25%);
