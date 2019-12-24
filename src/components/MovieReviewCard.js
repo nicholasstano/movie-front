@@ -19,7 +19,7 @@ export class MovieReviewCard extends Component {
                     <img src={this.props.movie.image} alt={this.props.movie.name} />
                     <div className="movieReviewInfo">
                         <ul>{this.props.movie.month_day_watched}/{this.props.movie.year_watched}</ul>
-                        <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button>{this.props.movie.name} ({this.props.movie.year})</ul>
+                        <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.movie.name} ({this.props.movie.year})</ul>
                         <ul>{this.props.movie.director}</ul>
                     </div>
                     <p>Rating: {this.stars()}
@@ -27,7 +27,7 @@ export class MovieReviewCard extends Component {
                     <p>Notes: {this.props.movie.notes}</p>
                 </div>
                 :
-                <div><button onClick={() => this.setState({ description: !this.state.description })}>+</button>{this.props.movie.name}</div>
+                <div className="movieReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.movie.month_day_watched}/{this.props.movie.year_watched} - {this.props.movie.name}</div>
         )
     }
 }
