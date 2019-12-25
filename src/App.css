@@ -23,15 +23,15 @@
 .movieReviewList {
   border-style: solid;
   border-color: black;
-  border-radius: 5%;
-  margin: 0.25%;
-  padding: 1.25%;
+  padding: 0.25%;
+  margin: 0.03125% 0.25%;
   background-color: gold;
   color: black;
 }
 
 .movieReviewList:nth-child(even) {
   background-color: black;
+  border-color: gold;
   color: gold;
 }
 
