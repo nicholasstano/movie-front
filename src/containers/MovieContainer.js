@@ -57,8 +57,8 @@ export class MovieContainer extends Component {
         let movieReviews = this.filterMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
         return (
             <div className="movieReviewContainer">
-                <h1>Movie Reviews</h1>
-                <MovieForm handleFormSubmit={this.handleFormSubmit} />
+                <h1 className="movieReviewHeader">Movie Reviews</h1>
+                {/* <MovieForm handleFormSubmit={this.handleFormSubmit} /> */}
                 <MovieReviewSearch value={this.state.movieSearch} searchMovie={this.searchMovie} />
                 {movieReviews}
             </div >
