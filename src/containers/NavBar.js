@@ -6,7 +6,7 @@ export class NavBar extends Component {
         return (
             <div>
                 <div className="navbar">
-                    <Link className="navbar-link" to="/">Home</Link>
+                    <Link className="navbar-link" to="/">Onats Media Home</Link>
                     <Link className="navbar-link" to="/movies">Movie Reviews</Link>
                 </div>
             </div>

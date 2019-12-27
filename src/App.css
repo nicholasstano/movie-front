@@ -23,12 +23,8 @@
 }
 
 .homeHeader {
-  border-style: solid;
-  border-color: black;
-  border-radius: 5%;
   margin: 0.25%;
   padding: 1.25%;
-  text-align: center;
 }
 
 .movieReviewHeader {
