@@ -3,7 +3,7 @@
   border-color: black;
   border-radius: 5%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
   margin: 0.25%;
   padding: 1.25%;
 }
@@ -23,6 +23,31 @@
 }
 
 .homeHeader {
+  margin: 0.25%;
+  padding: 1.25%;
+}
+
+.boardContainer p {
+  margin: 0.25%;
+  padding: 1.25%;
+}
+
+.videoContainer p {
+  margin: 0.25%;
+  padding: 1.25%;
+}
+
+.bookContainer p {
+  margin: 0.25%;
+  padding: 1.25%;
+}
+
+.televisionContainer p {
+  margin: 0.25%;
+  padding: 1.25%;
+}
+
+.albumContainer p {
   margin: 0.25%;
   padding: 1.25%;
 }

@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import './App.css';
 import MovieContainer from '../src/containers/MovieContainer.js'
+import BoardContainer from '../src/containers/BoardContainer.js'
+import VideoContainer from '../src/containers/VideoContainer.js'
+import BookContainer from '../src/containers/BookContainer.js'
+import AlbumContainer from '../src/containers/AlbumContainer.js'
+import TelevisionContainer from '../src/containers/TelevisionContainer.js'
 import NavBar from '../src/containers/NavBar.js'
 import Home from '../src/containers/Home.js'
 import { withRouter, Switch, Route } from 'react-router-dom'
@@ -17,6 +22,41 @@ export class App extends Component {
             render={() => {
               return (
                 <div><MovieContainer /></div>
+              )
+            }} />
+          <Route
+            path="/boards"
+            render={() => {
+              return (
+                <div><BoardContainer /></div>
+              )
+            }} />
+          <Route
+            path="/albums"
+            render={() => {
+              return (
+                <div><AlbumContainer /></div>
+              )
+            }} />
+          <Route
+            path="/videos"
+            render={() => {
+              return (
+                <div><VideoContainer /></div>
+              )
+            }} />
+          <Route
+            path="/books"
+            render={() => {
+              return (
+                <div><BookContainer /></div>
+              )
+            }} />
+          <Route
+            path="/television"
+            render={() => {
+              return (
+                <div><TelevisionContainer /></div>
               )
             }} />
           <Route
