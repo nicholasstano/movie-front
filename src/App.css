@@ -1,3 +1,7 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .navbar {
   border-style: solid;
   border-color: black;
@@ -52,10 +56,19 @@
   padding: 1.25%;
 }
 
-.movieReviewHeader {
+.mediaHeader {
   margin: 0.25%;
   padding: 1.25%;
   text-align: center;
+}
+
+.mediaContainer {
+  display: grid;
+}
+
+.mediaContainer p {
+  margin: 0.25%;
+  padding: 1.25%;
 }
 
 .movieReviewCard {
@@ -93,10 +106,6 @@
   background-color: black;
   border-color: gold;
   color: gold;
-}
-
-.movieReviewContainer {
-  display: grid;
 }
 
 .movieReviewSearch {
