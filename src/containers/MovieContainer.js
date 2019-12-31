@@ -7,14 +7,12 @@ import MovieForm from '../components/MovieForm.js'
 
 export class MovieContainer extends Component {
 
-    state = { movieSearch: "", movieReviews: [], option: "All", selectedYear: [] }
+    state = { movieSearch: "", movieReviews: [], option: "All years", selectedYear: [] }
 
     componentDidMount() {
-        if (this.state) {
-            fetch('http://localhost:3000/api/v1/movies')
-                .then(response => response.json())
-                .then(movies => this.setState({ movieReviews: movies.reverse(), selectedYear: movies }));
-        }
+        fetch('http://localhost:3000/api/v1/movies')
+            .then(response => response.json())
+            .then(movies => this.setState({ movieReviews: movies.reverse(), selectedYear: movies }));
     }
 
     addNewMovie = function (movie) {
@@ -59,7 +57,7 @@ export class MovieContainer extends Component {
     changeYear = (event) => {
         let allMovies = this.state.movieReviews
         let yearsMovies = this.state.movieReviews.filter(movie => movie.year_watched === event.value)
-        if (event.value === "All") {
+        if (event.value === "All years") {
             this.setState({ selectedYear: allMovies })
         }
         else if (event.value) {
@@ -70,14 +68,14 @@ export class MovieContainer extends Component {
     render() {
         let years = this.state.movieReviews.map(movie => movie.year_watched)
         let uniqueYears = [...new Set(years)]
-        let options = ["All", ...uniqueYears]
+        let options = ["All years", ...uniqueYears]
 
         let movieReviews = this.filterMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
-        console.log(this.filterMovies())
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">Movie Reviews</h1>
-                <Dropdown options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
+                <h1 className="mediaHeader">Spoilers for all movie reviews below!</h1>
+                <p>TCM is doing a 4 films that defined a decade. I had no movies from the 1920's that stood out for me. From the 1930's I recently rewatched my two favorites The Rules of the Game and M. I realized the 1940's has a lot of my favorite titles and it was so hard to narrow it down to 4. I plan to go through movies from the 1940's within the next few months. Then the 1950's and so on.</p>
+                <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                 <MovieForm handleFormSubmit={this.handleFormSubmit} />
                 <MovieReviewSearch value={this.state.movieSearch} searchMovie={this.searchMovie} />
                 {movieReviews}

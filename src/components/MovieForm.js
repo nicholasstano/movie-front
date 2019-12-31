@@ -34,7 +34,7 @@ export class MovieForm extends Component {
 
     render() {
         return (
-            <form className="movieForm" onSubmit={this.handleMovieReviewSubmit}>
+            <form className="mediaForm" onSubmit={this.handleMovieReviewSubmit}>
                 <ul>
                     <label>Month/Day <input type="text" name="monthWatched" value={this.state.monthWatched} placeholder="12/31" onChange={this.handleMovieReviewChange} />
                     </label>
