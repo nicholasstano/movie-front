@@ -15,8 +15,8 @@ export class MovieReviewCard extends Component {
     render() {
         return (
             this.state.description ?
-                <div className="movieReviewCard" key={this.props.movie.id}>
-                    <div className="movieReviewInfo">
+                <div className="mediaReviewCard" key={this.props.movie.id}>
+                    <div>
                         <ul>{this.props.movie.month_day_watched}/{this.props.movie.year_watched}</ul>
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.movie.name} ({this.props.movie.year})</ul>
                         <ul>{this.props.movie.director}</ul>
@@ -27,7 +27,7 @@ export class MovieReviewCard extends Component {
                     <p>Notes: {this.props.movie.notes}</p>
                 </div>
                 :
-                <div className="movieReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.movie.month_day_watched}/{this.props.movie.year_watched} - {this.props.movie.name}</div>
+                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.movie.month_day_watched}/{this.props.movie.year_watched} - {this.props.movie.name}</div>
         )
     }
 }

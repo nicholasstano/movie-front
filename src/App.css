@@ -62,7 +62,7 @@ a:hover {
   padding: 1.25%;
 }
 
-.movieReviewCard {
+.mediaReviewCard {
   border-style: solid;
   border-color: black;
   border-radius: 3.25%;
@@ -74,20 +74,20 @@ a:hover {
   color: black;
 }
 
-.movieReviewCard img {
+.mediaReviewCard img {
   width: 100%;
   height: auto;
   border: solid;
   border-color: black;
 }
 
-.movieReviewCard:nth-child(even) {
+.mediaReviewCard:nth-child(even) {
   background-color: black;
   color: gold;
   border-color: gold;
 }
 
-.movieReviewCard:nth-child(even) img {
+.mediaReviewCard:nth-child(even) img {
   width: 100%;
   height: auto;
   border: solid;
@@ -98,7 +98,7 @@ a:hover {
   text-align: center;
 }
 
-.movieReviewList {
+.mediaReviewList {
   border-style: solid;
   border-color: black;
   padding: 0.25%;
@@ -107,7 +107,7 @@ a:hover {
   color: black;
 }
 
-.movieReviewList:nth-child(even) {
+.mediaReviewList:nth-child(even) {
   background-color: black;
   border-color: gold;
   color: gold;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BoardReviewCard from '../components/BoardReviewCard.js'
 import BoardForm from '../components/BoardForm.js'
 
 export class BoardContainer extends Component {
@@ -50,12 +51,14 @@ export class BoardContainer extends Component {
     }
 
     render() {
+        let boardReviews = this.filterBoards().map(board => <BoardReviewCard key={board.id} board={board} />)
+
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Board Game Reviews</h1>
                 <p>I enjoy getting together monthly with friends to play board games. Personal favorites are Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. I'll leave reviews and comments of sessions.</p>
-                <p>I want to set this page up next!</p>
                 <BoardForm handleFormSubmit={this.handleFormSubmit} />
+                {boardReviews}
             </div>
         )
     }
