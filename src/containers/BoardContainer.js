@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import BoardReviewCard from '../components/BoardReviewCard.js'
+import BoardReviewSearch from '../components/BoardReviewSearch.js'
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
 import BoardForm from '../components/BoardForm.js'
 
 export class BoardContainer extends Component {
@@ -50,14 +53,29 @@ export class BoardContainer extends Component {
         return filteredBoards
     }
 
-    render() {
-        let boardReviews = this.filterBoards().map(board => <BoardReviewCard key={board.id} board={board} />)
+    changeYear = (event) => {
+        let allBoards = this.state.boardReviews
+        let yearsBoards = this.state.boardReviews.filter(board => board.year_played === event.value)
+        if (event.value === "All years") {
+            this.setState({ selectedYear: allBoards })
+        }
+        else if (event.value) {
+            this.setState({ selectedYear: yearsBoards })
+        }
+    }
 
+    render() {
+        let years = this.state.boardReviews.map(board => board.year_played)
+        let uniqueYears = [...new Set(years)]
+        let options = ["All years", ...uniqueYears]
+        let boardReviews = this.filterBoards().map(board => <BoardReviewCard key={board.id} board={board} />)
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Board Game Reviews</h1>
                 <p>I enjoy getting together monthly with friends to play board games. Personal favorites are Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. I'll leave reviews and comments of sessions.</p>
+                <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                 <BoardForm handleFormSubmit={this.handleFormSubmit} />
+                <BoardReviewSearch value={this.state.boardSearch} searchMovie={this.searchBoard} />
                 {boardReviews}
             </div>
         )

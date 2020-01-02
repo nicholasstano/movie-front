@@ -69,7 +69,6 @@ export class MovieContainer extends Component {
         let years = this.state.movieReviews.map(movie => movie.year_watched)
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
-
         let movieReviews = this.filterMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
         return (
             <div className="mediaContainer">

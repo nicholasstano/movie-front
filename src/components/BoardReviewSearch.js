@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
-export class MovieReviewSearch extends Component {
+export class BoardReviewSearch extends Component {
     render() {
         return (
             <div className="mediaReviewSearch">
                 <form onSubmit={(event) => event.preventDefault()}>
-                    <input type="text" placeholder="search movies" value={this.props.value} onChange={(event) => { this.props.searchMovie(event.target.value) }} />
+                    <input type="text" placeholder="search board games" value={this.props.value} onChange={(event) => { this.props.searchMovie(event.target.value) }} />
                 </form>
             </div>
         )
     }
 }
 
-export default MovieReviewSearch
+export default BoardReviewSearch
