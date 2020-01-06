@@ -36,36 +36,28 @@ export class MovieForm extends Component {
         return (
             <form className="mediaForm" onSubmit={this.handleMovieReviewSubmit}>
                 <ul>
-                    <label>Month/Day <input type="text" name="monthWatched" value={this.state.monthWatched} placeholder="12/31" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <input type="text" name="monthWatched" value={this.state.monthWatched} placeholder="Month/Day Watched (ex: 12/31)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <label>Year Watched <input type="text" name="yearWatched" value={this.state.yearWatched} placeholder="1999" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <input type="text" name="yearWatched" value={this.state.yearWatched} placeholder="Year Watched (ex: 2010)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <label>Name <input type="text" name="name" value={this.state.name} placeholder="Casablanca" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <input type="text" name="name" value={this.state.name} placeholder="Name (ex: Casablanca)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <label>Director <input type="text" name="director" value={this.state.director} placeholder="Michael Curtiz" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <input type="text" name="director" value={this.state.director} placeholder="Director (ex: Michael Curtiz)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <label>Year Released <input type="text" name="year" value={this.state.year} placeholder="1942" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <input type="text" name="year" value={this.state.year} placeholder="Year Released (ex: 1942)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <label>Movie Poster <input type="text" name="image" value={this.state.image} placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/CasablancaPoster-Gold.jpg/440px-CasablancaPoster-Gold.jpg" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <input type="text" name="image" value={this.state.image} placeholder="Poster URL (ex: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/CasablancaPoster-Gold.jpg/440px-CasablancaPoster-Gold.jpg)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <label>Rating <input type="text" name="rating" value={this.state.rating} placeholder="5/5" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 5/5)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <label>Notes <textarea name="notes" value={this.state.notes} placeholder="Movie Session Notes" onChange={this.handleMovieReviewChange} />
-                    </label>
+                    <textarea name="notes" value={this.state.notes} placeholder="Movie Session Notes" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>

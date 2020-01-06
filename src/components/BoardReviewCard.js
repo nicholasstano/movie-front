@@ -26,7 +26,7 @@ export class BoardReviewCard extends Component {
                     <p>Notes: {this.props.board.notes}</p>
                 </div>
                 :
-                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.board.month_day_played}/{this.props.board.year_played} - {this.props.board.name}</div>
+                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.board.month_day_played}/{this.props.board.year_played} - {this.props.board.name} ({this.props.board.year})</div>
         )
     }
 }

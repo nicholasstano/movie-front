@@ -76,7 +76,7 @@ export class MovieContainer extends Component {
                 <p>TCM is doing a 4 films that defined a decade. I had no movies from the 1920's that stood out for me. From the 1930's I recently rewatched my two favorites The Rules of the Game and M. I realized the 1940's has a lot of my favorite titles and it was so hard to narrow it down to 4. I plan to go through movies from the 1940's within the next few months. Then the 1950's and so on.</p>
                 <MovieForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
-                    <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
+                    <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MovieReviewSearch value={this.state.movieSearch} searchMovie={this.searchMovie} />
                 </div>
                 {movieReviews}

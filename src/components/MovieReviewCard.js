@@ -27,7 +27,7 @@ export class MovieReviewCard extends Component {
                     <p>Notes: {this.props.movie.notes}</p>
                 </div>
                 :
-                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.movie.month_day_watched}/{this.props.movie.year_watched} - {this.props.movie.name}</div>
+                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.movie.month_day_watched}/{this.props.movie.year_watched} - {this.props.movie.name} ({this.props.movie.year})</div>
         )
     }
 }

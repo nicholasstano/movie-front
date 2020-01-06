@@ -12,6 +12,9 @@
 input {
   background-color: darkred;
   color: gold;
+  width: 85%;
+  border: black;
+  border-style: solid;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -19,6 +22,10 @@ input {
 textarea {
   background-color: darkred;
   color: gold;
+  width: 85%;
+  height: 300px;
+  border: black;
+  border-style: solid;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -33,7 +40,7 @@ a:hover {
 
 .navbar {
   border-style: solid;
-  border-color: black;
+  border-color: gold;
   border-radius: 5%;
   display: grid;
   grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
@@ -90,14 +97,14 @@ a:hover {
 
 .mediaReviewCard {
   border-style: solid;
-  border-color: black;
+  border-color: gold;
   border-radius: 3.25%;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 0.25%;
   margin: 0.03125% 1.5%;
-  background-color: gold;
-  color: black;
+  background-color:darkred;
+  color: gold;
 }
 
 .mediaReviewCard img {
@@ -107,35 +114,16 @@ a:hover {
   border-color: black;
 }
 
-.mediaReviewCard:nth-child(even) {
-  background-color: black;
-  color: gold;
-  border-color: gold;
-}
-
-.mediaReviewCard:nth-child(even) img {
-  width: 100%;
-  height: auto;
-  border: solid;
-  border-color: gold;
-}
-
 .rating {
   text-align: center;
 }
 
 .mediaReviewList {
   border-style: solid;
-  border-color: black;
+  border-color: gold;
   padding: 0.25%;
   margin: 0.03125% 1.5%;
-  background-color: gold;
-  color: black;
-}
-
-.mediaReviewList:nth-child(even) {
-  background-color: black;
-  border-color: gold;
+  background-color:darkred;
   color: gold;
 }
 
@@ -161,5 +149,5 @@ a:hover {
   padding: 1.25%;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(2, 50%);
 }
