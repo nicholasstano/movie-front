@@ -64,7 +64,7 @@ export class MovieForm extends Component {
                     </label>
                 </ul>
                 <ul>
-                    <label>Notes <textarea name="notes" value={this.state.notes} placeholder="(Un)worthy Movie Notes" onChange={this.handleMovieReviewChange} />
+                    <label>Notes <textarea name="notes" value={this.state.notes} placeholder="Movie Session Notes" onChange={this.handleMovieReviewChange} />
                     </label>
                 </ul>
                 <ul>

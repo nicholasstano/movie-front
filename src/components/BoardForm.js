@@ -58,7 +58,7 @@ export class BoardForm extends Component {
                     </label>
                 </ul>
                 <ul>
-                    <label>Notes <textarea name="notes" value={this.state.notes} placeholder="(Un)worthy Game Notes" onChange={this.handleBoardReviewChange} />
+                    <label>Notes <textarea name="notes" value={this.state.notes} placeholder="Session Game Notes" onChange={this.handleBoardReviewChange} />
                     </label>
                 </ul>
                 <ul>

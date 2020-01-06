@@ -5,7 +5,7 @@ export class MovieReviewSearch extends Component {
         return (
             <div className="mediaReviewSearch">
                 <form onSubmit={(event) => event.preventDefault()}>
-                    <input type="text" placeholder="search movies" value={this.props.value} onChange={(event) => { this.props.searchMovie(event.target.value) }} />
+                    <input type="text" className="mediaReviewSearchBox" placeholder="Search Movies" value={this.props.value} onChange={(event) => { this.props.searchMovie(event.target.value) }} />
                 </form>
             </div>
         )

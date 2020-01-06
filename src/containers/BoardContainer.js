@@ -71,11 +71,13 @@ export class BoardContainer extends Component {
         let boardReviews = this.filterBoards().map(board => <BoardReviewCard key={board.id} board={board} />)
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">Board Game Reviews</h1>
+                <h1 className="mediaHeader">Board Game Sessions</h1>
                 <p>I enjoy getting together monthly with friends to play board games. Personal favorites are Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. I'll leave reviews and comments of sessions.</p>
-                <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                 <BoardForm handleFormSubmit={this.handleFormSubmit} />
-                <BoardReviewSearch value={this.state.boardSearch} searchMovie={this.searchBoard} />
+                <div className="mediaDropAndSearch">
+                    <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
+                    <BoardReviewSearch value={this.state.boardSearch} searchMovie={this.searchBoard} />
+                </div>
                 {boardReviews}
             </div>
         )
