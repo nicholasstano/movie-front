@@ -57,10 +57,10 @@ export class BoardContainer extends Component {
         let allBoards = this.state.boardReviews
         let yearsBoards = this.state.boardReviews.filter(board => board.year_played === event.value)
         if (event.value === "All years") {
-            this.setState({ selectedYear: allBoards })
+            this.setState({ selectedYear: allBoards, option: "All years" })
         }
         else if (event.value) {
-            this.setState({ selectedYear: yearsBoards })
+            this.setState({ selectedYear: yearsBoards, option: event.value })
         }
     }
 

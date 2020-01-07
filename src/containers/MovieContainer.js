@@ -58,10 +58,10 @@ export class MovieContainer extends Component {
         let allMovies = this.state.movieReviews
         let yearsMovies = this.state.movieReviews.filter(movie => movie.year_watched === event.value)
         if (event.value === "All years") {
-            this.setState({ selectedYear: allMovies })
+            this.setState({ selectedYear: allMovies, option: "All years" })
         }
         else if (event.value) {
-            this.setState({ selectedYear: yearsMovies })
+            this.setState({ selectedYear: yearsMovies, option: event.value })
         }
     }
 
