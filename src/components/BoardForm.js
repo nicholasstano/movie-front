@@ -12,11 +12,11 @@ export class BoardForm extends Component {
         image: ""
     }
 
-    handleBoardReviewChange = (event) => {
+    handleTextChange = (event) => {
         this.setState({ [event.target.name]: event.target.value })
     }
 
-    handleBoardReviewSubmit = event => {
+    handleSubmitNewReview = event => {
         event.preventDefault()
         this.props.handleFormSubmit(this.state)
         this.setState({
@@ -32,27 +32,27 @@ export class BoardForm extends Component {
 
     render() {
         return (
-            <form className="mediaForm" onSubmit={this.handleBoardReviewSubmit}>
+            <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>
-                    <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Played (ex: 01/19)" onChange={this.handleBoardReviewChange} />
+                    <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Played (ex: 01/19)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="yearPlayed" value={this.state.yearPlayed} placeholder="Year Played (ex: 2018)" onChange={this.handleBoardReviewChange} />
+                    <input type="text" name="yearPlayed" value={this.state.yearPlayed} placeholder="Year Played (ex: 2018)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="name" value={this.state.name} placeholder="Name (ex: Terra Mystica)" onChange={this.handleBoardReviewChange} />
+                    <input type="text" name="name" value={this.state.name} placeholder="Name (ex: Terra Mystica)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="year" value={this.state.year} placeholder="Year Released (ex: 2012)" onChange={this.handleBoardReviewChange} />
+                    <input type="text" name="year" value={this.state.year} placeholder="Year Released (ex: 2012)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="image" value={this.state.image} placeholder="Image URL (ex: https://cf.geekdo-images.com/itemrep/img/zm6mWUEYg2Yco_sJpjmN1DBZZv8=/fit-in/246x300/pic1356616.jpg)" onChange={this.handleBoardReviewChange} />
+                    <input type="text" name="image" value={this.state.image} placeholder="Image URL (ex: https://cf.geekdo-images.com/itemrep/img/zm6mWUEYg2Yco_sJpjmN1DBZZv8=/fit-in/246x300/pic1356616.jpg)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 5/5)" onChange={this.handleBoardReviewChange} />
+                    <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 5/5)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <textarea name="notes" value={this.state.notes} placeholder="Board Game Session Notes" onChange={this.handleBoardReviewChange} />
+                    <textarea name="notes" value={this.state.notes} placeholder="Board Game Session Notes" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>

@@ -76,7 +76,7 @@ export class BoardContainer extends Component {
                 <BoardForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <BoardReviewSearch value={this.state.boardSearch} searchMovie={this.searchBoard} />
+                    <BoardReviewSearch value={this.state.boardSearch} searchBoard={this.searchBoard} />
                 </div>
                 {boardReviews}
             </div>
