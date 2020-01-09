@@ -19,6 +19,7 @@ export class AlbumReviewCard extends Component {
                     <div>
                         <ul>{this.props.album.month_day_played}/{this.props.album.year_played}</ul>
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.album.name} ({this.props.album.year})</ul>
+                        <ul>{this.props.album.artist}</ul>
                     </div>
                     <img src={this.props.album.image} alt={this.props.album.name} />
                     <p className="rating">Rating: {this.stars()}

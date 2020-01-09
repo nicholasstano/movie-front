@@ -4,13 +4,14 @@ import AlbumReviewSearch from '../components/AlbumReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import AlbumForm from '../components/AlbumForm.js'
+import { url } from '../global/GlobalVariables.js'
 
 export class AlbumContainer extends Component {
 
     state = { albumSearch: "", albumReviews: [], option: "All years", selectedYear: [] }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/v1/albums')
+        fetch(`${url}/albums`)
             .then(response => response.json())
             .then(albums => this.setState({ albumReviews: albums.reverse(), selectedYear: albums }));
     }

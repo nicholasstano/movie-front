@@ -4,13 +4,14 @@ import MovieReviewSearch from '../components/MovieReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import MovieForm from '../components/MovieForm.js'
+import { url } from '../global/GlobalVariables.js'
 
 export class MovieContainer extends Component {
 
     state = { movieSearch: "", movieReviews: [], option: "All years", selectedYear: [] }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/v1/movies')
+        fetch(`${url}/movies`)
             .then(response => response.json())
             .then(movies => this.setState({ movieReviews: movies.reverse(), selectedYear: movies }));
     }
@@ -24,7 +25,7 @@ export class MovieContainer extends Component {
     }
 
     handleFormSubmit = (movie) => {
-        fetch('http://localhost:3000/api/v1/movies', {
+        fetch(`${url}/movies`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

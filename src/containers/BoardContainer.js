@@ -4,13 +4,14 @@ import BoardReviewSearch from '../components/BoardReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import BoardForm from '../components/BoardForm.js'
+import { url } from '../global/GlobalVariables.js'
 
 export class BoardContainer extends Component {
 
     state = { boardSearch: "", boardReviews: [], option: "All years", selectedYear: [] }
 
     componentDidMount() {
-        fetch('http://localhost:3000/api/v1/boards')
+        fetch(`${url}/boards`)
             .then(response => response.json())
             .then(boards => this.setState({ boardReviews: boards.reverse(), selectedYear: boards }));
     }
@@ -24,7 +25,7 @@ export class BoardContainer extends Component {
     }
 
     handleFormSubmit = (board) => {
-        fetch('http://localhost:3000/api/v1/boards', {
+        fetch(`${url}/boards`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
