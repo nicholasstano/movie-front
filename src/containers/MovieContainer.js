@@ -73,8 +73,8 @@ export class MovieContainer extends Component {
         let movieReviews = this.filterMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">Spoilers for all movie reviews below!</h1>
-                <p>TCM is doing a 4 films that defined a decade. I had no movies from the 1920's that stood out for me. From the 1930's I recently rewatched my two favorites The Rules of the Game and M. I realized the 1940's has a lot of my favorite titles and it was so hard to narrow it down to 4. I plan to go through movies from the 1940's within the next few months. Then the 1950's and so on.</p>
+                <h1 className="mediaHeader">Spoilers for all movies below!</h1>
+                <p>Around the end of 2019 TCM did a 4 films that define a decade starting with the 1920's. I'm going to go through my favorites from each decade. Currently in the 40's.</p>
                 <MovieForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />

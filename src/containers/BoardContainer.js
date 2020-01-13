@@ -73,7 +73,7 @@ export class BoardContainer extends Component {
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Board Game Sessions</h1>
-                <p>I enjoy getting together monthly with friends to play board games. Personal favorites are Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. I'll leave reviews and comments of sessions.</p>
+                <p>Attempting to get together with friends at least monthly. Easier said than done! My favorites include Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. Session notes below!</p>
                 <BoardForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
