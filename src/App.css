@@ -49,6 +49,18 @@ a:hover {
   background-color: darkred;
 }
 
+.footer {
+  border-style: solid;
+  border-color: gold;
+  border-radius: 5%;
+  color: gold;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0.25%;
+  padding: 1.25%;
+  background-color: darkred;
+}
+
 .tooManyTimesImages {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;

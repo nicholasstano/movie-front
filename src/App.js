@@ -7,6 +7,7 @@ import BookContainer from '../src/containers/BookContainer.js'
 import AlbumContainer from '../src/containers/AlbumContainer.js'
 import TelevisionContainer from '../src/containers/TelevisionContainer.js'
 import NavBar from '../src/containers/NavBar.js'
+import Footer from '../src/containers/Footer.js'
 import Home from '../src/containers/Home.js'
 import { withRouter, Switch, Route } from 'react-router-dom'
 
@@ -21,49 +22,58 @@ export class App extends Component {
             path="/movies"
             render={() => {
               return (
-                <div><MovieContainer /></div>
+                <div><MovieContainer />
+                  <Footer />
+                </div>
               )
             }} />
           <Route
             path="/boards"
             render={() => {
               return (
-                <div><BoardContainer /></div>
+                <div><BoardContainer />
+                  <Footer /></div>
               )
             }} />
           <Route
             path="/albums"
             render={() => {
               return (
-                <div><AlbumContainer /></div>
+                <div><AlbumContainer />
+                  <Footer /></div>
               )
             }} />
           <Route
             path="/videos"
             render={() => {
               return (
-                <div><VideoContainer /></div>
+                <div><VideoContainer />
+                  <Footer /></div>
               )
             }} />
           <Route
             path="/books"
             render={() => {
               return (
-                <div><BookContainer /></div>
+                <div><BookContainer />
+                  <Footer /></div>
               )
             }} />
           <Route
             path="/television"
             render={() => {
               return (
-                <div><TelevisionContainer /></div>
+                <div><TelevisionContainer />
+                  <Footer /></div>
               )
             }} />
           <Route
             path="/"
             render={() => {
               return (
-                <div><Home /></div>
+                <div><Home />
+                  <Footer />
+                </div>
               )
             }} />
         </Switch>
