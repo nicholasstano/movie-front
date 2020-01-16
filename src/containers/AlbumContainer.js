@@ -3,7 +3,6 @@ import AlbumReviewCard from '../components/AlbumReviewCard.js'
 import AlbumReviewSearch from '../components/AlbumReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import AlbumForm from '../components/AlbumForm.js'
 import { url } from '../global/GlobalVariables.js'
 
 export class AlbumContainer extends Component {
@@ -14,36 +13,6 @@ export class AlbumContainer extends Component {
         fetch(`${url}/albums`)
             .then(response => response.json())
             .then(albums => this.setState({ albumReviews: albums.reverse(), selectedYear: albums }));
-    }
-
-    addNewAlbum = function (album) {
-        const newAlbum = album
-        this.setState({
-            albumReviews: [newAlbum, ...this.state.albumReviews],
-            selectedYear: [newAlbum, ...this.state.selectedYear],
-        })
-    }
-
-    handleFormSubmit = (album) => {
-        fetch('http://localhost:3000/api/v1/albums', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: album.name,
-                artist: album.name,
-                month_day_played: album.monthPlayed,
-                year_played: album.yearPlayed,
-                notes: album.notes,
-                year: album.year,
-                rating: album.rating,
-                image: album.image
-            })
-        }).then(response => response.json())
-            .then(album => this.addNewAlbum(album)
-            )
     }
 
     searchAlbum = (search) => {
@@ -75,7 +44,6 @@ export class AlbumContainer extends Component {
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Album Reviews</h1>
                 <p>Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and skip no tracks. Recommendations? My favorites include Safe As Milk, Arthur (Or the Decline and Fall of the British Empire), Hot Rats, and Sticky Fingers.</p>
-                <AlbumForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <AlbumReviewSearch value={this.state.albumSearch} searchAlbum={this.searchAlbum} />

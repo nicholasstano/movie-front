@@ -90,6 +90,7 @@ a:hover {
   display: grid;
   background-color: darkred;
   color: gold;
+  padding-bottom: 10px;
 }
 
 .mediaContainer p {
@@ -122,6 +123,7 @@ a:hover {
   border-style: solid;
   border-color: gold;
   border-radius: 3.25%;
+  border-width: thin;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 0.25%;
@@ -144,6 +146,8 @@ a:hover {
 .mediaReviewList {
   border-style: solid;
   border-color: gold;
+  border-radius: 5px;
+  border-width: thin;
   padding: 0.25%;
   margin: 0.03125% 1.5%;
   background-color:darkred;
@@ -168,6 +172,7 @@ a:hover {
 .mediaForm {
   border-style: solid;
   border-radius: 5%;
+  border-width: thin;
   margin: 0.75%;
   padding: 1.25%;
   display: grid;

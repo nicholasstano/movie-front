@@ -19,7 +19,7 @@ export class AlbumForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleFormSubmit(this.state)
+        this.props.handleAlbumSubmit(this.state)
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
@@ -42,10 +42,10 @@ export class AlbumForm extends Component {
                     <input type="text" name="yearPlayed" value={this.state.yearPlayed} placeholder="Year Listened (ex: 2019)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="name" value={this.state.name} placeholder="Name (ex: Trans Europa Express)" onChange={this.handleTextChange} />
+                    <input type="text" name="name" value={this.state.name} placeholder="Album Name (ex: Trans Europa Express)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="artist" value={this.state.artist} placeholder="Name (ex: Kraftwerk)" onChange={this.handleTextChange} />
+                    <input type="text" name="artist" value={this.state.artist} placeholder="Artist Name (ex: Kraftwerk)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <input type="text" name="year" value={this.state.year} placeholder="Year Released (ex: 1977)" onChange={this.handleTextChange} />

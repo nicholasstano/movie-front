@@ -18,7 +18,7 @@ export class VideoForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleFormSubmit(this.state)
+        this.props.handleVideoSubmit(this.state)
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
