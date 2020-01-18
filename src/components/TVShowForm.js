@@ -19,7 +19,7 @@ export class TVShowForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleFormSubmit(this.state)
+        this.props.handleTVSubmit(this.state)
         this.setState({
             monthWatched: "",
             yearWatched: "",

@@ -4,7 +4,7 @@ import BoardReviewSearch from '../components/BoardReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import BoardForm from '../components/BoardForm.js'
-import { url } from '../global/GlobalVariables.js'
+import { url } from '../config'
 
 export class BoardContainer extends Component {
 

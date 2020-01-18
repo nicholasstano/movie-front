@@ -4,7 +4,7 @@ import MovieReviewSearch from '../components/MovieReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import MovieForm from '../components/MovieForm.js'
-import { url } from '../global/GlobalVariables.js'
+import { url } from '../config'
 
 export class MovieContainer extends Component {
 

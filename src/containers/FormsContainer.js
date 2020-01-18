@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import BoardForm from '../components/BoardForm.js'
 import AlbumForm from '../components/AlbumForm.js'
 import VideoForm from '../components/VideoForm.js'
-import { url } from '../global/GlobalVariables.js'
+import TVShowForm from '../components/TVShowForm.js'
+import { url } from '../config'
 
 export class FormsContainer extends Component {
 
@@ -45,12 +46,33 @@ export class FormsContainer extends Component {
         })
     }
 
+    handleTVSubmit = (show) => {
+        fetch(`${url}/tvshows`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: show.name,
+                month_day_watched: show.monthWatched,
+                year_watched: show.yearWatched,
+                notes: show.notes,
+                year: show.year,
+                rating: show.rating,
+                image: show.image,
+                season: show.season
+            })
+        })
+    }
+
     render() {
         return (
             <div className="mediaContainer">
                 <BoardForm />
                 <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} />
                 <VideoForm handleVideoSubmit={this.handleVideoSubmit} />
+                <TVShowForm handleTVSubmit={this.handleTVSubmit} />
             </div>
         )
     }

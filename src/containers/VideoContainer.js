@@ -3,7 +3,7 @@ import VideoReviewCard from '../components/VideoReviewCard.js'
 import VideoReviewSearch from '../components/VideoReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import { url } from '../global/GlobalVariables.js'
+import { url } from '../config'
 
 export class VideoContainer extends Component {
 

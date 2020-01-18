@@ -3,8 +3,8 @@ import TVShowReviewCard from '../components/TVShowReviewCard.js'
 import TVShowReviewSearch from '../components/TVShowReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import TVShowForm from '../components/TVShowForm.js'
-import { url } from '../global/GlobalVariables.js'
+import { url } from '../config'
+import util from '../util'
 
 export class TelevisionContainer extends Component {
 
@@ -15,45 +15,24 @@ export class TelevisionContainer extends Component {
             .then(response => response.json())
             .then(shows => this.setState({ tvReviews: shows.reverse(), selectedYear: shows }));
     }
-
-    addNew = function (show) {
-        const newShow = show
-        this.setState({
-            tvReviews: [newShow, ...this.state.tvReviews],
-            selectedYear: [newShow, ...this.state.selectedYear],
-        })
-    }
-
-    handleFormSubmit = (show) => {
-        fetch(`${url}/tvshows`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: show.name,
-                month_day_watched: show.monthWatched,
-                year_watched: show.yearWatched,
-                notes: show.notes,
-                year: show.year,
-                rating: show.rating,
-                image: show.image,
-                season: show.season
-            })
-        }).then(response => response.json())
-            .then(show => this.addNew(show)
-            )
-    }
-
+    //handleSearchTermChange
     searchShow = (search) => {
         this.setState({ tvSearch: search })
     }
-
+    //searchArray
+    //searchShows
     filterShows = () => {
-        let filteredShows = this.state.selectedYear.filter(show => show.name.toLowerCase().includes(this.state.tvSearch.toLowerCase()))
-        return filteredShows
+        // let filteredShows = this.state.selectedYear.filter(show => show.name.toLowerCase().includes(this.state.tvSearch.toLowerCase()))
+        // return filteredShows
+
+        return util.searchMedia(this.state.selectedYear, "name", this.state.tvSearch)
     }
+
+    //let searchArray
+    // searchMedia = function (media, field, searchTerm) {
+    //     return media.filter(m => m[field].toLowerCase().includes(searchTerm.toLowerCase()))
+    // }
+
 
     changeYear = (event) => {
         let allShows = this.state.tvReviews
@@ -75,10 +54,9 @@ export class TelevisionContainer extends Component {
             <div className="mediaContainer">
                 <h1 className="mediaHeader">TV Show Reviews</h1>
                 <p>I am not too into watching TV. I prefer movies. I am intimidated by the idea of getting into a show that has 5 seasons and 60+ episodes. At times I will bingewatch shows on say Netflix.</p>
-                <TVShowForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <TVShowReviewSearch value={this.state.tvSearch} searchShow={this.searchShow} />
+                    <TVShowReviewSearch value={this.state.tvSearch} onChange={this.searchShow} />
                 </div>
                 {tvReviews}
             </div>

@@ -3,7 +3,7 @@ import AlbumReviewCard from '../components/AlbumReviewCard.js'
 import AlbumReviewSearch from '../components/AlbumReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import { url } from '../global/GlobalVariables.js'
+import { url } from '../config'
 
 export class AlbumContainer extends Component {
 
