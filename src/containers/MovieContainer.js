@@ -3,7 +3,6 @@ import MovieReviewCard from '../components/MovieReviewCard.js'
 import MovieReviewSearch from '../components/MovieReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import MovieForm from '../components/MovieForm.js'
 import { url } from '../config'
 
 export class MovieContainer extends Component {
@@ -14,36 +13,6 @@ export class MovieContainer extends Component {
         fetch(`${url}/movies`)
             .then(response => response.json())
             .then(movies => this.setState({ movieReviews: movies.reverse(), selectedYear: movies }));
-    }
-
-    addNewMovie = function (movie) {
-        const newMovie = movie
-        this.setState({
-            movieReviews: [newMovie, ...this.state.movieReviews],
-            selectedYear: [newMovie, ...this.state.selectedYear],
-        })
-    }
-
-    handleFormSubmit = (movie) => {
-        fetch(`${url}/movies`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: movie.name,
-                month_day_watched: movie.monthWatched,
-                year_watched: movie.yearWatched,
-                notes: movie.notes,
-                director: movie.director,
-                year: movie.year,
-                rating: movie.rating,
-                image: movie.image
-            })
-        }).then(response => response.json())
-            .then(movie => this.addNewMovie(movie)
-            )
     }
 
     searchMovie = (search) => {
@@ -75,7 +44,6 @@ export class MovieContainer extends Component {
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Spoilers for all movies below!</h1>
                 <p>Around the end of 2019 TCM did a 4 films that define a decade starting with the 1920's. I'm going to go through my favorites from each decade. Currently in the 40's.</p>
-                <MovieForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MovieReviewSearch value={this.state.movieSearch} searchMovie={this.searchMovie} />

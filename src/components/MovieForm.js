@@ -19,7 +19,7 @@ export class MovieForm extends Component {
 
     handleMovieReviewSubmit = event => {
         event.preventDefault()
-        this.props.handleFormSubmit(this.state)
+        this.props.handleMovieSubmit(this.state)
         this.setState({
             monthWatched: "",
             yearWatched: "",

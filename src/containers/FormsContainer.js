@@ -3,9 +3,30 @@ import BoardForm from '../components/BoardForm.js'
 import AlbumForm from '../components/AlbumForm.js'
 import VideoForm from '../components/VideoForm.js'
 import TVShowForm from '../components/TVShowForm.js'
+import MovieForm from '../components/MovieForm.js'
 import { url } from '../config'
 
 export class FormsContainer extends Component {
+
+    handleMovieSubmit = (movie) => {
+        fetch(`${url}/movies`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: movie.name,
+                month_day_watched: movie.monthWatched,
+                year_watched: movie.yearWatched,
+                notes: movie.notes,
+                director: movie.director,
+                year: movie.year,
+                rating: movie.rating,
+                image: movie.image
+            })
+        })
+    }
 
     handleAlbumSubmit = (album) => {
         fetch(`${url}/albums`, {
@@ -69,6 +90,7 @@ export class FormsContainer extends Component {
     render() {
         return (
             <div className="mediaContainer">
+                <MovieForm handleMovieSubmit={this.handleMovieSubmit} />
                 <BoardForm />
                 <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} />
                 <VideoForm handleVideoSubmit={this.handleVideoSubmit} />
