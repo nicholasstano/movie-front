@@ -4,6 +4,7 @@ import AlbumReviewSearch from '../components/AlbumReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
+import util from '../util'
 
 export class AlbumContainer extends Component {
 
@@ -15,13 +16,12 @@ export class AlbumContainer extends Component {
             .then(albums => this.setState({ albumReviews: albums.reverse(), selectedYear: albums }));
     }
 
-    searchAlbum = (search) => {
+    handleSearchTermChange = (search) => {
         this.setState({ albumSearch: search })
     }
 
-    filterAlbums = () => {
-        let filteredAlbums = this.state.selectedYear.filter(album => album.name.toLowerCase().includes(this.state.albumSearch.toLowerCase()))
-        return filteredAlbums
+    searchAlbums = () => {
+        return util.searchMedia(this.state.selectedYear, "name", this.state.albumSearch)
     }
 
     changeYear = (event) => {
@@ -39,14 +39,14 @@ export class AlbumContainer extends Component {
         let years = this.state.albumReviews.map(album => album.year_played)
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
-        let albumReviews = this.filterAlbums().map(album => <AlbumReviewCard key={album.id} album={album} />)
+        let albumReviews = this.searchAlbums().map(album => <AlbumReviewCard key={album.id} album={album} />)
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Album Reviews</h1>
                 <p>Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and skip no tracks. Recommendations? My favorites include Safe As Milk, Arthur (Or the Decline and Fall of the British Empire), Hot Rats, and Sticky Fingers.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <AlbumReviewSearch value={this.state.albumSearch} searchAlbum={this.searchAlbum} />
+                    <AlbumReviewSearch value={this.state.albumSearch} onChange={this.handleSearchTermChange} />
                 </div>
                 {albumReviews}
             </div>

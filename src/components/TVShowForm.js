@@ -36,7 +36,7 @@ export class TVShowForm extends Component {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>
-                    <p onClick={this.props.closeTVForm}>Close TV Show Form</p>
+                    <p onClick={this.props.toggleTVForm}>Close TV Show Form</p>
                 </ul>
                 <ul>
                     <input type="text" name="monthWatched" value={this.state.monthWatched} placeholder="Month/Day Watched (ex: 04/17)" onChange={this.handleTextChange} />

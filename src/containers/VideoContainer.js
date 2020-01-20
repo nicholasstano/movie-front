@@ -4,6 +4,7 @@ import VideoReviewSearch from '../components/VideoReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
+import util from '../util'
 
 export class VideoContainer extends Component {
 
@@ -15,13 +16,12 @@ export class VideoContainer extends Component {
             .then(videos => this.setState({ videoReviews: videos.reverse(), selectedYear: videos }));
     }
 
-    searchVideo = (search) => {
+    handleSearchTermChange = (search) => {
         this.setState({ videoSearch: search })
     }
 
-    filterVideos = () => {
-        let filteredVideos = this.state.selectedYear.filter(video => video.name.toLowerCase().includes(this.state.videoSearch.toLowerCase()))
-        return filteredVideos
+    searchVideoGames = () => {
+        return util.searchMedia(this.state.selectedYear, "name", this.state.videoSearch)
     }
 
     changeYear = (event) => {
@@ -39,14 +39,14 @@ export class VideoContainer extends Component {
         let years = this.state.videoReviews.map(video => video.year_played)
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
-        let videoReviews = this.filterVideos().map(video => <VideoReviewCard key={video.id} video={video} />)
+        let videoReviews = this.searchVideoGames().map(video => <VideoReviewCard key={video.id} video={video} />)
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Video Game Reviews</h1>
                 <p>I enjoy replaying through video games. My favorites include Starcraft, Warcraft, Baldur's Gate, Sonic, Mario, and GoldenEye</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <VideoReviewSearch value={this.state.videoSearch} searchVideo={this.searchVideo} />
+                    <VideoReviewSearch value={this.state.videoSearch} onChange={this.handleSearchTermChange} />
                 </div>
                 {videoReviews}
             </div>

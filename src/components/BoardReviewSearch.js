@@ -5,7 +5,7 @@ export class BoardReviewSearch extends Component {
         return (
             <div className="mediaReviewSearch">
                 <form onSubmit={(event) => event.preventDefault()}>
-                    <input type="text" className="mediaReviewSearchBox" placeholder="Search Board Games" value={this.props.value} onChange={(event) => { this.props.searchBoard(event.target.value) }} />
+                    <input type="text" className="mediaReviewSearchBox" placeholder="Search Board Games" value={this.props.value} onChange={(event) => { this.props.onChange(event.target.value) }} />
                 </form>
             </div>
         )

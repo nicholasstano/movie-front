@@ -34,7 +34,7 @@ export class BoardForm extends Component {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>
-                    <p onClick={this.props.closeBoardForm}>Close Board Game Form</p>
+                    <p onClick={this.props.toggleBoardForm}>Close Board Game Form</p>
                 </ul>
                 <ul>
                     <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Played (ex: 01/19)" onChange={this.handleTextChange} />

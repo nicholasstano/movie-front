@@ -4,6 +4,7 @@ import MovieReviewSearch from '../components/MovieReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
+import util from '../util'
 
 export class MovieContainer extends Component {
 
@@ -15,13 +16,12 @@ export class MovieContainer extends Component {
             .then(movies => this.setState({ movieReviews: movies.reverse(), selectedYear: movies }));
     }
 
-    searchMovie = (search) => {
+    handleSearchTermChange = (search) => {
         this.setState({ movieSearch: search })
     }
 
-    filterMovies = () => {
-        let filteredMovies = this.state.selectedYear.filter(movie => movie.name.toLowerCase().includes(this.state.movieSearch.toLowerCase()))
-        return filteredMovies
+    searchMovies = () => {
+        return util.searchMedia(this.state.selectedYear, "name", this.state.movieSearch)
     }
 
     changeYear = (event) => {
@@ -39,14 +39,14 @@ export class MovieContainer extends Component {
         let years = this.state.movieReviews.map(movie => movie.year_watched)
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
-        let movieReviews = this.filterMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
+        let movieReviews = this.searchMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Spoilers for all movies below!</h1>
                 <p>Going through movies from the 1940's. On my watchlist: Mildred Pierce, Double Indemnity, Laura, The Lost Weekend, Gilda, The Killers, Brute Force, Out of the Past, The Big Clock, White Heat, and The Treasure of the Sierra Madre.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <MovieReviewSearch value={this.state.movieSearch} searchMovie={this.searchMovie} />
+                    <MovieReviewSearch value={this.state.movieSearch} onChange={this.handleSearchTermChange} />
                 </div>
                 {movieReviews}
             </div >

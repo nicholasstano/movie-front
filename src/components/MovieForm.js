@@ -36,7 +36,7 @@ export class MovieForm extends Component {
         return (
             <form className="mediaForm" onSubmit={this.handleMovieReviewSubmit}>
                 <ul>
-                    <p onClick={this.props.closeMovieForm}>Close Movie Form</p>
+                    <p onClick={this.props.toggleMovieForm}>Close Movie Form</p>
                 </ul>
                 <ul>
                     <input type="text" name="monthWatched" value={this.state.monthWatched} placeholder="Month/Day Watched (ex: 12/31)" onChange={this.handleMovieReviewChange} />
