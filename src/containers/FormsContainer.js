@@ -8,6 +8,8 @@ import { url } from '../config'
 
 export class FormsContainer extends Component {
 
+    state = { movieForm: true, boardForm: true, albumForm: true, videoForm: true, tvForm: true }
+
     handleMovieSubmit = (movie) => {
         fetch(`${url}/movies`, {
             method: 'POST',
@@ -87,14 +89,53 @@ export class FormsContainer extends Component {
         })
     }
 
+    handleBoardSubmit = (board) => {
+        fetch(`${url}/boards`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: board.name,
+                month_day_played: board.monthPlayed,
+                year_played: board.yearPlayed,
+                notes: board.notes,
+                year: board.year,
+                rating: board.rating,
+                image: board.image
+            })
+        })
+    }
+
+    closeMovieForm = () => {
+        this.setState({ movieForm: !this.state.movieForm })
+    }
+
+    closeBoardForm = () => {
+        this.setState({ boardForm: !this.state.boardForm })
+    }
+
+    closeAlbumForm = () => {
+        this.setState({ albumForm: !this.state.albumForm })
+    }
+
+    closeVideoForm = () => {
+        this.setState({ videoForm: !this.state.videoForm })
+    }
+
+    closeTVForm = () => {
+        this.setState({ tvForm: !this.state.tvForm })
+    }
+
     render() {
         return (
             <div className="mediaContainer">
-                <MovieForm handleMovieSubmit={this.handleMovieSubmit} />
-                <BoardForm />
-                <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} />
-                <VideoForm handleVideoSubmit={this.handleVideoSubmit} />
-                <TVShowForm handleTVSubmit={this.handleTVSubmit} />
+                {this.state.movieForm ? <div><p onClick={() => this.setState({ movieForm: !this.state.movieForm })}>Open Movie Form</p></div> : <MovieForm handleMovieSubmit={this.handleMovieSubmit} closeMovieForm={this.closeMovieForm} />}
+                {this.state.boardForm ? <div><p onClick={() => this.setState({ boardForm: !this.state.boardForm })}>Open Board Game Form</p></div> : <BoardForm handleBoardSubmit={this.handleBoardSubmit} closeBoardForm={this.closeBoardForm} />}
+                {this.state.albumForm ? <div><p onClick={() => this.setState({ albumForm: !this.state.albumForm })}>Open Album Form</p></div> : <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} closeAlbumForm={this.closeAlbumForm} />}
+                {this.state.videoForm ? <div><p onClick={() => this.setState({ videoForm: !this.state.videoForm })}>Open Video Game Form</p></div> : <VideoForm handleVideoSubmit={this.handleVideoSubmit} closeVideoForm={this.closeVideoForm} />}
+                {this.state.tvForm ? <div><p onClick={() => this.setState({ tvForm: !this.state.tvForm })}>Open TV Show Form</p></div> : <TVShowForm handleTVSubmit={this.handleTVSubmit} closeTVForm={this.closeTVForm} />}
             </div>
         )
     }

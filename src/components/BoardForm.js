@@ -18,7 +18,7 @@ export class BoardForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleFormSubmit(this.state)
+        this.props.handleBoardSubmit(this.state)
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
@@ -33,6 +33,9 @@ export class BoardForm extends Component {
     render() {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
+                <ul>
+                    <p onClick={this.props.closeBoardForm}>Close Board Game Form</p>
+                </ul>
                 <ul>
                     <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Played (ex: 01/19)" onChange={this.handleTextChange} />
                 </ul>

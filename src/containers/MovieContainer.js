@@ -43,7 +43,7 @@ export class MovieContainer extends Component {
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Spoilers for all movies below!</h1>
-                <p>Around the end of 2019 TCM did a 4 films that define a decade starting with the 1920's. I'm going to go through my favorites from each decade. Currently in the 40's.</p>
+                <p>Going through movies from the 1940's. On my watchlist: Mildred Pierce, Double Indemnity, Laura, The Lost Weekend, Gilda, The Killers, Brute Force, Out of the Past, The Big Clock, White Heat, and The Treasure of the Sierra Madre.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MovieReviewSearch value={this.state.movieSearch} searchMovie={this.searchMovie} />

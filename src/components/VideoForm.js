@@ -35,6 +35,9 @@ export class VideoForm extends Component {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>
+                    <p onClick={this.props.closeVideoForm}>Close Video Game Form</p>
+                </ul>
+                <ul>
                     <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Played (ex: 03/22)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>

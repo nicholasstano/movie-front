@@ -3,7 +3,6 @@ import BoardReviewCard from '../components/BoardReviewCard.js'
 import BoardReviewSearch from '../components/BoardReviewSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import BoardForm from '../components/BoardForm.js'
 import { url } from '../config'
 
 export class BoardContainer extends Component {
@@ -14,35 +13,6 @@ export class BoardContainer extends Component {
         fetch(`${url}/boards`)
             .then(response => response.json())
             .then(boards => this.setState({ boardReviews: boards.reverse(), selectedYear: boards }));
-    }
-
-    addNewBoard = function (board) {
-        const newBoard = board
-        this.setState({
-            boardReviews: [newBoard, ...this.state.boardReviews],
-            selectedYear: [newBoard, ...this.state.selectedYear],
-        })
-    }
-
-    handleFormSubmit = (board) => {
-        fetch(`${url}/boards`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: board.name,
-                month_day_played: board.monthPlayed,
-                year_played: board.yearPlayed,
-                notes: board.notes,
-                year: board.year,
-                rating: board.rating,
-                image: board.image
-            })
-        }).then(response => response.json())
-            .then(board => this.addNewBoard(board)
-            )
     }
 
     searchBoard = (search) => {
@@ -74,7 +44,6 @@ export class BoardContainer extends Component {
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Board Game Sessions</h1>
                 <p>Attempting to get together with friends at least monthly. Easier said than done! My favorites include Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. Session notes below!</p>
-                <BoardForm handleFormSubmit={this.handleFormSubmit} />
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <BoardReviewSearch value={this.state.boardSearch} searchBoard={this.searchBoard} />

@@ -36,6 +36,9 @@ export class AlbumForm extends Component {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>
+                    <p onClick={this.props.closeAlbumForm}>Close Album Form</p>
+                </ul>
+                <ul>
                     <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Listened (ex: 02/13)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
