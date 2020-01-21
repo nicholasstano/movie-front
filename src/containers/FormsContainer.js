@@ -131,11 +131,11 @@ export class FormsContainer extends Component {
     render() {
         return (
             <div className="mediaContainer">
-                {this.state.movieForm ? <div><p onClick={() => this.toggleMovieForm}>Open Movie Form</p></div> : <MovieForm handleMovieSubmit={this.handleMovieSubmit} toggleMovieForm={this.toggleMovieForm} />}
-                {this.state.boardForm ? <div><p onClick={() => this.toggleBoardForm}>Open Board Game Form</p></div> : <BoardForm handleBoardSubmit={this.handleBoardSubmit} toggleBoardForm={this.toggleBoardForm} />}
-                {this.state.albumForm ? <div><p onClick={() => this.toggleAlbumForm}>Open Album Form</p></div> : <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} toggleAlbumForm={this.toggleAlbumForm} />}
-                {this.state.videoForm ? <div><p onClick={() => this.toggleVideoForm}>Open Video Game Form</p></div> : <VideoForm handleVideoSubmit={this.handleVideoSubmit} toggleVideoForm={this.toggleVideoForm} />}
-                {this.state.tvForm ? <div><p onClick={() => this.toggleTVForm}>Open TV Show Form</p></div> : <TVShowForm handleTVSubmit={this.handleTVSubmit} toggleTVForm={this.toggleTVForm} />}
+                {this.state.movieForm ? <div><p onClick={this.toggleMovieForm}>Open Movie Form</p></div> : <MovieForm handleMovieSubmit={this.handleMovieSubmit} toggleMovieForm={this.toggleMovieForm} />}
+                {this.state.boardForm ? <div><p onClick={this.toggleBoardForm}>Open Board Game Form</p></div> : <BoardForm handleBoardSubmit={this.handleBoardSubmit} toggleBoardForm={this.toggleBoardForm} />}
+                {this.state.albumForm ? <div><p onClick={this.toggleAlbumForm}>Open Album Form</p></div> : <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} toggleAlbumForm={this.toggleAlbumForm} />}
+                {this.state.videoForm ? <div><p onClick={this.toggleVideoForm}>Open Video Game Form</p></div> : <VideoForm handleVideoSubmit={this.handleVideoSubmit} toggleVideoForm={this.toggleVideoForm} />}
+                {this.state.tvForm ? <div><p onClick={this.toggleTVForm}>Open TV Show Form</p></div> : <TVShowForm handleTVSubmit={this.handleTVSubmit} toggleTVForm={this.toggleTVForm} />}
             </div>
         )
     }

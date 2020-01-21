@@ -5,6 +5,7 @@ import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
 import util from '../util'
+import photos from '../photos'
 
 export class MovieContainer extends Component {
 
@@ -40,10 +41,17 @@ export class MovieContainer extends Component {
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
         let movieReviews = this.searchMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
+        let favoriteFiveMovies = photos.moviePosterArray.map((movie, index) =>
+            <div key={movie}>
+                <p>{index + 1}</p>
+                <img src={movie} alt={movie} />
+            </div>
+        )
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Spoilers for all movies below!</h1>
-                <p>Going through movies from the 1940's. On my watchlist: Mildred Pierce, Double Indemnity, Laura, The Lost Weekend, Gilda, The Killers, Brute Force, Out of the Past, The Big Clock, White Heat, and The Treasure of the Sierra Madre.</p>
+                <div className="mediaFavoriteFive">{favoriteFiveMovies}</div>
+                <p>WATCHLIST: Mildred Pierce, Double Indemnity, Laura, The Lost Weekend, Gilda, The Killers, Brute Force, Out of the Past, The Big Clock, White Heat, and The Treasure of the Sierra Madre.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.movieSearch} onChange={this.handleSearchTermChange} mediaName={"Movies"} />

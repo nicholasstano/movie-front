@@ -94,7 +94,7 @@ a:hover {
 }
 
 .mediaContainer p {
-  margin: 0.25%;
+  margin: 1.75%;
   padding: 1.25%;
 }
 
@@ -178,4 +178,19 @@ a:hover {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, 50%);
+}
+
+.mediaFavoriteFive {
+  /* border-style: solid;
+  border-color: gold;
+  border-radius: 5%; */
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%; 
+  margin: 0.75%;
+  padding: 1.25%;
+}
+
+.mediaFavoriteFive img {
+  width: 50%;
+  height: auto;
 }

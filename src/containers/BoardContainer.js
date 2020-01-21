@@ -5,6 +5,7 @@ import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
 import util from '../util'
+import photos from '../photos'
 
 export class BoardContainer extends Component {
 
@@ -40,10 +41,17 @@ export class BoardContainer extends Component {
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
         let boardReviews = this.searchBoards().map(board => <BoardReviewCard key={board.id} board={board} />)
+        let favoriteFiveBoardGames = photos.boardGameArray.map((board, index) =>
+            <div key={board}>
+                <p>{index + 1}</p>
+                <img src={board} alt={board} />
+            </div>
+        )
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Board Game Sessions</h1>
-                <p>Attempting to get together with friends at least monthly. Easier said than done! My favorites include Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. Session notes below!</p>
+                <div className="mediaFavoriteFive">{favoriteFiveBoardGames}</div>
+                <p>Nerdy notes I took from sessions to track this for my own reason.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.boardSearch} onChange={this.handleSearchTermChange} mediaName={"Board Games"} />
