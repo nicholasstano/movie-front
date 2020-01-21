@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TVShowReviewCard from '../components/TVShowReviewCard.js'
-import TVShowReviewSearch from '../components/TVShowReviewSearch.js'
+import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
@@ -45,7 +45,7 @@ export class TelevisionContainer extends Component {
                 <p>I am not too into watching TV. I prefer movies. I am intimidated by the idea of getting into a show that has 5 seasons and 60+ episodes. At times I will bingewatch shows on say Netflix.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <TVShowReviewSearch value={this.state.tvSearch} onChange={this.handleSearchTermChange} />
+                    <MediaSearch value={this.state.tvSearch} onChange={this.handleSearchTermChange} mediaName={"TV Shows"} />
                 </div>
                 {tvReviews}
             </div>

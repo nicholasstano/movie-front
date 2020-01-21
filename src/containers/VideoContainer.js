@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import VideoReviewCard from '../components/VideoReviewCard.js'
-import VideoReviewSearch from '../components/VideoReviewSearch.js'
+import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
@@ -46,7 +46,7 @@ export class VideoContainer extends Component {
                 <p>I enjoy replaying through video games. My favorites include Starcraft, Warcraft, Baldur's Gate, Sonic, Mario, and GoldenEye</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <VideoReviewSearch value={this.state.videoSearch} onChange={this.handleSearchTermChange} />
+                    <MediaSearch value={this.state.videoSearch} onChange={this.handleSearchTermChange} mediaName={"Video Games"} />
                 </div>
                 {videoReviews}
             </div>

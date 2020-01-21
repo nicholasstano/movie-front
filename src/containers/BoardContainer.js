@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import BoardReviewCard from '../components/BoardReviewCard.js'
-import BoardReviewSearch from '../components/BoardReviewSearch.js'
+import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
@@ -46,7 +46,7 @@ export class BoardContainer extends Component {
                 <p>Attempting to get together with friends at least monthly. Easier said than done! My favorites include Dominion, Seven Wonders, Terra Mystica, Scythe, Power Grid, and Concordia. Session notes below!</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <BoardReviewSearch value={this.state.boardSearch} onChange={this.handleSearchTermChange} />
+                    <MediaSearch value={this.state.boardSearch} onChange={this.handleSearchTermChange} mediaName={"Board Games"} />
                 </div>
                 {boardReviews}
             </div>

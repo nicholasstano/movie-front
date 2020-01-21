@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MovieReviewCard from '../components/MovieReviewCard.js'
-import MovieReviewSearch from '../components/MovieReviewSearch.js'
+import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
@@ -46,7 +46,7 @@ export class MovieContainer extends Component {
                 <p>Going through movies from the 1940's. On my watchlist: Mildred Pierce, Double Indemnity, Laura, The Lost Weekend, Gilda, The Killers, Brute Force, Out of the Past, The Big Clock, White Heat, and The Treasure of the Sierra Madre.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <MovieReviewSearch value={this.state.movieSearch} onChange={this.handleSearchTermChange} />
+                    <MediaSearch value={this.state.movieSearch} onChange={this.handleSearchTermChange} mediaName={"Movies"} />
                 </div>
                 {movieReviews}
             </div >

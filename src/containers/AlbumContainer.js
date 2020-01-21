@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AlbumReviewCard from '../components/AlbumReviewCard.js'
-import AlbumReviewSearch from '../components/AlbumReviewSearch.js'
+import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
@@ -46,7 +46,7 @@ export class AlbumContainer extends Component {
                 <p>Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and skip no tracks. Recommendations? My favorites include Safe As Milk, Arthur (Or the Decline and Fall of the British Empire), Hot Rats, and Sticky Fingers.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <AlbumReviewSearch value={this.state.albumSearch} onChange={this.handleSearchTermChange} />
+                    <MediaSearch value={this.state.albumSearch} onChange={this.handleSearchTermChange} mediaName={"Albums"} />
                 </div>
                 {albumReviews}
             </div>
