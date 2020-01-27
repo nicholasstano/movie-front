@@ -41,7 +41,7 @@ export class MovieContainer extends Component {
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
         let movieReviews = this.searchMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
-        let favoriteFiveMovies = photos.moviePosterArray.map((movie, index) =>
+        let favoriteFiveMovies = photos.movies.map((movie, index) =>
             <div key={movie}>
                 <p>{index + 1}</p>
                 <img src={movie} alt={movie} />

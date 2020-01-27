@@ -41,7 +41,7 @@ export class BoardContainer extends Component {
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
         let boardReviews = this.searchBoards().map(board => <BoardReviewCard key={board.id} board={board} />)
-        let favoriteFiveBoardGames = photos.boardGameArray.map((board, index) =>
+        let favoriteFiveBoardGames = photos.boardGames.map((board, index) =>
             <div key={board}>
                 <p>{index + 1}</p>
                 <img src={board} alt={board} />

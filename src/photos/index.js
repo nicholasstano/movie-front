@@ -29,11 +29,11 @@ import gobletoffire from '../photos/gobletoffire.jpg'
 import orderofthephoenix from '../photos/orderofthephoenix.jpg'
 import speakerforthedead from '../photos/speakerforthedead.jpg'
 
-let moviePosterArray = [pulpfiction, taxidriver, chinatown, godfather, usualsuspects]
-let boardGameArray = [terramystica, concordia, dominion, sevenwonders, powergrid]
-let albumArray = [computerwelt, safeasmilk, arthur, lamb, hotrats]
-let videoGameArray = [warcraft3tft, supermario64, goldeneye, baldursgate, sonic]
+let movies = [pulpfiction, taxidriver, chinatown, godfather, usualsuspects]
+let boardGames = [terramystica, concordia, dominion, sevenwonders, powergrid]
+let albums = [computerwelt, safeasmilk, arthur, lamb, hotrats]
+let videoGames = [warcraft3tft, supermario64, goldeneye, baldursgate, sonic]
 let tvShows = [whoseline, thesimpsons, parksandrec, entourage, agentcarter]
 let books = [orderofthephoenix, speakerforthedead, chamberofsecrets, gobletoffire, endersshadow]
 
-export default { moviePosterArray, boardGameArray, albumArray, videoGameArray, tvShows, books }
+export default { movies, boardGames, albums, videoGames, tvShows, books }

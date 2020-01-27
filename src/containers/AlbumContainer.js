@@ -41,7 +41,7 @@ export class AlbumContainer extends Component {
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
         let albumReviews = this.searchAlbums().map(album => <AlbumReviewCard key={album.id} album={album} />)
-        let favoriteFiveAlbums = photos.albumArray.map((album, index) =>
+        let favoriteFiveAlbums = photos.albums.map((album, index) =>
             <div key={album}>
                 <p>{index + 1}</p>
                 <img src={album} alt={album} />
