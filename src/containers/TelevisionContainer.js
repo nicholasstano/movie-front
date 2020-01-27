@@ -5,6 +5,7 @@ import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
 import util from '../util'
+import photos from '../photos'
 
 export class TelevisionContainer extends Component {
 
@@ -39,10 +40,16 @@ export class TelevisionContainer extends Component {
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
         let tvReviews = this.searchShows().map(show => <TVShowReviewCard key={show.id} show={show} />)
+        let favoriteTVShows = photos.tvShows.map((show, index) =>
+            <div key={show}>
+                <p>{index + 1}</p>
+                <img src={show} alt={show} />
+            </div>)
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">TV Show Reviews</h1>
-                <p>I am not too into watching TV. I prefer movies. I am intimidated by the idea of getting into a show that has 5 seasons and 60+ episodes. At times I will bingewatch shows on say Netflix.</p>
+                <div className="mediaFavoriteFive">{favoriteTVShows}</div>
+                <p>Bad taste in TV shows? Probably. It is the type of media I visit the least.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.tvSearch} onChange={this.handleSearchTermChange} mediaName={"TV Shows"} />

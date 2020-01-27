@@ -5,6 +5,7 @@ import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
 import util from '../util'
+import photos from '../photos'
 
 export class AlbumContainer extends Component {
 
@@ -40,10 +41,16 @@ export class AlbumContainer extends Component {
         let uniqueYears = [...new Set(years)]
         let options = ["All years", ...uniqueYears]
         let albumReviews = this.searchAlbums().map(album => <AlbumReviewCard key={album.id} album={album} />)
+        let favoriteFiveAlbums = photos.albumArray.map((album, index) =>
+            <div key={album}>
+                <p>{index + 1}</p>
+                <img src={album} alt={album} />
+            </div>)
         return (
             <div className="mediaContainer">
                 <h1 className="mediaHeader">Album Reviews</h1>
-                <p>Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and skip no tracks. Recommendations? My favorites include Safe As Milk, Arthur (Or the Decline and Fall of the British Empire), Hot Rats, and Sticky Fingers.</p>
+                <div className="mediaFavoriteFive">{favoriteFiveAlbums}</div>
+                <p>Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and skip no tracks. I guess that's the same thing.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.albumSearch} onChange={this.handleSearchTermChange} mediaName={"Albums"} />
