@@ -3,12 +3,13 @@ import BoardForm from '../components/BoardForm.js'
 import AlbumForm from '../components/AlbumForm.js'
 import VideoForm from '../components/VideoForm.js'
 import TVShowForm from '../components/TVShowForm.js'
+import BookForm from '../components/BookForm.js'
 import MovieForm from '../components/MovieForm.js'
 import { url } from '../config'
 
 export class FormsContainer extends Component {
 
-    state = { movieForm: true, boardForm: true, albumForm: true, videoForm: true, tvForm: true }
+    state = { movieForm: true, boardForm: true, albumForm: true, videoForm: true, tvForm: true, bookForm: true }
 
     handleMovieSubmit = (movie) => {
         fetch(`${url}/movies`, {
@@ -108,6 +109,26 @@ export class FormsContainer extends Component {
         })
     }
 
+    handleBookSubmit = (book) => {
+        fetch(`${url}/books`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: book.name,
+                month_day_read: book.monthRead,
+                year_read: book.yearRead,
+                notes: book.notes,
+                year: book.year,
+                rating: book.rating,
+                image: book.image,
+                author: book.author
+            })
+        })
+    }
+
     toggleMovieForm = () => {
         this.setState({ movieForm: !this.state.movieForm })
     }
@@ -124,6 +145,10 @@ export class FormsContainer extends Component {
         this.setState({ videoForm: !this.state.videoForm })
     }
 
+    toggleBookForm = () => {
+        this.setState({ bookForm: !this.state.bookForm })
+    }
+
     toggleTVForm = () => {
         this.setState({ tvForm: !this.state.tvForm })
     }
@@ -135,7 +160,7 @@ export class FormsContainer extends Component {
                 {this.state.boardForm ? <div><p onClick={this.toggleBoardForm}>Open Board Game Form</p></div> : <BoardForm handleBoardSubmit={this.handleBoardSubmit} toggleBoardForm={this.toggleBoardForm} />}
                 {this.state.albumForm ? <div><p onClick={this.toggleAlbumForm}>Open Album Form</p></div> : <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} toggleAlbumForm={this.toggleAlbumForm} />}
                 {this.state.videoForm ? <div><p onClick={this.toggleVideoForm}>Open Video Game Form</p></div> : <VideoForm handleVideoSubmit={this.handleVideoSubmit} toggleVideoForm={this.toggleVideoForm} />}
-                {this.state.tvForm ? <div><p onClick={this.toggleTVForm}>Open TV Show Form</p></div> : <TVShowForm handleTVSubmit={this.handleTVSubmit} toggleTVForm={this.toggleTVForm} />}
+                {this.state.bookForm ? <div><p onClick={this.toggleBookForm}>Open Book Form</p></div> : <BookForm handleBookSubmit={this.handleBookSubmit} toggleBookForm={this.toggleBookForm} />}                {this.state.tvForm ? <div><p onClick={this.toggleTVForm}>Open TV Show Form</p></div> : <TVShowForm handleTVSubmit={this.handleTVSubmit} toggleTVForm={this.toggleTVForm} />}
             </div>
         )
     }

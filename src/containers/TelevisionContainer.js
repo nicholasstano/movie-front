@@ -24,6 +24,7 @@ export class TelevisionContainer extends Component {
     searchShows = () => {
         return util.searchMedia(this.state.selectedYear, "name", this.state.tvSearch)
     }
+
     changeYear = (event) => {
         let allShows = this.state.tvReviews
         let yearsShows = this.state.tvReviews.filter(show => show.year_watched === event.value)
