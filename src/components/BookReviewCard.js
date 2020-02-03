@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import bookPhotos from '../photos/books'
 
 export class BookReviewCard extends Component {
 
     state = { description: false }
 
-    stars = () => {
+    stars() {
         let s = ""
         for (let i = 0; i < this.props.book.rating[0]; i++) {
             s = s + "⭑"
@@ -21,7 +22,7 @@ export class BookReviewCard extends Component {
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.book.name} ({this.props.book.year})</ul>
                         <ul>{this.props.book.author}</ul>
                     </div>
-                    <img src={this.props.book.image} alt={this.props.book.name} />
+                    <img src={bookPhotos[this.props.book.image]} alt={this.props.book.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
                     <p>Notes: {this.props.book.notes}</p>

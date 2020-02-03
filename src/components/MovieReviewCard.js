@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import moviePhotos from '../photos/movies'
 
 export class MovieReviewCard extends Component {
 
@@ -21,7 +22,7 @@ export class MovieReviewCard extends Component {
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.movie.name} ({this.props.movie.year})</ul>
                         <ul>{this.props.movie.director}</ul>
                     </div>
-                    <img src={this.props.movie.image} alt={this.props.movie.name} />
+                    <img src={moviePhotos[this.props.movie.image]} alt={this.props.movie.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
                     <p>Notes: {this.props.movie.notes}</p>
