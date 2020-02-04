@@ -8,25 +8,25 @@ export class NavBar extends Component {
             <div>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <Link className="navbar-brand" to="/">
-                        <button type="button" class="btn btn-outline-dark">onats</button>
+                        <button type="button" className="btn btn-outline-dark">onats</button>
                     </Link>
                     <Link className="navbar-brand" to="/movies">
-                        <button type="button" class="btn btn-outline-dark">movies</button>
+                        <button type="button" className="btn btn-outline-dark">Movies</button>
                     </Link>
                     <Link className="navbar-brand" to="/boards">
-                        <button type="button" class="btn btn-outline-dark">board games</button>
+                        <button type="button" className="btn btn-outline-dark">Board Games</button>
                     </Link>
                     <Link className="navbar-brand" to="/albums">
-                        <button type="button" class="btn btn-outline-dark">albums</button>
+                        <button type="button" className="btn btn-outline-dark">Albums</button>
                     </Link>
                     <Link className="navbar-brand" to="/videos">
-                        <button type="button" class="btn btn-outline-dark">video games</button>
+                        <button type="button" className="btn btn-outline-dark">Video Games</button>
                     </Link>
                     <Link className="navbar-brand" to="/books">
-                        <button type="button" class="btn btn-outline-dark">books</button>
+                        <button type="button" className="btn btn-outline-dark">Books</button>
                     </Link>
                     <Link className="navbar-brand" to="/television">
-                        <button type="button" class="btn btn-outline-dark">television</button>
+                        <button type="button" className="btn btn-outline-dark">Television</button>
                     </Link>
                 </nav>
             </div>

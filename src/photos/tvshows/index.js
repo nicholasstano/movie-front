@@ -1,3 +1,3 @@
-import entoruage5 from '../movies/entourage5.jpg'
+import entourage5 from '../tvshows/entourage5.jpg'
 
-export default { entourage }
+export default { entourage5 }

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import tvPhotos from '../photos/tvshows'
+
 
 export class TVShowReviewCard extends Component {
 
@@ -21,7 +23,7 @@ export class TVShowReviewCard extends Component {
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.show.name} ({this.props.show.year})</ul>
                         <ul>Season {this.props.show.season}</ul>
                     </div>
-                    <img src={this.props.show.image} alt={this.props.show.name} />
+                    <img src={tvPhotos[this.props.show.image]} alt={this.props.show.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
                     <p>Notes: {this.props.show.notes}</p>
