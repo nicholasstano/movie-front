@@ -3,23 +3,23 @@
 }
 
 .app {
-  background-color: #fceed1;
+  background-color: #F8F8F8;
 }
 
 body {
-  background-color: #fceed1;
+  background-color: #F8F8F8;
 }
 
 ::placeholder {
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 input {
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   width: 85%;
   border: black;
   border-style: solid;
@@ -28,8 +28,8 @@ input {
 }
 
 textarea {
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   width: 85%;
   height: 300px;
   border: black;
@@ -39,7 +39,7 @@ textarea {
 }
 
 a {
-  color:#7d3cff;
+  color:#5cb85c;
 }
 
 a:hover {
@@ -50,8 +50,8 @@ a:hover {
   border-style: solid;
   border-radius: 5%;
   border-color: black;
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   display: grid;
   grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
   margin: 0.25%;
@@ -62,8 +62,8 @@ a:hover {
   border-style: solid;
   border-radius: 5%;
   border-color: black;
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 0.25%;
@@ -97,8 +97,8 @@ a:hover {
 
 .mediaContainer {
   display: grid;
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   padding-bottom: 10px;
 }
 
@@ -118,11 +118,11 @@ a:hover {
 }
 
 .Dropdown-arrow-wrapper {
-  background-color: #fceed1;
+  background-color: #F8F8F8;
 }
 
 .Dropdown-placeholder {
-  color:#7d3cff;
+  color:#5cb85c;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -131,8 +131,8 @@ a:hover {
   border-style: solid;
   border-radius: 3.25%;
   border-color: black;
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   border-width: thin;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -156,8 +156,8 @@ a:hover {
   border-radius: 5px;
   border-width: thin;
   border-color: black;
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   padding: 0.25%;
   margin: 0.03125% 1.5%;
 }
@@ -171,8 +171,8 @@ a:hover {
 }
 
 .mediaReviewSearchBox {
-  color:#7d3cff;
-  background-color: #fceed1;
+  color:#5cb85c;
+  background-color: #F8F8F8;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
 }
