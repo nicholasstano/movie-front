@@ -5,7 +5,7 @@ import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import { url } from '../config'
 import util from '../util'
-import photos from '../photos'
+import photos from '../photos/favorites'
 
 export class VideoContainer extends Component {
 
