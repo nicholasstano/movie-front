@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import videogames from '../photos/videogames'
 
 export class VideoReviewCard extends Component {
 
@@ -20,7 +21,7 @@ export class VideoReviewCard extends Component {
                         <ul>{this.props.video.month_day_played}/{this.props.video.year_played}</ul>
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.video.name} ({this.props.video.year})</ul>
                     </div>
-                    <img src={this.props.video.image} alt={this.props.video.name} />
+                    <img src={videogames[this.props.video.image]} alt={this.props.video.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
                     <p>Notes: {this.props.video.notes}</p>
