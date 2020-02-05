@@ -7,6 +7,7 @@ import BookContainer from '../src/containers/BookContainer.js'
 import AlbumContainer from '../src/containers/AlbumContainer.js'
 import TelevisionContainer from '../src/containers/TelevisionContainer.js'
 import FormsContainer from '../src/containers/FormsContainer.js'
+import LoginContainer from '../src/containers/LoginContainer.js'
 import NavBar from '../src/containers/NavBar.js'
 import Footer from '../src/containers/Footer.js'
 import Home from '../src/containers/Home.js'
@@ -19,6 +20,15 @@ export class App extends Component {
       <div className="app">
         <NavBar />
         <Switch>
+          <Route
+            path="/login"
+            render={() => {
+              return (
+                <div><LoginContainer />
+                  <Footer />
+                </div>
+              )
+            }} />
           <Route
             path="/forms"
             render={() => {

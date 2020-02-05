@@ -28,12 +28,13 @@ import endersshadow from '../favorites/endersshadow.jpg'
 import gobletoffire from '../favorites/gobletoffire.jpg'
 import orderofthephoenix from '../favorites/orderofthephoenix.jpg'
 import speakerforthedead from '../favorites/speakerforthedead.jpg'
+import conchords from '../favorites/conchords.jpg'
 
 let movies = [pulpfiction, taxidriver, chinatown, godfather, usualsuspects]
 let boardGames = [terramystica, concordia, dominion, sevenwonders, powergrid]
 let albums = [computerwelt, safeasmilk, arthur, lamb, hotrats]
 let videoGames = [warcraft3tft, supermario64, goldeneye, baldursgate, sonic]
-let tvShows = [whoseline, thesimpsons, parksandrec, entourage, agentcarter]
+let tvShows = [whoseline, thesimpsons, conchords, parksandrec, entourage]
 let books = [orderofthephoenix, speakerforthedead, chamberofsecrets, gobletoffire, endersshadow]
 
 export default { movies, boardGames, albums, videoGames, tvShows, books }
