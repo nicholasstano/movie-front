@@ -6,30 +6,31 @@ export class NavBar extends Component {
     render() {
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <Link className="navbar-brand" to="/">
-                        <button type="button" className="btn btn-outline-dark">onats</button>
+                        <button type="button" className="btn-sm btn-light">onats</button>
                     </Link>
                     <Link className="navbar-brand" to="/movies">
-                        <button type="button" className="btn btn-outline-dark">Movies</button>
+                        <button type="button" className="btn-sm btn-secondary">Movies</button>
                     </Link>
                     <Link className="navbar-brand" to="/boards">
-                        <button type="button" className="btn btn-outline-dark">Board Games</button>
+                        <button type="button" className="btn-sm btn-secondary">Board Games</button>
                     </Link>
                     <Link className="navbar-brand" to="/albums">
-                        <button type="button" className="btn btn-outline-dark">Albums</button>
+                        <button type="button" className="btn-sm btn-secondary">Albums</button>
                     </Link>
                     <Link className="navbar-brand" to="/videos">
-                        <button type="button" className="btn btn-outline-dark">Video Games</button>
+                        <button type="button" className="btn-sm btn-secondary">Video Games</button>
                     </Link>
                     <Link className="navbar-brand" to="/books">
-                        <button type="button" className="btn btn-outline-dark">Books</button>
+                        <button type="button" className="btn-sm btn-secondary">Books</button>
                     </Link>
                     <Link className="navbar-brand" to="/television">
-                        <button type="button" className="btn btn-outline-dark">Television</button>
+                        <button type="button" className="btn-sm btn-secondary">Television</button>
                     </Link>
                 </nav>
-            </div>
+            </div >
         )
     }
 }
