@@ -6,7 +6,6 @@ export class NavBar extends Component {
     render() {
         return (
             <div>
-
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <Link className="navbar-brand" to="/">
                         <button type="button" className="btn-sm btn-light">onats</button>

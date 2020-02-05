@@ -15,29 +15,35 @@ import { withRouter, Switch, Route } from 'react-router-dom'
 
 export class App extends Component {
 
+  state = { userName: null }
+
+  setUser = u => {
+    this.setState({ userName: u })
+  }
+
   render() {
     return (
       <div className="app">
         <NavBar />
         <Switch>
-          <Route
-            path="/login"
-            render={() => {
-              return (
-                <div><LoginContainer />
-                  <Footer />
-                </div>
-              )
-            }} />
-          <Route
-            path="/forms"
-            render={() => {
-              return (
-                <div><FormsContainer />
-                  <Footer />
-                </div>
-              )
-            }} />
+          {this.state.userName !== "admin" ?
+            <Route
+              path="/login"
+              render={() => {
+                return (
+                  <div><LoginContainer setUser={this.setUser} />
+                  </div>
+                )
+              }} /> :
+            <Route
+              path="/forms"
+              render={() => {
+                return (
+                  <div><FormsContainer />
+                    <Footer />
+                  </div>
+                )
+              }} />}
           <Route
             path="/movies"
             render={() => {
