@@ -10,6 +10,7 @@ export class VideoForm extends Component {
         year: "",
         rating: "",
         image: "",
+        improveNotes: ""
     }
 
     handleTextChange = (event) => {
@@ -27,7 +28,8 @@ export class VideoForm extends Component {
             year: "",
             rating: "",
             image: "",
-            artist: ""
+            artist: "",
+            improveNotes: ""
         })
     }
 
@@ -57,6 +59,9 @@ export class VideoForm extends Component {
                 </ul>
                 <ul>
                     <textarea name="notes" value={this.state.notes} placeholder="Video Game Playthrough Notes" onChange={this.handleTextChange} />
+                </ul>
+                <ul>
+                    <textarea name="improveNotes" value={this.state.improveNotes} placeholder="Video Game Could Be Better Notes" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>

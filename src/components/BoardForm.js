@@ -9,7 +9,8 @@ export class BoardForm extends Component {
         notes: "",
         year: "",
         rating: "",
-        image: ""
+        image: "",
+        improveNotes: ""
     }
 
     handleTextChange = (event) => {
@@ -26,7 +27,8 @@ export class BoardForm extends Component {
             notes: "",
             year: "",
             rating: "",
-            image: ""
+            image: "",
+            improveNotes: ""
         })
     }
 
@@ -49,13 +51,16 @@ export class BoardForm extends Component {
                     <input type="text" name="year" value={this.state.year} placeholder="Year Released (ex: 2012)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="image" value={this.state.image} placeholder="Image URL (ex: https://cf.geekdo-images.com/itemrep/img/zm6mWUEYg2Yco_sJpjmN1DBZZv8=/fit-in/246x300/pic1356616.jpg)" onChange={this.handleTextChange} />
+                    <input type="text" name="image" value={this.state.image} placeholder="terramystica)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 5/5)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <textarea name="notes" value={this.state.notes} placeholder="Board Game Session Notes" onChange={this.handleTextChange} />
+                </ul>
+                <ul>
+                    <textarea name="improveNotes" value={this.state.improveNotes} placeholder="Could Be Better" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>

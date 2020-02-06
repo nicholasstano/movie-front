@@ -10,7 +10,8 @@ export class TVShowForm extends Component {
         year: "",
         rating: "",
         image: "",
-        season: ""
+        season: "",
+        improveNotes: ""
     }
 
     handleTextChange = (event) => {
@@ -28,7 +29,8 @@ export class TVShowForm extends Component {
             year: "",
             rating: "",
             image: "",
-            season: ""
+            season: "",
+            improveNotes: ""
         })
     }
 
@@ -60,7 +62,10 @@ export class TVShowForm extends Component {
                     <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 3/5)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <textarea name="notes" value={this.state.notes} placeholder="Season Notes" onChange={this.handleTextChange} />
+                    <textarea name="notes" value={this.state.notes} placeholder="Good Season Notes" onChange={this.handleTextChange} />
+                </ul>
+                <ul>
+                    <textarea name="improveNotes" value={this.state.improveNotes} placeholder="Could Be Better Season Notes" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>

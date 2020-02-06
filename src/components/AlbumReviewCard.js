@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import albumPhotos from '../photos/albums'
+
 
 export class AlbumReviewCard extends Component {
 
@@ -21,10 +23,13 @@ export class AlbumReviewCard extends Component {
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.album.name} ({this.props.album.year})</ul>
                         <ul>{this.props.album.artist}</ul>
                     </div>
-                    <img src={this.props.album.image} alt={this.props.album.name} />
+                    <img src={albumPhotos[this.props.album.image]} alt={this.props.album.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
-                    <p>Notes: {this.props.album.notes}</p>
+                    <div>
+                        <p>The Good: {this.props.album.notes}</p>
+                        <p>The Could Be Better: {this.props.album.improve_notes}</p>
+                    </div>
                 </div>
                 :
                 <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.album.month_day_played}/{this.props.album.year_played} - {this.props.album.name} ({this.props.album.year})</div>

@@ -10,7 +10,8 @@ export class MovieForm extends Component {
         year: "",
         director: "",
         rating: "",
-        image: ""
+        image: "",
+        improveNotes: ""
     }
 
     handleMovieReviewChange = (event) => {
@@ -28,7 +29,8 @@ export class MovieForm extends Component {
             year: "",
             director: "",
             rating: "",
-            image: ""
+            image: "",
+            improveNotes: ""
         })
     }
 
@@ -60,7 +62,10 @@ export class MovieForm extends Component {
                     <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 5/5)" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
-                    <textarea name="notes" value={this.state.notes} placeholder="Movie Session Notes" onChange={this.handleMovieReviewChange} />
+                    <textarea name="notes" value={this.state.notes} placeholder="The Good Movie Session Notes" onChange={this.handleMovieReviewChange} />
+                </ul>
+                <ul>
+                    <textarea name="improveNotes" value={this.state.improveNotes} placeholder="The Could Be Better Movie Session Notes" onChange={this.handleMovieReviewChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>

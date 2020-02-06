@@ -10,7 +10,8 @@ export class BookForm extends Component {
         year: "",
         rating: "",
         image: "",
-        author: ""
+        author: "",
+        improveNotes: ""
     }
 
     handleTextChange = (event) => {
@@ -28,7 +29,8 @@ export class BookForm extends Component {
             year: "",
             rating: "",
             image: "",
-            author: ""
+            author: "",
+            improveNotes: ""
         })
     }
 
@@ -60,7 +62,10 @@ export class BookForm extends Component {
                     <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 5/5)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <textarea name="notes" value={this.state.notes} placeholder="Book Notes" onChange={this.handleTextChange} />
+                    <textarea name="notes" value={this.state.notes} placeholder="Good Book Notes" onChange={this.handleTextChange} />
+                </ul>
+                <ul>
+                    <textarea name="improveNotes" value={this.state.improveNotes} placeholder="Could Be Better Book Notes" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>
