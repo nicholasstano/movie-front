@@ -10,7 +10,8 @@ export class AlbumForm extends Component {
         year: "",
         rating: "",
         image: "",
-        artist: ""
+        artist: "",
+        improveNotes: ""
     }
 
     handleTextChange = (event) => {
@@ -28,7 +29,8 @@ export class AlbumForm extends Component {
             year: "",
             rating: "",
             image: "",
-            artist: ""
+            artist: "",
+            improveNotes: ""
         })
     }
 
@@ -54,13 +56,16 @@ export class AlbumForm extends Component {
                     <input type="text" name="year" value={this.state.year} placeholder="Year Released (ex: 1977)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <input type="text" name="image" value={this.state.image} placeholder="Image URL (ex: https://upload.wikimedia.org/wikipedia/en/5/57/Trans-Europe_Express_German.png)" onChange={this.handleTextChange} />
+                    <input type="text" name="image" value={this.state.image} placeholder="transeuropaexpress" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <input type="text" name="rating" value={this.state.rating} placeholder="Rating (ex: 5/5)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
-                    <textarea name="notes" value={this.state.notes} placeholder="Album Notes" onChange={this.handleTextChange} />
+                    <textarea name="notes" value={this.state.notes} placeholder="The Good" onChange={this.handleTextChange} />
+                </ul>
+                <ul>
+                    <textarea name="improveNotes" value={this.state.improveNotes} placeholder="The Could Be Better" onChange={this.handleTextChange} />
                 </ul>
                 <ul>
                     <button>Submit</button>

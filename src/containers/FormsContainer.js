@@ -9,26 +9,13 @@ import { url } from '../config'
 
 export class FormsContainer extends Component {
 
-    state = { movieForm: true, boardForm: true, albumForm: true, videoForm: true, tvForm: true, bookForm: true }
-
-    handleMovieSubmit = (movie) => {
-        fetch(`${url}/movies`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: movie.name,
-                month_day_watched: movie.monthWatched,
-                year_watched: movie.yearWatched,
-                notes: movie.notes,
-                director: movie.director,
-                year: movie.year,
-                rating: movie.rating,
-                image: movie.image
-            })
-        })
+    state = {
+        albumForm: true,
+        boardForm: true,
+        bookForm: true,
+        movieForm: true,
+        tvForm: true,
+        videoForm: true,
     }
 
     handleAlbumSubmit = (album) => {
@@ -46,7 +33,28 @@ export class FormsContainer extends Component {
                 notes: album.notes,
                 year: album.year,
                 rating: album.rating,
-                image: album.image
+                image: album.image,
+                improve_notes: album.improveNotes
+            })
+        })
+    }
+
+    handleMovieSubmit = (movie) => {
+        fetch(`${url}/movies`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: movie.name,
+                month_day_watched: movie.monthWatched,
+                year_watched: movie.yearWatched,
+                notes: movie.notes,
+                director: movie.director,
+                year: movie.year,
+                rating: movie.rating,
+                image: movie.image
             })
         })
     }
