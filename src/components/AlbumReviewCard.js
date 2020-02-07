@@ -6,7 +6,7 @@ export class AlbumReviewCard extends Component {
 
     state = { description: false }
 
-    stars = () => {
+    stars() {
         let s = ""
         for (let i = 0; i < this.props.album.rating[0]; i++) {
             s = s + "⭑"

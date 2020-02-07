@@ -38,9 +38,6 @@ export class BookForm extends Component {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>
-                    <p onClick={this.props.toggleBookForm}>Close Book Form</p>
-                </ul>
-                <ul>
                     <input type="text" name="monthRead" value={this.state.monthRead} placeholder="Month/Day Read (ex: 05/19)" onChange={this.handleTextChange} />
                 </ul>
                 <ul>

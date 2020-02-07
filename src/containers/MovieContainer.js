@@ -56,12 +56,6 @@ export class MovieContainer extends Component {
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.movieSearch} onChange={this.handleSearchTermChange} mediaName={"Movies"} />
                 </div>
-                {/* <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Active</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </nav> */}
                 {movieReviews}
             </div >
         );

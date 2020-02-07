@@ -5,7 +5,7 @@ export class VideoReviewCard extends Component {
 
     state = { description: false }
 
-    stars = () => {
+    stars() {
         let s = ""
         for (let i = 0; i < this.props.video.rating[0]; i++) {
             s = s + "⭑"
@@ -24,7 +24,10 @@ export class VideoReviewCard extends Component {
                     <img src={videogames[this.props.video.image]} alt={this.props.video.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
-                    <p>Notes: {this.props.video.notes}</p>
+                    <div>
+                        <p>The Good: {this.props.video.notes}</p>
+                        <p>The Could Be Better: {this.props.video.improve_notes}</p>
+                    </div>
                 </div>
                 :
                 <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.video.month_day_played}/{this.props.video.year_played} - {this.props.video.name} ({this.props.video.year})</div>

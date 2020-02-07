@@ -25,7 +25,10 @@ export class BookReviewCard extends Component {
                     <img src={bookPhotos[this.props.book.image]} alt={this.props.book.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
-                    <p>Notes: {this.props.book.notes}</p>
+                    <div>
+                        <p>The Good: {this.props.book.notes}</p>
+                        <p>The Could Be Better: {this.props.book.improve_notes}</p>
+                    </div>
                 </div>
                 :
                 <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.book.month_day_read}/{this.props.book.year_read} - {this.props.book.name} ({this.props.book.year})</div>

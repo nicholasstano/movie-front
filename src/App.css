@@ -166,3 +166,8 @@ a:hover {
   width: 50%;
   height: auto;
 }
+
+.formsContainer {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}

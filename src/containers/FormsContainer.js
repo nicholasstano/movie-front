@@ -10,12 +10,12 @@ import { url } from '../config'
 export class FormsContainer extends Component {
 
     state = {
-        albumForm: true,
-        boardForm: true,
-        bookForm: true,
-        movieForm: true,
-        tvForm: true,
-        videoForm: true,
+        albumForm: false,
+        boardForm: false,
+        bookForm: false,
+        movieForm: false,
+        tvForm: false,
+        videoForm: false,
     }
 
     handleAlbumSubmit = (album) => {
@@ -142,39 +142,58 @@ export class FormsContainer extends Component {
         })
     }
 
-    toggleMovieForm = () => {
-        this.setState({ movieForm: !this.state.movieForm })
-    }
-
-    toggleBoardForm = () => {
-        this.setState({ boardForm: !this.state.boardForm })
-    }
-
     toggleAlbumForm = () => {
-        this.setState({ albumForm: !this.state.albumForm })
+        this.setState({ albumForm: true, boardForm: false, bookForm: false, movieForm: false, tvForm: false, videoForm: false })
     }
-
-    toggleVideoForm = () => {
-        this.setState({ videoForm: !this.state.videoForm })
+    toggleBoardForm = () => {
+        this.setState({ albumForm: false, boardForm: true, bookForm: false, movieForm: false, tvForm: false, videoForm: false })
     }
-
     toggleBookForm = () => {
-        this.setState({ bookForm: !this.state.bookForm })
+        this.setState({ albumForm: false, boardForm: false, bookForm: true, movieForm: false, tvForm: false, videoForm: false })
     }
-
+    toggleMovieForm = () => {
+        this.setState({ albumForm: false, boardForm: false, bookForm: false, movieForm: true, tvForm: false, videoForm: false })
+    }
     toggleTVForm = () => {
-        this.setState({ tvForm: !this.state.tvForm })
+        this.setState({ albumForm: false, boardForm: false, bookForm: false, movieForm: false, tvForm: true, videoForm: false })
+    }
+    toggleVideoForm = () => {
+        this.setState({ albumForm: false, boardForm: false, bookForm: false, movieForm: false, tvForm: false, videoForm: true })
     }
 
     render() {
         return (
-            <div className="mediaContainer">
-                {this.state.albumForm ? <div><p onClick={this.toggleAlbumForm}>Open Album Form</p></div> : <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} toggleAlbumForm={this.toggleAlbumForm} />}
-                {this.state.boardForm ? <div><p onClick={this.toggleBoardForm}>Open Board Game Form</p></div> : <BoardForm handleBoardSubmit={this.handleBoardSubmit} toggleBoardForm={this.toggleBoardForm} />}
-                {this.state.bookForm ? <div><p onClick={this.toggleBookForm}>Open Book Form</p></div> : <BookForm handleBookSubmit={this.handleBookSubmit} toggleBookForm={this.toggleBookForm} />}
-                {this.state.movieForm ? <div><p onClick={this.toggleMovieForm}>Open Movie Form</p></div> : <MovieForm handleMovieSubmit={this.handleMovieSubmit} toggleMovieForm={this.toggleMovieForm} />}
-                {this.state.tvForm ? <div><p onClick={this.toggleTVForm}>Open TV Show Form</p></div> : <TVShowForm handleTVSubmit={this.handleTVSubmit} toggleTVForm={this.toggleTVForm} />}
-                {this.state.videoForm ? <div><p onClick={this.toggleVideoForm}>Open Video Game Form</p></div> : <VideoForm handleVideoSubmit={this.handleVideoSubmit} toggleVideoForm={this.toggleVideoForm} />}
+            <div className="formsContainer">
+                <div>
+                    <ul className="nav flex-column navbar-dark bg-dark">
+                        <li className="nav-item">
+                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleAlbumForm}>Albums Form</button>
+                        </li>
+                        <li className="nav-item">
+                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleBoardForm}>Board Games Form</button>
+                        </li>
+                        <li className="nav-item">
+                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleBookForm}>Books Form</button>
+                        </li>
+                        <li className="nav-item">
+                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleMovieForm}>Movies Form</button>
+                        </li>
+                        <li className="nav-item">
+                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleTVForm}>TV Shows Form</button>
+                        </li>
+                        <li className="nav-item">
+                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleVideoForm}>Video Games Form</button>
+                        </li>
+                    </ul>
+                </div>
+                <div className="MediaContainer">
+                    {this.state.albumForm ? <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} toggleAlbumForm={this.toggleAlbumForm} /> : null}
+                    {this.state.boardForm ? <BoardForm handleBoardSubmit={this.handleBoardSubmit} toggleBoardForm={this.toggleBoardForm} /> : null}
+                    {this.state.bookForm ? <BookForm handleBookSubmit={this.handleBookSubmit} toggleBookForm={this.toggleBookForm} /> : null}
+                    {this.state.movieForm ? <MovieForm handleMovieSubmit={this.handleMovieSubmit} toggleMovieForm={this.toggleMovieForm} /> : null}
+                    {this.state.tvForm ? <TVShowForm handleTVSubmit={this.handleTVSubmit} toggleTVForm={this.toggleTVForm} /> : null}
+                    {this.state.videoForm ? <VideoForm handleVideoSubmit={this.handleVideoSubmit} toggleVideoForm={this.toggleVideoForm} /> : null}
+                </div>
             </div>
         )
     }
