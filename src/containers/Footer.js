@@ -5,10 +5,8 @@ export class Footer extends Component {
     render() {
         return (
             <div className="footer">
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <p onClick={() => window.scrollTo(0, 0)}>
-                        back to the front, I mean top...
-                </p>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <button type="button" className="btn-sm btn-light" onClick={() => window.scrollTo(0, 0)}>Top</button>
                 </nav>
             </div>
         )

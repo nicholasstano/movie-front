@@ -163,9 +163,11 @@ export class FormsContainer extends Component {
 
     render() {
         return (
-            <div className="formsContainer">
-                <div>
-                    <ul className="nav flex-column navbar-dark bg-dark">
+            <div className="">
+                <div className="formsSidebar">
+                    <ul className="nav flex-column 
+                    // navbar-dark bg-dark"
+                    >
                         <li className="nav-item">
                             <button type="button" className="btn-sm btn-secondary" onClick={this.toggleAlbumForm}>Albums Form</button>
                         </li>
@@ -186,7 +188,7 @@ export class FormsContainer extends Component {
                         </li>
                     </ul>
                 </div>
-                <div className="MediaContainer">
+                <div className="formsContainer">
                     {this.state.albumForm ? <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} toggleAlbumForm={this.toggleAlbumForm} /> : null}
                     {this.state.boardForm ? <BoardForm handleBoardSubmit={this.handleBoardSubmit} toggleBoardForm={this.toggleBoardForm} /> : null}
                     {this.state.bookForm ? <BookForm handleBookSubmit={this.handleBookSubmit} toggleBookForm={this.toggleBookForm} /> : null}

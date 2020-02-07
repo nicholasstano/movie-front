@@ -5,7 +5,7 @@ import 'react-dropdown/style.css'
 export class NavBar extends Component {
     render() {
         return (
-            <div>
+            <div className="topNavbar">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                     <Link className="navbar-brand" to="/">
                         <button type="button" className="btn-sm btn-light">onats</button>

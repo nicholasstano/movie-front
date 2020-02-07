@@ -48,7 +48,14 @@ a:hover {
 
 .footer {
   bottom: 0;
+  width: 100%;
   position: relative;
+}
+
+.footer nav button {
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%
 }
 
 .homeHeader {
@@ -67,6 +74,7 @@ a:hover {
   color:#080808;
   background-color: #FFFFFF	;
   padding-bottom: 10px;
+  padding-top: 58px;
 }
 
 .mediaContainer p {
@@ -168,6 +176,21 @@ a:hover {
 }
 
 .formsContainer {
-  display: grid;
-  grid-template-columns: 20% 80%;
+  padding: 10%;
+}
+
+.formsSidebar {
+  top: 58px; 
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.topNavbar {
+  position: fixed;
+  width: 100%;
 }
