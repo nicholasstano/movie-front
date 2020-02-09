@@ -33,18 +33,20 @@ export class LoginContainer extends Component {
 
     render() {
         return (
-            <div className="login">
-                <form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
-                        <label >Username</label>
-                        <input type="text" className="form-control" name="username" value={this.state.username} onChange={this.handleChange} />
-                    </div>
-                    <div className="form-group">
-                        <label>Password</label>
-                        <input type="password" className="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+            <div className="mediaContainer">
+                <div className="login">
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="form-group">
+                            <label >Username</label>
+                            <input type="text" className="form-control" name="username" value={this.state.username} onChange={this.handleChange} />
+                        </div>
+                        <div className="form-group">
+                            <label>Password</label>
+                            <input type="password" className="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
+                        </div>
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </form>
+                </div>
             </div>
         )
     }
