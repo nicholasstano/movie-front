@@ -7,7 +7,7 @@ export class Home extends Component {
 
     render() {
         return (
-            <div className="mediaContainer">
+            <div className="homeContainer">
                 <NameAndPhoto />
                 <AboutMe />
                 <FavoriteMedia />

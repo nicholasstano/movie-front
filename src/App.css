@@ -6,15 +6,23 @@
   background-color: #FFFFFF	;
 }
 
-body {
-  background-color: #FFFFFF	;
-}
-
 ::placeholder {
   color:#080808;
   background-color: #FFFFFF	;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  color:#080808;
+}
+
+a:hover {
+  color: black;
+}
+
+body {
+  background-color: #FFFFFF	;
 }
 
 input {
@@ -38,12 +46,34 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-a {
-  color:#080808;
+.aboutMe {
+  padding: 10px;
 }
 
-a:hover {
-  color: black;
+.aboutMe h1 {
+  text-align: center;
+}
+
+.contact {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(3,33%);
+}
+
+.contact img {
+  width: 25%;
+  border: solid;
+  border-color: lightgrey;
+  border-radius: 15px;
+  background-color:  #f8f8f8;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact img:hover {
+  opacity: .5;
 }
 
 .footer {
@@ -58,8 +88,104 @@ a:hover {
   margin-right: 40%
 }
 
+.formsContainer {
+  padding: 10%;
+}
+
+.formsSidebar {
+  top: 58px; 
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.homeContainer {
+  display: grid;
+  color:#080808;
+  background-color: #FFFFFF;
+  padding-bottom: 10px; 
+  padding-top: 58px;
+}
+
+.homeFavoriteMedia {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+.homeFavoriteMedia p {
+  text-align: center
+}
+
+.homeFavoriteMediaHover {
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  opacity: 0.5;
+  border-color: black;
+}
+
+.homeFavoriteMediaHover p {
+  text-align: center
+}
+
+.homeFavoriteSix {
+  display: grid; 
+  grid-template-columns: repeat(3,33%);
+}
+
+.homeFavoriteSix img {
+  height: 362px;
+  width: 262px;
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 35px;
+}
+
 .homeHeader {
   text-align: center;
+}
+
+.mediaContainer {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  color:#080808;
+  background-color: #FFFFFF;
+  padding-bottom: 0px; 
+  padding-top: 48px;
+}
+
+.mediaFavoriteFive {
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  margin: 0.75%;
+  padding: 1.25%;
+}
+
+.mediaFavoriteFiveSingle img {
+  border: solid;
+  height: 100px;
+  width: 100px;
+  border-width: 2px;
+  border-radius: 100%;
+}
+
+.mediaForm {
+  border-style: solid;
+  border-radius: 5%;
+  border-width: thin;
+  margin: 0.75%;
+  padding: 1.25%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 50%);
 }
 
 .mediaHeader {
@@ -68,41 +194,22 @@ a:hover {
   text-align: center;
 }
 
-.mediaContainer {
-  display: grid;
-  color:#080808;
-  background-color: #FFFFFF;
-  padding-bottom: 10px; 
-  padding-top: 58px;
-}
-
-.mediaContainer p {
-  margin: 1.75%;
-  padding: 1.25%;
-}
-
-.mediaDropdown {
-  margin: 1.25% 30%;
-  padding: 1.25%;
-}
-
-.mediaDropAndSearch {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.Dropdown-arrow-wrapper {
-  background-color: #FFFFFF	;
-}
-
-.Dropdown-placeholder {
-  color:#080808;
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.mediaHome {
+  margin: 3.25%;
+  padding: 2%;
+  border: solid;
+  border-width: 0.80px;
+  border-radius: 15px;
 }
 
 .mediaReviewCard {
-  border-style: solid;
+  margin: 3.25%;
+  padding: 2%;
+  border: solid;
+  border-width: 0.80px;
+  border-radius: 15px;
+
+  /* border-style: solid;
   border-radius: 3.25%;
   border-color: black;
   color:#080808;
@@ -111,18 +218,15 @@ a:hover {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   padding: 0.25%;
-  margin: 0.03125% 1.5%;
+  margin: 0.03125% 1.5%; */
 }
 
 .mediaReviewCard img {
-  width: 100%;
-  height: auto;
-  border: solid;
   border-color: black;
-}
-
-.rating {
-  text-align: center;
+  height: 100px;
+  width: 100px;
+  border-width: 2px;
+  border-radius: 100%;
 }
 
 .mediaReviewList {
@@ -151,98 +255,13 @@ a:hover {
   font-size: 16px;
 }
 
-.mediaForm {
-  border-style: solid;
-  border-radius: 5%;
-  border-width: thin;
-  margin: 0.75%;
-  padding: 1.25%;
+.mediaSearch {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: 50% 50%;
 }
 
-.mediaFavoriteFive {
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
-  margin: 0.75%;
-  padding: 1.25%;
-}
-
-.mediaFavoriteFiveSingle img {
+.mediaSidebar {
   border: solid;
-  height: 200px;
-  width: 200px;
-  border: solid;
-  border-width: 2px;
-  border-radius: 100%;
-}
-
-.formsContainer {
-  padding: 10%;
-}
-
-.formsSidebar {
-  top: 58px; 
-  height: 100%;
-  width: 10%;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-}
-
-.topNavbar {
-  position: fixed;
-  width: 100%;
-  border: solid;
-  border-color: rgb(163, 155, 155);
-  border-radius: 6px;
-  display: grid;
-  grid-template-columns: 14% 14% 14% 16% 14% 14% 14%;
-}
-
-.topNavbar a {
-  text-align: center;
-}
-
-.homeFavoriteSix {
-  display: grid; 
-  grid-template-columns: repeat(3,33%);
-}
-
-.homeFavoriteSix img {
-  height: 362px;
-  width: 262px;
-  border: solid;
-  border-width: 1px;
-  border-color: black;
-  border-radius: 35px;
-}
-
-.homeFavoriteMedia {
-  display: grid;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-}
-
-.homeFavoriteMedia p {
-  text-align: center
-}
-
-.homeFavoriteMediaHover {
-  display: grid;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-  opacity: 0.5;
-  border-color: black;
-}
-
-.homeFavoriteMediaHover p {
-  text-align: center
 }
 
 .nameAndPhoto {
@@ -262,32 +281,20 @@ a:hover {
   width: 75%;
 }
 
-.contact {
-  display: grid;
-  padding: 10px;
-  grid-template-columns: repeat(3,33%);
-}
-
-.contact img {
-  width: 25%;
-  border: solid;
-  border-color: lightgrey;
-  border-radius: 15px;
-  background-color:  #f8f8f8;
-}
-
-.contact p {
+.rating {
   text-align: center;
 }
 
-.contact img:hover {
-  opacity: .5;
+.topNavbar {
+  position: fixed;
+  width: 100%;
+  border: solid;
+  border-color: rgb(163, 155, 155);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 14% 14% 14% 16% 14% 14% 14%;
 }
 
-.aboutMe {
-  padding: 10px;
-}
-
-.aboutMe h1 {
+.topNavbar a {
   text-align: center;
 }
