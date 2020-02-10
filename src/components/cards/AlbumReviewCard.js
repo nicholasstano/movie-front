@@ -15,6 +15,7 @@ export class AlbumReviewCard extends Component {
     }
 
     render() {
+        console.log(this.props.album)
         return (
             this.state.description ?
                 <div className="mediaReviewCard" key={this.props.album.id}>

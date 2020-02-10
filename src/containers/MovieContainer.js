@@ -42,13 +42,12 @@ export class MovieContainer extends Component {
         let options = ["All years", ...uniqueYears]
         let movieReviews = this.searchMovies().map(movie => <MovieReviewCard key={movie.id} movie={movie} />)
         let favoriteFiveMovies = photos.movies.map((movie, index) =>
-            <div key={movie}>
-                <p>{index + 1}</p>
+            <div className="mediaFavoriteFiveSingle" key={movie}>
                 <img src={movie} alt={movie} />
             </div>
         )
         return (
-            <div>
+            <div className="mediaContainer">
                 <h1 className="mediaHeader">Spoilers for all movies below!</h1>
                 <div className="mediaFavoriteFive">{favoriteFiveMovies}</div>
                 <p>WATCHLIST: Mildred Pierce, Double Indemnity, The Lost Weekend, Gilda, Brute Force, Out of the Past, White Heat, and The Treasure of the Sierra Madre.</p>

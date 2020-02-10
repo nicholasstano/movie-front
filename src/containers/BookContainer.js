@@ -42,8 +42,7 @@ export class BookContainer extends Component {
         let options = ["All years", ...uniqueYears]
         let bookReviews = this.searchBooks().map(book => <BookReviewCard key={book.id} book={book} />)
         let favoriteFiveBooks = photos.books.map((book, index) =>
-            <div key={book}>
-                <p>{index + 1}</p>
+            <div className="mediaFavoriteFiveSingle" key={book}>
                 <img src={book} alt={book} />
             </div>)
         return (

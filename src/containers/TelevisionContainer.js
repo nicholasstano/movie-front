@@ -42,8 +42,7 @@ export class TelevisionContainer extends Component {
         let options = ["All years", ...uniqueYears]
         let tvReviews = this.searchShows().map(show => <TVShowReviewCard key={show.id} show={show} />)
         let favoriteTVShows = photos.tvShows.map((show, index) =>
-            <div key={show}>
-                <p>{index + 1}</p>
+            <div className="mediaFavoriteFiveSingle" key={show}>
                 <img src={show} alt={show} />
             </div>)
         return (

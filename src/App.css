@@ -164,14 +164,18 @@ a:hover {
 
 .mediaFavoriteFive {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%; 
+  grid-template-columns: repeat(5, 20%);
   margin: 0.75%;
   padding: 1.25%;
 }
 
-.mediaFavoriteFive img {
-  width: 50%;
-  height: auto;
+.mediaFavoriteFiveSingle img {
+  border: solid;
+  height: 200px;
+  width: 200px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 100%;
 }
 
 .formsContainer {

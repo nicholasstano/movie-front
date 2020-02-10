@@ -42,8 +42,7 @@ export class VideoContainer extends Component {
         let options = ["All years", ...uniqueYears]
         let videoReviews = this.searchVideoGames().map(video => <VideoReviewCard key={video.id} video={video} />)
         let favoriteFiveVideoGames = photos.videoGames.map((vg, index) =>
-            <div key={vg}>
-                <p>{index + 1}</p>
+            <div className="mediaFavoriteFiveSingle" key={vg}>
                 <img src={vg} alt={vg} />
             </div>)
         return (
