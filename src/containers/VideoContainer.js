@@ -47,9 +47,9 @@ export class VideoContainer extends Component {
             </div>)
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">Video Game Reviews</h1>
+                <h1 className="mediaHeader font-weight-light">Video Game Reviews</h1>
                 <div className="mediaFavoriteFive">{favoriteFiveVideoGames}</div>
-                <p>Why discover new games when you can replay the old greats?</p>
+                <p className="font-weight-light">Why discover new games when you can replay the old greats?</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.videoSearch} onChange={this.handleSearchTermChange} mediaName={"Video Games"} />

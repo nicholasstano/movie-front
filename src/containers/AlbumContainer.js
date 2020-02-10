@@ -47,9 +47,9 @@ export class AlbumContainer extends Component {
             </div>)
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">Album Reviews</h1>
+                <h1 className="mediaHeader font-weight-light">Album Reviews</h1>
                 <div className="mediaFavoriteFive">{favoriteFiveAlbums}</div>
-                <p>Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and skip no tracks. I guess that's the same thing.</p>
+                <p className="font-weight-light">Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and skip no tracks. I guess that's the same thing.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.albumSearch} onChange={this.handleSearchTermChange} mediaName={"Albums"} />

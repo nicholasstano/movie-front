@@ -6,7 +6,7 @@ export class Footer extends Component {
         return (
             <div className="footer">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <button type="button" className="btn-sm btn-light" onClick={() => window.scrollTo(0, 0)}>Top</button>
+                    <button type="button" className="btn-sm btn-light font-weight-light" onClick={() => window.scrollTo(0, 0)}>Top</button>
                 </nav>
             </div>
         )

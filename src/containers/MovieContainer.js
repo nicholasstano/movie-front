@@ -48,9 +48,9 @@ export class MovieContainer extends Component {
         )
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">Spoilers for all movies below!</h1>
+                <h1 className="mediaHeader font-weight-light">Spoilers for all movies below!</h1>
                 <div className="mediaFavoriteFive">{favoriteFiveMovies}</div>
-                <p>WATCHLIST: Mildred Pierce, Double Indemnity, The Lost Weekend, Gilda, Brute Force, Out of the Past, White Heat, and The Treasure of the Sierra Madre.</p>
+                <p className="font-weight-light">WATCHLIST: Mildred Pierce, Double Indemnity, The Lost Weekend, Gilda, Brute Force, Out of the Past, White Heat, and The Treasure of the Sierra Madre.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.movieSearch} onChange={this.handleSearchTermChange} mediaName={"Movies"} />

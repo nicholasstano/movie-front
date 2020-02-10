@@ -48,9 +48,9 @@ export class BoardContainer extends Component {
         )
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">Board Game Sessions</h1>
+                <h1 className="mediaHeader font-weight-light">Board Game Sessions</h1>
                 <div className="mediaFavoriteFive">{favoriteFiveBoardGames}</div>
-                <p>Nerdy notes I took from sessions to track this for my own reason.</p>
+                <p className="font-weight-light">Nerdy notes I took from sessions to track this for my own reason.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown options={options} className="mediaDropdown" onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.boardSearch} onChange={this.handleSearchTermChange} mediaName={"Board Games"} />

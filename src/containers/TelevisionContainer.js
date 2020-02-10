@@ -47,9 +47,9 @@ export class TelevisionContainer extends Component {
             </div>)
         return (
             <div className="mediaContainer">
-                <h1 className="mediaHeader">TV Show Reviews</h1>
+                <h1 className="mediaHeader font-weight-light">TV Show Reviews</h1>
                 <div className="mediaFavoriteFive">{favoriteTVShows}</div>
-                <p>Bad taste in TV shows? Probably. It is the type of media I visit the least.</p>
+                <p className="font-weight-light">Bad taste in TV shows? Probably. It is the type of media I visit the least.</p>
                 <div className="mediaDropAndSearch">
                     <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
                     <MediaSearch value={this.state.tvSearch} onChange={this.handleSearchTermChange} mediaName={"TV Shows"} />
