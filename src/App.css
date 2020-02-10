@@ -71,8 +71,8 @@ a:hover {
 .mediaContainer {
   display: grid;
   color:#080808;
-  background-color: #FFFFFF	;
-  padding-bottom: 10px;
+  background-color: #FFFFFF;
+  padding-bottom: 10px; 
   padding-top: 58px;
 }
 
@@ -212,7 +212,9 @@ a:hover {
   height: 362px;
   width: 262px;
   border: solid;
+  border-width: 1px;
   border-color: black;
+  border-radius: 35px;
 }
 
 .homeFavoriteMedia {
