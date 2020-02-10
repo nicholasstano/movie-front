@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import tvPhotos from '../photos/tvshows'
+import tvPhotos from '../../photos/tvshows'
 
 export class TVShowReviewCard extends Component {
 

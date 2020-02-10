@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BoardReviewCard from '../components/BoardReviewCard.js'
+import BoardReviewCard from '../components/cards/BoardReviewCard.js'
 import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'

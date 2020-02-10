@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import videogames from '../photos/videogames'
+import videogames from '../../photos/videogames'
 
 export class VideoReviewCard extends Component {
 

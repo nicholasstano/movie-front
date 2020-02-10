@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import BoardForm from '../components/BoardForm.js'
-import AlbumForm from '../components/AlbumForm.js'
-import VideoForm from '../components/VideoForm.js'
-import TVShowForm from '../components/TVShowForm.js'
-import BookForm from '../components/BookForm.js'
-import MovieForm from '../components/MovieForm.js'
+import AlbumForm from '../components/forms/AlbumForm.js'
+import BoardForm from '../components/forms/BoardForm.js'
+import BookForm from '../components/forms/BookForm.js'
+import MovieForm from '../components/forms/MovieForm.js'
+import TVShowForm from '../components/forms/TVShowForm.js'
+import VideoForm from '../components/forms/VideoForm.js'
 import { url } from '../config'
 
 export class FormsContainer extends Component {

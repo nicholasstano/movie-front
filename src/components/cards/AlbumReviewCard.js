@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import albumPhotos from '../photos/albums'
+import albumPhotos from '../../photos/albums'
 
 
 export class AlbumReviewCard extends Component {

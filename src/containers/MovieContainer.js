@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import MovieReviewCard from '../components/MovieReviewCard.js'
+import MovieReviewCard from '../components/cards/MovieReviewCard.js'
 import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
@@ -48,7 +48,7 @@ export class MovieContainer extends Component {
             </div>
         )
         return (
-            <div className="mediaContainer">
+            <div>
                 <h1 className="mediaHeader">Spoilers for all movies below!</h1>
                 <div className="mediaFavoriteFive">{favoriteFiveMovies}</div>
                 <p>WATCHLIST: Mildred Pierce, Double Indemnity, The Lost Weekend, Gilda, Brute Force, Out of the Past, White Heat, and The Treasure of the Sierra Madre.</p>

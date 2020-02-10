@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import bookPhotos from '../photos/books'
+import bookPhotos from '../../photos/books'
 
 export class BookReviewCard extends Component {
 

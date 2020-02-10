@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BookReviewCard from '../components/BookReviewCard.js'
+import BookReviewCard from '../components/cards/BookReviewCard.js'
 import MediaSearch from '../components/MediaSearch.js'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'

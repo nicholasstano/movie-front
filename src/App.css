@@ -231,10 +231,57 @@ a:hover {
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
-  opacity: 0.2;
+  opacity: 0.5;
   border-color: black;
 }
 
 .homeFavoriteMediaHover p {
   text-align: center
+}
+
+.nameAndPhoto {
+  display: grid;
+  padding: 2.5% 4.5%;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.nameAndPhoto div {
+  background-color: #f8f8f8;
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nameAndPhoto img {
+  width: 75%;
+}
+
+.contact {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(3,33%);
+}
+
+.contact img {
+  width: 25%;
+  border: solid;
+  border-color: lightgrey;
+  border-radius: 15px;
+  background-color:  #f8f8f8;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact img:hover {
+  opacity: .5;
+}
+
+.aboutMe {
+  padding: 10px;
+}
+
+.aboutMe h1 {
+  text-align: center;
 }
