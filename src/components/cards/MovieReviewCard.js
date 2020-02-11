@@ -1,39 +1,32 @@
-import React, { Component } from 'react'
 import moviePhotos from '../../photos/movies'
+import React from 'react'
 
-export class MovieReviewCard extends Component {
-
-    state = { description: false }
-
-    stars() {
+export default function MovieReviewCard(props) {
+    function stars() {
         let s = ""
-        for (let i = 0; i < this.props.movie.rating[0]; i++) {
+        for (let i = 0; i < props.movie.rating[0]; i++) {
             s = s + "⭑"
         }
         return s
     }
-
-    render() {
-        return (
-            this.state.description ?
-                <div className="mediaReviewCard" key={this.props.movie.id}>
-                    <div>
-                        <ul>{this.props.movie.month_day_watched}/{this.props.movie.year_watched}</ul>
-                        <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.movie.name} ({this.props.movie.year})</ul>
-                        <ul>{this.props.movie.director}</ul>
-                    </div>
-                    <img src={moviePhotos[this.props.movie.image]} alt={this.props.movie.name} />
-                    <p className="rating">Rating: {this.stars()}
-                    </p>
-                    <div>
-                        <p>The Good: {this.props.movie.notes}</p>
-                        <p>The Could Be Better: {this.props.movie.improve_notes}</p>
-                    </div>
+    return (
+        <div className="mediaReviewCard" key={props.movie.id}>
+            <div className="mediaInfoAndPicture">
+                <div>
+                    <img src={moviePhotos[props.movie.image]} alt={props.movie.name} />
                 </div>
-                :
-                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.movie.month_day_watched}/{this.props.movie.year_watched} - {this.props.movie.name} ({this.props.movie.year})</div>
-        )
-    }
+                <div className="mediaStarsAndDate">
+                    <p>{props.movie.month_day_watched}/{props.movie.year_watched}</p>
+                    <p>{props.movie.name} ({props.movie.year}) by {props.movie.artist}</p>
+                    <p>Rating: {stars()}</p>
+                </div>
+            </div>
+            <div>
+                <p className="mediaBold">The Good</p>
+                <p>{props.movie.notes}</p>
+                <p className="mediaBold">The Could Be Better</p>
+                <p> {props.movie.improve_notes}</p>
+            </div>
+        </div>
+    )
 }
-
-export default MovieReviewCard

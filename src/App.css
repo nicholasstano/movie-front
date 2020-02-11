@@ -280,6 +280,12 @@ textarea {
   padding: 1%;
 }
 
+.mediaTitleMovies {
+  font-size: 12px;
+  color: #90EE90;
+  padding: 1%;
+}
+
 .monthDay {
   font-size: 8px;
 }

@@ -27,6 +27,6 @@ export default function AlbumReviewCard(props) {
                 <p className="mediaBold">The Could Be Better</p>
                 <p> {props.album.improve_notes}</p>
             </div>
-        </div >
+        </div>
     )
 }
