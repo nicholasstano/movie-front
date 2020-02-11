@@ -2,14 +2,14 @@ import React from 'react'
 import photos from '../../photos/favorites'
 
 export default function AlbumHome() {
-    let favoriteFiveAlbums = photos.albums.map((album, index) =>
+    let favoriteFive = photos.albums.map((album, index) =>
         <div className="mediaFavoriteFiveSingle" key={album}>
             <img src={album} alt={album} />
         </div>)
     return (
         <div className="mediaHome">
             <h1 className="mediaHeader font-weight-light">Favorite Albums</h1>
-            <div className="mediaFavoriteFive">{favoriteFiveAlbums}</div>
+            <div className="mediaFavoriteFive">{favoriteFive}</div>
             <p>Chris Jericho defines a perfect album as one where every song is an A or better. I believe a perfect album is an album that you throw on and have a desire to skip no tracks. I guess that's the same thing.</p>
             <p>1) Computerwelt by Kraftwerk has stood the test of time for me and it is not surprising they play plenty of songs from this album live. They're all memorable and many could be in my top 10 Kraftwerk songs of all time.</p>
             <p>2) Safe as Milk by Captain Beefheart is another favorite of mine. I had no clue what I was getting into the first time I heard it but I could not turn it off. It is odd and he has a unique voice that was nothing like what I had heard at the time. The music is stellar as well!</p>

@@ -1,60 +1,37 @@
-import React, { Component } from 'react'
+import BookHome from '../components/mediahomes/BookHome.js'
+import BookSidebar from '../components/sidebars/BookSidebar.js'
 import BookReviewCard from '../components/cards/BookReviewCard.js'
-import MediaSearch from '../components/MediaSearch.js'
-import Dropdown from 'react-dropdown'
-import 'react-dropdown/style.css'
+import React, { Component } from 'react'
 import { url } from '../config'
 import util from '../util'
-import photos from '../photos/favorites'
 
 export class BookContainer extends Component {
 
-    state = { bookSearch: "", bookReviews: [], option: "All years", selectedYear: [] }
+    state = { bookReviews: [], media: null }
 
     componentDidMount() {
         fetch(`${url}/books`)
             .then(response => response.json())
-            .then(books => this.setState({ bookReviews: books.reverse(), selectedYear: books }));
+            .then(books => {
+                this.setState({
+                    bookReviews: util.sortMediaById(books)
+                })
+            })
     }
 
-    handleSearchTermChange = (search) => {
-        this.setState({ bookSearch: search })
-    }
-
-    searchBooks = () => {
-        return util.searchMedia(this.state.selectedYear, "name", this.state.bookSearch)
-    }
-
-    changeYear = (event) => {
-        let allBooks = this.state.bookReviews
-        let yearsBooks = this.state.bookReviews.filter(book => book.year_read === event.value)
-        if (event.value === "All years") {
-            this.setState({ selectedYear: allBooks, option: "All years" })
-        }
-        else if (event.value) {
-            this.setState({ selectedYear: yearsBooks, option: event.value })
-        }
+    mediaClickHandler = (mediaClicked) => {
+        this.setState({ media: mediaClicked })
     }
 
     render() {
-        let years = this.state.bookReviews.map(book => book.year_read)
-        let uniqueYears = [...new Set(years)]
-        let options = ["All years", ...uniqueYears]
-        let bookReviews = this.searchBooks().map(book => <BookReviewCard key={book.id} book={book} />)
-        let favoriteFiveBooks = photos.books.map((book, index) =>
-            <div className="mediaFavoriteFiveSingle" key={book}>
-                <img src={book} alt={book} />
-            </div>)
         return (
-            <div className="mediaContainer">
-                <h1 className="mediaHeader font-weight-light">Book Reviews</h1>
-                <div className="mediaFavoriteFive">{favoriteFiveBooks}</div>
-                <p className="font-weight-light">Hmm, maybe I should stop revisiting the same stories and branch out more?</p>
-                <div className="mediaDropAndSearch">
-                    <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <MediaSearch value={this.state.bookSearch} onChange={this.handleSearchTermChange} mediaName={"Books"} />
+            <div className="mediaContainer font-weight-light">
+                <div>
+                    <BookSidebar bookReviews={this.state.bookReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                {bookReviews}
+                <div>
+                    {this.state.media ? <BookReviewCard key={this.state.media.id} book={this.state.media} /> : <BookHome />}
+                </div>
             </div>
         )
     }

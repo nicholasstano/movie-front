@@ -1,39 +1,32 @@
-import React, { Component } from 'react'
 import bookPhotos from '../../photos/books'
+import React from 'react'
 
-export class BookReviewCard extends Component {
-
-    state = { description: false }
-
-    stars() {
+export default function BookReviewCard(props) {
+    function stars() {
         let s = ""
-        for (let i = 0; i < this.props.book.rating[0]; i++) {
+        for (let i = 0; i < props.book.rating[0]; i++) {
             s = s + "⭑"
         }
         return s
     }
-
-    render() {
-        return (
-            this.state.description ?
-                <div className="mediaReviewCard" key={this.props.book.id}>
-                    <div>
-                        <ul>{this.props.book.month_day_read}/{this.props.book.year_read}</ul>
-                        <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.book.name} ({this.props.book.year})</ul>
-                        <ul>{this.props.book.author}</ul>
-                    </div>
-                    <img src={bookPhotos[this.props.book.image]} alt={this.props.book.name} />
-                    <p className="rating">Rating: {this.stars()}
-                    </p>
-                    <div>
-                        <p>The Good: {this.props.book.notes}</p>
-                        <p>The Could Be Better: {this.props.book.improve_notes}</p>
-                    </div>
+    return (
+        <div className="mediaReviewCard" key={props.book.id}>
+            <div className="mediaInfoAndPicture">
+                <div>
+                    <img src={bookPhotos[props.book.image]} alt={props.book.name} />
                 </div>
-                :
-                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.book.month_day_read}/{this.props.book.year_read} - {this.props.book.name} ({this.props.book.year})</div>
-        )
-    }
+                <div className="mediaStarsAndDate">
+                    <p>{props.book.month_day_read}/{props.book.year_read}</p>
+                    <p>{props.book.name} ({props.book.year}) by {props.book.author}</p>
+                    <p>Rating: {stars()}</p>
+                </div>
+            </div>
+            <div>
+                <p className="mediaBold">The Good</p>
+                <p>{props.book.notes}</p>
+                <p className="mediaBold">The Could Be Better</p>
+                <p> {props.book.improve_notes}</p>
+            </div>
+        </div >
+    )
 }
-
-export default BookReviewCard

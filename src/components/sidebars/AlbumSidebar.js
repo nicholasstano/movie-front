@@ -5,19 +5,19 @@ import util from '../../util'
 
 export class AlbumSidebar extends Component {
 
-    state = { albumSearch: "" }
+    state = { mediaSearch: "" }
 
 
     handleSearchTermChange = (search) => {
-        this.setState({ albumSearch: search })
+        this.setState({ mediaSearch: search })
     }
 
-    searchAlbums = () => {
-        return util.searchMedia(this.props.albumReviews, "name", this.state.albumSearch)
+    searchMedia = () => {
+        return util.searchMedia(this.props.albumReviews, "name", this.state.mediaSearch)
     }
 
     render() {
-        let albumReviews = this.searchAlbums().map(album => <div className="mediaTitleAlbums" key={album.id}><div onClick={() => this.props.albumClickHandler(album)}>{album.name}<div className="monthDay">
+        let albumReviews = this.searchMedia().map(album => <div className="mediaTitleAlbums" key={album.id}><div onClick={() => this.props.mediaClickHandler(album)}>{album.name}<div className="monthDay">
             ({album.month_day_played}/{album.year_played})
             </div>
         </div></div>)

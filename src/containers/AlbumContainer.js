@@ -7,7 +7,7 @@ import util from '../util'
 
 export class AlbumContainer extends Component {
 
-    state = { albumReviews: [], option: "All years", album: null }
+    state = { albumReviews: [], media: null }
 
     componentDidMount() {
         fetch(`${url}/albums`)
@@ -19,18 +19,18 @@ export class AlbumContainer extends Component {
             });
     }
 
-    albumClickHandler = (albumClicked) => {
-        this.setState({ album: albumClicked })
+    mediaClickHandler = (mediaClicked) => {
+        this.setState({ media: mediaClicked })
     }
 
     render() {
         return (
             <div className="mediaContainer font-weight-light">
                 <div>
-                    <AlbumSidebar albumReviews={this.state.albumReviews} selectedYear={this.state.selectedYear} albumClickHandler={this.albumClickHandler} />
+                    <AlbumSidebar albumReviews={this.state.albumReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
                 <div>
-                    {this.state.album ? <AlbumReviewCard key={this.state.album.id} album={this.state.album} /> : <AlbumHome />}
+                    {this.state.media ? <AlbumReviewCard key={this.state.media.id} album={this.state.media} /> : <AlbumHome />}
                 </div>
             </div>
         )

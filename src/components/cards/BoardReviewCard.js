@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import boardGamePhotos from '../../photos/boardgames'
 
 export class BoardReviewCard extends Component {
 
@@ -20,7 +21,7 @@ export class BoardReviewCard extends Component {
                         <ul>{this.props.board.month_day_played}/{this.props.board.year_played}</ul>
                         <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.board.name} ({this.props.board.year})</ul>
                     </div>
-                    <img src={this.props.board.image} alt={this.props.board.name} />
+                    <img src={boardGamePhotos[this.props.board.image]} alt={this.props.board.name} />
                     <p className="rating">Rating: {this.stars()}
                     </p>
                     <div>
