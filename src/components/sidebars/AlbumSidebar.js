@@ -24,7 +24,7 @@ export class AlbumSidebar extends Component {
         return (
             <div className="mediaSidebar navbar-dark bg-dark">
                 <div className="mediaSearch">
-                    <MediaSearch value={this.state.albumSearch} onChange={this.handleSearchTermChange} mediaName={"Albums"} />
+                    <MediaSearch onChange={this.handleSearchTermChange} mediaName={"Albums"} />
                 </div>
                 {albumReviews}
             </div>

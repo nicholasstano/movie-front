@@ -24,7 +24,7 @@ export class BookSidebar extends Component {
         return (
             <div className="mediaSidebar navbar-dark bg-dark">
                 <div className="mediaSearch">
-                    <MediaSearch value={this.state.bookSearch} onChange={this.handleSearchTermChange} mediaName={"Books"} />
+                    <MediaSearch onChange={this.handleSearchTermChange} mediaName={"Books"} />
                 </div>
                 {bookReviews}
             </div>
