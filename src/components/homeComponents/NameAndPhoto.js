@@ -5,8 +5,8 @@ export default function NameAndPhoto() {
     return (
         <div>
             <div className="nameAndPhotoHeader">
-                <div className="nameAndPhoto font-weight-light">
-                    <div><img src={photos.nick} alt="me" /></div>
+                <div className="nameAndPhoto">
+                    <div><img src={photos.nick} alt="nick" /></div>
                     <div>
                         <h1 className="font-weight-light">Nick Stano</h1>
                         <h5 className="font-weight-light">Full Stack Developer</h5>
