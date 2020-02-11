@@ -1,39 +1,33 @@
-import React, { Component } from 'react'
 import tvPhotos from '../../photos/tvshows'
+import React from 'react'
 
-export class TVShowReviewCard extends Component {
+export default function TVShowReviewCard(props) {
 
-    state = { description: false }
-
-    stars() {
+    function stars() {
         let s = ""
-        for (let i = 0; i < this.props.show.rating[0]; i++) {
+        for (let i = 0; i < props.tvshow.rating[0]; i++) {
             s = s + "⭑"
         }
         return s
     }
-
-    render() {
-        return (
-            this.state.description ?
-                <div className="mediaReviewCard" key={this.props.show.id}>
-                    <div>
-                        <ul>{this.props.show.month_day_watched}/{this.props.show.year_watched}</ul>
-                        <ul><button onClick={() => this.setState({ description: !this.state.description })}>-</button> {this.props.show.name} ({this.props.show.year})</ul>
-                        <ul>Season {this.props.show.season}</ul>
-                    </div>
-                    <img src={tvPhotos[this.props.show.image]} alt={this.props.show.name} />
-                    <p className="rating">Rating: {this.stars()}
-                    </p>
-                    <div>
-                        <p>The Good: {this.props.show.notes}</p>
-                        <p>The Could Be Better: {this.props.show.improve_notes}</p>
-                    </div>
+    return (
+        <div className="mediaReviewCard" key={props.tvshow.id}>
+            <div className="mediaInfoAndPicture">
+                <div>
+                    <img src={tvPhotos[props.tvshow.image]} alt={props.tvshow.name} />
                 </div>
-                :
-                <div className="mediaReviewList"><button onClick={() => this.setState({ description: !this.state.description })}>+</button> {this.props.show.month_day_watched}/{this.props.show.year_watched} - {this.props.show.name} Season {this.props.show.season} ({this.props.show.year})</div>
-        )
-    }
+                <div className="mediaStarsAndDate">
+                    <p>{props.tvshow.month_day_watched}/{props.tvshow.year_watched}</p>
+                    <p>{props.tvshow.name} ({props.tvshow.year})</p>
+                    <p>Rating: {stars()}</p>
+                </div>
+            </div>
+            <div>
+                <p className="mediaBold">The Good</p>
+                <p>{props.tvshow.notes}</p>
+                <p className="mediaBold">The Could Be Better</p>
+                <p> {props.tvshow.improve_notes}</p>
+            </div>
+        </div>
+    )
 }
-
-export default TVShowReviewCard
