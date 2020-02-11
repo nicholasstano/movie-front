@@ -2,7 +2,7 @@ import React from 'react'
 import photos from '../../photos/favorites'
 
 export default function VideoGameHome() {
-    let favoriteFive = photos.tvShows.map((vg, index) =>
+    let favoriteFive = photos.videoGames.map((vg, index) =>
         <div className="mediaFavoriteFiveSingle" key={vg}>
             <img src={vg} alt={vg} />
         </div>)
