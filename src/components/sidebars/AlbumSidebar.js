@@ -17,7 +17,10 @@ export class AlbumSidebar extends Component {
     }
 
     render() {
-        let albumReviews = this.searchAlbums().map(album => <div key={album.id}><p onClick={() => this.props.albumClickHandler(album)}>{album.month_day_played}/{album.year_played} {album.name}</p></div>)
+        let albumReviews = this.searchAlbums().map(album => <div className="mediaTitleAlbums" key={album.id}><div onClick={() => this.props.albumClickHandler(album)}>{album.name}<div className="monthDay">
+            ({album.month_day_played}/{album.year_played})
+            </div>
+        </div></div>)
         return (
             <div className="mediaSidebar navbar-dark bg-dark">
                 <div className="mediaSearch">

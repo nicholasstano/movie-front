@@ -3,6 +3,7 @@ import AlbumSidebar from '../components/sidebars/AlbumSidebar.js'
 import AlbumReviewCard from '../components/cards/AlbumReviewCard.js'
 import React, { Component } from 'react'
 import { url } from '../config'
+import util from '../util'
 
 export class AlbumContainer extends Component {
 
@@ -12,11 +13,9 @@ export class AlbumContainer extends Component {
         fetch(`${url}/albums`)
             .then(response => response.json())
             .then(albums => {
-                let sortedAlbums = []
-                sortedAlbums = albums.sort(function (a, b) {
-                    return b.id - a.id
+                this.setState({
+                    albumReviews: util.sortMediaById(albums)
                 })
-                this.setState({ albumReviews: sortedAlbums })
             });
     }
 

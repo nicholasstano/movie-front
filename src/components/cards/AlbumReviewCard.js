@@ -22,8 +22,10 @@ export default function AlbumReviewCard(props) {
                 </div>
             </div>
             <div>
-                <p><p className="mediaBold">The Good</p>{props.album.notes}</p>
-                <p><p className="mediaBold">The Could Be Better</p> {props.album.improve_notes}</p>
+                <p className="mediaBold">The Good</p>
+                <p>{props.album.notes}</p>
+                <p className="mediaBold">The Could Be Better</p>
+                <p> {props.album.improve_notes}</p>
             </div>
         </div >
     )
