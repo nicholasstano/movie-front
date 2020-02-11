@@ -11,7 +11,13 @@ export class AlbumContainer extends Component {
     componentDidMount() {
         fetch(`${url}/albums`)
             .then(response => response.json())
-            .then(albums => this.setState({ albumReviews: albums.reverse() }));
+            .then(albums => {
+                let sortedAlbums = []
+                sortedAlbums = albums.sort(function (a, b) {
+                    return b.id - a.id
+                })
+                this.setState({ albumReviews: sortedAlbums })
+            });
     }
 
     albumClickHandler = (albumClicked) => {
@@ -20,7 +26,7 @@ export class AlbumContainer extends Component {
 
     render() {
         return (
-            <div className="mediaContainer">
+            <div className="mediaContainer font-weight-light">
                 <div>
                     <AlbumSidebar albumReviews={this.state.albumReviews} selectedYear={this.state.selectedYear} albumClickHandler={this.albumClickHandler} />
                 </div>

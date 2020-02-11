@@ -1,35 +1,30 @@
-import React, { Component } from 'react'
 import albumPhotos from '../../photos/albums'
+import React from 'react'
 
-
-export class AlbumReviewCard extends Component {
-
-    stars() {
+export default function AlbumReviewCard(props) {
+    function stars() {
         let s = ""
-        for (let i = 0; i < this.props.album.rating[0]; i++) {
+        for (let i = 0; i < props.album.rating[0]; i++) {
             s = s + "⭑"
         }
         return s
     }
-
-    render() {
-        return (
-            <div className="mediaReviewCard" key={this.props.album.id}>
-                <ul><h1>{this.props.album.artist}</h1></ul>
-                <ul><h1>{this.props.album.name} ({this.props.album.year})</h1></ul>
-                <img src={albumPhotos[this.props.album.image]} alt={this.props.album.name} />
+    return (
+        <div className="mediaReviewCard" key={props.album.id}>
+            <div className="mediaInfoAndPicture">
                 <div>
-                    <ul>{this.props.album.month_day_played}/{this.props.album.year_played}</ul>
+                    <img src={albumPhotos[props.album.image]} alt={props.album.name} />
                 </div>
-                <p className="rating">Rating: {this.stars()}
-                </p>
-                <div>
-                    <p>The Good: {this.props.album.notes}</p>
-                    <p>The Could Be Better: {this.props.album.improve_notes}</p>
+                <div className="mediaStarsAndDate">
+                    <p>{props.album.month_day_played}/{props.album.year_played}</p>
+                    <p>{props.album.name} ({props.album.year}) by {props.album.artist}</p>
+                    <p>Rating: {stars()}</p>
                 </div>
-            </div >
-        )
-    }
+            </div>
+            <div>
+                <p><p className="mediaBold">The Good</p>{props.album.notes}</p>
+                <p><p className="mediaBold">The Could Be Better</p> {props.album.improve_notes}</p>
+            </div>
+        </div >
+    )
 }
-
-export default AlbumReviewCard

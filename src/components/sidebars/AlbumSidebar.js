@@ -19,7 +19,7 @@ export class AlbumSidebar extends Component {
     render() {
         let albumReviews = this.searchAlbums().map(album => <div key={album.id}><p onClick={() => this.props.albumClickHandler(album)}>{album.month_day_played}/{album.year_played} {album.name}</p></div>)
         return (
-            <div className="mediaSidebar">
+            <div className="mediaSidebar navbar-dark bg-dark">
                 <div className="mediaSearch">
                     <MediaSearch value={this.state.albumSearch} onChange={this.handleSearchTermChange} mediaName={"Albums"} />
                 </div>
