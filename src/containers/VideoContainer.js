@@ -1,60 +1,37 @@
+import VideoGameHome from '../components/mediahomes/VideoGameHome.js'
+import VideoGameSidebar from '../components/sidebars/VideoGameSidebar.js'
+import VideoGameReviewCard from '../components/cards/VideoGameReviewCard.js'
 import React, { Component } from 'react'
-import VideoReviewCard from '../components/cards/VideoReviewCard.js'
-import MediaSearch from '../components/MediaSearch.js'
-import Dropdown from 'react-dropdown'
-import 'react-dropdown/style.css'
 import { url } from '../config'
 import util from '../util'
-import photos from '../photos/favorites'
 
 export class VideoContainer extends Component {
 
-    state = { videoSearch: "", videoReviews: [], option: "All years", selectedYear: [] }
+    state = { videoGameReviews: [], media: null }
 
     componentDidMount() {
         fetch(`${url}/videos`)
             .then(response => response.json())
-            .then(videos => this.setState({ videoReviews: videos.reverse(), selectedYear: videos }));
+            .then(videoGames => {
+                this.setState({
+                    videoGameReviews: util.sortMediaById(videoGames)
+                })
+            })
     }
 
-    handleSearchTermChange = (search) => {
-        this.setState({ videoSearch: search })
-    }
-
-    searchVideoGames = () => {
-        return util.searchMedia(this.state.selectedYear, "name", this.state.videoSearch)
-    }
-
-    changeYear = (event) => {
-        let allVideos = this.state.videoReviews
-        let yearsVideos = this.state.videoReviews.filter(video => video.year_played === event.value)
-        if (event.value === "All years") {
-            this.setState({ selectedYear: allVideos, option: "All years" })
-        }
-        else if (event.value) {
-            this.setState({ selectedYear: yearsVideos, option: event.value })
-        }
+    mediaClickHandler = (mediaClicked) => {
+        this.setState({ media: mediaClicked })
     }
 
     render() {
-        let years = this.state.videoReviews.map(video => video.year_played)
-        let uniqueYears = [...new Set(years)]
-        let options = ["All years", ...uniqueYears]
-        let videoReviews = this.searchVideoGames().map(video => <VideoReviewCard key={video.id} video={video} />)
-        let favoriteFiveVideoGames = photos.videoGames.map((vg, index) =>
-            <div className="mediaFavoriteFiveSingle" key={vg}>
-                <img src={vg} alt={vg} />
-            </div>)
         return (
-            <div className="mediaContainer">
-                <h1 className="mediaHeader font-weight-light">Video Game Reviews</h1>
-                <div className="mediaFavoriteFive">{favoriteFiveVideoGames}</div>
-                <p className="font-weight-light">Why discover new games when you can replay the old greats?</p>
-                <div className="mediaDropAndSearch">
-                    <Dropdown className="mediaDropdown" options={options} onChange={this.changeYear} value={this.state.option} placeholder="Select an option" />
-                    <MediaSearch value={this.state.videoSearch} onChange={this.handleSearchTermChange} mediaName={"Video Games"} />
+            <div className="mediaContainer font-weight-light">
+                <div>
+                    <VideoGameSidebar videoGameReviews={this.state.videoGameReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                {videoReviews}
+                <div>
+                    {this.state.media ? <VideoGameReviewCard key={this.state.media.id} videoGame={this.state.media} /> : <VideoGameHome />}
+                </div>
             </div>
         )
     }
