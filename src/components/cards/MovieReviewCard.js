@@ -17,7 +17,7 @@ export default function MovieReviewCard(props) {
                 </div>
                 <div className="mediaStarsAndDate">
                     <p>{props.movie.month_day_watched}/{props.movie.year_watched}</p>
-                    <p>{props.movie.name} ({props.movie.year}) by {props.movie.artist}</p>
+                    <p>{props.movie.name} ({props.movie.year})</p>
                     <p>Rating: {stars()}</p>
                 </div>
             </div>

@@ -17,7 +17,7 @@ export default function VideoGameReviewCard(props) {
                 </div>
                 <div className="mediaStarsAndDate">
                     <p>{props.videoGame.month_day_played}/{props.videoGame.year_played}</p>
-                    <p>{props.videoGame.name} ({props.videoGame.year}) by {props.videoGame.artist}</p>
+                    <p>{props.videoGame.name} ({props.videoGame.year})</p>
                     <p>Rating: {stars()}</p>
                 </div>
             </div>
