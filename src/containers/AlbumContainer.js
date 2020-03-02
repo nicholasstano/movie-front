@@ -29,7 +29,7 @@ export class AlbumContainer extends Component {
                 <div>
                     <AlbumSidebar albumReviews={this.state.albumReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                <div>
+                <div className="container-fluid">
                     {this.state.media ? <AlbumReviewCard key={this.state.media.id} album={this.state.media} /> : <AlbumHome />}
                 </div>
             </div>

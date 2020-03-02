@@ -29,7 +29,7 @@ export class BoardContainer extends Component {
                 <div>
                     <BoardGameSidebar boardReviews={this.state.boardReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                <div>
+                <div className="container-fluid">
                     {this.state.media ? <BoardGameReviewCard key={this.state.media.id} board={this.state.media} /> : <BoardGameHome />}
                 </div>
             </div>

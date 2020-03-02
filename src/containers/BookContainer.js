@@ -29,7 +29,7 @@ export class BookContainer extends Component {
                 <div>
                     <BookSidebar bookReviews={this.state.bookReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                <div>
+                <div className="container-fluid">
                     {this.state.media ? <BookReviewCard key={this.state.media.id} book={this.state.media} /> : <BookHome />}
                 </div>
             </div>
