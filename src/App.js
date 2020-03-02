@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css"
 import MovieContainer from '../src/containers/MovieContainer.js'
 import BoardContainer from '../src/containers/BoardContainer.js'
 import VideoContainer from '../src/containers/VideoContainer.js'
