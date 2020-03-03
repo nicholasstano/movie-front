@@ -10,7 +10,7 @@ export default function NameAndPhoto() {
                     <div>
                         <h1 className="font-weight-light">Nick Stano</h1>
                         <h5 className="font-weight-light">Full Stack Developer</h5>
-                        <h2 className="font-weight-light"><a href="https://docs.google.com/presentation/d/1ZLDseGwmmNtkrRJYVNR4QPti_NFllnYx43MYu8Eoet0/edit?usp=sharing2" target="_blank" rel="noopener noreferrer">Resume</a></h2>
+                        <h2 className="font-weight-light"><a href="https://docs.google.com/document/d/1pr_5DQ7HNGsopysRLOZ6QsA3S_XzAsai89b1fu0DQGs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></h2>
                     </div>
                 </div>
                 <div className="contact">
