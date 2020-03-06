@@ -59,6 +59,78 @@ textarea {
   text-align: center;
 }
 
+.btn-album {
+  background-color: lightblue;
+  color:black;
+  border-color: lightblue;
+}
+ 
+.btn-album:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-color: lightskyblue;
+  color: black;
+  border-color: lightskyblue;
+}
+
+.btn-boardgame {
+  background-color: #ffcccb;
+  color:black;
+  border-color: #ffcccb;
+}
+   
+.btn-boardgame:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-color: salmon;
+  color: black;
+  border-color: salmon;
+}
+
+.btn-book {
+  background-color: lightgoldenrodyellow;
+  color:black;
+  border-color: lightgoldenrodyellow;
+}
+   
+.btn-book:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-color: goldenrod;
+  color: black;
+  border-color: goldenrod;
+}
+
+.btn-movie {
+  background-color: #90EE90;
+  color:black;
+  border-color: #90EE90;
+}
+   
+.btn-movie:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-color: #8FBC8F;
+  color: black;
+  border-color: #8FBC8F;
+}
+
+.btn-tv {
+  background-color: #fed8b1;
+  color:black;
+  border-color: #fed8b1;
+}
+
+.btn-tv:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-color: #fdad5c;
+  color:black;
+  border-color: #fdad5c;
+}
+   
+.btn-videogame {
+  background-color: #b19cd9;
+  color:black;
+  border-color: #b19cd9;
+}
+
+.btn-videogame:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  background-color: #a28ad2;
+  color:black;
+  border-color: #a28ad2;
+} 
+
 .contact {
   display: grid;
   padding: 10px;
@@ -273,17 +345,18 @@ textarea {
   padding: 1%;
 }
 
+.mediaTitleBoardGames {
+  font-size: 12px;
+  color: #ffcccb;
+  padding: 1%;
+}
+
 .mediaTitleBooks {
   font-size: 12px;
   color: lightgoldenrodyellow;
   padding: 1%;
 }
 
-.mediaTitleBoardGames {
-  font-size: 12px;
-  color: #ffcccb;
-  padding: 1%;
-}
 
 .mediaTitleMovies {
   font-size: 12px;
@@ -302,8 +375,6 @@ textarea {
   color: #b19cd9;
   padding: 1%;
 }
-
-
 
 .monthDay {
   font-size: 8px;
