@@ -7,5 +7,7 @@ import whiteheat from '../movies/whiteheat.jpg'
 import mildredpierce from '../movies/mildredpierce.jpg'
 import thetreasureofthesierramadre from '../movies/thetreasureofthesierramadre.jpg'
 import outofthepast from '../movies/outofthepast.jpg'
+import doubleindemnity from '../movies/doubleindemnity.jpg'
+import gilda from '../movies/gilda.jpg'
 
-export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast }
+export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda }

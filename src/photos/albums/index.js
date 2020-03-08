@@ -7,5 +7,6 @@ import apostrophe from '../albums/apostrophe.jpg'
 import brownalbum from '../albums/brownalbum.jpg'
 import foxtrot from '../albums/foxtrot.jpg'
 import larkstongues from '../albums/larkstongues.jpg'
+import qarewenotmenawearedevo from '../albums/qarewenotmenawearedevo.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo }
