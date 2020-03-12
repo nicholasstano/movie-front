@@ -8,5 +8,6 @@ import brownalbum from '../albums/brownalbum.jpg'
 import foxtrot from '../albums/foxtrot.jpg'
 import larkstongues from '../albums/larkstongues.jpg'
 import qarewenotmenawearedevo from '../albums/qarewenotmenawearedevo.jpg'
+import freedomofchoice from '../albums/freedomofchoice.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice }
