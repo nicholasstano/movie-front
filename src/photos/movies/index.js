@@ -10,5 +10,6 @@ import outofthepast from '../movies/outofthepast.jpg'
 import doubleindemnity from '../movies/doubleindemnity.jpg'
 import gilda from '../movies/gilda.jpg'
 import sunsetboulevard from '../movies/sunsetboulevard.jpg'
+import thebigheat from '../movies/thebigheat.jpg'
 
-export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard }
+export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat }
