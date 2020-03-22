@@ -1,6 +1,6 @@
-import nick from '../me/nick.jpg'
-import gmail from '../me/gmail.png'
-import github from '../me/github.png'
-import linkedin from '../me/linkedin.png'
+import nick from './nick.jpg'
+import gmail from './gmail.png'
+import github from './github.png'
+import linkedin from './linkedin.png'
 
 export default { nick, gmail, github, linkedin }

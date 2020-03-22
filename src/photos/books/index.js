@@ -1,3 +1,3 @@
-import xenocide from '../books/xenocide.jpg'
+import xenocide from './xenocide.jpg'
 
 export default { xenocide }

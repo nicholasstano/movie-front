@@ -10,7 +10,7 @@ export default function MovieHome() {
         <div className="mediaHome">
             <h1 className="mediaHeader font-weight-light">Favorite Movies</h1>
             <div className="mediaFavoriteFive">{favoriteFive}</div>
-            <p>1950's rewatch watchlist: In a Lonely Place, Rashomon, The Asphalt Jungle, Strangers on a Train, The Big Heat, Dial M for Murder, Rear Window, Seven Samurai, Rififi, The Night of the Hunter, The Killing, The Searchers, 12 Angry Men, The Hidden Fortress, Touch of Evil, Vertigo, North by Northwest</p>
+            <p>1950's rewatch watchlist: In a Lonely Place, Rashomon, Strangers on a Train, Dial M for Murder, Rear Window, Seven Samurai, Rififi, The Night of the Hunter, The Searchers, 12 Angry Men, The Hidden Fortress, Touch of Evil, Vertigo, North by Northwest</p>
             <p>1) Love the dialogue in Pulp Fiction and the narrative structure. Samuel L Jackson as Jules is one of my favorite character performances of all time. Rewatched it a ton and find different pieces funny each time.</p>
             <p>2) Taxi Driver has my favorite soundtrack not because I love the pieces of music more than others but because they fit the mood of the movie so well. The saxophone pieces play at perfect times. The shots when he is driving around in the cab are well done. De Niro does an excellent job in his role as the awkward Travis Bickle.</p>
             <p>3) Chinatown ends on an awful note, which was different than the positive endings I was used to watching. Find myself rooting for JJ Gittes as the movie slowly unfolds. Jack Nicholson crushes it in his role and John Huston does an excellent job playing the most terrible person ever. My favorite genre of movie is noir and this is the best one.</p>

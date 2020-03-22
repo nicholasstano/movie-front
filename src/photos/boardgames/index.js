@@ -1,7 +1,7 @@
-import concordia from '../boardgames/concordia.jpg'
-import tapestry from '../boardgames/tapestry.jpg'
-import castlesofburgundy from '../boardgames/castlesofburgundy.jpg'
-import kingdombuilder from '../boardgames/kingdombuilder.jpg'
-import kingdomino from '../boardgames/kingdomino.png'
+import concordia from './concordia.jpg'
+import tapestry from './tapestry.jpg'
+import castlesofburgundy from './castlesofburgundy.jpg'
+import kingdombuilder from './kingdombuilder.jpg'
+import kingdomino from './kingdomino.png'
 
 export default { concordia, tapestry, castlesofburgundy, kingdombuilder, kingdomino }
