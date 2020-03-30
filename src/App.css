@@ -285,7 +285,20 @@ textarea {
 
 .mediaInfoAndPicture {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.mediaPicture {
+  text-align: center;
+}
+
+.mediaPicture img {
+  height: auto;
+  width: 256px;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  border-radius: 5%;
 }
 
 .mediaReviewCard {
@@ -297,14 +310,14 @@ textarea {
   display: grid;
 }
 
-.mediaReviewCard img {
+/* .mediaReviewCard img {
   height: auto;
   width: 50%;
   border-style: solid;
   border-color: black;
   border-width: thin;
   border-radius: 5%;
-}
+} */
 
 .mediaReviewList {
   border-style: solid;
@@ -334,9 +347,7 @@ textarea {
 }
 
 .mediaStarsAndDate {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 5fr;
-  text-align: right;
+  text-align: center;
 }
 
 .mediaTitleAlbums {
