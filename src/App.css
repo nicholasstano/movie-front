@@ -304,10 +304,7 @@ textarea {
 .mediaReviewCard {
   margin: 3.25%;
   padding: 2%;
-  border: solid;
-  border-width: thin;
-  border-radius: 15px;
-  display: grid;
+  position: relative;
 }
 
 /* .mediaReviewCard img {

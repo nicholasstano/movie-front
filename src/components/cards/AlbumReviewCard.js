@@ -28,19 +28,20 @@ export default function AlbumReviewCard(props) {
         // </Media>
         < div className="mediaReviewCard" key={props.album.id} >
             <div>
-                <div className="mediaStarsAndDate">
-                    <Media heading>{props.album.name} ({props.album.year}) by {props.album.artist}</Media>
-                    <Media heading>{props.album.month_day_played}/{props.album.year_played} - Rating: {stars().map((s, i) => <StarRateIcon key={i} />)}</Media>
-                </div>
-                <div className="mediaPicture">
-                    <img src={albumPhotos[props.album.image]} alt={props.album.name} />
-                </div>
+                <ul class="list-group list-group-horizontal">
+                    <li className="mediaPicture list-group-item"><img src={albumPhotos[props.album.image]} alt={props.album.name} /></li>
+                    <li className="list-group-item"><Media>{props.album.name} ({props.album.year}) by {props.album.artist}</Media></li>
+                    <li className="list-group-item"><Media>Rating: {stars().map((s, i) => <StarRateIcon key={i} />)} ({props.album.month_day_played}/{props.album.year_played}) </Media></li>
+                </ul>
             </div>
             <div>
-                <p className="mediaBold">The Good</p>
-                <p>{props.album.notes}</p>
-                <p className="mediaBold">The Could Be Better</p>
-                <p> {props.album.improve_notes}</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><Media heading>The Good</Media></li>
+                    <li class="list-group-item"><Media body>{props.album.notes}</Media></li>
+                    <li class="list-group-item"><Media heading>The Could Be Better</Media>
+                    </li>
+                    <li class="list-group-item"><Media body>{props.album.improve_notes}</Media></li>
+                </ul>
             </div>
         </div >
     )
