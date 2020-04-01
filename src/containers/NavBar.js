@@ -1,8 +1,23 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import 'react-dropdown/style.css'
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText
+} from 'reactstrap';
 
 export class NavBar extends Component {
+
     render() {
         return (
             <div className="topNavbar navbar-expand-lg navbar-dark bg-dark">

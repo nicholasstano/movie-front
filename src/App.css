@@ -288,13 +288,9 @@ textarea {
   grid-template-rows: 1fr 1fr;
 }
 
-.mediaPicture {
-  text-align: center;
-}
-
 .mediaPicture img {
   height: auto;
-  width: 256px;
+  width: 200px;
   border-style: solid;
   border-color: black;
   border-width: thin;
@@ -304,17 +300,9 @@ textarea {
 .mediaReviewCard {
   margin: 3.25%;
   padding: 2%;
-  position: relative;
-}
+  border: solid;
 
-/* .mediaReviewCard img {
-  height: auto;
-  width: 50%;
-  border-style: solid;
-  border-color: black;
-  border-width: thin;
-  border-radius: 5%;
-} */
+}
 
 .mediaReviewList {
   border-style: solid;
@@ -416,6 +404,7 @@ textarea {
 .topNavbar {
   position: fixed;
   width: 100%;
+  padding-top: 5px;
   border: solid;
   border-color: rgb(163, 155, 155);
   border-radius: 6px;
