@@ -1,31 +1,36 @@
 import videoGamePhotos from '../../photos/videogames'
 import React from 'react'
+import StarRateIcon from '@material-ui/icons/StarRate';
 
 export default function VideoGameReviewCard(props) {
+
+    const { rating, image, name, month_day_played, year_played, year, notes, improve_notes } = props.videoGame
+
     function stars() {
-        let s = ""
-        for (let i = 0; i < props.videoGame.rating[0]; i++) {
-            s = s + "⭑"
+        let stars = []
+        for (let i = 0; i < rating[0]; i++) {
+            stars.push(i)
         }
-        return s
+        return stars
     }
+
     return (
-        <div className="mediaReviewCard" key={props.videoGame.id}>
-            <div className="mediaInfoAndPicture">
-                <div>
-                    <img src={videoGamePhotos[props.videoGame.image]} alt={props.videoGame.name} />
-                </div>
-                <div className="mediaStarsAndDate">
-                    <p>{props.videoGame.month_day_played}/{props.videoGame.year_played}</p>
-                    <p>{props.videoGame.name} ({props.videoGame.year})</p>
-                    <p>Rating: {stars()}</p>
-                </div>
+        <div className="mediaReviewCard">
+            <div>
+                <h5>{name} ({year})</h5>
+                <p className="mediaPicture">
+                    <img src={videoGamePhotos[image]} alt={name} />
+                </p>
+                <p>Rating: {stars().map((s, i) => <StarRateIcon key={i} />)}</p>
+                <p>Date: {month_day_played}/{year_played}</p>
             </div>
             <div>
-                <p className="mediaBold">The Good</p>
-                <p>{props.videoGame.notes}</p>
-                <p className="mediaBold">The Could Be Better</p>
-                <p> {props.videoGame.improve_notes}</p>
+                <h5>The Good</h5>
+                <p>{notes}</p>
+            </div>
+            <div>
+                <h5>The Could Be Better</h5>
+                <p>{improve_notes}</p>
             </div>
         </div>
     )

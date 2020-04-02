@@ -231,10 +231,6 @@ textarea {
   text-align: center;
 }
 
-.mediaBold {
-  font-weight: bold;
-}
-
 .mediaContainer {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -283,11 +279,6 @@ textarea {
   border-radius: 15px;
 }
 
-.mediaInfoAndPicture {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
-
 .mediaPicture img {
   height: auto;
   width: 200px;
@@ -298,10 +289,17 @@ textarea {
 }
 
 .mediaReviewCard {
-  margin: 3.25%;
-  padding: 2%;
-  border: solid;
+  margin: 1.25%;
+  padding: 1%;
+}
 
+.mediaReviewCard div {
+  border: solid;
+  border-width: thin;
+  border-radius: 3px;
+  border-color: lightgray;
+  padding: 15px;
+  margin: 0.5px;
 }
 
 .mediaReviewList {
@@ -331,10 +329,6 @@ textarea {
   color: #f8f8f8;
 }
 
-.mediaStarsAndDate {
-  text-align: center;
-}
-
 .mediaTitleAlbums {
   font-size: 12px;
   color: lightblue;
@@ -352,7 +346,6 @@ textarea {
   color: lightgoldenrodyellow;
   padding: 1%;
 }
-
 
 .mediaTitleMovies {
   font-size: 12px;

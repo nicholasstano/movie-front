@@ -1,32 +1,37 @@
 import boardGamePhotos from '../../photos/boardgames'
 import React from 'react'
+import StarRateIcon from '@material-ui/icons/StarRate';
 
 export default function BoardReviewCard(props) {
+
+    const { rating, image, name, month_day_played, year_played, year, notes, improve_notes } = props.board
+
     function stars() {
-        let s = ""
-        for (let i = 0; i < props.board.rating[0]; i++) {
-            s = s + "⭑"
+        let stars = []
+        for (let i = 0; i < rating[0]; i++) {
+            stars.push(i)
         }
-        return s
+        return stars
     }
+
     return (
-        <div className="mediaReviewCard" key={props.board.id}>
-            <div className="mediaInfoAndPicture">
-                <div>
-                    <img src={boardGamePhotos[props.board.image]} alt={props.board.name} />
-                </div>
-                <div className="mediaStarsAndDate">
-                    <p>{props.board.month_day_played}/{props.board.year_played}</p>
-                    <p>{props.board.name} ({props.board.year})</p>
-                    <p>Rating: {stars()}</p>
-                </div>
+        <div className="mediaReviewCard">
+            <div>
+                <h5>{name} ({year})</h5>
+                <p className="mediaPicture">
+                    <img src={boardGamePhotos[image]} alt={name} />
+                </p>
+                <p>Rating: {stars().map((s, i) => <StarRateIcon key={i} />)}</p>
+                <p>Date: {month_day_played}/{year_played}</p>
             </div>
             <div>
-                <p className="mediaBold">The Good</p>
-                <p>{props.board.notes}</p>
-                <p className="mediaBold">The Could Be Better</p>
-                <p> {props.board.improve_notes}</p>
+                <h5>The Good</h5>
+                <p>{notes}</p>
             </div>
-        </div >
+            <div>
+                <h5>The Could Be Better</h5>
+                <p>{improve_notes}</p>
+            </div>
+        </div>
     )
 }
