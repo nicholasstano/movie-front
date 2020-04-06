@@ -15,5 +15,7 @@ import theasphaltjungle from './theasphaltjungle.jpg'
 import thekilling from './thekilling.jpg'
 import rififi from './rififi.jpg'
 import highnoon from './highnoon.jpg'
+import rashomon from './rashomon.jpg'
+import thehiddenfortress from './thehiddenfortress.jpg'
 
-export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon }
+export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon, rashomon, thehiddenfortress }

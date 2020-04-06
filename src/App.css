@@ -243,17 +243,32 @@ textarea {
 
 .mediaFavoriteFive {
   display: grid;
-  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
   margin: 0.75%;
   padding: 1.25%;
 }
 
+.mediaFavoriteFiveSingle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr
+
+}
+
 .mediaFavoriteFiveSingle img {
   border: solid;
-  border-radius: 100%;
-  border-width: thin;
-  height: 100px;
-  width: 100px;
+  border-radius: 3.5px;
+  border-width: 0.75px;
+  height: auto;
+  border-color: lightgray;
+  width: 150px;
+}
+
+.mediaFavoriteFiveSingle h1 {
+  text-align: center;
+}
+
+.mediaFavoriteFiveSingle h5 {
+  padding: 1%;
 }
 
 .mediaForm {
@@ -272,20 +287,25 @@ textarea {
 }
 
 .mediaHome {
-  margin: 3.25%;
-  padding: 2%;
+  margin: 1.25%;
+  padding: 1%;
+}
+
+.mediaHome div {
   border: solid;
   border-width: thin;
-  border-radius: 15px;
+  border-radius: 3px;
+  border-color: lightgray;
+  padding: 1%;
 }
 
 .mediaPicture img {
   height: auto;
-  width: 200px;
+  width: 150px;
   border-style: solid;
-  border-color: black;
+  border-color: lightgray;
   border-width: thin;
-  border-radius: 5%;
+  border-radius: 3.5px;
 }
 
 .mediaReviewCard {
