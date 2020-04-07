@@ -11,5 +11,3 @@ export default function VideoGameHome() {
         HomeTemplate(mediaNames, photos.videoGames, "Video Games", mediaIntro)
     )
 }
-
-
