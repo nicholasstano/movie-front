@@ -163,7 +163,9 @@ textarea {
 .footer nav button {
   width: 20%;
   margin-left: 40%;
-  margin-right: 40%
+  margin-right: 40%;
+  background-color: dimgray;
+  color: white;
 }
 
 .formsContainer {
@@ -237,7 +239,7 @@ textarea {
   color:#080808;
   background-color: #FFFFFF;
   padding-bottom: 0px; 
-  padding-top: 42px;
+  padding-top: 49px;
   min-height: 100vh;
 }
 
@@ -341,12 +343,18 @@ textarea {
 }
 
 .mediaSidebar {
+  position: fixed;
+  overflow-y: scroll;
+  width: 250px;
+  top: 49px;
+  bottom: 0px;
   border: solid;
   border-color: rgb(163, 155, 155);
   border-radius: 6px;
   border-width: thin;
-  padding: 5%;
   color: #f8f8f8;
+  padding: 1.5%;
+  background-color: dimgrey;
 }
 
 .mediaTitleAlbums {
@@ -424,6 +432,7 @@ textarea {
   border-width: thin;
   display: grid;
   grid-template-columns: 14% 14% 14% 16% 14% 14% 14%;
+  background-color: dimgrey;
 }
 
 .topNavbar a {

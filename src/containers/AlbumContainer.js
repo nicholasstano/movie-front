@@ -20,16 +20,17 @@ export class AlbumContainer extends Component {
     }
 
     mediaClickHandler = (mediaClicked) => {
+        window.scrollTo(0, 0)
         this.setState({ media: mediaClicked })
     }
 
     render() {
         return (
-            <div className="mediaContainer font-weight-light">
+            <div className="mediaContainer">
                 <div>
                     <AlbumSidebar albumReviews={this.state.albumReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                <div className="container-fluid">
+                <div>
                     {this.state.media ? <AlbumReviewCard key={this.state.media.id} album={this.state.media} /> : <AlbumHome />}
                 </div>
             </div>

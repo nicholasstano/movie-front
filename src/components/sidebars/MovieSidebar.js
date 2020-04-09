@@ -22,7 +22,7 @@ export class MovieSidebar extends Component {
             </div>
         </div></div>)
         return (
-            <div className="mediaSidebar navbar-dark bg-dark">
+            <div className="mediaSidebar">
                 <div className="mediaSearch">
                     <MediaSearch onChange={this.handleSearchTermChange} mediaName={"Movies"} />
                 </div>

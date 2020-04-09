@@ -20,12 +20,13 @@ export class BoardContainer extends Component {
     }
 
     mediaClickHandler = (mediaClicked) => {
+        window.scrollTo(0, 0)
         this.setState({ media: mediaClicked })
     }
 
     render() {
         return (
-            <div className="mediaContainer font-weight-light">
+            <div className="mediaContainer">
                 <div>
                     <BoardGameSidebar boardReviews={this.state.boardReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
