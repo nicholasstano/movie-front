@@ -30,7 +30,7 @@ export class TelevisionContainer extends Component {
                 <div>
                     <TVShowSidebar tvReviews={this.state.tvReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                <div className="container-fluid">
+                <div className="mediaContent">
                     {this.state.media ? <TVShowReviewCard key={this.state.media.id} tvshow={this.state.media} /> : <TVShowHome />}
                 </div>
             </div>

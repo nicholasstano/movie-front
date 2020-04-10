@@ -36,73 +36,14 @@ export class App extends Component {
                   </div>
                 )
               }} /> :
-            <Route
-              path="/forms"
-              render={() => {
-                return (
-                  <div><FormsContainer />
-                    <Footer />
-                  </div>
-                )
-              }} />}
-          <Route
-            path="/movies"
-            render={() => {
-              return (
-                <div><MovieContainer />
-                  <Footer />
-                </div>
-              )
-            }} />
-          <Route
-            path="/boards"
-            render={() => {
-              return (
-                <div><BoardContainer />
-                  <Footer /></div>
-              )
-            }} />
-          <Route
-            path="/albums"
-            render={() => {
-              return (
-                <div><AlbumContainer />
-                  <Footer /></div>
-              )
-            }} />
-          <Route
-            path="/videos"
-            render={() => {
-              return (
-                <div><VideoContainer />
-                  <Footer /></div>
-              )
-            }} />
-          <Route
-            path="/books"
-            render={() => {
-              return (
-                <div><BookContainer />
-                  <Footer /></div>
-              )
-            }} />
-          <Route
-            path="/television"
-            render={() => {
-              return (
-                <div><TelevisionContainer />
-                  <Footer /></div>
-              )
-            }} />
-          <Route
-            path="/"
-            render={() => {
-              return (
-                <div><Home />
-                  <Footer />
-                </div>
-              )
-            }} />
+            <Route path="/forms" render={() => { return (<div><FormsContainer /> <Footer /> </div>) }} />}
+          <Route path="/movies" render={() => { return (<div><MovieContainer /></div>) }} />
+          <Route path="/albums" render={() => { return (<div><AlbumContainer /></div>) }} />
+          <Route path="/boards" render={() => { return (<div><BoardContainer /></div>) }} />
+          <Route path="/books" render={() => { return (<div><BookContainer /></div>) }} />
+          <Route path="/television" render={() => { return (<div><TelevisionContainer /></div>) }} />
+          <Route path="/videos" render={() => { return (<div><VideoContainer /></div>) }} />
+          <Route path="/" render={() => { return (<div><Home /> <Footer /> </div>) }} />
         </Switch>
       </div>
     )

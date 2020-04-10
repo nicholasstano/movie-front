@@ -324,6 +324,10 @@ textarea {
   margin: 0.5px;
 }
 
+.mediaContent {
+  height: 100vh;
+}
+
 .mediaReviewList {
   border-style: solid;
   border-radius: 5px;
@@ -345,7 +349,7 @@ textarea {
 .mediaSidebar {
   position: fixed;
   overflow-y: scroll;
-  width: 250px;
+  width: 20%;
   top: 49px;
   bottom: 0px;
   border: solid;

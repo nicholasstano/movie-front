@@ -30,7 +30,7 @@ export class MovieContainer extends Component {
                 <div>
                     <MovieSidebar movieReviews={this.state.movieReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
-                <div className="container-fluid">
+                <div className="mediaContent">
                     {this.state.media ? <MovieReviewCard key={this.state.media.id} movie={this.state.media} /> : <MovieHome />}
                 </div>
             </div>
