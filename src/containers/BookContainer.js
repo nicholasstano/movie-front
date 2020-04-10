@@ -26,7 +26,7 @@ export class BookContainer extends Component {
 
     render() {
         return (
-            <div className="mediaContainer font-weight-light">
+            <div className="mediaContainer">
                 <div>
                     <BookSidebar bookReviews={this.state.bookReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>

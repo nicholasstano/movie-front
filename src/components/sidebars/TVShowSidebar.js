@@ -17,10 +17,11 @@ export class TVShowSidebar extends Component {
     }
 
     render() {
-        let tvReviews = this.searchMedia().map(tv => <div className="mediaTitleTVShows" key={tv.id}><div onClick={() => this.props.mediaClickHandler(tv)}>{tv.name} Season {tv.season}<div className="monthDay">
-            ({tv.month_day_watched}/{tv.year_watched})
-            </div>
-        </div></div>)
+        let tvReviews = this.searchMedia().map(tv => <div className="mediaTitles" key={tv.id}>
+            <button onClick={() => this.props.mediaClickHandler(tv)}>{tv.name} Season {tv.season}
+                <div className="monthDay">({tv.month_day_watched}/{tv.year_watched})</div>
+            </button>
+        </div>)
         return (
             <div className="mediaSidebar">
                 <div className="mediaSearch">

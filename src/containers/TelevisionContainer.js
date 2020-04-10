@@ -26,7 +26,7 @@ export class TelevisionContainer extends Component {
 
     render() {
         return (
-            <div className="mediaContainer font-weight-light">
+            <div className="mediaContainer">
                 <div>
                     <TVShowSidebar tvReviews={this.state.tvReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>

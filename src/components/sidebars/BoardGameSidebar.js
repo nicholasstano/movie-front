@@ -17,10 +17,11 @@ export class BoardGameSidebar extends Component {
     }
 
     render() {
-        let boardGameReviews = this.searchMedia().map(bg => <div className="mediaTitleBoardGames" key={bg.id}><div onClick={() => this.props.mediaClickHandler(bg)}>{bg.name}<div className="monthDay">
-            ({bg.month_day_played}/{bg.year_played})
-            </div>
-        </div></div>)
+        let boardGameReviews = this.searchMedia().map(bg => <div className="mediaTitles" key={bg.id}>
+            <button onClick={() => this.props.mediaClickHandler(bg)}>{bg.name}
+                <div className="monthDay">({bg.month_day_played}/{bg.year_played})</div>
+            </button>
+        </div>)
         return (
             <div className="mediaSidebar">
                 <div className="mediaSearch">

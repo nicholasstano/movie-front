@@ -26,7 +26,7 @@ export class MovieContainer extends Component {
 
     render() {
         return (
-            <div className="mediaContainer font-weight-light">
+            <div className="mediaContainer">
                 <div>
                     <MovieSidebar movieReviews={this.state.movieReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>

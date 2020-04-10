@@ -17,10 +17,11 @@ export class BookSidebar extends Component {
     }
 
     render() {
-        let bookReviews = this.searchMedia().map(book => <div className="mediaTitleBooks" key={book.id}><div onClick={() => this.props.mediaClickHandler(book)}>{book.name}<div className="monthDay">
-            ({book.month_day_read}/{book.year_read})
-            </div>
-        </div></div>)
+        let bookReviews = this.searchMedia().map(book => <div className="mediaTitles" key={book.id}>
+            <button onClick={() => this.props.mediaClickHandler(book)}>{book.name}
+                <div className="monthDay">({book.month_day_read}/{book.year_read})</div>
+            </button>
+        </div>)
         return (
             <div className="mediaSidebar">
                 <div className="mediaSearch">

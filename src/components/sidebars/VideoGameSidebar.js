@@ -17,10 +17,11 @@ export class VideoGameSidebar extends Component {
     }
 
     render() {
-        let videoGameReviews = this.searchMedia().map(vg => <div className="mediaTitleVideoGames" key={vg.id}><div onClick={() => this.props.mediaClickHandler(vg)}>{vg.name}<div className="monthDay">
-            ({vg.month_day_played}/{vg.year_played})
-            </div>
-        </div></div>)
+        let videoGameReviews = this.searchMedia().map(vg => <div className="mediaTitles" key={vg.id}>
+            <button onClick={() => this.props.mediaClickHandler(vg)}>{vg.name}
+                <div className="monthDay">({vg.month_day_played}/{vg.year_played})</div>
+            </button>
+        </div>)
         return (
             <div className="mediaSidebar">
                 <div className="mediaSearch">

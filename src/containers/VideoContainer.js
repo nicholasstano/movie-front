@@ -26,7 +26,7 @@ export class VideoContainer extends Component {
 
     render() {
         return (
-            <div className="mediaContainer font-weight-light">
+            <div className="mediaContainer">
                 <div>
                     <VideoGameSidebar videoGameReviews={this.state.videoGameReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
