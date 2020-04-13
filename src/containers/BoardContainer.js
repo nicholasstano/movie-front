@@ -28,7 +28,7 @@ export class BoardContainer extends Component {
         return (
             <div className="mediaContainer">
                 <div>
-                    <BoardGameSidebar boardReviews={this.state.boardReviews} mediaClickHandler={this.mediaClickHandler} />
+                    <BoardGameSidebar reviews={this.state.boardReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
                 <div className="mediaContent">
                     {this.state.media ? <BoardGameReviewCard key={this.state.media.id} board={this.state.media} /> : <BoardGameHome />}

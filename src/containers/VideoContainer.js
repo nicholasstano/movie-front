@@ -28,7 +28,7 @@ export class VideoContainer extends Component {
         return (
             <div className="mediaContainer">
                 <div>
-                    <VideoGameSidebar videoGameReviews={this.state.videoGameReviews} mediaClickHandler={this.mediaClickHandler} />
+                    <VideoGameSidebar reviews={this.state.videoGameReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
                 <div className="mediaContent">
                     {this.state.media ? <VideoGameReviewCard key={this.state.media.id} videoGame={this.state.media} /> : <VideoGameHome />}

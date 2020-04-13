@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MediaSearch from '../MediaSearch.js'
 import 'react-dropdown/style.css'
 import util from '../../util'
+import './sidebar.css'
 
 export class BookSidebar extends Component {
 
@@ -13,7 +14,7 @@ export class BookSidebar extends Component {
     }
 
     searchMedia = () => {
-        return util.searchMedia(this.props.bookReviews, "name", this.state.mediaSearch)
+        return util.searchMedia(this.props.reviews, "name", this.state.mediaSearch)
     }
 
     render() {

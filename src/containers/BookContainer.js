@@ -28,7 +28,7 @@ export class BookContainer extends Component {
         return (
             <div className="mediaContainer">
                 <div>
-                    <BookSidebar bookReviews={this.state.bookReviews} mediaClickHandler={this.mediaClickHandler} />
+                    <BookSidebar reviews={this.state.bookReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
                 <div className="mediaContent">
                     {this.state.media ? <BookReviewCard key={this.state.media.id} book={this.state.media} /> : <BookHome />}

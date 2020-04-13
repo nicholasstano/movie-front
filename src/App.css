@@ -243,36 +243,6 @@ textarea {
   min-height: 100vh;
 }
 
-.mediaFavoriteFive {
-  display: grid;
-  grid-template-rows: repeat(5, 20%);
-  margin: 0.75%;
-  padding: 1.25%;
-}
-
-.mediaFavoriteFiveSingle {
-  display: grid;
-  grid-template-columns: 1fr 1fr 4fr
-
-}
-
-.mediaFavoriteFiveSingle img {
-  border: solid;
-  border-radius: 3.5px;
-  border-width: 0.75px;
-  height: auto;
-  border-color: lightgray;
-  width: 150px;
-}
-
-.mediaFavoriteFiveSingle h1 {
-  text-align: center;
-}
-
-.mediaFavoriteFiveSingle h5 {
-  padding: 1%;
-}
-
 .mediaForm {
   border-style: solid;
   border-radius: 5%;
@@ -282,23 +252,6 @@ textarea {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, 50%);
-}
-
-.mediaHeader {
-  text-align: center;
-}
-
-.mediaHome {
-  margin: 1.25%;
-  padding: 1%;
-}
-
-.mediaHome div {
-  border: solid;
-  border-width: thin;
-  border-radius: 3px;
-  border-color: lightgray;
-  padding: 1%;
 }
 
 .mediaPicture img {
@@ -337,45 +290,6 @@ textarea {
   background-color: #FFFFFF	;
   padding: 0.25%;
   margin: 0.03125% 1.5%;
-}
-
-.mediaSearch {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding: 1%
-}
-
-.mediaSidebar {
-  position: fixed;
-  overflow-y: scroll;
-  width: 20%;
-  top: 49px;
-  bottom: 0px;
-  border: solid;
-  border-color: rgb(163, 155, 155);
-  border-radius: 6px;
-  border-width: thin;
-  color: #f8f8f8;
-  padding: 1.5%;
-  background-color: dimgrey;
-}
-
-.mediaTitles {
-  font-size: 12px;
-  padding: 1%;
-}
-
-.mediaTitles button {
-  border-radius: 2px;
-  border-color: darkgray;
-  background-color: lightgray;
-  text-align: left;
-  width: 100%;
-}
-
-.monthDay {
-  font-size: 8px;
 }
 
 .nameAndPhoto {

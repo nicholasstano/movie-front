@@ -2,24 +2,24 @@ import React, { Component } from 'react'
 import MediaSearch from '../MediaSearch.js'
 import 'react-dropdown/style.css'
 import util from '../../util'
+import './sidebar.css'
 
 export class AlbumSidebar extends Component {
 
     state = { mediaSearch: "" }
-
 
     handleSearchTermChange = (search) => {
         this.setState({ mediaSearch: search })
     }
 
     searchMedia = () => {
-        return util.searchMedia(this.props.albumReviews, "name", this.state.mediaSearch)
+        return util.searchMedia(this.props.reviews, "name", this.state.mediaSearch)
     }
 
     render() {
-        let albumReviews = this.searchMedia().map(album => <div className="mediaTitles" key={album.id}>
-            <button onClick={() => this.props.mediaClickHandler(album)}>{album.name}
-                <div className="monthDay">({album.month_day_played}/{album.year_played})</div>
+        let mediaReviews = this.searchMedia().map(media => <div className="mediaTitles" key={media.id}>
+            <button onClick={() => this.props.mediaClickHandler(media)}>{media.name}
+                <div className="monthDay">({media.month_day_played}/{media.year_played})</div>
             </button>
         </div>)
         return (
@@ -27,7 +27,7 @@ export class AlbumSidebar extends Component {
                 <div className="mediaSearch">
                     <MediaSearch onChange={this.handleSearchTermChange} mediaName={"Albums"} />
                 </div>
-                {albumReviews}
+                {mediaReviews}
             </div>
         )
     }

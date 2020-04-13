@@ -28,7 +28,7 @@ export class AlbumContainer extends Component {
         return (
             <div className="mediaContainer">
                 <div>
-                    <AlbumSidebar albumReviews={this.state.albumReviews} mediaClickHandler={this.mediaClickHandler} />
+                    <AlbumSidebar reviews={this.state.albumReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
                 <div className="mediaContent">
                     {this.state.media ? <AlbumReviewCard key={this.state.media.id} album={this.state.media} /> : <AlbumHome />}

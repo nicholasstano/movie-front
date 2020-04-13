@@ -28,7 +28,7 @@ export class TelevisionContainer extends Component {
         return (
             <div className="mediaContainer">
                 <div>
-                    <TVShowSidebar tvReviews={this.state.tvReviews} mediaClickHandler={this.mediaClickHandler} />
+                    <TVShowSidebar reviews={this.state.tvReviews} mediaClickHandler={this.mediaClickHandler} />
                 </div>
                 <div className="mediaContent">
                     {this.state.media ? <TVShowReviewCard key={this.state.media.id} tvshow={this.state.media} /> : <TVShowHome />}
