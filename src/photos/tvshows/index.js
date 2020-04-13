@@ -5,5 +5,6 @@ import entourage8 from './entourage8.jpg'
 import flightoftheconchords1 from './flightoftheconchords1.jpg'
 import flightoftheconchords2 from './flightoftheconchords2.jpg'
 import agentcarter1 from './agentcarter1.jpg'
+import dragonballzkai1 from './dragonballzkai1.jpg'
 
-export default { entourage5, entourage6, entourage7, entourage8, flightoftheconchords1, flightoftheconchords2, agentcarter1 }
+export default { entourage5, entourage6, entourage7, entourage8, flightoftheconchords1, flightoftheconchords2, agentcarter1, dragonballzkai1 }
