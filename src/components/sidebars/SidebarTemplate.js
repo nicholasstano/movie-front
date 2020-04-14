@@ -16,8 +16,17 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
         return util.searchMedia(reviews, "name", mediaSearch)
     }
 
+    const truncateMediaName = (name) => {
+        if (name.length > 25) {
+            return name.slice(0, 28) + '...'
+        }
+        else {
+            return name
+        }
+    }
+
     let mediaReviews = searchMedia().map(media => <div className="mediaTitles" key={media.id}>
-        <button onClick={() => clickHandler(media)}>{media.name} {mediaTitle === "TV Shows" && <span>
+        <button onClick={() => clickHandler(media)}>{truncateMediaName(media.name)} {mediaTitle === "TV Shows" && <span>
             ({media.season})
         </span>}
             {(mediaTitle === "Albums" || mediaTitle === "Board Games" || mediaTitle === "Video Games") &&

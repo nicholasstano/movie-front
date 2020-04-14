@@ -1,5 +1,6 @@
 import React from 'react'
 import StarRateIcon from '@material-ui/icons/StarRate';
+import './reviewcard.css'
 
 export default function ReviewCardTemplate(name, photos, rating, image, monthDayConsumed, yearConsumed, notes, improveNotes) {
 

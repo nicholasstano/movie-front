@@ -9,7 +9,7 @@
     position: fixed;
     overflow-y: scroll;
     width: 20%;
-    top: 49px;
+    top: 61px;
     bottom: 0px;
     border: solid;
     border-color: rgb(163, 155, 155);
@@ -33,8 +33,14 @@
     width: 100%;
   }
 
+.mediaTitles button:hover {
+  border-radius: 5px;
+  border-color: white;
+  background-color: white;
+  text-align: left;
+  width: 100%;
+}
+
 .monthDay {
     font-size: 8px;
   }
-
-  

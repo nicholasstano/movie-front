@@ -1,0 +1,35 @@
+.topNavbar {
+    position: fixed;
+    width: 100%;
+    border: solid;
+    border-color: rgb(163, 155, 155);
+    border-radius: 6px;
+    border-width: thin;
+    display: grid;
+    grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+    justify-content: space-evenly;
+    background-color: dimgrey;
+  }
+
+  .topNavbar a {
+      padding: 5px;
+      margin: 5px;
+  }
+
+  .navbarButton {
+    border-radius: 5px;
+    border-color: lightgray;
+    background-color: dimgray;
+    color: lightgray;
+    text-align: center;
+    width: 100%;
+    margin: 5px;
+  }
+
+  .navbarButton:hover {
+    border-radius: 5px;
+    border-color: dimgray;
+    background-color: lightgray;
+    color: black;
+    width: 100%;
+  }
