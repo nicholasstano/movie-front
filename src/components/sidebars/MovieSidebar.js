@@ -1,37 +1,12 @@
-import React, { Component } from 'react'
-import MediaSearch from '../MediaSearch.js'
-import 'react-dropdown/style.css'
-import util from '../../util'
-import './sidebar.css'
+import SidebarTemplate from './SidebarTemplate.js'
 
-export class MovieSidebar extends Component {
+const MovieSidebar = (props) => {
 
-    state = { mediaSearch: "" }
+    const { reviews, mediaClickHandler } = props
 
-
-    handleSearchTermChange = (search) => {
-        this.setState({ mediaSearch: search })
-    }
-
-    searchMedia = () => {
-        return util.searchMedia(this.props.reviews, "name", this.state.mediaSearch)
-    }
-
-    render() {
-        let movieReviews = this.searchMedia().map(movie => <div className="mediaTitles" key={movie.id}>
-            <button onClick={() => this.props.mediaClickHandler(movie)}>{movie.name}
-                <div className="monthDay">({movie.month_day_watched}/{movie.year_watched})</div>
-            </button>
-        </div>)
-        return (
-            <div className="mediaSidebar">
-                <div className="mediaSearch">
-                    <MediaSearch onChange={this.handleSearchTermChange} mediaName={"Movies"} />
-                </div>
-                {movieReviews}
-            </div>
-        )
-    }
+    return (
+        SidebarTemplate(reviews, "Movies", mediaClickHandler)
+    )
 }
 
 export default MovieSidebar

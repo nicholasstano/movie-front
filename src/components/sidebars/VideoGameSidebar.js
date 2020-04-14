@@ -1,37 +1,12 @@
-import React, { Component } from 'react'
-import MediaSearch from '../MediaSearch.js'
-import 'react-dropdown/style.css'
-import util from '../../util'
-import './sidebar.css'
+import SidebarTemplate from './SidebarTemplate.js'
 
-export class VideoGameSidebar extends Component {
+const VideoGameSidebar = (props) => {
 
-    state = { mediaSearch: "" }
+    const { reviews, mediaClickHandler } = props
 
-
-    handleSearchTermChange = (search) => {
-        this.setState({ mediaSearch: search })
-    }
-
-    searchMedia = () => {
-        return util.searchMedia(this.props.reviews, "name", this.state.mediaSearch)
-    }
-
-    render() {
-        let videoGameReviews = this.searchMedia().map(vg => <div className="mediaTitles" key={vg.id}>
-            <button onClick={() => this.props.mediaClickHandler(vg)}>{vg.name}
-                <div className="monthDay">({vg.month_day_played}/{vg.year_played})</div>
-            </button>
-        </div>)
-        return (
-            <div className="mediaSidebar">
-                <div className="mediaSearch">
-                    <MediaSearch onChange={this.handleSearchTermChange} mediaName={"Video Games"} />
-                </div>
-                {videoGameReviews}
-            </div>
-        )
-    }
+    return (
+        SidebarTemplate(reviews, "Video Games", mediaClickHandler)
+    )
 }
 
 export default VideoGameSidebar
