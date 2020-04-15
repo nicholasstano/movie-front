@@ -11,22 +11,22 @@ export class NavBar extends Component {
                     <button className="navbarButton">Nick Stano</button>
                 </Link>
                 <Link to="/albums">
-                    <button className="navbarButton">Albums</button>
+                    <button className="navbarButton albums">Albums</button>
                 </Link>
                 <Link to="/boards">
-                    <button className="navbarButton">Board Games</button>
+                    <button className="navbarButton boardgames">Board Games</button>
                 </Link>
                 <Link to="/books">
-                    <button className="navbarButton">Books</button>
+                    <button className="navbarButton books">Books</button>
                 </Link>
                 <Link to="/movies">
-                    <button className="navbarButton">Movies</button>
+                    <button className="navbarButton movies">Movies</button>
                 </Link>
                 <Link to="/television">
-                    <button className="navbarButton">Television</button>
+                    <button className="navbarButton television">Television</button>
                 </Link>
                 <Link to="/videos">
-                    <button className="navbarButton">Video Games</button>
+                    <button className="navbarButton videogames">Video Games</button>
                 </Link>
             </div>
         )

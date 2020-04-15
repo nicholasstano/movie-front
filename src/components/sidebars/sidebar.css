@@ -27,20 +27,67 @@
   
 .mediaTitles button {
     border-radius: 5px;
-    border-color: darkgray;
-    background-color: lightgray;
+    border-color: lightgray;
+    background-color: dimgray;
+    color: lightgray;
     text-align: left;
     width: 100%;
   }
 
-.mediaTitles button:hover {
+.monthDay {
+    font-size: 8px;
+  }
+
+.Albums:hover {
   border-radius: 5px;
-  border-color: white;
-  background-color: white;
+  border-color: darkred;
+  background-color: red;
+  color: white;
   text-align: left;
   width: 100%;
 }
 
-.monthDay {
-    font-size: 8px;
-  }
+.Board.Games:hover {
+  border-radius: 5px;
+  border-color: darkblue;
+  background-color: blue;
+  color: white;
+  text-align: left;
+  width: 100%;
+}
+
+.Books:hover {
+  border-radius: 5px;
+  border-color: darkgoldenrod;
+  background-color: yellow;
+  color: black;
+  text-align: left;
+  width: 100%;
+}
+
+.Movies:hover {
+  border-radius: 5px;
+  border-color: darkorange;
+  background-color: orange;
+  color: white;
+  text-align: left;
+  width: 100%;
+}
+
+.TV.Shows:hover {
+  border-radius: 5px;
+  border-color: darkgreen;
+  background-color: green;
+  color: white;
+  text-align: left;
+  width: 100%;
+}
+
+.Video.Games:hover {
+  border-radius: 5px;
+  border-color: darkviolet;
+  background-color: purple;
+  color: white;
+  text-align: left;
+  width: 100%;
+}

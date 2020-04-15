@@ -2,7 +2,7 @@
     height: auto;
     width: 150px;
     border-style: solid;
-    border-color: lightgray;
+    border-color: black;
     border-width: thin;
     border-radius: 3.5px;
   }
@@ -17,6 +17,8 @@
     border-width: thin;
     border-radius: 3px;
     border-color: lightgray;
+    background-color: dimgray;
+    color: lightgray;
     padding: 15px;
     margin: 0.5px;
   }

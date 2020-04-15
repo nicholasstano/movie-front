@@ -2,8 +2,9 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 .app {
-  background-color: #FFFFFF	;
+  background-color: lightgray;
 }
 
 ::placeholder {

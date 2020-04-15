@@ -33,3 +33,51 @@
     color: black;
     width: 100%;
   }
+
+  .navbarButton.albums:hover {
+    border-radius: 5px;
+    border-color: darkred;
+    background-color: red;
+    color: white;
+    width: 100%;
+  }
+
+  .navbarButton.boardgames:hover {
+    border-radius: 5px;
+    border-color: darkblue;
+    background-color: blue;
+    color: white;
+    width: 100%;
+  }
+
+  .navbarButton.books:hover {
+    border-radius: 5px;
+    border-color: darkgoldenrod;
+    background-color: yellow;
+    color: black;
+    width: 100%;
+  }
+
+  .navbarButton.movies:hover {
+    border-radius: 5px;
+    border-color: darkorange;
+    background-color: orange;
+    color: white;
+    width: 100%;
+  }
+
+  .navbarButton.television:hover {
+    border-radius: 5px;
+    border-color: darkgreen;
+    background-color: green;
+    color: white;
+    width: 100%;
+  }
+
+  .navbarButton.videogames:hover {
+    border-radius: 5px;
+    border-color: darkviolet;
+    background-color: purple;
+    color: white;
+    width: 100%;
+  }

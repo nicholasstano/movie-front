@@ -26,7 +26,7 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
     }
 
     let mediaReviews = searchMedia().map(media => <div className="mediaTitles" key={media.id}>
-        <button onClick={() => clickHandler(media)}>{truncateMediaName(media.name)} {mediaTitle === "TV Shows" && <span>
+        <button className={mediaTitle} onClick={() => clickHandler(media)}>{truncateMediaName(media.name)} {mediaTitle === "TV Shows" && <span>
             ({media.season})
         </span>}
             {(mediaTitle === "Albums" || mediaTitle === "Board Games" || mediaTitle === "Video Games") &&
