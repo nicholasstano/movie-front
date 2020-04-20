@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.css'
+import MenuIcon from '@material-ui/icons/Menu';
 
-export class NavBar extends Component {
+const NavBar = () => {
 
-    render() {
-        return (
-            <div className="topNavbar">
+    const [navOpen, setNavOpen] = useState(false)
+
+    return (
+        <div>
+            <div className="topNavbar" >
+                {/* <MenuIcon /> */}
                 <Link to="/">
                     <button className="navbarButton">Nick Stano</button>
                 </Link>
@@ -29,8 +33,9 @@ export class NavBar extends Component {
                     <button className="navbarButton videogames">Video Games</button>
                 </Link>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default NavBar
+

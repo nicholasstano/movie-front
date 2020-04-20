@@ -1,4 +1,5 @@
-.topNavbar {
+@media only screen and (min-width: 600px) {
+  div.topNavbar {
     position: fixed;
     width: 100%;
     border: solid;
@@ -10,74 +11,75 @@
     justify-content: space-evenly;
     background-color: dimgrey;
   }
+}
 
-  .topNavbar a {
-      padding: 5px;
-      margin: 5px;
-  }
+.topNavbar a {
+  padding: 5px;
+  margin: 5px;
+}
 
-  .navbarButton {
-    border-radius: 5px;
-    border-color: lightgray;
-    background-color: dimgray;
-    color: lightgray;
-    text-align: center;
-    width: 100%;
-    margin: 5px;
-  }
+.navbarButton {
+border-radius: 5px;
+border-color: lightgray;
+background-color: dimgray;
+color: lightgray;
+text-align: center;
+width: 100%;
+margin: 5px;
+}
 
-  .navbarButton:hover {
-    border-radius: 5px;
-    border-color: dimgray;
-    background-color: lightgray;
-    color: black;
-    width: 100%;
-  }
+.navbarButton:hover {
+border-radius: 5px;
+border-color: dimgray;
+background-color: lightgray;
+color: black;
+width: 100%;
+}
 
-  .navbarButton.albums:hover {
-    border-radius: 5px;
-    border-color: darkred;
-    background-color: red;
-    color: white;
-    width: 100%;
-  }
+.navbarButton.albums:hover {
+border-radius: 5px;
+border-color: darkred;
+background-color: red;
+color: white;
+width: 100%;
+}
 
-  .navbarButton.boardgames:hover {
-    border-radius: 5px;
-    border-color: darkblue;
-    background-color: blue;
-    color: white;
-    width: 100%;
-  }
+.navbarButton.boardgames:hover {
+border-radius: 5px;
+border-color: darkblue;
+background-color: blue;
+color: white;
+width: 100%;
+}
 
-  .navbarButton.books:hover {
-    border-radius: 5px;
-    border-color: darkgoldenrod;
-    background-color: yellow;
-    color: black;
-    width: 100%;
-  }
+.navbarButton.books:hover {
+border-radius: 5px;
+border-color: darkgoldenrod;
+background-color: yellow;
+color: black;
+width: 100%;
+}
 
-  .navbarButton.movies:hover {
-    border-radius: 5px;
-    border-color: darkorange;
-    background-color: orange;
-    color: white;
-    width: 100%;
-  }
+.navbarButton.movies:hover {
+border-radius: 5px;
+border-color: darkorange;
+background-color: orange;
+color: white;
+width: 100%;
+}
 
-  .navbarButton.television:hover {
-    border-radius: 5px;
-    border-color: darkgreen;
-    background-color: green;
-    color: white;
-    width: 100%;
-  }
+.navbarButton.television:hover {
+border-radius: 5px;
+border-color: darkgreen;
+background-color: green;
+color: white;
+width: 100%;
+}
 
-  .navbarButton.videogames:hover {
-    border-radius: 5px;
-    border-color: darkviolet;
-    background-color: purple;
-    color: white;
-    width: 100%;
-  }
+.navbarButton.videogames:hover {
+border-radius: 5px;
+border-color: darkviolet;
+background-color: purple;
+color: white;
+width: 100%;
+}
