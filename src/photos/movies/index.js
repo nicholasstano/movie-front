@@ -19,5 +19,7 @@ import rashomon from './rashomon.jpg'
 import thehiddenfortress from './thehiddenfortress.jpg'
 import throneofblood from './throneofblood.jpg'
 import twelveangrymen from './12angrymen.jpg'
+import inalonelyplace from './inalonelyplace.jpg'
+import strangersonatrain from './strangersonatrain.jpg'
 
-export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon, rashomon, thehiddenfortress, throneofblood, twelveangrymen }
+export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon, rashomon, thehiddenfortress, throneofblood, twelveangrymen, inalonelyplace, strangersonatrain }
