@@ -1,9 +1,9 @@
-import TVShowHome from '../components/mediahomes/TVShowHome.js'
-import TVShowSidebar from '../components/sidebars/TVShowSidebar.js'
-import TVShowReviewCard from '../components/cards/TVShowReviewCard.js'
+import TVShowHome from '../../components/mediahomes/TVShowHome.js'
+import TVShowSidebar from '../../components/sidebars/TVShowSidebar.js'
+import TVShowReviewCard from '../../components/cards/TVShowReviewCard.js'
 import React, { Component } from 'react'
-import { url } from '../config'
-import util from '../util'
+import { url } from '../../config'
+import util from '../../util'
 import './container.scss'
 
 export class TelevisionContainer extends Component {

@@ -1,9 +1,9 @@
-import BoardGameHome from '../components/mediahomes/BoardGameHome.js'
-import BoardGameSidebar from '../components/sidebars/BoardGameSidebar.js'
-import BoardGameReviewCard from '../components/cards/BoardGameReviewCard.js'
+import BoardGameHome from '../../components/mediahomes/BoardGameHome.js'
+import BoardGameSidebar from '../../components/sidebars/BoardGameSidebar.js'
+import BoardGameReviewCard from '../../components/cards/BoardGameReviewCard.js'
 import React, { Component } from 'react'
-import { url } from '../config'
-import util from '../util'
+import { url } from '../../config'
+import util from '../../util'
 import './container.scss'
 
 export class BoardContainer extends Component {

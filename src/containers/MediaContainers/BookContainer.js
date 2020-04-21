@@ -1,9 +1,9 @@
-import BookHome from '../components/mediahomes/BookHome.js'
-import BookSidebar from '../components/sidebars/BookSidebar.js'
-import BookReviewCard from '../components/cards/BookReviewCard.js'
+import BookHome from '../../components/mediahomes/BookHome.js'
+import BookSidebar from '../../components/sidebars/BookSidebar.js'
+import BookReviewCard from '../../components/cards/BookReviewCard.js'
 import React, { Component } from 'react'
-import { url } from '../config'
-import util from '../util'
+import { url } from '../../config'
+import util from '../../util'
 import './container.scss'
 
 export class BookContainer extends Component {

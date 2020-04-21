@@ -1,9 +1,9 @@
-import VideoGameHome from '../components/mediahomes/VideoGameHome.js'
-import VideoGameSidebar from '../components/sidebars/VideoGameSidebar.js'
-import VideoGameReviewCard from '../components/cards/VideoGameReviewCard.js'
+import VideoGameHome from '../../components/mediahomes/VideoGameHome.js'
+import VideoGameSidebar from '../../components/sidebars/VideoGameSidebar.js'
+import VideoGameReviewCard from '../../components/cards/VideoGameReviewCard.js'
 import React, { Component } from 'react'
-import { url } from '../config'
-import util from '../util'
+import { url } from '../../config'
+import util from '../../util'
 import './container.scss'
 
 export class VideoContainer extends Component {

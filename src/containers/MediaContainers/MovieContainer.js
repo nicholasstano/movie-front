@@ -1,9 +1,9 @@
-import MovieHome from '../components/mediahomes/MovieHome.js'
-import MovieSidebar from '../components/sidebars/MovieSidebar.js'
-import MovieReviewCard from '../components/cards/MovieReviewCard.js'
+import MovieHome from '../../components/mediahomes/MovieHome.js'
+import MovieSidebar from '../../components/sidebars/MovieSidebar.js'
+import MovieReviewCard from '../../components/cards/MovieReviewCard.js'
 import React, { Component } from 'react'
-import { url } from '../config'
-import util from '../util'
+import { url } from '../../config'
+import util from '../../util'
 import './container.scss'
 
 export class MovieContainer extends Component {
