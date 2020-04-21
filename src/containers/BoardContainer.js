@@ -4,6 +4,7 @@ import BoardGameReviewCard from '../components/cards/BoardGameReviewCard.js'
 import React, { Component } from 'react'
 import { url } from '../config'
 import util from '../util'
+import './container.scss'
 
 export class BoardContainer extends Component {
 

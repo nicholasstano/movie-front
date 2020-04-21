@@ -4,6 +4,7 @@ import BookReviewCard from '../components/cards/BookReviewCard.js'
 import React, { Component } from 'react'
 import { url } from '../config'
 import util from '../util'
+import './container.scss'
 
 export class BookContainer extends Component {
 

@@ -4,6 +4,7 @@ import MovieReviewCard from '../components/cards/MovieReviewCard.js'
 import React, { Component } from 'react'
 import { url } from '../config'
 import util from '../util'
+import './container.scss'
 
 export class MovieContainer extends Component {
 

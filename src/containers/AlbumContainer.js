@@ -1,41 +1,40 @@
 import AlbumHome from '../components/mediahomes/AlbumHome.js'
 import AlbumSidebar from '../components/sidebars/AlbumSidebar.js'
 import AlbumReviewCard from '../components/cards/AlbumReviewCard.js'
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { url } from '../config'
 import util from '../util'
+import './container.scss'
 
-export class AlbumContainer extends Component {
+const AlbumContainer = () => {
 
-    state = { albumReviews: [], media: null }
+    const [mediaReviews, setMediaReviews] = useState([])
+    const [media, setMedia] = useState(null)
 
-    componentDidMount() {
+    useEffect(() => {
         fetch(`${url}/albums`)
             .then(response => response.json())
-            .then(albums => {
-                this.setState({
-                    albumReviews: util.sortMediaById(albums)
-                })
-            });
-    }
+            .then(media => setMediaReviews(util.sortMediaById(media))
+            );
+    })
 
-    mediaClickHandler = (mediaClicked) => {
+    const mediaClickHandler = (mediaClicked) => {
         window.scrollTo(0, 0)
-        this.setState({ media: mediaClicked })
+        setMedia(mediaClicked)
     }
 
-    render() {
-        return (
+    return (
+        <div>
             <div className="mediaContainer">
                 <div>
-                    <AlbumSidebar reviews={this.state.albumReviews} mediaClickHandler={this.mediaClickHandler} />
+                    <AlbumSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
                 </div>
                 <div className="mediaContent">
-                    {this.state.media ? <AlbumReviewCard key={this.state.media.id} album={this.state.media} /> : <AlbumHome />}
+                    {media ? <AlbumReviewCard key={media.id} album={media} /> : <AlbumHome />}
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default AlbumContainer

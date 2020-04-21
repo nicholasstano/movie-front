@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import './navbar.css'
+import './navbar.scss'
 import MenuIcon from '@material-ui/icons/Menu';
 
 const NavBar = () => {
@@ -10,7 +10,6 @@ const NavBar = () => {
     return (
         <div>
             <div className="topNavbar" >
-                {/* <MenuIcon /> */}
                 <Link to="/">
                     <button className="navbarButton">Nick Stano</button>
                 </Link>

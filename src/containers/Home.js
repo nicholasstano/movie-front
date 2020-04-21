@@ -7,7 +7,7 @@ export class Home extends Component {
 
     render() {
         return (
-            <div className="homeContainer font-weight-light">
+            <div className="homeContainer">
                 <NameAndPhoto />
                 <AboutMe />
                 <FavoriteMedia />

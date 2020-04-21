@@ -1,0 +1,14 @@
+div.mediaContainer {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    color:#080808;
+    background-color: #FFFFFF;
+    padding-bottom: 0px; 
+    padding-top: 49px;
+    min-height: 100vh;
+
+    div.mediaContent {
+        height: 100vh;
+    }
+    
+  }

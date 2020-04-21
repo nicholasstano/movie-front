@@ -4,6 +4,7 @@ import TVShowReviewCard from '../components/cards/TVShowReviewCard.js'
 import React, { Component } from 'react'
 import { url } from '../config'
 import util from '../util'
+import './container.scss'
 
 export class TelevisionContainer extends Component {
 
