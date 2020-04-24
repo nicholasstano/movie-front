@@ -13,9 +13,8 @@ const AlbumContainer = () => {
     useEffect(() => {
         fetch(`${url}/albums`)
             .then(response => response.json())
-            .then(media => setMediaReviews(util.sortMediaById(media))
-            );
-    }, [])
+            .then(media => setMediaReviews(util.sortMediaById(media)))
+    }, [mediaReviews])
 
     const mediaClickHandler = (mediaClicked) => {
         window.scrollTo(0, 0)

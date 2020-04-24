@@ -1,42 +1,35 @@
 import MovieHome from '../../components/mediahomes/MovieHome.js'
 import MovieSidebar from '../../components/sidebars/MovieSidebar.js'
 import MovieReviewCard from '../../components/cards/MovieReviewCard.js'
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { url } from '../../config'
 import util from '../../util'
 import './container.scss'
 
-export class MovieContainer extends Component {
+const MovieContainer = () => {
+    const [mediaReviews, setMediaReviews] = useState([])
+    const [media, setMedia] = useState(null)
 
-    state = { movieReviews: [], media: null }
-
-    componentDidMount() {
+    useEffect(() => {
         fetch(`${url}/movies`)
-            .then(response => response.json())
-            .then(movies => {
-                this.setState({
-                    movieReviews: util.sortMediaById(movies)
-                })
-            })
-    }
+            .then(res => res.json())
+            .then(media => setMediaReviews(util.sortMediaById(media)))
+    }, [mediaReviews])
 
-    mediaClickHandler = (mediaClicked) => {
+    const mediaClickHandler = (mediaClicked) => {
         window.scrollTo(0, 0)
-        this.setState({ media: mediaClicked })
+        setMedia(mediaClicked)
     }
-
-    render() {
-        return (
-            <div className="mediaContainer">
-                <div>
-                    <MovieSidebar reviews={this.state.movieReviews} mediaClickHandler={this.mediaClickHandler} />
-                </div>
-                <div className="mediaContent">
-                    {this.state.media ? <MovieReviewCard key={this.state.media.id} movie={this.state.media} /> : <MovieHome />}
-                </div>
+    return (
+        <div className="mediaContainer">
+            <div>
+                <MovieSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
             </div>
-        );
-    }
+            <div className="mediaContent">
+                {media ? <MovieReviewCard key={media.id} movie={media} /> : <MovieHome />}
+            </div>
+        </div>
+    )
 }
 
 export default MovieContainer
