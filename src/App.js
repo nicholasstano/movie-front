@@ -13,7 +13,6 @@ import NavBar from '../src/containers/NavBar/NavBar.js'
 import Footer from '../src/containers/Footer.js'
 import Home from '../src/containers/Home.js'
 import { withRouter, Switch, Route } from 'react-router-dom'
-import Test from './Test.js'
 
 export class App extends Component {
 
@@ -37,7 +36,6 @@ export class App extends Component {
               }} />
             :
             <Route path="/forms" render={() => { return (<div><FormsContainer /> <Footer /> </div>) }} />}
-          <Route path="/tests" render={() => { return (<div><Test /> </div>) }} />}
           <Route path="/movies" render={() => { return (<div><MovieContainer /></div>) }} />
           <Route path="/albums" render={() => { return (<div><AlbumContainer /></div>) }} />
           <Route path="/boards" render={() => { return (<div><BoardContainer /></div>) }} />
