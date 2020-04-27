@@ -44,7 +44,7 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
             <div className="mediaSearch">
                 <MediaSearch onChange={handleSearchTermChange} mediaName={mediaTitle} />
             </div>
-            {mediaReviews}
+            {mediaReviews.length ? mediaReviews : <div>Loading</div>}
         </div>
     )
 }
