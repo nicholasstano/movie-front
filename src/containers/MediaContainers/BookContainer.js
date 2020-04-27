@@ -1,42 +1,35 @@
 import BookHome from '../../components/mediahomes/BookHome.js'
 import BookSidebar from '../../components/sidebars/BookSidebar.js'
 import BookReviewCard from '../../components/cards/BookReviewCard.js'
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { url } from '../../config'
 import util from '../../util'
 import './container.scss'
 
-export class BookContainer extends Component {
+const BookContainer = () => {
+    const [mediaReviews, setMediaReviews] = useState([])
+    const [media, setMedia] = useState(null)
 
-    state = { bookReviews: [], media: null }
-
-    componentDidMount() {
+    useEffect(() => {
         fetch(`${url}/books`)
             .then(response => response.json())
-            .then(books => {
-                this.setState({
-                    bookReviews: util.sortMediaById(books)
-                })
-            })
-    }
+            .then(media => setMediaReviews(util.sortMediaById(media)))
+    }, [])
 
-    mediaClickHandler = (mediaClicked) => {
+    const mediaClickHandler = (mediaClicked) => {
         window.scrollTo(0, 0)
-        this.setState({ media: mediaClicked })
+        setMedia(mediaClicked)
     }
-
-    render() {
-        return (
-            <div className="mediaContainer">
-                <div>
-                    <BookSidebar reviews={this.state.bookReviews} mediaClickHandler={this.mediaClickHandler} />
-                </div>
-                <div className="mediaContent">
-                    {this.state.media ? <BookReviewCard key={this.state.media.id} book={this.state.media} /> : <BookHome />}
-                </div>
+    return (
+        <div className="mediaContainer">
+            <div>
+                <BookSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
             </div>
-        )
-    }
+            <div className="mediaContent">
+                {media ? <BookReviewCard key={media.id} book={media} /> : <BookHome />}
+            </div>
+        </div>
+    )
 }
 
 export default BookContainer

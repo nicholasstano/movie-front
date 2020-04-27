@@ -1,42 +1,35 @@
 import VideoGameHome from '../../components/mediahomes/VideoGameHome.js'
 import VideoGameSidebar from '../../components/sidebars/VideoGameSidebar.js'
 import VideoGameReviewCard from '../../components/cards/VideoGameReviewCard.js'
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import { url } from '../../config'
 import util from '../../util'
 import './container.scss'
 
-export class VideoContainer extends Component {
+const VideoContainer = () => {
+    const [mediaReviews, setMediaReviews] = useState([])
+    const [media, setMedia] = useState(null)
 
-    state = { videoGameReviews: [], media: null }
-
-    componentDidMount() {
+    useEffect(() => {
         fetch(`${url}/videos`)
-            .then(response => response.json())
-            .then(videoGames => {
-                this.setState({
-                    videoGameReviews: util.sortMediaById(videoGames)
-                })
-            })
-    }
+            .then(res => res.json())
+            .then(media => setMediaReviews(util.sortMediaById(media)))
+    }, [])
 
-    mediaClickHandler = (mediaClicked) => {
+    const mediaClickHandler = (mediaClicked) => {
         window.scrollTo(0, 0)
-        this.setState({ media: mediaClicked })
+        setMedia(mediaClicked)
     }
-
-    render() {
-        return (
-            <div className="mediaContainer">
-                <div>
-                    <VideoGameSidebar reviews={this.state.videoGameReviews} mediaClickHandler={this.mediaClickHandler} />
-                </div>
-                <div className="mediaContent">
-                    {this.state.media ? <VideoGameReviewCard key={this.state.media.id} videoGame={this.state.media} /> : <VideoGameHome />}
-                </div>
+    return (
+        <div className="mediaContainer">
+            <div>
+                <VideoGameSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
             </div>
-        )
-    }
+            <div className="mediaContent">
+                {media ? <VideoGameReviewCard key={media.id} videoGame={media} /> : <VideoGameHome />}
+            </div>
+        </div>
+    )
 }
 
 export default VideoContainer

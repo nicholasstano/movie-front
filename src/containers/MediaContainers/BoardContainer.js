@@ -1,42 +1,35 @@
 import BoardGameHome from '../../components/mediahomes/BoardGameHome.js'
 import BoardGameSidebar from '../../components/sidebars/BoardGameSidebar.js'
 import BoardGameReviewCard from '../../components/cards/BoardGameReviewCard.js'
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { url } from '../../config'
 import util from '../../util'
 import './container.scss'
 
-export class BoardContainer extends Component {
+const BoardContainer = () => {
+    const [mediaReviews, setMediaReviews] = useState([])
+    const [media, setMedia] = useState(null)
 
-    state = { boardReviews: [], media: null }
-
-    componentDidMount() {
+    useEffect(() => {
         fetch(`${url}/boards`)
             .then(response => response.json())
-            .then(boards => {
-                this.setState({
-                    boardReviews: util.sortMediaById(boards)
-                })
-            });
-    }
+            .then(media => setMediaReviews(util.sortMediaById(media)))
+    }, [])
 
-    mediaClickHandler = (mediaClicked) => {
+    const mediaClickHandler = (mediaClicked) => {
         window.scrollTo(0, 0)
-        this.setState({ media: mediaClicked })
+        setMedia(mediaClicked)
     }
-
-    render() {
-        return (
-            <div className="mediaContainer">
-                <div>
-                    <BoardGameSidebar reviews={this.state.boardReviews} mediaClickHandler={this.mediaClickHandler} />
-                </div>
-                <div className="mediaContent">
-                    {this.state.media ? <BoardGameReviewCard key={this.state.media.id} board={this.state.media} /> : <BoardGameHome />}
-                </div>
+    return (
+        <div className="mediaContainer">
+            <div>
+                <BoardGameSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
             </div>
-        )
-    }
+            <div className="mediaContent">
+                {media ? <BoardGameReviewCard key={media.id} board={media} /> : <BoardGameHome />}
+            </div>
+        </div>
+    )
 }
 
 export default BoardContainer
