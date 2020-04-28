@@ -12,5 +12,6 @@ import freedomofchoice from './freedomofchoice.jpg'
 import pointofknowreturn from './pointofknowreturn.jpg'
 import minimummaximum from './minimummaximum.png'
 import thegrandwazoo from './thegrandwazoo.jpg'
+import enemaofthestate from './enemaofthestate.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate }
