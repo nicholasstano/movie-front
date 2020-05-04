@@ -4,8 +4,8 @@ import './home.scss'
 export default function HomeTemplate(topFiveMediaNames, photoName, title, paragraphInformation) {
     let favoriteFive = photoName.map((media, index) =>
         <div className="mediaFavoriteFiveSingle" key={media}>
-            <p>{topFiveMediaNames[index]}</p>
             <img src={media} alt={media} />
+            <p>{topFiveMediaNames[index]}</p>
         </div>)
     return (
         <div className="mediaHome">
