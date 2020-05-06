@@ -6,9 +6,9 @@ function MediaSearch(props) {
     }
 
     return (
-        <div className="mediaReviewSearch">
+        <div className="mediaSearch">
             <form onSubmit={(event) => event.preventDefault()}>
-                <input type="text" className="mediaReviewSearchBox font-weight-light" placeholder={text()} onChange={(event) => { props.onChange(event.target.value) }} />
+                <input type="text" className="mediaSearchBox" placeholder={text()} onChange={(event) => { props.onChange(event.target.value) }} />
             </form>
         </div>
     )
