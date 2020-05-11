@@ -26,5 +26,7 @@ import vertigo from './vertigo.jpg'
 import dialmformurder from './dialmformurder.jpg'
 import northbynorthwest from './northbynorthwest.jpg'
 import psycho from './psycho.jpg'
+import thebirds from './thebirds.jpg'
+import touchofevil from './touchofevil.jpg'
 
-export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon, rashomon, thehiddenfortress, throneofblood, twelveangrymen, inalonelyplace, strangersonatrain, rearwindow, vertigo, dialmformurder, northbynorthwest, psycho }
+export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon, rashomon, thehiddenfortress, throneofblood, twelveangrymen, inalonelyplace, strangersonatrain, rearwindow, vertigo, dialmformurder, northbynorthwest, psycho, thebirds, touchofevil }
