@@ -5,7 +5,9 @@
   div.headerInfo {
     border: solid;
     border-width: thin;
-    border-radius: 3px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 3px;
     border-color: lightgray;
     background-color: dimgray;
     color: lightgray;
@@ -17,28 +19,25 @@
   div.favoriteFive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    border: solid;
-    border-width: thin;
-    border-radius: 3px;
-    border-color: lightgray;
     background-color: dimgray;
     color: lightgray;
     padding: 15px;
 
     div.mediaFavoriteFiveSingle {
       display: grid;
+      padding: 10px;
       img {
         margin-left: auto;
         margin-right: auto;
         border: solid;
         border-radius: 3.5px;
-        border-width: 0.75px;
-        border-color: lightgray;
+        border-width: 1px;
+        border-color: white;
         height: 125px;
         width: auto;
       }
       p {
-        font-size: 8px;
+        font-size: 12px;
         text-align: center;
         margin: 0;
         padding: 0;

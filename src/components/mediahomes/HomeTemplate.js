@@ -1,5 +1,5 @@
 import React from 'react'
-import './home.scss'
+import './mediaHome.scss'
 
 export default function HomeTemplate(topFiveMediaNames, photoName, title, paragraphInformation) {
     let favoriteFive = photoName.map((media, index) =>
