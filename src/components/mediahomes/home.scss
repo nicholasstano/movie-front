@@ -1,13 +1,15 @@
 .mediaHome {
   margin: 1.25%;
-  padding: 1%;
+  padding: 10px 0px;
 
   div.headerInfo {
     border: solid;
     border-width: thin;
     border-radius: 3px;
     border-color: lightgray;
-    padding: 1%;
+    background-color: dimgray;
+    color: lightgray;
+    padding: 15px;
     h1.mediaHeader {
       text-align: center;
     }
@@ -15,11 +17,13 @@
   div.favoriteFive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    padding: 1%;
     border: solid;
     border-width: thin;
     border-radius: 3px;
     border-color: lightgray;
+    background-color: dimgray;
+    color: lightgray;
+    padding: 15px;
 
     div.mediaFavoriteFiveSingle {
       display: grid;

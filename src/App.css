@@ -116,8 +116,8 @@ textarea {
   display: grid;
   color:#080808;
   background-color: #FFFFFF;
-  padding-bottom: 10px; 
-  padding-top: 58px;
+  padding-bottom: 0px; 
+  padding-top: 49px;
 }
 
 .homeFavoriteMedia {
@@ -207,9 +207,4 @@ textarea {
   border-radius: 35px;
   border-style: thin;
   border-color: #f8f8f8;
-}
-
-.testContainer {
-  margin: 40px;
-  padding: 90px;
 }

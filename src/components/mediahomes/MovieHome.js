@@ -5,7 +5,7 @@ export default function MovieHome() {
 
     const mediaNames = ["Pulp Fiction", "Taxi Driver", "Chinatown", "The Godfather", "The Usual Suspects"]
 
-    const mediaIntro = "1960's rewatch watchlist: Psycho, Yojimbo, Sanjuro, The Manchurian Candidate, High and Low, The Birds, A Shot in the Dark, A Fistful of Dollars, Dr. Strangelove, For a Few Dollars More, The Sound of Music, The Good, The Bad and The Ugly, Once Upon a Time in the West, Butch Cassidy and the Sundance Kid"
+    const mediaIntro = "1960's rewatch watchlist: Yojimbo, Sanjuro, High and Low, A Shot in the Dark, A Fistful of Dollars, Dr. Strangelove, For a Few Dollars More, The Sound of Music, The Good The Bad and The Ugly, Once Upon a Time in the West, Butch Cassidy and the Sundance Kid"
 
     return (
         HomeTemplate(mediaNames, photos.movies, "Movies", mediaIntro)
