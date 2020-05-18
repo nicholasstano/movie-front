@@ -14,5 +14,6 @@ import minimummaximum from './minimummaximum.png'
 import thegrandwazoo from './thegrandwazoo.jpg'
 import enemaofthestate from './enemaofthestate.jpg'
 import licensedtoill from './licensedtoill.jpg'
+import letthedominoesfall from './letthedominoesfall.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall }
