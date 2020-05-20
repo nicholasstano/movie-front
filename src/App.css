@@ -114,8 +114,9 @@ textarea {
 
 .homeContainer {
   display: grid;
-  color:#080808;
-  background-color: #FFFFFF;
+  color: lightgray;
+  background-color: dimgray;
+
   padding-bottom: 0px; 
   padding-top: 49px;
 }
@@ -191,20 +192,16 @@ textarea {
 }
 
 .nameAndPhoto div {
-  background-color: #f8f8f8;
   display: grid;
   align-items: center;
   justify-content: space-evenly;
-  border: solid;
-  border-radius: 3px;
-  border-style: thin;
-  border-color: #f8f8f8;
 }
 
 .nameAndPhoto img {
   width: 75%;
-  border: solid;
   border-radius: 35px;
-  border-style: thin;
-  border-color: #f8f8f8;
+}
+
+.nameAndPhoto div h3 a {
+  color: white;
 }

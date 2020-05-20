@@ -8,9 +8,9 @@ export class Home extends Component {
     render() {
         return (
             <div className="homeContainer">
-                <NameAndPhoto />
                 <AboutMe />
-                <FavoriteMedia />
+                <NameAndPhoto />
+                {/* <FavoriteMedia /> */}
             </div>
         )
     }
