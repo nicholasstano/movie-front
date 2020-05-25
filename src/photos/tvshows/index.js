@@ -9,5 +9,6 @@ import dragonballzkai1 from './dragonballzkai1.jpg'
 import dragonballsuper1 from './dragonballsuper1.jpg'
 import dragonballzkai2 from './dragonballzkai2.jpg'
 import dragonballzkai3 from './dragonballzkai3.jpg'
+import shaqlife from './shaqlife.jpg'
 
-export default { entourage5, entourage6, entourage7, entourage8, flightoftheconchords1, flightoftheconchords2, agentcarter1, dragonballzkai1, dragonballsuper1, dragonballzkai2, dragonballzkai3 }
+export default { entourage5, entourage6, entourage7, entourage8, flightoftheconchords1, flightoftheconchords2, agentcarter1, dragonballzkai1, dragonballsuper1, dragonballzkai2, dragonballzkai3, shaqlife }
