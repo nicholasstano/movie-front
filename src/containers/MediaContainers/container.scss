@@ -4,10 +4,15 @@ div.mediaContainer {
     color:#080808;
     background-color: #FFFFFF;
     padding-bottom: 0px; 
-    padding-top: 49px;
+    padding-top: 61px;
     min-height: 100vh;
+
 
     div.mediaContent {
         background-color: dimgray;
+        border: solid;
+        border-color: rgb(163, 155, 155);
+        border-radius: 6px;
+        border-width: thin;
     }
   }

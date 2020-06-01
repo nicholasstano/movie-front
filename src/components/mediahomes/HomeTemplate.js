@@ -7,8 +7,8 @@ export default function HomeTemplate(topFiveMediaNames, photoName, title, paragr
             <img src={media} alt={media} />
             <p>{topFiveMediaNames[index]}</p>
         </div>)
-    let paragraph = paragraphInformation.split('\n').map(text =>
-        <React.Fragment>
+    let paragraph = paragraphInformation.split('\n').map((text, i) =>
+        <React.Fragment key={i}>
             {text}
             <br />
         </React.Fragment>
