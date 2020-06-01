@@ -35,5 +35,6 @@ import yojimbo from './yojimbo.jpg'
 import afistfulofdollars from './afistfulofdollars.jpg'
 import forafewdollarsmore from './forafewdollarsmore.jpg'
 import ashotinthedark from './ashotinthedark.jpg'
+import thesimpsonsmovie from './thesimpsonsmovie.png'
 
-export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon, rashomon, thehiddenfortress, throneofblood, twelveangrymen, inalonelyplace, strangersonatrain, rearwindow, vertigo, dialmformurder, northbynorthwest, psycho, thebirds, touchofevil, themanchuriancandidate, twentyonejumpstreet, highandlow, yojimbo, afistfulofdollars, forafewdollarsmore, ashotinthedark }
+export default { parasite, bruteforce, crisscross, entourage, birdsofprey, whiteheat, mildredpierce, thetreasureofthesierramadre, outofthepast, doubleindemnity, gilda, sunsetboulevard, thebigheat, theasphaltjungle, thekilling, rififi, highnoon, rashomon, thehiddenfortress, throneofblood, twelveangrymen, inalonelyplace, strangersonatrain, rearwindow, vertigo, dialmformurder, northbynorthwest, psycho, thebirds, touchofevil, themanchuriancandidate, twentyonejumpstreet, highandlow, yojimbo, afistfulofdollars, forafewdollarsmore, ashotinthedark, thesimpsonsmovie }
