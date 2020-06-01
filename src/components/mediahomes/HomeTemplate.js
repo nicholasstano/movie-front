@@ -7,11 +7,17 @@ export default function HomeTemplate(topFiveMediaNames, photoName, title, paragr
             <img src={media} alt={media} />
             <p>{topFiveMediaNames[index]}</p>
         </div>)
+    let paragraph = paragraphInformation.split('\n').map(text =>
+        <React.Fragment>
+            {text}
+            <br />
+        </React.Fragment>
+    )
     return (
         <div className="mediaHome">
             <div className="headerInfo">
                 <h1 className="mediaHeader">Favorite {title}</h1>
-                <p>{paragraphInformation}</p>
+                <p>{paragraph}</p>
             </div>
             <div className="favoriteFive">
                 {favoriteFive}
