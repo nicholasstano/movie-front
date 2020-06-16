@@ -1,11 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.scss'
-import MenuIcon from '@material-ui/icons/Menu';
 
 const NavBar = () => {
-
-    const [navOpen, setNavOpen] = useState(false)
 
     return (
         <div>
