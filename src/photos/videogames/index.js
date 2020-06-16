@@ -5,7 +5,6 @@ import supermarioworld from './supermarioworld.png'
 import breathoffireii from './breathoffireii.jpg'
 import baldursgate from './baldursgate.png'
 import baldursgatesiegeofdragonspear from './baldursgatesiegeofdragonspear.png'
-
 import baldursgateiienhancededition from './baldursgateiienhancededition.jpg'
 
 export default { nhl94, warcraft3reforged, newsupermariobrosudeluxe, supermarioworld, breathoffireii, baldursgate, baldursgatesiegeofdragonspear, baldursgateiienhancededition }
