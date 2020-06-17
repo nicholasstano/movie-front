@@ -19,5 +19,6 @@ import exileonmainst from './exileonmainst.jpg'
 import rageagainstthemachine from './rageagainstthemachine.jpg'
 import strictlybusiness from './strictlybusiness.jpg'
 import paulsboutique from './paulsboutique.jpg'
+import somethingforeverybody from './somethingforeverybody.jpeg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody }
