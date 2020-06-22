@@ -1,15 +1,22 @@
+.topFiveImages {
+  border: solid;
+  border-color: yellow;
+  width: 50vh;
+  height: 50vh;
+  padding: 15px;
+  margin: 15px;
+
+  img {
+    height: 50%;
+    width: auto;
+  }
+}
+
 .mediaHome {
   margin: 1.25%;
   padding: 10px 0px;
 
   div.headerInfo {
-    border: solid;
-    border-width: thin;
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 3px;
-    border-color: lightgray;
-    background-color: dimgray;
     color: lightgray;
     padding: 15px;
     h1.mediaHeader {
@@ -18,22 +25,31 @@
   }
   div.favoriteFive {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     background-color: dimgray;
     color: lightgray;
     padding: 15px;
 
     div.mediaFavoriteFiveSingle {
+  
+      border: solid;
+      border-color: lightgray;
+      border-radius: 6px;
+      border-width: thin;
       display: grid;
-      padding: 10px;
+      padding: 40px;
+      margin: 5px;
       img {
+        @media (max-width: 860px) {
+          height: 125px;
+        }
         margin-left: auto;
         margin-right: auto;
         border: solid;
         border-radius: 3.5px;
         border-width: 1px;
         border-color: white;
-        height: 125px;
+        height: 250px;
         width: auto;
       }
       p {
@@ -41,6 +57,11 @@
         text-align: center;
         margin: 0;
         padding: 0;
+      }
+      h2 {
+        @media (max-width: 860px) {
+          font-size: 10px;
+      }
       }
     }
   }
