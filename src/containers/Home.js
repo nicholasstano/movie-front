@@ -8,8 +8,8 @@ export class Home extends Component {
     render() {
         return (
             <div className="homeContainer">
-                <AboutMe />
                 <NameAndPhoto />
+                <AboutMe />
                 {/* <FavoriteMedia /> */}
             </div>
         )

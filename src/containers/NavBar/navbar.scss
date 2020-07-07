@@ -16,7 +16,7 @@ div.topNavbar {
     display: grid;
     grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
     justify-content: space-evenly;
-    background-color: dimgrey;
+    background-color: black;
 
     a {
         @media (max-width: 1032px) {
@@ -30,10 +30,10 @@ div.topNavbar {
     .navbarButton {
     border-radius: 5px;
     border-width: 1px;
-    border-color: lightgray;
+    border-color: darkblue;
     border-style: solid;
-    background-color: dimgray;
-    color: lightgray;
+    background-color: lightskyblue;
+    color: black;
     text-align: center;
     width: 100%;
     margin: 5px;
@@ -45,7 +45,7 @@ div.topNavbar {
     color: black;
     width: 100%;
     }
-    
+
     .navbarButton.albums:hover {
     border-radius: 5px;
     border-color: darkred;

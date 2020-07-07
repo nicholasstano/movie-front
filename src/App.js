@@ -42,7 +42,7 @@ export class App extends Component {
           <Route path="/books" render={() => { return (<div><BookContainer /></div>) }} />
           <Route path="/television" render={() => { return (<div><TelevisionContainer /></div>) }} />
           <Route path="/videos" render={() => { return (<div><VideoContainer /></div>) }} />
-          <Route path="/" render={() => { return (<div><Home /> <Footer /> </div>) }} />
+          <Route path="/" render={() => { return (<div><Home /> </div>) }} />
         </Switch>
       </div>
     )

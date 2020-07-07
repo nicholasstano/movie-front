@@ -1,5 +1,5 @@
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -23,7 +23,7 @@ a:hover {
 }
 
 body {
-  background-color: #FFFFFF	;
+  background-color: orange;
 }
 
 input {
@@ -67,7 +67,7 @@ textarea {
 }
 
 .contact img {
-  width: 25%;
+  width: 80%;
   border: solid;
   border-color: lightgrey;
   border-radius: 15px;
@@ -114,11 +114,17 @@ textarea {
 
 .homeContainer {
   display: grid;
-  color: lightgray;
-  background-color: dimgray;
-
+  position: fixed;
+  overflow-y: scroll;
+  top: 61px;
+  bottom: 0px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: thin;
+  border-color: black;
+  padding-top: 56px;
+  background-color: lightblue;
   padding-bottom: 0px; 
-  padding-top: 49px;
 }
 
 .homeFavoriteMedia {
@@ -185,6 +191,10 @@ textarea {
   margin: 0.03125% 1.5%;
 }
 
+.nameAndPhotoHeader {
+
+}
+
 .nameAndPhoto {
   display: grid;
   padding: 2.5% 4.5%;
@@ -202,6 +212,10 @@ textarea {
   border-radius: 35px;
 }
 
-.nameAndPhoto div h3 a {
+.nameAndPhoto h1 {
+  font-variant: small-caps;
+}
+
+.nameAndPhoto div h1 a {
   color: white;
 }

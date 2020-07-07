@@ -8,9 +8,9 @@ export default function NameAndPhoto() {
                 <div className="nameAndPhoto">
                     <div><img src={photos.nick} alt="nick" /></div>
                     <div>
-                        <h3>Nick Stano</h3>
-                        <h3>Full Stack Developer</h3>
-                        <h3><a href="https://docs.google.com/document/d/1pr_5DQ7HNGsopysRLOZ6QsA3S_XzAsai89b1fu0DQGs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></h3>
+                        <h1>Nick Stano</h1>
+                        <h1>Full Stack Developer</h1>
+                        <h1><a href="https://docs.google.com/document/d/1pr_5DQ7HNGsopysRLOZ6QsA3S_XzAsai89b1fu0DQGs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></h1>
                     </div>
                 </div>
                 <div className="contact">

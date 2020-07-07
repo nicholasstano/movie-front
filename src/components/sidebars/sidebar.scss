@@ -10,7 +10,7 @@ div.mediaSidebar {
     border-width: thin;
     color: #f8f8f8;
     padding: 1.5%;
-    background-color: dimgrey;
+    background-color: lightslategray;
 
     div.mediaSearch {
       display: grid;
@@ -34,10 +34,10 @@ div.mediaSidebar {
     div.mediaTitles button {
         border-radius: 5px;
         border-width: 1px;
-        border-color: lightgray;
+        border-color: darkblue;
         border-style: solid;
-        background-color: dimgray;
-        color: lightgray;
+        background-color: lightblue;
+        color: black;
         text-align: left;
         width: 100%;
 
