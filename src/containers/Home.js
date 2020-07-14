@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import FavoriteMedia from '../components/homeComponents/FavoriteMedia.js'
 import NameAndPhoto from '../components/homeComponents/NameAndPhoto.js'
-import AboutMe from '../components/homeComponents/AboutMe.js'
 
 export class Home extends Component {
 
@@ -9,8 +8,7 @@ export class Home extends Component {
         return (
             <div className="homeContainer">
                 <NameAndPhoto />
-                <AboutMe />
-                {/* <FavoriteMedia /> */}
+                <FavoriteMedia />
             </div>
         )
     }

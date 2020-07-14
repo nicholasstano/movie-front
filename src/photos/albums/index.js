@@ -22,5 +22,6 @@ import paulsboutique from './paulsboutique.jpg'
 import somethingforeverybody from './somethingforeverybody.jpeg'
 import beggarsbanquet from './beggarsbanquet.jpg'
 import rubbersoul from './rubbersoul.jpg'
+import leavehome from './leavehome.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome }
