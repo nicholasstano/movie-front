@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import photos from '../../photos/favorites'
+import './home.scss'
 
 export class FavoriteMedia extends Component {
     state = { hoverAlbums: true, hoverBoardGames: true, hoverBooks: true, hoverMovies: true, hoverTVShows: true, hoverVideoGames: true }

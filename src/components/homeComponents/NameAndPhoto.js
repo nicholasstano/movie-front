@@ -1,17 +1,17 @@
-import photos from '../../photos/me'
 import React from 'react'
+import photos from '../../photos/me'
 
 export default function NameAndPhoto() {
     return (
         <div>
-            <div className="nameAndPhotoHeader">
+            <div className="nameAndPhotoHome">
                 <div className="nameAndPhoto">
-                    <div><img src={photos.nick} alt="nick" /></div>
-                    <div>
+                    <div className="nameAndPhotoHeader">
                         <h1>Nick Stano</h1>
                         <h1>Full Stack Developer</h1>
                         <h1><a href="https://docs.google.com/document/d/1pr_5DQ7HNGsopysRLOZ6QsA3S_XzAsai89b1fu0DQGs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></h1>
                     </div>
+                    <div><img src={photos.nick} alt="nick" /></div>
                 </div>
                 <div className="aboutMe">
                     <div>
