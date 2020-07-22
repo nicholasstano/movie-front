@@ -1,35 +1,42 @@
+import React, { Component } from 'react'
 import TVShowHome from '../../components/mediahomes/TVShowHome.js'
 import TVShowSidebar from '../../components/sidebars/TVShowSidebar.js'
 import TVShowReviewCard from '../../components/cards/TVShowReviewCard.js'
-import React, { useEffect, useState } from 'react'
-import { url } from '../../config'
-import util from '../../util'
+import { getTVShows } from '../../components/actions/tvShowActions.js'
+import { connect } from 'react-redux'
 import './container.scss'
 
-const TelevisionContainer = () => {
-    const [mediaReviews, setMediaReviews] = useState([])
-    const [media, setMedia] = useState(null)
+export class TelevisionContainer extends Component {
 
-    useEffect(() => {
-        fetch(`${url}/tvshows`)
-            .then(res => res.json())
-            .then(media => setMediaReviews(util.sortMediaById(media)))
-    }, [])
+    state = { media: null }
 
-    const mediaClickHandler = (mediaClicked) => {
-        window.scrollTo(0, 0)
-        setMedia(mediaClicked)
+    componentDidMount() {
+        this.props.getTVShows()
     }
-    return (
-        <div className="mediaContainer">
-            <div>
-                <TVShowSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
+
+    mediaClickHandler = (mediaClicked) => {
+        window.scrollTo(0, 0)
+        this.setState({ media: mediaClicked })
+    }
+
+    render() {
+        const { tvShows } = this.props.tvShows
+        const { media } = this.state
+        return (
+            <div className="mediaContainer">
+                <div>
+                    <TVShowSidebar reviews={tvShows} mediaClickHandler={this.mediaClickHandler} />
+                </div>
+                <div className="mediaContent">
+                    {media ? <TVShowReviewCard key={media.id} tvshow={media} /> : <TVShowHome />}
+                </div>
             </div>
-            <div className="mediaContent">
-                {media ? <TVShowReviewCard key={media.id} tvshow={media} /> : <TVShowHome />}
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
-export default TelevisionContainer
+const mapStateToProps = state => ({
+    tvShows: state.tvShows
+})
+
+export default connect(mapStateToProps, { getTVShows })(TelevisionContainer)

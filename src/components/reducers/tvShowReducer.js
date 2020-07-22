@@ -1,15 +1,15 @@
-import { GET_BOARD_GAMES } from '../actions/types'
+import { GET_TV_SHOWS } from '../actions/types'
 
 const initialState = {
-    boardGames: []
+    tvShows: []
 }
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case GET_BOARD_GAMES:
+        case GET_TV_SHOWS:
             return {
                 ...state,
-                boardGames: action.payload
+                tvShows: action.payload
             }
         default:
             return state

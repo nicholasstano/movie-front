@@ -1,35 +1,42 @@
+import React, { Component } from 'react'
 import BookHome from '../../components/mediahomes/BookHome.js'
 import BookSidebar from '../../components/sidebars/BookSidebar.js'
 import BookReviewCard from '../../components/cards/BookReviewCard.js'
-import React, { useState, useEffect } from 'react'
-import { url } from '../../config'
-import util from '../../util'
+import { getBooks } from '../../components/actions/bookActions.js'
+import { connect } from 'react-redux'
 import './container.scss'
 
-const BookContainer = () => {
-    const [mediaReviews, setMediaReviews] = useState([])
-    const [media, setMedia] = useState(null)
+export class BookContainer extends Component {
 
-    useEffect(() => {
-        fetch(`${url}/books`)
-            .then(response => response.json())
-            .then(media => setMediaReviews(util.sortMediaById(media)))
-    }, [])
+    state = { media: null }
 
-    const mediaClickHandler = (mediaClicked) => {
-        window.scrollTo(0, 0)
-        setMedia(mediaClicked)
+    componentDidMount() {
+        this.props.getBooks()
     }
-    return (
-        <div className="mediaContainer">
-            <div>
-                <BookSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
+
+    mediaClickHandler = (mediaClicked) => {
+        window.scrollTo(0, 0)
+        this.setState({ media: mediaClicked })
+    }
+
+    render() {
+        const { books } = this.props.books
+        const { media } = this.state
+        return (
+            <div className="mediaContainer">
+                <div>
+                    <BookSidebar reviews={books} mediaClickHandler={this.mediaClickHandler} />
+                </div>
+                <div className="mediaContent">
+                    {media ? <BookReviewCard key={media.id} book={media} /> : <BookHome />}
+                </div>
             </div>
-            <div className="mediaContent">
-                {media ? <BookReviewCard key={media.id} book={media} /> : <BookHome />}
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
-export default BookContainer
+const mapStateToProps = state => ({
+    books: state.books
+})
+
+export default connect(mapStateToProps, { getBooks })(BookContainer)

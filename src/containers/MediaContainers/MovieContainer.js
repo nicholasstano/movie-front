@@ -1,35 +1,42 @@
+import React, { Component } from 'react'
 import MovieHome from '../../components/mediahomes/MovieHome.js'
 import MovieSidebar from '../../components/sidebars/MovieSidebar.js'
 import MovieReviewCard from '../../components/cards/MovieReviewCard.js'
-import React, { useState, useEffect } from 'react'
-import { url } from '../../config'
-import util from '../../util'
+import { getMovies } from '../../components/actions/movieActions.js'
+import { connect } from 'react-redux'
 import './container.scss'
 
-const MovieContainer = () => {
-    const [mediaReviews, setMediaReviews] = useState([])
-    const [media, setMedia] = useState(null)
+export class MovieContainer extends Component {
 
-    useEffect(() => {
-        fetch(`${url}/movies`)
-            .then(res => res.json())
-            .then(media => setMediaReviews(util.sortMediaById(media)))
-    }, [])
+    state = { media: null }
 
-    const mediaClickHandler = (mediaClicked) => {
-        window.scrollTo(0, 0)
-        setMedia(mediaClicked)
+    componentDidMount() {
+        this.props.getMovies()
     }
-    return (
-        <div className="mediaContainer">
-            <div>
-                <MovieSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
+
+    mediaClickHandler = (mediaClicked) => {
+        window.scrollTo(0, 0)
+        this.setState({ media: mediaClicked })
+    }
+
+    render() {
+        const { movies } = this.props.movies
+        const { media } = this.state
+        return (
+            <div className="mediaContainer">
+                <div>
+                    <MovieSidebar reviews={movies} mediaClickHandler={this.mediaClickHandler} />
+                </div>
+                <div className="mediaContent">
+                    {media ? <MovieReviewCard key={media.id} movie={media} /> : <MovieHome />}
+                </div>
             </div>
-            <div className="mediaContent">
-                {media ? <MovieReviewCard key={media.id} movie={media} /> : <MovieHome />}
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
-export default MovieContainer
+const mapStateToProps = state => ({
+    movies: state.movies
+})
+
+export default connect(mapStateToProps, { getMovies })(MovieContainer)

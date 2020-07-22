@@ -1,35 +1,42 @@
+import React, { Component } from 'react'
 import VideoGameHome from '../../components/mediahomes/VideoGameHome.js'
 import VideoGameSidebar from '../../components/sidebars/VideoGameSidebar.js'
 import VideoGameReviewCard from '../../components/cards/VideoGameReviewCard.js'
-import React, { useEffect, useState } from 'react'
-import { url } from '../../config'
-import util from '../../util'
+import { getVideoGames } from '../../components/actions/videoGameActions.js'
+import { connect } from 'react-redux'
 import './container.scss'
 
-const VideoContainer = () => {
-    const [mediaReviews, setMediaReviews] = useState([])
-    const [media, setMedia] = useState(null)
+export class VideoContainer extends Component {
 
-    useEffect(() => {
-        fetch(`${url}/videos`)
-            .then(res => res.json())
-            .then(media => setMediaReviews(util.sortMediaById(media)))
-    }, [])
+    state = { media: null }
 
-    const mediaClickHandler = (mediaClicked) => {
-        window.scrollTo(0, 0)
-        setMedia(mediaClicked)
+    componentDidMount() {
+        this.props.getVideoGames()
     }
-    return (
-        <div className="mediaContainer">
-            <div>
-                <VideoGameSidebar reviews={mediaReviews} mediaClickHandler={mediaClickHandler} />
+
+    mediaClickHandler = (mediaClicked) => {
+        window.scrollTo(0, 0)
+        this.setState({ media: mediaClicked })
+    }
+
+    render() {
+        const { videoGames } = this.props.videoGames
+        const { media } = this.state
+        return (
+            <div className="mediaContainer">
+                <div>
+                    <VideoGameSidebar reviews={videoGames} mediaClickHandler={this.mediaClickHandler} />
+                </div>
+                <div className="mediaContent">
+                    {media ? <VideoGameReviewCard key={media.id} videoGame={media} /> : <VideoGameHome />}
+                </div>
             </div>
-            <div className="mediaContent">
-                {media ? <VideoGameReviewCard key={media.id} videoGame={media} /> : <VideoGameHome />}
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
-export default VideoContainer
+const mapStateToProps = state => ({
+    videoGames: state.videoGames
+})
+
+export default connect(mapStateToProps, { getVideoGames })(VideoContainer)
