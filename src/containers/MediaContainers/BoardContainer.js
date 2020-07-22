@@ -35,35 +35,6 @@ export class BoardContainer extends Component {
     }
 }
 
-// const BoardContainer = (props) => {
-//     const [media, setMedia] = useState(null)
-//     // const [boardGames, setBoardGames] = useState([])
-//     const boardGames = props.boardGames.boardGames
-//     const getBoardGames = props.getBoardGames
-
-//     useEffect(() => {
-//         getBoardGames()
-//         // props.getBoardGames()
-//         // setBoardGames(props.boardGames.boardGames)
-//     }, [])
-
-//     const mediaClickHandler = (mediaClicked) => {
-//         window.scrollTo(0, 0)
-//         setMedia(mediaClicked)
-//     }
-//     console.log(props.boardGames.boardGames)
-//     return (
-//         <div className="mediaContainer">
-//             <div>
-//                 <BoardGameSidebar reviews={boardGames} mediaClickHandler={mediaClickHandler} />
-//             </div>
-//             <div className="mediaContent">
-//                 {media ? <BoardGameReviewCard key={media.id} board={media} /> : <BoardGameHome />}
-//             </div>
-//         </div>
-//     )
-// }
-
 const mapStateToProps = state => ({
     boardGames: state.boardGames
 })

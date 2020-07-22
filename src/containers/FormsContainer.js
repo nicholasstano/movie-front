@@ -18,27 +18,6 @@ export class FormsContainer extends Component {
         videoForm: false,
     }
 
-    handleAlbumSubmit = (album) => {
-        fetch(`${url}/albums`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: album.name,
-                artist: album.artist,
-                month_day_played: album.monthPlayed,
-                year_played: album.yearPlayed,
-                notes: album.notes,
-                year: album.year,
-                rating: album.rating,
-                image: album.image,
-                improve_notes: album.improveNotes
-            })
-        })
-    }
-
     handleBoardSubmit = (board) => {
         fetch(`${url}/boards`, {
             method: 'POST',
@@ -189,7 +168,7 @@ export class FormsContainer extends Component {
                     </ul>
                 </div>
                 <div className="formsContainer">
-                    {this.state.albumForm ? <AlbumForm handleAlbumSubmit={this.handleAlbumSubmit} toggleAlbumForm={this.toggleAlbumForm} /> : null}
+                    {this.state.albumForm ? <AlbumForm toggleAlbumForm={this.toggleAlbumForm} /> : null}
                     {this.state.boardForm ? <BoardForm handleBoardSubmit={this.handleBoardSubmit} toggleBoardForm={this.toggleBoardForm} /> : null}
                     {this.state.bookForm ? <BookForm handleBookSubmit={this.handleBookSubmit} toggleBookForm={this.toggleBookForm} /> : null}
                     {this.state.movieForm ? <MovieForm handleMovieSubmit={this.handleMovieSubmit} toggleMovieForm={this.toggleMovieForm} /> : null}

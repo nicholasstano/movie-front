@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addAlbum } from '../actions/albumActions'
+import { connect } from 'react-redux'
 
 export class AlbumForm extends Component {
 
@@ -20,7 +22,18 @@ export class AlbumForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleAlbumSubmit(this.state)
+        let newAlbum = {
+            name: this.state.name,
+            artist: this.state.artist,
+            month_day_played: this.state.monthPlayed,
+            year_played: this.state.yearPlayed,
+            notes: this.state.notes,
+            year: this.state.year,
+            rating: this.state.rating,
+            image: this.state.image,
+            improve_notes: this.state.improveNotes
+        }
+        this.props.addAlbum(newAlbum)
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
@@ -33,7 +46,6 @@ export class AlbumForm extends Component {
             improveNotes: ""
         })
     }
-
     render() {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
@@ -72,4 +84,8 @@ export class AlbumForm extends Component {
     }
 }
 
-export default AlbumForm
+const mapStateToProps = state => ({
+    albums: state.albums
+})
+
+export default connect(mapStateToProps, { addAlbum })(AlbumForm)
