@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addBoardGame } from '../actions/boardGameActions'
+import { connect } from 'react-redux'
 
 export class BoardForm extends Component {
 
@@ -19,7 +21,17 @@ export class BoardForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleBoardSubmit(this.state)
+        const newBoardGame = {
+            name: this.state.name,
+            month_day_played: this.state.monthPlayed,
+            year_played: this.state.yearPlayed,
+            notes: this.state.notes,
+            year: this.state.year,
+            rating: this.state.rating,
+            image: this.state.image,
+            improve_notes: this.state.improveNotes
+        }
+        this.props.addBoardGame(newBoardGame)
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
@@ -67,4 +79,8 @@ export class BoardForm extends Component {
     }
 }
 
-export default BoardForm
+const mapStateToProps = state => ({
+    boardGames: state.boardGames
+})
+
+export default connect(mapStateToProps, { addBoardGame })(BoardForm)
