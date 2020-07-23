@@ -14,18 +14,18 @@ export default function ReviewCardTemplate(name, photos, rating, image, monthDay
 
     return (
         <>
-            <div>
+            <div className="pictureAndDate">
                 <p className="mediaPicture">
                     <img src={photos[image]} alt={name} />
                 </p>
                 <p>Rating: {stars().map((s, i) => <StarRateIcon key={i} />)}</p>
                 <p>Date: {monthDayConsumed}/{yearConsumed}</p>
             </div>
-            <div>
+            <div className='goodHeader'>
                 <h5>The Good</h5>
                 <p>{notes}</p>
             </div>
-            <div>
+            <div className='betterHeader'>
                 <h5>The Could Be Better</h5>
                 <p>{improveNotes}</p>
             </div>

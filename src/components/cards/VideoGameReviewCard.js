@@ -8,7 +8,7 @@ export default function VideoGameReviewCard(props) {
 
     return (
         <div className="mediaReviewCard">
-            <div><h5>{name} ({year})</h5></div>
+            <div className='mediaReviewCardHeader'><h5>{name} ({year})</h5></div>
             {ReviewCardTemplate(name, videoGamePhotos, rating, image, month_day_played, year_played, notes, improve_notes)}
         </div>
     )

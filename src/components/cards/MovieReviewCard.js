@@ -8,7 +8,7 @@ export default function MovieReviewCard(props) {
 
     return (
         <div className="mediaReviewCard">
-            <div><h5>{name} directed by {director} ({year})</h5></div>
+            <div className='mediaReviewCardHeader'><h5>{name} directed by {director} ({year})</h5></div>
             {ReviewCardTemplate(name, moviePhotos, rating, image, month_day_watched, year_watched, notes, improve_notes)}
         </div>
     )

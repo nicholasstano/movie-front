@@ -10,13 +10,13 @@ div.topNavbar {
     left: 0;
     width: 100%;
     border: solid;
-    border-color: rgb(163, 155, 155);
+    border-color: lightskyblue;
     border-radius: 6px;
     border-width: thin;
     display: grid;
     grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
     justify-content: space-evenly;
-    background-color: black;
+    background-color: #F0FFFF;
 
     a {
         @media (max-width: 1032px) {

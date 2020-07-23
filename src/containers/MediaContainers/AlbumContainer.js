@@ -5,7 +5,6 @@ import AlbumReviewCard from '../../components/cards/AlbumReviewCard.js'
 import { getAlbums } from '../../components/actions/albumActions'
 import { connect } from 'react-redux'
 import './container.scss'
-// import PropTypes from 'prop-types'
 
 export class AlbumContainer extends Component {
 
@@ -39,10 +38,5 @@ export class AlbumContainer extends Component {
 const mapStateToProps = state => ({
     albums: state.albums
 })
-
-// AlbumContainer.propTypes = {
-//     getAlbums: PropTypes.func.isRequired,
-//     albums: PropTypes.object.isRequired
-// }
 
 export default connect(mapStateToProps, { getAlbums })(AlbumContainer)

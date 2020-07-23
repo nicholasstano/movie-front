@@ -8,7 +8,7 @@ export default function TVShowReviewCard(props) {
 
     return (
         <div className="mediaReviewCard">
-            <div><h5>{name} Season {season} ({year})</h5></div>
+            <div className='mediaReviewCardHeader'><h5>{name} Season {season} ({year})</h5></div>
             {ReviewCardTemplate(name, tvPhotos, rating, image, month_day_watched, year_watched, notes, improve_notes)}
         </div>
     )

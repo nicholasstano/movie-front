@@ -9,16 +9,40 @@
 
 .mediaReviewCard {
     margin: 1.25%;
-    padding: 10px 0px;
+    background: white;
+    .mediaReviewCardHeader {
+      background: lightcoral;
+      text-align: center;
+      border: solid;
+      border-width: thin;
+      padding: 5px;
+    }
+    .pictureAndDate {
+      padding: 15px;
+    }
   }
-  
-.mediaReviewCard div {
+.goodHeader {
+  h5 {
+    background: lightgreen;
+    text-align: center;
     border: solid;
     border-width: thin;
-    border-radius: 3px;
-    border-color: lightskyblue;
-    background-color: white;
-    color: black;
-    padding: 15px;
-    margin: 0.5px;
+    padding: 5px;
   }
+  p {
+    padding: 15px;
+  }
+}
+
+.betterHeader {
+  h5 {
+    background: lightyellow;
+    text-align: center;
+    border: solid;
+    border-width: thin;
+    padding: 5px;
+  }
+  p {
+    padding: 15px;
+  }
+}
