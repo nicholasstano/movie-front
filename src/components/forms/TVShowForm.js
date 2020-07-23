@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addTVShow } from '../actions/tvShowActions'
+import { connect } from 'react-redux'
 
 export class TVShowForm extends Component {
 
@@ -20,7 +22,18 @@ export class TVShowForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleTVSubmit(this.state)
+        const newShow = {
+            name: this.state.name,
+            month_day_watched: this.state.monthWatched,
+            year_watched: this.state.yearWatched,
+            notes: this.state.notes,
+            year: this.state.year,
+            rating: this.state.rating,
+            image: this.state.image,
+            season: this.state.season,
+            improve_notes: this.state.improveNotes
+        }
+        this.props.addTVShow(newShow)
         this.setState({
             monthWatched: "",
             yearWatched: "",
@@ -72,4 +85,8 @@ export class TVShowForm extends Component {
     }
 }
 
-export default TVShowForm
+const mapStateToProps = state => ({
+    tvShows: state.tvShows
+})
+
+export default connect(mapStateToProps, { addTVShow })(TVShowForm)

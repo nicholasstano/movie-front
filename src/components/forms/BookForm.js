@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addBook } from '../actions/bookActions'
+import { connect } from 'react-redux'
 
 export class BookForm extends Component {
 
@@ -20,7 +22,18 @@ export class BookForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        this.props.handleBookSubmit(this.state)
+        const newBook = {
+            name: this.state.name,
+            month_day_read: this.state.monthRead,
+            year_read: this.state.yearRead,
+            notes: this.state.notes,
+            year: this.state.year,
+            rating: this.state.rating,
+            image: this.state.image,
+            author: this.state.author,
+            improve_notes: this.state.improveNotes
+        }
+        this.props.addBook(newBook)
         this.setState({
             monthRead: "",
             yearRead: "",
@@ -72,4 +85,8 @@ export class BookForm extends Component {
     }
 }
 
-export default BookForm
+const mapStateToProps = state => ({
+    books: state.books
+})
+
+export default connect(mapStateToProps, { addBook })(BookForm)

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addVideoGame } from '../actions/videoGameActions'
+import { connect } from 'react-redux'
 
 export class VideoForm extends Component {
 
@@ -19,6 +21,17 @@ export class VideoForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
+        const newVideoGame = {
+            name: this.state.name,
+            month_day_played: this.state.monthPlayed,
+            year_played: this.state.yearPlayed,
+            notes: this.state.notes,
+            year: this.state.year,
+            rating: this.state.rating,
+            image: this.state.image,
+            improve_notes: this.state.improveNotes
+        }
+        this.props.addVideoGame(newVideoGame)
         this.props.handleVideoSubmit(this.state)
         this.setState({
             monthPlayed: "",
@@ -68,4 +81,8 @@ export class VideoForm extends Component {
     }
 }
 
-export default VideoForm
+const mapStateToProps = state => ({
+    videoGames: state.videoGames
+})
+
+export default connect(mapStateToProps, { addVideoGame })(VideoForm)

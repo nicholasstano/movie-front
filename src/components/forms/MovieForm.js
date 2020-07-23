@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { addMovie } from '../actions/movieActions'
+import { connect } from 'react-redux'
 
 export class MovieForm extends Component {
 
@@ -20,7 +22,18 @@ export class MovieForm extends Component {
 
     handleMovieReviewSubmit = event => {
         event.preventDefault()
-        this.props.handleMovieSubmit(this.state)
+        const newMovie = {
+            name: this.state.name,
+            month_day_watched: this.state.monthWatched,
+            year_watched: this.state.yearWatched,
+            notes: this.state.notes,
+            director: this.state.director,
+            year: this.state.year,
+            rating: this.state.rating,
+            image: this.state.image,
+            improve_notes: this.state.improveNotes
+        }
+        this.props.addMovie(newMovie)
         this.setState({
             monthWatched: "",
             yearWatched: "",
@@ -72,4 +85,8 @@ export class MovieForm extends Component {
     }
 }
 
-export default MovieForm
+const mapStateToProps = state => ({
+    movies: state.movies
+})
+
+export default connect(mapStateToProps, { addMovie })(MovieForm)

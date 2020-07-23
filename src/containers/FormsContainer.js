@@ -5,7 +5,6 @@ import BookForm from '../components/forms/BookForm.js'
 import MovieForm from '../components/forms/MovieForm.js'
 import TVShowForm from '../components/forms/TVShowForm.js'
 import VideoForm from '../components/forms/VideoForm.js'
-import { url } from '../config'
 
 export class FormsContainer extends Component {
 
@@ -16,89 +15,6 @@ export class FormsContainer extends Component {
         movieForm: false,
         tvForm: false,
         videoForm: false,
-    }
-
-    handleBookSubmit = (book) => {
-        fetch(`${url}/books`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: book.name,
-                month_day_read: book.monthRead,
-                year_read: book.yearRead,
-                notes: book.notes,
-                year: book.year,
-                rating: book.rating,
-                image: book.image,
-                author: book.author,
-                improve_notes: book.improveNotes
-            })
-        })
-    }
-
-    handleMovieSubmit = (movie) => {
-        fetch(`${url}/movies`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: movie.name,
-                month_day_watched: movie.monthWatched,
-                year_watched: movie.yearWatched,
-                notes: movie.notes,
-                director: movie.director,
-                year: movie.year,
-                rating: movie.rating,
-                image: movie.image,
-                improve_notes: movie.improveNotes
-            })
-        })
-    }
-
-    handleTVSubmit = (show) => {
-        fetch(`${url}/tvshows`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: show.name,
-                month_day_watched: show.monthWatched,
-                year_watched: show.yearWatched,
-                notes: show.notes,
-                year: show.year,
-                rating: show.rating,
-                image: show.image,
-                season: show.season,
-                improve_notes: show.improveNotes
-            })
-        })
-    }
-
-    handleVideoSubmit = (video) => {
-        fetch(`${url}/videos`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: video.name,
-                month_day_played: video.monthPlayed,
-                year_played: video.yearPlayed,
-                notes: video.notes,
-                year: video.year,
-                rating: video.rating,
-                image: video.image,
-                improve_notes: video.improveNotes
-            })
-        })
     }
 
     toggleAlbumForm = () => {
@@ -150,10 +66,10 @@ export class FormsContainer extends Component {
                 <div className="formsContainer">
                     {this.state.albumForm ? <AlbumForm toggleAlbumForm={this.toggleAlbumForm} /> : null}
                     {this.state.boardForm ? <BoardForm toggleBoardForm={this.toggleBoardForm} /> : null}
-                    {this.state.bookForm ? <BookForm handleBookSubmit={this.handleBookSubmit} toggleBookForm={this.toggleBookForm} /> : null}
-                    {this.state.movieForm ? <MovieForm handleMovieSubmit={this.handleMovieSubmit} toggleMovieForm={this.toggleMovieForm} /> : null}
-                    {this.state.tvForm ? <TVShowForm handleTVSubmit={this.handleTVSubmit} toggleTVForm={this.toggleTVForm} /> : null}
-                    {this.state.videoForm ? <VideoForm handleVideoSubmit={this.handleVideoSubmit} toggleVideoForm={this.toggleVideoForm} /> : null}
+                    {this.state.bookForm ? <BookForm toggleBookForm={this.toggleBookForm} /> : null}
+                    {this.state.movieForm ? <MovieForm toggleMovieForm={this.toggleMovieForm} /> : null}
+                    {this.state.tvForm ? <TVShowForm toggleTVForm={this.toggleTVForm} /> : null}
+                    {this.state.videoForm ? <VideoForm toggleVideoForm={this.toggleVideoForm} /> : null}
                 </div>
             </div>
         )
