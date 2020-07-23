@@ -40,26 +40,24 @@ export class FormsContainer extends Component {
         return (
             <div className="">
                 <div className="formsSidebar">
-                    <ul className="nav flex-column 
-                    // navbar-dark bg-dark"
-                    >
-                        <li className="nav-item">
-                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleAlbumForm}>Albums Form</button>
+                    <ul>
+                        <li>
+                            <button type="button" onClick={this.toggleAlbumForm}>Albums Form</button>
                         </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleBoardForm}>Board Games Form</button>
+                        <li>
+                            <button type="button" onClick={this.toggleBoardForm}>Board Games Form</button>
                         </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleBookForm}>Books Form</button>
+                        <li>
+                            <button type="button" onClick={this.toggleBookForm}>Books Form</button>
                         </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleMovieForm}>Movies Form</button>
+                        <li>
+                            <button type="button" onClick={this.toggleMovieForm}>Movies Form</button>
                         </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleTVForm}>TV Shows Form</button>
+                        <li>
+                            <button type="button" onClick={this.toggleTVForm}>TV Shows Form</button>
                         </li>
-                        <li className="nav-item">
-                            <button type="button" className="btn-sm btn-secondary" onClick={this.toggleVideoForm}>Video Games Form</button>
+                        <li>
+                            <button type="button" onClick={this.toggleVideoForm}>Video Games Form</button>
                         </li>
                     </ul>
                 </div>
