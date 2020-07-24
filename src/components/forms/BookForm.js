@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addBook } from '../actions/bookActions'
+import { addBook, getBooks } from '../actions/bookActions'
 import { connect } from 'react-redux'
 
 export class BookForm extends Component {
@@ -34,6 +34,9 @@ export class BookForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addBook(newBook)
+        if (!this.props.books.length > 0) {
+            this.props.getBooks()
+        }
         this.setState({
             monthRead: "",
             yearRead: "",
@@ -46,7 +49,6 @@ export class BookForm extends Component {
             improveNotes: ""
         })
     }
-
     render() {
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
@@ -89,4 +91,4 @@ const mapStateToProps = state => ({
     books: state.books
 })
 
-export default connect(mapStateToProps, { addBook })(BookForm)
+export default connect(mapStateToProps, { addBook, getBooks })(BookForm)

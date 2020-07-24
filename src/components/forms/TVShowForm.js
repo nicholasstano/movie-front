@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addTVShow } from '../actions/tvShowActions'
+import { addTVShow, getTVShows } from '../actions/tvShowActions'
 import { connect } from 'react-redux'
 
 export class TVShowForm extends Component {
@@ -34,6 +34,9 @@ export class TVShowForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addTVShow(newShow)
+        if (!this.props.tvShows.length > 0) {
+            this.props.getTVShows()
+        }
         this.setState({
             monthWatched: "",
             yearWatched: "",
@@ -89,4 +92,4 @@ const mapStateToProps = state => ({
     tvShows: state.tvShows
 })
 
-export default connect(mapStateToProps, { addTVShow })(TVShowForm)
+export default connect(mapStateToProps, { addTVShow, getTVShows })(TVShowForm)

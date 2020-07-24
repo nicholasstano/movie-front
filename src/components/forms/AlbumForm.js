@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addAlbum } from '../actions/albumActions'
+import { addAlbum, getAlbums } from '../actions/albumActions'
 import { connect } from 'react-redux'
 
 export class AlbumForm extends Component {
@@ -34,6 +34,9 @@ export class AlbumForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addAlbum(newAlbum)
+        if (!this.props.albums.length > 0) {
+            this.props.getAlbums()
+        }
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
@@ -88,4 +91,4 @@ const mapStateToProps = state => ({
     albums: state.albums
 })
 
-export default connect(mapStateToProps, { addAlbum })(AlbumForm)
+export default connect(mapStateToProps, { addAlbum, getAlbums })(AlbumForm)

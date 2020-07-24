@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addMovie } from '../actions/movieActions'
+import { addMovie, getMovies } from '../actions/movieActions'
 import { connect } from 'react-redux'
 
 export class MovieForm extends Component {
@@ -34,6 +34,9 @@ export class MovieForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addMovie(newMovie)
+        if (!this.props.movies.length > 0) {
+            this.props.getMovies()
+        }
         this.setState({
             monthWatched: "",
             yearWatched: "",
@@ -89,4 +92,4 @@ const mapStateToProps = state => ({
     movies: state.movies
 })
 
-export default connect(mapStateToProps, { addMovie })(MovieForm)
+export default connect(mapStateToProps, { addMovie, getMovies })(MovieForm)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addBoardGame } from '../actions/boardGameActions'
+import { addBoardGame, getBoardGames } from '../actions/boardGameActions'
 import { connect } from 'react-redux'
 
 export class BoardForm extends Component {
@@ -32,6 +32,9 @@ export class BoardForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addBoardGame(newBoardGame)
+        if (!this.props.boardGames.length > 0) {
+            this.props.getBoardGames()
+        }
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
@@ -83,4 +86,4 @@ const mapStateToProps = state => ({
     boardGames: state.boardGames
 })
 
-export default connect(mapStateToProps, { addBoardGame })(BoardForm)
+export default connect(mapStateToProps, { addBoardGame, getBoardGames })(BoardForm)
