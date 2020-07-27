@@ -19,30 +19,40 @@
     }
     .pictureAndDate {
       padding: 15px;
+      border-left: solid;
+      border-right: solid;
+      border-width: thin;
+    }
+
+    .goodHeader {
+      background: lightgreen;
+      text-align: center;
+      border: solid;
+      border-width: thin;
+      padding: 5px;
+      margin: 0px;
+    } 
+    .betterHeader {
+      background: lightyellow;
+      text-align: center;
+      border: solid;
+      border-width: thin;
+      padding: 5px;
+      margin: 0px;
+    }
+    .goodContent {
+      border-right: solid;
+      border-left: solid;
+      border-width: thin;
+      padding: 15px;
+      margin: 0px;
+    }
+    .betterContent {
+      border-right: solid;
+      border-left: solid;
+      border-bottom: solid;
+      border-width: thin;
+      padding: 15px;
+      margin: 0px;
     }
   }
-.goodHeader {
-  h5 {
-    background: lightgreen;
-    text-align: center;
-    border: solid;
-    border-width: thin;
-    padding: 5px;
-  }
-  p {
-    padding: 15px;
-  }
-}
-
-.betterHeader {
-  h5 {
-    background: lightyellow;
-    text-align: center;
-    border: solid;
-    border-width: thin;
-    padding: 5px;
-  }
-  p {
-    padding: 15px;
-  }
-}

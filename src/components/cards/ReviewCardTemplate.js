@@ -21,14 +21,10 @@ export default function ReviewCardTemplate(name, photos, rating, image, monthDay
                 <p>Rating: {stars().map((s, i) => <StarRateIcon key={i} />)}</p>
                 <p>Date: {monthDayConsumed}/{yearConsumed}</p>
             </div>
-            <div className='goodHeader'>
-                <h5>The Good</h5>
-                <p>{notes}</p>
-            </div>
-            <div className='betterHeader'>
-                <h5>The Could Be Better</h5>
-                <p>{improveNotes}</p>
-            </div>
+            <h5 className='goodHeader'>The Good</h5>
+            <p className='goodContent'>{notes}</p>
+            <h5 className='betterHeader'>The Could Be Better</h5>
+            <p className='betterContent'>{improveNotes}</p>
         </>
     )
 }
