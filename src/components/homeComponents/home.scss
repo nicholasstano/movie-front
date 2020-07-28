@@ -1,94 +1,73 @@
-.homeFavoriteSix {
-    display: grid; 
-    grid-template-columns: repeat(3,33%);
+.nameAndPhotoHome {
+    border:solid;
+    border-width: thin;
+    border-color: gray;
+    padding: 15px;
+    margin: 15px;
+    // max-width: 400px;
+    .myName {
+        text-align: center;
+    }
+    .myPhoto {
+        text-align: center;
+        padding-bottom: 25px;
+    }
     img {
-        height: 362px;
-        width: 262px;
+        width: 30%;
+        height: auto;
+    }
+    .wikiColumns {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        p {
+            font-weight: bold;
+        }
+        a:hover {
+            opacity: .5;
+          }
+    }
+}
+
+.aboutMeParagraph {
+    padding: 15px;
+}
+
+.homeFavoriteSix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap: 1rem;
+    img {
+        height: 181px;
+        width: 131px;
         border: solid;
         border-width: 1px;
         border-color: black;
-        border-radius: 35px;
     }
-    div.homeFavoriteMedia {
+    .homeFavoriteMedia {
         display: grid;
         justify-content: space-evenly;
         align-items: center;
         padding: 10px;
-    }
-    div.homeFavoriteMedia p {
-        text-align: center
-    }
-
-      
-    div.homeFavoriteMediaHover {
+        p {
+            font-size: 10px;
+            text-align: center;
+            margin: 0px;
+        }
+    }      
+    .homeFavoriteMediaHover {
         display: grid;
         justify-content: space-evenly;
         align-items: center;
         padding: 10px;
         opacity: 0.5;
-        border-color: black;
-    }
-  
-    div.homeFavoriteMediaHover p {
-        text-align: center
-    }
-}
-
-.nameAndPhotoHome {
-    div.nameAndPhoto {
-        display: grid;
-        padding: 2.5% 4.5%;
-        grid-template-rows: repeat(2, 25%);
-    }
-      
-    div.nameAndPhoto div {
-        display: grid;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-      
-    div.nameAndPhoto img {
-        width: 100%;
-        border-radius: 35px;
-        border-style: solid;
-        border-width: thin;
-        border-color: black;
-    }
-      
-    div.nameAndPhoto h1 {
-    }
-    
-    div.nameAndPhotoHeader {
-        font-variant: small-caps;
-        display: grid;
-        grid-template-columns: repeat(3,33%);
-
-        h1:nth-child(1) {
-            margin-left: auto;
-            margin-right: 0;
-            color: red;
-        }
-        h1:nth-child(2) {
+        p {
+            font-size: 10px;
             text-align: center;
-            color: yellow;
+            margin: 0px;
         }
-        h1:nth-child(3) {
-            color: blue;
-        }
-    }   
-}
-
-.aboutMe {
-    div:nth-child(1) {
-        font-variant: small-caps;
-
-    }
-    div:nth-child(2) {
-        font-variant: small-caps;
-        text-transform: lowercase;
-    }
-
-    div:nth-child(3) {
-        font-variant: small-caps;
     }
 }

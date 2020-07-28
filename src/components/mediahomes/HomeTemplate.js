@@ -17,7 +17,7 @@ export default function HomeTemplate(topFiveMediaNames, photoName, title, paragr
     return (
         <div className="mediaHome">
             <div className="headerInfo">
-                <h1 className="mediaHeader">Favorite {title}</h1>
+                <h5 className="mediaHeader">Favorite {title}</h5>
                 <p>{paragraph}</p>
             </div>
             <div className="favoriteFive">

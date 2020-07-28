@@ -1,13 +1,21 @@
 .mediaHome {
   margin: 1.25%;
-  padding: 10px 0px;
   background-color: white;
-
+  border: solid;
+  border-width: thin;
+  
   div.headerInfo {
     color: black;
-    padding: 15px;
-    h1.mediaHeader {
+    h5.mediaHeader {
       text-align: center;
+      background: lightcoral;
+      text-align: center;
+      border-bottom: solid;
+      border-width: thin;
+      padding: 5px;
+    }
+    p {
+      padding: 15px;
     }
   }
   div.favoriteFive {
