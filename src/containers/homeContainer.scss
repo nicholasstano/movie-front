@@ -1,8 +1,10 @@
+@import "../sass/breakpoints.scss";
+
 .homeContainer {
     display: grid;
     position: fixed;
     overflow-y: scroll;
-    top: 61px;
+    // top: 61px;
     bottom: 0px;
     border-style: solid;
     border-radius: 5px;
@@ -10,6 +12,18 @@
     border-color: lightskyblue;
     padding-top: 56px;
     padding-bottom: 0px; 
+    @include media ('>911px') {
+        top: 175px;
+    }
+    @include media('<=911px', '>461px') {
+        top: 275px;
+    }   
+    @include media('<=460px', '>311px') {
+        top: 375px;
+    } 
+    @include media('<=311px') {
+        top: 675px;
+    }    
     .homeComponents {
         padding: 15px;
         display: grid;

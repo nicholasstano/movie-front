@@ -2,10 +2,6 @@
   font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-.app {
-  background-color: lightgray;
-}
-
 ::placeholder {
   color:#080808;
   background-color: #FFFFFF	;

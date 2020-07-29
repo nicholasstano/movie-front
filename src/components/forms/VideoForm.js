@@ -32,9 +32,7 @@ export class VideoForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addVideoGame(newVideoGame)
-        if (!this.props.videoGames.length > 0) {
-            this.props.getVideoGames()
-        }
+        this.props.getVideoGames()
         this.setState({
             monthPlayed: "",
             yearPlayed: "",

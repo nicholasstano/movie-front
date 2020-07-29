@@ -34,9 +34,7 @@ export class AlbumForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addAlbum(newAlbum)
-        if (!this.props.albums.length > 0) {
-            this.props.getAlbums()
-        }
+        this.props.getAlbums()
         this.setState({
             monthPlayed: "",
             yearPlayed: "",

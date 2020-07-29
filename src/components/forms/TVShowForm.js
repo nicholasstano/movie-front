@@ -34,9 +34,7 @@ export class TVShowForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addTVShow(newShow)
-        if (!this.props.tvShows.length > 0) {
-            this.props.getTVShows()
-        }
+        this.props.getTVShows()
         this.setState({
             monthWatched: "",
             yearWatched: "",

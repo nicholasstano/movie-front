@@ -34,9 +34,7 @@ export class BookForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addBook(newBook)
-        if (!this.props.books.length > 0) {
-            this.props.getBooks()
-        }
+        this.props.getBooks()
         this.setState({
             monthRead: "",
             yearRead: "",

@@ -1,99 +1,145 @@
-div.topNavbar {
-    @media (max-width: 1032px) {
-        font-size: 8px;
-        height: 61px;
-        display: grid;
-        grid-template-columns: repeat(4, 25%)
-    }
+@import "../../sass/breakpoints.scss";
+
+div.navBarHome {
+    padding: 5px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     border: solid;
-    border-color: lightskyblue;
-    border-radius: 6px;
     border-width: thin;
-    display: grid;
-    grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
-    justify-content: space-evenly;
-    background-color: lightsteelblue;
-
-    a {
-        @media (max-width: 1032px) {
-            padding: 1px;
-            margin: 1px;
-        }
-      padding: 5px;
-      margin: 5px;
+    border-color: lightskyblue;
+    background-color: white;
+    @include media ('>911px') {
+        height: 175px;
     }
-    
-    .navbarButton {
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: darkblue;
-    border-style: solid;
-    background-color: lightskyblue;
-    color: black;
-    text-align: center;
-    width: 100%;
-    margin: 5px;
+    @include media('<=911px', '>461px') {
+        height: 275px;
+    }   
+    @include media('<=460px', '>311px') {
+        height: 375px;
     }
-    .navbarButton:hover {
-    border-radius: 5px;
-    border-color: dimgray;
-    background-color: lightgray;
-    color: black;
-    width: 100%;
-    }
-
-    .navbarButton.albums:hover {
-    border-radius: 5px;
-    border-color: darkred;
-    background-color: red;
-    color: white;
-    width: 100%;
-    }
-    
-    .navbarButton.boardgames:hover {
-    border-radius: 5px;
-    border-color: darkblue;
-    background-color: blue;
-    color: white;
-    width: 100%;
-    }
-    
-    .navbarButton.books:hover {
-    border-radius: 5px;
-    border-color: darkgoldenrod;
-    background-color: yellow;
-    color: black;
-    width: 100%;
-    }
-    
-    .navbarButton.movies:hover {
-    border-radius: 5px;
-    border-color: darkorange;
-    background-color: orange;
-    color: white;
-    width: 100%;
-    }
-    
-    .navbarButton.television:hover {
-    border-radius: 5px;
-    border-color: darkgreen;
-    background-color: green;
-    color: white;
-    width: 100%;
-    }
-    
-    .navbarButton.videogames:hover {
-    border-radius: 5px;
-    border-color: darkviolet;
-    background-color: purple;
-    color: white;
-    width: 100%;
+    @include media('<=311px') {
+        height: 675px;
+    }     
+    div.topNavbar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        justify-content: space-evenly;
+        justify-items: center;
+        div.mediaLink {
+            text-align: center;
+            border: solid;
+            border-color: gray;
+            border-width: thin;
+            width: 125px;
+            padding: 15px;
+            margin: 15px;
+            a {
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }        
     }
 }
+
+// div.topNavbar {
+//     @media (max-width: 1032px) {
+//         font-size: 8px;
+//         height: 61px;
+//         display: grid;
+//         grid-template-columns: repeat(4, 25%)
+//     }
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     border: solid;
+//     border-color: lightskyblue;
+//     border-radius: 6px;
+//     border-width: thin;
+//     display: grid;
+//     grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+//     justify-content: space-evenly;
+//     background-color: lightsteelblue;
+
+//     a {
+//         @media (max-width: 1032px) {
+//             padding: 1px;
+//             margin: 1px;
+//         }
+//       padding: 5px;
+//       margin: 5px;
+//     }
+    
+//     .navbarButton {
+//     border-radius: 5px;
+//     border-width: 1px;
+//     border-color: darkblue;
+//     border-style: solid;
+//     background-color: lightskyblue;
+//     color: black;
+//     text-align: center;
+//     width: 100%;
+//     margin: 5px;
+//     }
+//     .navbarButton:hover {
+//     border-radius: 5px;
+//     border-color: dimgray;
+//     background-color: lightgray;
+//     color: black;
+//     width: 100%;
+//     }
+
+//     .navbarButton.albums:hover {
+//     border-radius: 5px;
+//     border-color: darkred;
+//     background-color: red;
+//     color: white;
+//     width: 100%;
+//     }
+    
+//     .navbarButton.boardgames:hover {
+//     border-radius: 5px;
+//     border-color: darkblue;
+//     background-color: blue;
+//     color: white;
+//     width: 100%;
+//     }
+    
+//     .navbarButton.books:hover {
+//     border-radius: 5px;
+//     border-color: darkgoldenrod;
+//     background-color: yellow;
+//     color: black;
+//     width: 100%;
+//     }
+    
+//     .navbarButton.movies:hover {
+//     border-radius: 5px;
+//     border-color: darkorange;
+//     background-color: orange;
+//     color: white;
+//     width: 100%;
+//     }
+    
+//     .navbarButton.television:hover {
+//     border-radius: 5px;
+//     border-color: darkgreen;
+//     background-color: green;
+//     color: white;
+//     width: 100%;
+//     }
+    
+//     .navbarButton.videogames:hover {
+//     border-radius: 5px;
+//     border-color: darkviolet;
+//     background-color: purple;
+//     color: white;
+//     width: 100%;
+//     }
+// }
 
 
 

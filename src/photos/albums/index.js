@@ -28,5 +28,6 @@ import foghatlive from './foghatlive.jpg'
 import londoncalling from './londoncalling.jpg'
 import acquiringthetaste from './acquiringthetaste.jpg'
 import gentlegiant from './gentlegiant.jpg'
+import operationivy from './operationivy.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant, operationivy }

@@ -1,11 +1,25 @@
+@import "../../sass/breakpoints.scss";
+
 div.mediaContainer {
     display: grid;
     grid-template-columns: 20% 80%;
     color:#080808;
     background-color: #FFFFFF;
     padding-bottom: 0px; 
-    padding-top: 61px;
     min-height: 100vh;
+
+    @include media ('>911px') {
+        padding-top: 175px;
+    }
+    @include media('<=911px', '>461px') {
+        padding-top: 275px;
+    }   
+    @include media('<=460px', '>311px') {
+        padding-top: 375px;
+    } 
+    @include media('<=311px') {
+        padding-top: 675px;
+    }  
 
 
     div.mediaContent {

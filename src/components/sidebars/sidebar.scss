@@ -1,8 +1,9 @@
+@import "../../sass/breakpoints.scss";
+
 div.mediaSidebar {
     position: fixed;
     overflow-y: scroll;
     width: 20%;
-    top: 61px;
     bottom: 0px;
     border: solid;
     border-color: lightskyblue;
@@ -10,7 +11,20 @@ div.mediaSidebar {
     border-width: thin;
     color: #f8f8f8;
     padding: 1.5%;
-    background-color: lightsteelblue;
+    background-color: white;
+    @include media ('>911px') {
+      top: 175px;
+    }
+    @include media('<=911px', '>461px') {
+      top: 275px;
+    }   
+    @include media('<=460px', '>311px') {
+      top: 375px;
+    } 
+    @include media('<=311px') {
+      top: 675px;
+    } 
+
 
     div.mediaSearch {
       display: grid;
@@ -32,11 +46,10 @@ div.mediaSidebar {
       }
       
     div.mediaTitles button {
-        border-radius: 5px;
         border-width: 1px;
-        border-color: darkblue;
+        border-color: black;
         border-style: solid;
-        background-color: lightskyblue;
+        background-color: white;
         color: black;
         text-align: left;
         width: 100%;
@@ -50,7 +63,6 @@ div.mediaSidebar {
       }
 
     .Albums:hover {
-      border-radius: 5px;
       border-color: darkred;
       background-color: red;
       color: white;
@@ -59,7 +71,6 @@ div.mediaSidebar {
     }
 
     .Board.Games:hover {
-      border-radius: 5px;
       border-color: darkblue;
       background-color: blue;
       color: white;
@@ -68,7 +79,6 @@ div.mediaSidebar {
     }
     
     .Books:hover {
-      border-radius: 5px;
       border-color: darkgoldenrod;
       background-color: yellow;
       color: black;
@@ -77,7 +87,6 @@ div.mediaSidebar {
     }
     
     .Movies:hover {
-      border-radius: 5px;
       border-color: darkorange;
       background-color: orange;
       color: white;
@@ -86,7 +95,6 @@ div.mediaSidebar {
     }
     
     .TV.Shows:hover {
-      border-radius: 5px;
       border-color: darkgreen;
       background-color: green;
       color: white;
@@ -95,7 +103,6 @@ div.mediaSidebar {
     }
     
     .Video.Games:hover {
-      border-radius: 5px;
       border-color: darkviolet;
       background-color: purple;
       color: white;

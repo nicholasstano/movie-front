@@ -32,9 +32,7 @@ export class BoardForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addBoardGame(newBoardGame)
-        if (!this.props.boardGames.length > 0) {
-            this.props.getBoardGames()
-        }
+        this.props.getBoardGames()
         this.setState({
             monthPlayed: "",
             yearPlayed: "",

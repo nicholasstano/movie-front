@@ -34,9 +34,7 @@ export class MovieForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addMovie(newMovie)
-        if (!this.props.movies.length > 0) {
-            this.props.getMovies()
-        }
+        this.props.getMovies()
         this.setState({
             monthWatched: "",
             yearWatched: "",
