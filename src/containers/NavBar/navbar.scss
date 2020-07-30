@@ -8,20 +8,24 @@ div.navBarHome {
     width: 100%;
     border: solid;
     border-width: thin;
+    border-radius: 5px;
     border-color: lightskyblue;
     background-color: white;
     @include media ('>911px') {
-        height: 175px;
+        height: 145px;
     }
     @include media('<=911px', '>461px') {
-        height: 275px;
+        height: 255px;
     }   
     @include media('<=461px', '>311px') {
-        height: 375px;
+        height: 365px;
     }
     @include media('<=311px') {
         height: 675px;
     }     
+    p {
+        margin: 0px;
+    }
     div.topNavbar {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

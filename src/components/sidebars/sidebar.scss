@@ -13,13 +13,13 @@ div.mediaSidebar {
     padding: 1.5%;
     background-color: white;
     @include media ('>911px') {
-      top: 175px;
+      top: 144px;
     }
     @include media('<=911px', '>461px') {
-      top: 275px;
+      top: 254px;
     }   
     @include media('<=461px', '>311px') {
-      top: 375px;
+      top: 364px;
     } 
     @include media('<=311px') {
       top: 675px;

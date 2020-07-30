@@ -9,13 +9,13 @@ div.mediaContainer {
     min-height: 100vh;
 
     @include media ('>911px') {
-        padding-top: 175px;
+        padding-top: 144px;
     }
     @include media('<=911px', '>461px') {
-        padding-top: 275px;
+        padding-top: 254px;
     }   
     @include media('<=461px', '>311px') {
-        padding-top: 375px;
+        padding-top: 364px;
     } 
     @include media('<=311px') {
         padding-top: 675px;
