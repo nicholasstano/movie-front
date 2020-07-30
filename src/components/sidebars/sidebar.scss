@@ -18,7 +18,7 @@ div.mediaSidebar {
     @include media('<=911px', '>461px') {
       top: 275px;
     }   
-    @include media('<=460px', '>311px') {
+    @include media('<=461px', '>311px') {
       top: 375px;
     } 
     @include media('<=311px') {
@@ -34,16 +34,27 @@ div.mediaSidebar {
         width: 100%;
         height: auto;
         padding: 1%;
+        border-style: solid;
+        border-width: thin;
+        border-radius: 0px;
       }
     }
     div.mediaTitles {
-      @media (max-width: 1032px) {
-        font-size: 6px;
-        padding: 1%;
-    }
-        font-size: 12px;
-        padding: 1%;
+      padding: 1%;
+      @include media ('>911px') {
+        font-size: 75%;
       }
+      @include media('<=911px', '>461px') {
+        font-size: 56.25%;
+      }   
+      @include media('<=461px', '>311px') {
+        font-size: 50%;
+      } 
+      @include media('<=311px') {
+        font-size: 40%;
+      } 
+  
+    }
       
     div.mediaTitles button {
         border-width: 1px;
@@ -53,13 +64,6 @@ div.mediaSidebar {
         color: black;
         text-align: left;
         width: 100%;
-
-        div.monthDay {
-          @media (max-width: 1032px) {
-            font-size: 6px;
-        }
-          font-size: 8px;
-        }
       }
 
     .Albums:hover {

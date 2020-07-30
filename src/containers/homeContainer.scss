@@ -4,7 +4,6 @@
     display: grid;
     position: fixed;
     overflow-y: scroll;
-    // top: 61px;
     bottom: 0px;
     border-style: solid;
     border-radius: 5px;
@@ -18,7 +17,7 @@
     @include media('<=911px', '>461px') {
         top: 275px;
     }   
-    @include media('<=460px', '>311px') {
+    @include media('<=461px', '>311px') {
         top: 375px;
     } 
     @include media('<=311px') {

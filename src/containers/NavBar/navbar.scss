@@ -16,7 +16,7 @@ div.navBarHome {
     @include media('<=911px', '>461px') {
         height: 275px;
     }   
-    @include media('<=460px', '>311px') {
+    @include media('<=461px', '>311px') {
         height: 375px;
     }
     @include media('<=311px') {

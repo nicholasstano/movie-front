@@ -14,7 +14,7 @@ div.mediaContainer {
     @include media('<=911px', '>461px') {
         padding-top: 275px;
     }   
-    @include media('<=460px', '>311px') {
+    @include media('<=461px', '>311px') {
         padding-top: 375px;
     } 
     @include media('<=311px') {
@@ -23,7 +23,10 @@ div.mediaContainer {
 
 
     div.mediaContent {
-        border: solid;
+        // border: solid;
+        border-top: solid;
+        border-right: solid;
+        border-left: solid;
         border-color: white;
         border-radius: 6px;
         border-width: thin;

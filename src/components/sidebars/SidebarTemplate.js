@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import MediaSearch from './MediaSearch.js'
-import 'react-dropdown/style.css'
 import util from '../../util'
 import './sidebar.scss'
 
