@@ -14,7 +14,7 @@ export default function (state = initialState, action) {
         case ADD_BOARD_GAME:
             return {
                 ...state,
-                boardGames: [state.boardGames, action.payload.boardGame]
+                boardGames: [...state.boardGames, action.payload]
             }
         default:
             return state

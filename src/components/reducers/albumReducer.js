@@ -14,7 +14,7 @@ export default function (state = initialState, action) {
         case ADD_ALBUM:
             return {
                 ...state,
-                albums: [state.albums, action.payload.album]
+                albums: [...state.albums, action.payload]
             }
         default:
             return state

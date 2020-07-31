@@ -5,6 +5,7 @@ export default {
 }
 
 function searchMedia(media, field, searchTerm) {
+    console.log(media)
     return media.filter(m => m[field].toLowerCase().includes(searchTerm.toLowerCase()))
 }
 

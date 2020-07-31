@@ -1,4 +1,5 @@
 import { GET_BOOKS, ADD_BOOK } from '../actions/types'
+import util from '../../util'
 
 const initialState = {
     books: []
@@ -14,7 +15,7 @@ export default function (state = initialState, action) {
         case ADD_BOOK:
             return {
                 ...state,
-                books: [state.books, action.payload.book]
+                books: [...state.books, action.payload]
             }
         default:
             return state

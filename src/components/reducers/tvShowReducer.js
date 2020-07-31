@@ -14,7 +14,7 @@ export default function (state = initialState, action) {
         case ADD_TV_SHOW:
             return {
                 ...state,
-                tvShows: [state.tvShows, action.payload.tvShow]
+                tvShows: [...state.tvShows, action.payload]
             }
         default:
             return state

@@ -16,6 +16,10 @@ export class BookForm extends Component {
         improveNotes: ""
     }
 
+    componentDidMount() {
+        this.props.getBooks()
+    }
+
     handleTextChange = (event) => {
         this.setState({ [event.target.name]: event.target.value })
     }
@@ -34,7 +38,6 @@ export class BookForm extends Component {
             improve_notes: this.state.improveNotes
         }
         this.props.addBook(newBook)
-        this.props.getBooks()
         this.setState({
             monthRead: "",
             yearRead: "",
@@ -48,6 +51,7 @@ export class BookForm extends Component {
         })
     }
     render() {
+        console.log(this.props, this.state)
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>

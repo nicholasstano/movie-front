@@ -22,13 +22,14 @@ export class BookContainer extends Component {
     render() {
         const { books } = this.props.books
         const { media } = this.state
+
         return (
             <div className="mediaContainer">
                 <div>
                     <BookSidebar reviews={books} mediaClickHandler={this.mediaClickHandler} />
                 </div>
                 <div className="mediaContent">
-                    {media ? <BookReviewCard key={media.id} book={media} /> : <BookHome />}
+                    {this.state.media ? <BookReviewCard key={media.id} book={media} /> : <BookHome />}
                 </div>
             </div>
         )
