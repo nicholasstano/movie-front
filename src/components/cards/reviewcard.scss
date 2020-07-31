@@ -33,7 +33,9 @@
     .betterHeader {
       background: lightyellow;
       text-align: center;
-      border: solid;
+      border-right: solid;
+      border-left: solid;
+      border-top: solid;
       border-width: thin;
       padding: 5px;
       margin: 0px;
@@ -46,9 +48,7 @@
       margin: 0px;
     }
     .betterContent {
-      border-right: solid;
-      border-left: solid;
-      border-bottom: solid;
+      border: solid;
       border-width: thin;
       padding: 15px;
       margin: 0px;
