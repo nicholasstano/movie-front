@@ -67,51 +67,27 @@ div.mediaSidebar {
       }
 
     .Albums:hover {
-      border-color: darkred;
-      background-color: red;
-      color: white;
-      text-align: left;
-      width: 100%;
+      color:red;
     }
 
     .Board.Games:hover {
-      border-color: darkblue;
-      background-color: blue;
-      color: white;
-      text-align: left;
-      width: 100%;
+      color:blue;
     }
     
     .Books:hover {
-      border-color: darkgoldenrod;
-      background-color: yellow;
-      color: black;
-      text-align: left;
-      width: 100%;
+      color: #CCCC00;
     }
     
     .Movies:hover {
-      border-color: darkorange;
-      background-color: orange;
-      color: white;
-      text-align: left;
-      width: 100%;
+      color: orange;
     }
     
     .TV.Shows:hover {
-      border-color: darkgreen;
-      background-color: green;
-      color: white;
-      text-align: left;
-      width: 100%;
+      color: green;
     }
     
     .Video.Games:hover {
-      border-color: darkviolet;
-      background-color: purple;
-      color: white;
-      text-align: left;
-      width: 100%;
+      color: purple;
     }
 
   }  
