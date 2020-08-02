@@ -1,5 +1,4 @@
 import { GET_BOOKS, ADD_BOOK } from '../actions/types'
-import util from '../../util'
 
 const initialState = {
     books: []
