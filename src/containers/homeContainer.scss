@@ -26,7 +26,19 @@
     .homeComponents {
         padding: 15px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 1rem;
+        @include media ('>911px') {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        @include media('<=911px', '>461px') {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }   
+        @include media('<=461px', '>311px') {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        } 
+        @include media('<=311px') {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }  
     }
   }
