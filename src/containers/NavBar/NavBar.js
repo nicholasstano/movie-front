@@ -16,42 +16,42 @@ const NavBar = () => {
                 <p>Nick Stano</p>
             </Link>
             <div className="topNavbar" >
-                <div className="mediaLink">
-                    <Link to="/albums" onClick={() => window.scrollTo(0, 0)}>
+                <Link to="/albums" onClick={() => window.scrollTo(0, 0)}>
+                    <div className="mediaLink">
                         <AlbumIcon />
                         <p>albums</p>
-                    </Link>
-                </div>
-                <div className="mediaLink">
-                    <Link to="/boards" onClick={() => window.scrollTo(0, 0)}>
+                    </div>
+                </Link>
+                <Link to="/boards" onClick={() => window.scrollTo(0, 0)}>
+                    <div className="mediaLink">
                         <DonutSmallIcon />
                         <p>boardgames</p>
-                    </Link>
-                </div>
-                <div className="mediaLink">
-                    <Link to="/books" onClick={() => window.scrollTo(0, 0)}>
+                    </div>
+                </Link>
+                <Link to="/books" onClick={() => window.scrollTo(0, 0)}>
+                    <div className="mediaLink">
                         <MenuBookIcon />
                         <p>books</p>
-                    </Link>
-                </div>
-                <div className="mediaLink">
-                    <Link to="/movies" onClick={() => window.scrollTo(0, 0)}>
+                    </div>
+                </Link>
+                <Link to="/movies" onClick={() => window.scrollTo(0, 0)}>
+                    <div className="mediaLink">
                         <TheatersIcon />
                         <p>movies</p>
-                    </Link>
-                </div>
-                <div className="mediaLink">
-                    <Link to="/television" onClick={() => window.scrollTo(0, 0)}>
+                    </div>
+                </Link>
+                <Link to="/television" onClick={() => window.scrollTo(0, 0)}>
+                    <div className="mediaLink">
                         <LiveTvIcon />
                         <p>television</p>
-                    </Link>
-                </div>
-                <div className="mediaLink">
-                    <Link to="/videos" onClick={() => window.scrollTo(0, 0)}>
+                    </div>
+                </Link>
+                <Link to="/videos" onClick={() => window.scrollTo(0, 0)}>
+                    <div className="mediaLink">
                         <VideogameAssetIcon />
                         <p>videogames</p>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
             </div>
         </div >
     )
