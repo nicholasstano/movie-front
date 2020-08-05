@@ -15,40 +15,40 @@ const NavBar = () => {
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 <p>Nick Stano</p>
             </Link>
-            <div className="topNavbar" >
+            <div className="navBarMediaIcons" >
                 <Link to="/albums" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
-                        <AlbumIcon />
+                        <AlbumIcon className="mediaIcon" />
                         <p>albums</p>
                     </div>
                 </Link>
                 <Link to="/boards" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
-                        <DonutSmallIcon />
+                        <DonutSmallIcon className="mediaIcon" />
                         <p>boardgames</p>
                     </div>
                 </Link>
                 <Link to="/books" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
-                        <MenuBookIcon />
+                        <MenuBookIcon className="mediaIcon" />
                         <p>books</p>
                     </div>
                 </Link>
                 <Link to="/movies" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
-                        <TheatersIcon />
+                        <TheatersIcon className="mediaIcon" />
                         <p>movies</p>
                     </div>
                 </Link>
                 <Link to="/television" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
-                        <LiveTvIcon />
+                        <LiveTvIcon className="mediaIcon" />
                         <p>television</p>
                     </div>
                 </Link>
                 <Link to="/videos" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
-                        <VideogameAssetIcon />
+                        <VideogameAssetIcon className="mediaIcon" />
                         <p>videogames</p>
                     </div>
                 </Link>

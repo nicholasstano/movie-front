@@ -26,7 +26,7 @@ div.navBarHome {
     p {
         margin: 0px;
     }
-    div.topNavbar {
+    div.navBarMediaIcons {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         justify-content: space-evenly;
@@ -39,11 +39,14 @@ div.navBarHome {
             width: 125px;
             padding: 15px;
             margin: 15px;
-            a {
-                    p {
-                        margin: 0px;
-                    }
-                }
-            }        
+            .mediaIcon {
+                @include media('<=311px') {
+                    display: none;
+                }  
+            }
+            p {
+                margin: 0px;
+            }   
+        }        
     }
 }

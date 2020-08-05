@@ -11,34 +11,66 @@ import NavBar from '../src/containers/NavBar/NavBar.js'
 import Home from '../src/containers/Home.js'
 import { withRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
+import { basicUrl } from '../src/config'
 import store from './store'
 // import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
 
 export class App extends Component {
 
-  state = { userName: null }
+  state = { user: null }
 
   setUser = u => {
-    this.setState({ userName: u })
+    if (u != null) {
+      this.setState({ user: u })
+    }
+    else {
+      localStorage.removeItem('userId')
+      this.setState({ user: null })
+    }
+  }
+
+  componentDidMount() {
+    this.autoLogin()
+  }
+
+  autoLogin() {
+    let userId = localStorage.getItem('userId')
+    console.log(userId)
+    if (userId) {
+      fetch(`${basicUrl}/autologin`, {
+        headers: {
+          'accept': 'application/json',
+          'Content-Type': 'application/json',
+          Authorization: userId
+          // Authorization: token
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          this.setUser(data)
+        })
+    }
   }
 
   render() {
+    console.log(this.state.user)
     return (
       <Provider store={store}>
 
         <div className="app">
           <NavBar />
           <Switch>
-            {this.state.userName !== "admin" ?
-              <Route
-                path="/login"
-                render={() => {
-                  return (
-                    <div><LoginContainer setUser={this.setUser} /></div>)
-                }} />
-              :
-              <Route path="/forms" render={() => { return (<div><FormsContainer /></div>) }} />}
+            {/* {this.state.user && this.state.user.username !== "admin" ? */}
+            <Route
+              path="/login"
+              render={() => {
+                return (
+                  <div><LoginContainer setUser={this.setUser} /></div>)
+              }} />
+            {/* : */}
+            <Route path="/forms" render={() => { return (<div><FormsContainer /></div>) }} />
+            {/* } */}
             <Route path="/movies" render={() => { return (<div><MovieContainer /></div>) }} />
             <Route path="/albums" render={() => { return (<div><AlbumContainer /></div>) }} />
             <Route path="/boards" render={() => { return (<div><BoardContainer /></div>) }} />
