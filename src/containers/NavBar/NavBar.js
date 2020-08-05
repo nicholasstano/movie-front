@@ -8,13 +8,22 @@ import LiveTvIcon from '@material-ui/icons/LiveTv';
 import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 import './navbar.scss'
 
-const NavBar = () => {
-
+const NavBar = (props) => {
+    console.log(props)
     return (
         <div className="navBarHome">
-            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-                <p>Nick Stano</p>
-            </Link>
+            <div className="navBarHeader">
+                <div>
+                    <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                        <p>Nick Stano</p>
+                    </Link>
+                </div>
+                {props.user &&
+                    <div>
+                        <p onClick={() => props.setUser(null)}>Log Out</p>
+                    </div>
+                }
+            </div>
             <div className="navBarMediaIcons" >
                 <Link to="/albums" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">

@@ -22,10 +22,14 @@ div.navBarHome {
     }
     @include media('<=311px') {
         height: 675px;
-    }     
-    p {
-        margin: 0px;
-    }
+    }  
+    .navBarHeader {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        p {
+            margin: 0px;
+        }
+    }   
     div.navBarMediaIcons {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

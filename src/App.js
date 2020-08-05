@@ -54,12 +54,11 @@ export class App extends Component {
   }
 
   render() {
-    console.log(this.state.user)
     return (
       <Provider store={store}>
 
         <div className="app">
-          <NavBar />
+          <NavBar user={this.state.user} setUser={this.setUser} />
           <Switch>
             {/* {this.state.user && this.state.user.username !== "admin" ? */}
             <Route
