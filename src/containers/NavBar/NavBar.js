@@ -9,7 +9,6 @@ import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 import './navbar.scss'
 
 const NavBar = (props) => {
-    console.log(props)
     return (
         <div className="navBarHome">
             <div className="navBarHeader">

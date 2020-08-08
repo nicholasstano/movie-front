@@ -36,7 +36,6 @@ export class App extends Component {
 
   autoLogin() {
     let userId = localStorage.getItem('userId')
-    console.log(userId)
     if (userId) {
       fetch(`${basicUrl}/autologin`, {
         headers: {
@@ -56,7 +55,6 @@ export class App extends Component {
   render() {
     return (
       <Provider store={store}>
-
         <div className="app">
           <NavBar user={this.state.user} setUser={this.setUser} />
           <Switch>
