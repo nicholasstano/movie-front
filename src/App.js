@@ -24,7 +24,7 @@ export class App extends Component {
       this.setState({ user: u })
     }
     else {
-      localStorage.removeItem('userId')
+      localStorage.removeItem('token')
       this.setState({ user: null })
     }
   }
@@ -34,18 +34,19 @@ export class App extends Component {
   }
 
   autoLogin() {
-    let userId = localStorage.getItem('userId')
-    if (userId) {
+    let token = localStorage.getItem('token')
+    console.log(token)
+    if (token) {
       fetch(`${basicUrl}/autologin`, {
         headers: {
           'accept': 'application/json',
-          'Content-Type': 'application/json',
-          Authorization: userId
-          // Authorization: token
+          'content-type': 'application/json',
+          Authorization: token
         }
       })
         .then(response => response.json())
         .then(data => {
+          console.log(data)
           this.setUser(data)
         })
     }
