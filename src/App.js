@@ -13,7 +13,6 @@ import { withRouter, Switch, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { basicUrl } from '../src/config'
 import store from './store'
-// import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
 
 export class App extends Component {
@@ -58,16 +57,9 @@ export class App extends Component {
         <div className="app">
           <NavBar user={this.state.user} setUser={this.setUser} />
           <Switch>
-            {/* {this.state.user && this.state.user.username !== "admin" ? */}
-            <Route
-              path="/login"
-              render={() => {
-                return (
-                  <div><LoginContainer setUser={this.setUser} /></div>)
-              }} />
-            {/* : */}
-            <Route path="/forms" render={() => { return (<div><FormsContainer /></div>) }} />
-            {/* } */}
+            {this.state.user && this.state.user.username === 'admin' &&
+              <Route path="/forms" render={() => { return (<div><FormsContainer /></div>) }} />}
+            <Route path="/login" render={() => { return (<div><LoginContainer setUser={this.setUser} /></div>) }} />
             <Route path="/movies" render={() => { return (<div><MovieContainer /></div>) }} />
             <Route path="/albums" render={() => { return (<div><AlbumContainer /></div>) }} />
             <Route path="/boards" render={() => { return (<div><BoardContainer /></div>) }} />

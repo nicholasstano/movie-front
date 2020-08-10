@@ -33,7 +33,7 @@ const NavBar = (props) => {
                 <Link to="/boards" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
                         <DonutSmallIcon className="mediaIcon" />
-                        <p>boardgames</p>
+                        <p>board games</p>
                     </div>
                 </Link>
                 <Link to="/books" onClick={() => window.scrollTo(0, 0)}>
@@ -57,7 +57,7 @@ const NavBar = (props) => {
                 <Link to="/videos" onClick={() => window.scrollTo(0, 0)}>
                     <div className="mediaLink">
                         <VideogameAssetIcon className="mediaIcon" />
-                        <p>videogames</p>
+                        <p>video games</p>
                     </div>
                 </Link>
             </div>
