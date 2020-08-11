@@ -12,7 +12,6 @@ export const getBooks = () => dispatch => {
 }
 
 export const addBook = (newBook) => dispatch => {
-    console.log(newBook)
     fetch(`${url}/books`, {
         method: 'POST',
         headers: {

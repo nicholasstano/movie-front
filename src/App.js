@@ -35,7 +35,6 @@ export class App extends Component {
 
   autoLogin() {
     let token = localStorage.getItem('token')
-    console.log(token)
     if (token) {
       fetch(`${basicUrl}/autologin`, {
         headers: {
@@ -46,7 +45,6 @@ export class App extends Component {
       })
         .then(response => response.json())
         .then(data => {
-          console.log(data)
           this.setUser(data)
         })
     }

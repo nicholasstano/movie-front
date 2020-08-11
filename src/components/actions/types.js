@@ -15,3 +15,6 @@ export const ADD_TV_SHOW = 'ADD_TV_SHOW'
 
 export const GET_VIDEO_GAMES = 'GET_VIDEO_GAMES'
 export const ADD_VIDEO_GAME = 'ADD_VIDEO_GAME'
+
+export const USER_LOGIN = 'USER_LOGIN'
+export const AUTO_LOGIN = 'AUTO_LOGIN'

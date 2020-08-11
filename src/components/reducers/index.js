@@ -5,6 +5,7 @@ import bookReducer from './bookReducer'
 import movieReducer from './movieReducer'
 import tvShowReducer from './tvShowReducer'
 import videoGameReducer from './videoGameReducer'
+import userReducer from './userReducer';
 
 export default combineReducers({
     albums: albumReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
     books: bookReducer,
     movies: movieReducer,
     tvShows: tvShowReducer,
-    videoGames: videoGameReducer
+    videoGames: videoGameReducer,
+    user: userReducer
 })

@@ -22,7 +22,6 @@ export class BookContainer extends Component {
     render() {
         const { books } = this.props.books
         const { media } = this.state
-
         return (
             <div className="mediaContainer">
                 <div>
