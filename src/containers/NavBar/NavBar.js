@@ -1,14 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 import AlbumIcon from '@material-ui/icons/Album';
 import DonutSmallIcon from '@material-ui/icons/DonutSmall';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import TheatersIcon from '@material-ui/icons/Theaters';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
+import { logout } from '../../components/actions/userActions'
 import './navbar.scss'
 
 const NavBar = (props) => {
+
+    const { user } = props.user
+
     return (
         <div className="navBarHome">
             <div className="navBarHeader">
@@ -17,9 +22,9 @@ const NavBar = (props) => {
                         <p>Nick Stano</p>
                     </Link>
                 </div>
-                {props.user &&
+                {user &&
                     <div>
-                        <p onClick={() => props.setUser(null)}>Log Out</p>
+                        <p onClick={() => props.logout()}>Log Out</p>
                     </div>
                 }
             </div>
@@ -65,5 +70,8 @@ const NavBar = (props) => {
     )
 }
 
-export default NavBar
+const mapStateToProps = state => ({
+    user: state.user
+})
 
+export default connect(mapStateToProps, { logout })(NavBar)

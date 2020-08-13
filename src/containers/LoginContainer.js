@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 import { basicUrl } from '../config'
+import { setLogin } from '../components/actions/userActions.js'
+import { USER_LOGIN } from '../components/actions/types'
 
 export class LoginContainer extends Component {
     state = {
@@ -21,7 +24,9 @@ export class LoginContainer extends Component {
             }
         }).then(res => res.json())
             .then(data => {
-                this.props.setUser(data.user)
+                console.log(data)
+                this.props.setLogin(USER_LOGIN, data.user)
+                // this.props.setUser(data.user)
                 this.props.history.push('/forms')
                 localStorage.setItem('token', data.token)
             })
@@ -52,4 +57,8 @@ export class LoginContainer extends Component {
     }
 }
 
-export default withRouter(LoginContainer)
+const mapStateToProps = state => ({
+    user: state.user
+})
+
+export default withRouter(connect(mapStateToProps, { setLogin })(LoginContainer))

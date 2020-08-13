@@ -18,3 +18,4 @@ export const ADD_VIDEO_GAME = 'ADD_VIDEO_GAME'
 
 export const USER_LOGIN = 'USER_LOGIN'
 export const AUTO_LOGIN = 'AUTO_LOGIN'
+export const LOG_OUT = 'LOG_OUT'

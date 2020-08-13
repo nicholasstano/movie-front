@@ -10,9 +10,11 @@ import LoginContainer from './containers/LoginContainer.js'
 import NavBar from '../src/containers/NavBar/NavBar.js'
 import Home from '../src/containers/Home.js'
 import { withRouter, Switch, Route } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import { connect } from 'react-redux'
 import { basicUrl } from '../src/config'
-import store from './store'
+import { AUTO_LOGIN } from '../src/components/actions/types'
+import { setLogin } from '../src/components/actions/userActions.js'
+
 import './App.css';
 
 export class App extends Component {
@@ -45,32 +47,36 @@ export class App extends Component {
       })
         .then(response => response.json())
         .then(data => {
-          this.setUser(data)
+          this.props.setLogin(AUTO_LOGIN, data)
         })
     }
   }
 
   render() {
+    console.log(this.props)
+    const { user } = this.props.user
     return (
-      <Provider store={store}>
-        <div className="app">
-          <NavBar user={this.state.user} setUser={this.setUser} />
-          <Switch>
-            {this.state.user && this.state.user.username === 'admin' &&
-              <Route path="/forms" render={() => { return (<div><FormsContainer /></div>) }} />}
-            <Route path="/login" render={() => { return (<div><LoginContainer setUser={this.setUser} /></div>) }} />
-            <Route path="/movies" render={() => { return (<div><MovieContainer /></div>) }} />
-            <Route path="/albums" render={() => { return (<div><AlbumContainer /></div>) }} />
-            <Route path="/boards" render={() => { return (<div><BoardContainer /></div>) }} />
-            <Route path="/books" render={() => { return (<div><BookContainer /></div>) }} />
-            <Route path="/television" render={() => { return (<div><TelevisionContainer /></div>) }} />
-            <Route path="/videos" render={() => { return (<div><VideoContainer /></div>) }} />
-            <Route path="/" render={() => { return (<div><Home /> </div>) }} />
-          </Switch>
-        </div>
-      </Provider>
+      <div className="app">
+        <NavBar />
+        <Switch>
+          {user && user.username === 'admin' &&
+            <Route path="/forms" render={() => { return (<div><FormsContainer /></div>) }} />}
+          <Route path="/login" render={() => { return (<div><LoginContainer setUser={this.setUser} /></div>) }} />
+          <Route path="/movies" render={() => { return (<div><MovieContainer /></div>) }} />
+          <Route path="/albums" render={() => { return (<div><AlbumContainer /></div>) }} />
+          <Route path="/boards" render={() => { return (<div><BoardContainer /></div>) }} />
+          <Route path="/books" render={() => { return (<div><BookContainer /></div>) }} />
+          <Route path="/television" render={() => { return (<div><TelevisionContainer /></div>) }} />
+          <Route path="/videos" render={() => { return (<div><VideoContainer /></div>) }} />
+          <Route path="/" render={() => { return (<div><Home /> </div>) }} />
+        </Switch>
+      </div>
     )
   }
 }
 
-export default withRouter(App)
+const mapStateToProps = state => ({
+  user: state.user
+})
+
+export default withRouter(connect(mapStateToProps, { setLogin })(App))

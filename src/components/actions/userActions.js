@@ -1,9 +1,17 @@
-import { USER_LOGIN, AUTO_LOGIN } from './types'
+import { LOG_OUT } from './types'
 
-export const setUserLogin = (userData) => dispatch => {
-    console.log("UD", userData)
-    return {
-        type: USER_LOGIN,
+export const setLogin = (type, userData) => dispatch => {
+    return dispatch({
+        type: type,
         payload: userData
-    }
+    })
+}
+
+export const logout = () => dispatch => {
+    console.log("hit")
+    localStorage.removeItem('token')
+    return dispatch({
+        type: LOG_OUT,
+        payload: null
+    })
 }
