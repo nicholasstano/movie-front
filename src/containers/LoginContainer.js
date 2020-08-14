@@ -24,9 +24,7 @@ export class LoginContainer extends Component {
             }
         }).then(res => res.json())
             .then(data => {
-                console.log(data)
                 this.props.setLogin(USER_LOGIN, data.user)
-                // this.props.setUser(data.user)
                 this.props.history.push('/forms')
                 localStorage.setItem('token', data.token)
             })

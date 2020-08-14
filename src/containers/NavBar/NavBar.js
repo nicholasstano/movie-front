@@ -22,7 +22,7 @@ const NavBar = (props) => {
                         <p>Nick Stano</p>
                     </Link>
                 </div>
-                {user &&
+                {user && Object.keys(user).length > 0 &&
                     <div>
                         <p onClick={() => props.logout()}>Log Out</p>
                     </div>

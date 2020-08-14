@@ -51,7 +51,6 @@ export class BookForm extends Component {
         })
     }
     render() {
-        console.log(this.props, this.state)
         return (
             <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
                 <ul>

@@ -8,10 +8,9 @@ export const setLogin = (type, userData) => dispatch => {
 }
 
 export const logout = () => dispatch => {
-    console.log("hit")
     localStorage.removeItem('token')
     return dispatch({
         type: LOG_OUT,
-        payload: null
+        payload: {}
     })
 }

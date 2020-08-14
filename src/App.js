@@ -19,18 +19,6 @@ import './App.css';
 
 export class App extends Component {
 
-  state = { user: null }
-
-  setUser = u => {
-    if (u != null) {
-      this.setState({ user: u })
-    }
-    else {
-      localStorage.removeItem('token')
-      this.setState({ user: null })
-    }
-  }
-
   componentDidMount() {
     this.autoLogin()
   }
@@ -53,7 +41,6 @@ export class App extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { user } = this.props.user
     return (
       <div className="app">
