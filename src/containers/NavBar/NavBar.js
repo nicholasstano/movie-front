@@ -24,7 +24,7 @@ const NavBar = (props) => {
                 </div>
                 {user && Object.keys(user).length > 0 &&
                     <div>
-                        <p onClick={() => props.logout()}>Log Out</p>
+                        <button onClick={() => props.logout()}>Log Out</button>
                     </div>
                 }
             </div>

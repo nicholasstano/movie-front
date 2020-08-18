@@ -1,4 +1,4 @@
-import { GET_BOOKS, ADD_BOOK } from './types'
+import { GET_BOOKS, ADD_BOOK, EDIT_BOOK } from './types'
 import util from '../../util'
 import { url } from '../../config'
 
@@ -23,6 +23,22 @@ export const addBook = (newBook) => dispatch => {
         .then(res => res.json())
         .then(book => dispatch({
             type: ADD_BOOK,
+            payload: book
+        }))
+}
+
+export const editBook = (editedBook) => dispatch => {
+    fetch(`${url}/books/${editedBook.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(editedBook)
+    })
+        .then(res => res.json())
+        .then(book => dispatch({
+            type: EDIT_BOOK,
             payload: book
         }))
 }

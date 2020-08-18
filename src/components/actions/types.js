@@ -6,6 +6,7 @@ export const ADD_BOARD_GAME = 'ADD_BOARD_GAME'
 
 export const GET_BOOKS = 'GET_BOOKS'
 export const ADD_BOOK = 'ADD_BOOK'
+export const EDIT_BOOK = 'EDIT_BOOK'
 
 export const GET_MOVIES = 'GET_MOVIES'
 export const ADD_MOVIE = 'ADD_MOVIE'
