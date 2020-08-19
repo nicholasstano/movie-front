@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import ReviewCardTemplate from './ReviewCardTemplate';
 import bookPhotos from '../../photos/books'
-import EditBookForm from '../forms/Edit Forms/EditBookForm';
+import EditBookForm from '../forms/editForms/EditBookForm';
+import { deleteBook } from '../actions/bookActions'
 
 const BookReviewCard = (props) => {
 
@@ -10,11 +12,15 @@ const BookReviewCard = (props) => {
 
     const { rating, image, name, month_day_read, year_read, year, author, notes, improve_notes } = props.book
 
-    console.log(props.user.user)
+    const removeBook = () => {
+        props.deleteBook(props.book.id)
+        props.history.push('/')
+    }
+
     return (
         <div className="mediaReviewCard">
             <div className='mediaReviewCardHeader'>
-                <h5>{name} by {author} ({year}) {props.user && props.user.user.username === 'admin' && <button onClick={() => setEditBook(!editBook)}>Edit</button>}
+                <h5>{name} by {author} ({year}) {props.user && props.user.user.username === 'admin' && <><button onClick={() => setEditBook(!editBook)}>Edit</button> <button onClick={() => removeBook()}>Delete</button></>}
                 </h5>
             </div>
             {editBook
@@ -31,4 +37,4 @@ const mapStateToProps = state => ({
     user: state.user
 })
 
-export default connect(mapStateToProps)(BookReviewCard)
+export default withRouter(connect(mapStateToProps, { deleteBook })(BookReviewCard))

@@ -1,4 +1,4 @@
-import { GET_BOOKS, ADD_BOOK, EDIT_BOOK } from './types'
+import { GET_BOOKS, ADD_BOOK, EDIT_BOOK, DELETE_BOOK } from './types'
 import util from '../../util'
 import { url } from '../../config'
 
@@ -40,5 +40,15 @@ export const editBook = (editedBook) => dispatch => {
         .then(book => dispatch({
             type: EDIT_BOOK,
             payload: book
+        }))
+}
+
+export const deleteBook = (inputId) => dispatch => {
+    fetch(`${url}/books/${inputId}`, {
+        method: "DELETE",
+    })
+        .then(id => dispatch({
+            type: DELETE_BOOK,
+            payload: id
         }))
 }
