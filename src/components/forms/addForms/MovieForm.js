@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addMovie, getMovies } from '../actions/movieActions'
+import { addMovie, getMovies } from '../../actions/movieActions'
 import { connect } from 'react-redux'
 
 export class MovieForm extends Component {

@@ -9,6 +9,7 @@ import { deleteBook } from '../actions/bookActions'
 const BookReviewCard = (props) => {
 
     const [editBook, setEditBook] = useState(false)
+    const [showDeleteButton, setShowDeleteButton] = useState(true)
 
     const { rating, image, name, month_day_read, year_read, year, author, notes, improve_notes } = props.book
 
@@ -20,7 +21,12 @@ const BookReviewCard = (props) => {
     return (
         <div className="mediaReviewCard">
             <div className='mediaReviewCardHeader'>
-                <h5>{name} by {author} ({year}) {props.user && props.user.user.username === 'admin' && <><button onClick={() => setEditBook(!editBook)}>Edit</button> <button onClick={() => removeBook()}>Delete</button></>}
+                <h5>{name} by {author} ({year}) {props.user && props.user.user.username === 'admin' &&
+                    <><button onClick={() => setEditBook(!editBook)}>Edit</button>
+                        <button onClick={() => setShowDeleteButton(!showDeleteButton)}>Show Delete Button</button>
+                        {showDeleteButton ? null : <button onClick={() => removeBook()}>Delete</button>}
+                    </>
+                }
                 </h5>
             </div>
             {editBook

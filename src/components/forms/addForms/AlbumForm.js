@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addAlbum, getAlbums } from '../actions/albumActions'
+import { addAlbum, getAlbums } from '../../actions/albumActions'
 import { connect } from 'react-redux'
 
 export class AlbumForm extends Component {

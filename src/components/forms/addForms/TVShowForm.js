@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addTVShow, getTVShows } from '../actions/tvShowActions'
+import { addTVShow, getTVShows } from '../../actions/tvShowActions'
 import { connect } from 'react-redux'
 
 export class TVShowForm extends Component {

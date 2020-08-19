@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { addBook, getBooks } from '../actions/bookActions'
+import { addBook, getBooks } from '../../actions/bookActions'
+
 import { connect } from 'react-redux'
 
 export class BookForm extends Component {

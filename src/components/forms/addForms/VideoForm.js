@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addVideoGame, getVideoGames } from '../actions/videoGameActions'
+import { addVideoGame, getVideoGames } from '../../actions/videoGameActions'
 import { connect } from 'react-redux'
 
 export class VideoForm extends Component {

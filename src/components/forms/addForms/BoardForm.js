@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addBoardGame, getBoardGames } from '../actions/boardGameActions'
+import { addBoardGame, getBoardGames } from '../../actions/boardGameActions'
 import { connect } from 'react-redux'
 
 export class BoardForm extends Component {
