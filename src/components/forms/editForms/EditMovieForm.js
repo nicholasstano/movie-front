@@ -1,20 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addMedia } from '../../actions/mediaActions'
-import { ADD_MOVIE } from '../../actions/types'
+import { withRouter } from 'react-router-dom'
+import { editMedia } from '../../actions/mediaActions'
+import { EDIT_MOVIE } from '../../actions/types'
 
-export class MovieForm extends Component {
+export class EditMovieForm extends Component {
 
     state = {
-        monthWatched: "",
-        yearWatched: "",
-        name: "",
-        notes: "",
-        year: "",
-        director: "",
-        rating: "",
-        image: "",
-        improveNotes: ""
+        id: this.props.movie.id,
+        monthWatched: this.props.movie.month_day_watched,
+        yearWatched: this.props.movie.year_watched,
+        name: this.props.movie.name,
+        notes: this.props.movie.notes,
+        year: this.props.movie.year,
+        director: this.props.movie.director,
+        rating: this.props.movie.rating,
+        image: this.props.movie.image,
+        improveNotes: this.props.movie.improve_notes
     }
 
     handleMovieReviewChange = (event) => {
@@ -23,7 +25,8 @@ export class MovieForm extends Component {
 
     handleMovieReviewSubmit = event => {
         event.preventDefault()
-        const newMovie = {
+        const editedMovie = {
+            id: this.state.id,
             name: this.state.name,
             month_day_watched: this.state.monthWatched,
             year_watched: this.state.yearWatched,
@@ -34,18 +37,8 @@ export class MovieForm extends Component {
             image: this.state.image,
             improve_notes: this.state.improveNotes
         }
-        this.props.addMedia(newMovie, "movies", ADD_MOVIE)
-        this.setState({
-            monthWatched: "",
-            yearWatched: "",
-            name: "",
-            notes: "",
-            year: "",
-            director: "",
-            rating: "",
-            image: "",
-            improveNotes: ""
-        })
+        this.props.editMedia(editedMovie, "movies", EDIT_MOVIE)
+        this.props.history.push('/')
     }
 
     render() {
@@ -90,4 +83,4 @@ const mapStateToProps = state => ({
     movies: state.movies
 })
 
-export default connect(mapStateToProps, { addMedia })(MovieForm)
+export default withRouter(connect(mapStateToProps, { editMedia })(EditMovieForm))

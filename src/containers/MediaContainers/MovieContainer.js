@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import MovieHome from '../../components/mediahomes/MovieHome.js'
 import MovieSidebar from '../../components/sidebars/MovieSidebar.js'
 import MovieReviewCard from '../../components/cards/MovieReviewCard.js'
-import { getMovies } from '../../components/actions/movieActions.js'
-import { connect } from 'react-redux'
+import { getMedia } from '../../components/actions/mediaActions.js'
+import { GET_MOVIES } from '../../components/actions/types'
 import './container.scss'
 
 export class MovieContainer extends Component {
@@ -11,7 +12,7 @@ export class MovieContainer extends Component {
     state = { media: null }
 
     componentDidMount() {
-        this.props.getMovies()
+        this.props.getMedia("movies", GET_MOVIES)
     }
 
     mediaClickHandler = (mediaClicked) => {
@@ -39,4 +40,4 @@ const mapStateToProps = state => ({
     movies: state.movies
 })
 
-export default connect(mapStateToProps, { getMovies })(MovieContainer)
+export default connect(mapStateToProps, { getMedia })(MovieContainer)
