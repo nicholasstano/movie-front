@@ -4,7 +4,8 @@ import { withRouter } from 'react-router-dom'
 import ReviewCardTemplate from './ReviewCardTemplate';
 import albumPhotos from '../../photos/albums'
 import EditAlbumForm from '../forms/editForms/EditAlbumForm';
-import { deleteAlbum } from '../actions/albumActions'
+import { deleteMedia } from '../actions/mediaActions'
+import { DELETE_ALBUM } from '../actions/types'
 
 const AlbumReviewCard = (props) => {
 
@@ -14,14 +15,13 @@ const AlbumReviewCard = (props) => {
     const { rating, name, artist, year, image, month_day_played, year_played, notes, improve_notes } = props.album
 
     const removeAlbum = () => {
-        props.deleteAlbum(props.album.id)
+        props.deleteMedia(props.album.id, "albums", DELETE_ALBUM)
         props.history.push('/')
     }
 
     return (
         <div className="mediaReviewCard">
             <div className='mediaReviewCardHeader'>
-                <h5>{name} by {artist} ({year})</h5>
                 <h5>{name} by {artist} ({year}) {props.user && props.user.user.username === 'admin' &&
                     <><button onClick={() => setEditMedia(!editMedia)}>Edit</button>
                         <button onClick={() => setShowDeleteButton(!showDeleteButton)}>Show Delete Button</button>
@@ -44,4 +44,4 @@ const mapStateToProps = state => ({
     user: state.user
 })
 
-export default withRouter(connect(mapStateToProps, { deleteAlbum })(AlbumReviewCard))
+export default withRouter(connect(mapStateToProps, { deleteMedia })(AlbumReviewCard))

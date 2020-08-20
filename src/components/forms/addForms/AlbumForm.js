@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { addAlbum, getAlbums } from '../../actions/albumActions'
 import { connect } from 'react-redux'
+import { addMedia } from '../../actions/mediaActions'
+import { ADD_ALBUM } from '../../actions/types'
 
 export class AlbumForm extends Component {
 
@@ -33,8 +34,7 @@ export class AlbumForm extends Component {
             image: this.state.image,
             improve_notes: this.state.improveNotes
         }
-        this.props.addAlbum(newAlbum)
-        this.props.getAlbums()
+        this.props.addMedia(newAlbum, "albums", ADD_ALBUM)
         this.setState({
             monthPlayed: "",
             yearPlayed: "",
@@ -89,4 +89,4 @@ const mapStateToProps = state => ({
     albums: state.albums
 })
 
-export default connect(mapStateToProps, { addAlbum, getAlbums })(AlbumForm)
+export default connect(mapStateToProps, { addMedia })(AlbumForm)

@@ -1,4 +1,4 @@
-import { GET_BOARD_GAMES, ADD_BOARD_GAME } from './types'
+import { GET_BOARD_GAMES, ADD_BOARD_GAME, EDIT_BOARD_GAME, DELETE_BOARD_GAME } from './types'
 import util from '../../util'
 import { url } from '../../config'
 

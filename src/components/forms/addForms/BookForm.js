@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { addBook, getBooks } from '../../actions/bookActions'
-
 import { connect } from 'react-redux'
+import { addMedia } from '../../actions/mediaActions'
+import { ADD_BOOK } from '../../actions/types'
 
 export class BookForm extends Component {
 
@@ -15,10 +15,6 @@ export class BookForm extends Component {
         image: "",
         author: "",
         improveNotes: ""
-    }
-
-    componentDidMount() {
-        this.props.getBooks()
     }
 
     handleTextChange = (event) => {
@@ -38,7 +34,7 @@ export class BookForm extends Component {
             author: this.state.author,
             improve_notes: this.state.improveNotes
         }
-        this.props.addBook(newBook)
+        this.props.addMedia(newBook, "books", ADD_BOOK)
         this.setState({
             monthRead: "",
             yearRead: "",
@@ -93,4 +89,4 @@ const mapStateToProps = state => ({
     books: state.books
 })
 
-export default connect(mapStateToProps, { addBook, getBooks })(BookForm)
+export default connect(mapStateToProps, { addMedia })(BookForm)

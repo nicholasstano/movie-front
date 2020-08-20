@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { editAlbum, getAlbums } from '../../actions/albumActions'
+import { editMedia } from '../../actions/mediaActions'
+import { EDIT_ALBUM } from '../../actions/types'
 
 export class EditAlbumForm extends Component {
 
@@ -36,7 +37,7 @@ export class EditAlbumForm extends Component {
             image: this.state.image,
             improve_notes: this.state.improveNotes
         }
-        this.props.editAlbum(editedAlbum)
+        this.props.editMedia(editedAlbum, "albums", EDIT_ALBUM)
         this.props.history.push('/')
     }
     render() {
@@ -81,4 +82,4 @@ const mapStateToProps = state => ({
     albums: state.albums
 })
 
-export default withRouter(connect(mapStateToProps, { editAlbum, getAlbums })(EditAlbumForm))
+export default withRouter(connect(mapStateToProps, { editMedia })(EditAlbumForm))

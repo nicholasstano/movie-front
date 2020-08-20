@@ -4,7 +4,8 @@ import { withRouter } from 'react-router-dom'
 import ReviewCardTemplate from './ReviewCardTemplate';
 import bookPhotos from '../../photos/books'
 import EditBookForm from '../forms/editForms/EditBookForm';
-import { deleteBook } from '../actions/bookActions'
+import { deleteMedia } from '../actions/mediaActions'
+import { DELETE_BOOK } from '../actions/types'
 
 const BookReviewCard = (props) => {
 
@@ -14,7 +15,7 @@ const BookReviewCard = (props) => {
     const { rating, image, name, month_day_read, year_read, year, author, notes, improve_notes } = props.book
 
     const removeBook = () => {
-        props.deleteBook(props.book.id)
+        props.deleteMedia(props.book.id, "books", DELETE_BOOK)
         props.history.push('/')
     }
 
@@ -43,4 +44,4 @@ const mapStateToProps = state => ({
     user: state.user
 })
 
-export default withRouter(connect(mapStateToProps, { deleteBook })(BookReviewCard))
+export default withRouter(connect(mapStateToProps, { deleteMedia })(BookReviewCard))

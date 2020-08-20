@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { editBook, getBooks } from '../../actions/bookActions'
+import { editMedia } from '../../actions/mediaActions'
+import { EDIT_BOOK } from '../../actions/types'
 
 export class EditBookForm extends Component {
 
@@ -36,7 +37,7 @@ export class EditBookForm extends Component {
             author: this.state.author,
             improve_notes: this.state.improveNotes
         }
-        this.props.editBook(editedBook)
+        this.props.editMedia(editedBook, "books", EDIT_BOOK)
         this.props.history.push('/')
     }
     render() {
@@ -81,4 +82,4 @@ const mapStateToProps = state => ({
     books: state.books
 })
 
-export default withRouter(connect(mapStateToProps, { editBook, getBooks })(EditBookForm))
+export default withRouter(connect(mapStateToProps, { editMedia })(EditBookForm))
