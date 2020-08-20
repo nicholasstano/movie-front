@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import TVShowHome from '../../components/mediahomes/TVShowHome.js'
 import TVShowSidebar from '../../components/sidebars/TVShowSidebar.js'
 import TVShowReviewCard from '../../components/cards/TVShowReviewCard.js'
-import { getTVShows } from '../../components/actions/tvShowActions.js'
-import { connect } from 'react-redux'
+import { getMedia } from '../../components/actions/mediaActions.js'
+import { GET_TV_SHOWS } from '../../components/actions/types'
 import './container.scss'
 
 export class TelevisionContainer extends Component {
@@ -11,7 +12,7 @@ export class TelevisionContainer extends Component {
     state = { media: null }
 
     componentDidMount() {
-        this.props.getTVShows()
+        this.props.getMedia("tvshows", GET_TV_SHOWS)
     }
 
     mediaClickHandler = (mediaClicked) => {
@@ -39,4 +40,4 @@ const mapStateToProps = state => ({
     tvShows: state.tvShows
 })
 
-export default connect(mapStateToProps, { getTVShows })(TelevisionContainer)
+export default connect(mapStateToProps, { getMedia })(TelevisionContainer)

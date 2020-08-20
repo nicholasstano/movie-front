@@ -1,30 +1,32 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addMedia } from '../../actions/mediaActions'
-import { ADD_TV_SHOW } from '../../actions/types'
+import { withRouter } from 'react-router-dom'
+import { editMedia } from '../../actions/mediaActions'
+import { EDIT_TV_SHOW } from '../../actions/types'
 
-
-export class TVShowForm extends Component {
+export class EditTVShowForm extends Component {
 
     state = {
-        monthWatched: "",
-        yearWatched: "",
-        name: "",
-        notes: "",
-        year: "",
-        rating: "",
-        image: "",
-        season: "",
-        improveNotes: ""
+        id: this.props.tvshow.id,
+        monthWatched: this.props.tvshow.month_day_watched,
+        yearWatched: this.props.tvshow.year_watched,
+        name: this.props.tvshow.name,
+        notes: this.props.tvshow.notes,
+        year: this.props.tvshow.year,
+        rating: this.props.tvshow.rating,
+        image: this.props.tvshow.image,
+        season: this.props.tvshow.season,
+        improveNotes: this.props.tvshow.improve_notes
     }
 
     handleTextChange = (event) => {
         this.setState({ [event.target.name]: event.target.value })
     }
 
-    handleSubmitNewReview = event => {
+    handleSubmitEditReview = event => {
         event.preventDefault()
-        const newShow = {
+        const editedShow = {
+            id: this.state.id,
             name: this.state.name,
             month_day_watched: this.state.monthWatched,
             year_watched: this.state.yearWatched,
@@ -35,23 +37,13 @@ export class TVShowForm extends Component {
             season: this.state.season,
             improve_notes: this.state.improveNotes
         }
-        this.props.addMedia(newShow, "tvshows", ADD_TV_SHOW)
-        this.setState({
-            monthWatched: "",
-            yearWatched: "",
-            name: "",
-            notes: "",
-            year: "",
-            rating: "",
-            image: "",
-            season: "",
-            improveNotes: ""
-        })
+        this.props.editMedia(editedShow, "tvshows", EDIT_TV_SHOW)
+        this.props.history.push('/')
     }
 
     render() {
         return (
-            <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
+            <form className="mediaForm" onSubmit={this.handleSubmitEditReview}>
                 <ul>
                     <input type="text" name="monthWatched" value={this.state.monthWatched} placeholder="Month/Day Watched (ex: 04/17)" onChange={this.handleTextChange} />
                 </ul>
@@ -91,4 +83,4 @@ const mapStateToProps = state => ({
     tvShows: state.tvShows
 })
 
-export default connect(mapStateToProps, { addMedia })(TVShowForm)
+export default withRouter(connect(mapStateToProps, { editMedia })(EditTVShowForm))
