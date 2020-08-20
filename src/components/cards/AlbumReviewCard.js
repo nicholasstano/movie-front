@@ -14,7 +14,7 @@ const AlbumReviewCard = (props) => {
 
     const { rating, name, artist, year, image, month_day_played, year_played, notes, improve_notes } = props.album
 
-    const removeAlbum = () => {
+    const removeMedia = () => {
         props.deleteMedia(props.album.id, "albums", DELETE_ALBUM)
         props.history.push('/')
     }
@@ -25,7 +25,7 @@ const AlbumReviewCard = (props) => {
                 <h5>{name} by {artist} ({year}) {props.user && props.user.user.username === 'admin' &&
                     <><button onClick={() => setEditMedia(!editMedia)}>Edit</button>
                         <button onClick={() => setShowDeleteButton(!showDeleteButton)}>Show Delete Button</button>
-                        {showDeleteButton ? null : <button onClick={() => removeAlbum()}>Delete</button>}
+                        {showDeleteButton ? null : <button onClick={() => removeMedia()}>Delete</button>}
                     </>
                 }
                 </h5>

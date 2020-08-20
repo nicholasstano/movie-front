@@ -23,7 +23,7 @@ export class AlbumForm extends Component {
 
     handleSubmitNewReview = event => {
         event.preventDefault()
-        let newAlbum = {
+        const newAlbum = {
             name: this.state.name,
             artist: this.state.artist,
             month_day_played: this.state.monthPlayed,

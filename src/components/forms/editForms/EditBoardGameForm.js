@@ -1,28 +1,31 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addMedia } from '../../actions/mediaActions'
-import { ADD_BOARD_GAME } from '../../actions/types'
+import { withRouter } from 'react-router-dom'
+import { editMedia } from '../../actions/mediaActions'
+import { EDIT_BOARD_GAME } from '../../actions/types'
 
-export class BoardForm extends Component {
+export class EditBoardGameForm extends Component {
 
     state = {
-        monthPlayed: "",
-        yearPlayed: "",
-        name: "",
-        notes: "",
-        year: "",
-        rating: "",
-        image: "",
-        improveNotes: ""
+        id: this.props.board.id,
+        monthPlayed: this.props.board.month_day_played,
+        yearPlayed: this.props.board.year_played,
+        name: this.props.board.name,
+        notes: this.props.board.notes,
+        year: this.props.board.year,
+        rating: this.props.board.rating,
+        image: this.props.board.image,
+        improveNotes: this.props.board.improve_notes
     }
 
     handleTextChange = (event) => {
         this.setState({ [event.target.name]: event.target.value })
     }
 
-    handleSubmitNewReview = event => {
+    handleSubmitEditReview = event => {
         event.preventDefault()
-        const newBoardGame = {
+        const editedBoardGame = {
+            id: this.state.id,
             name: this.state.name,
             month_day_played: this.state.monthPlayed,
             year_played: this.state.yearPlayed,
@@ -32,22 +35,13 @@ export class BoardForm extends Component {
             image: this.state.image,
             improve_notes: this.state.improveNotes
         }
-        this.props.addMedia(newBoardGame, "boards", ADD_BOARD_GAME)
-        this.setState({
-            monthPlayed: "",
-            yearPlayed: "",
-            name: "",
-            notes: "",
-            year: "",
-            rating: "",
-            image: "",
-            improveNotes: ""
-        })
+        this.props.editMedia(editedBoardGame, "boards", EDIT_BOARD_GAME)
+        this.props.history.push('/')
     }
 
     render() {
         return (
-            <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
+            <form className="mediaForm" onSubmit={this.handleSubmitEditReview}>
                 <ul>
                     <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Played (ex: 01/19)" onChange={this.handleTextChange} />
                 </ul>
@@ -84,4 +78,4 @@ const mapStateToProps = state => ({
     boardGames: state.boardGames
 })
 
-export default connect(mapStateToProps, { addMedia })(BoardForm)
+export default withRouter(connect(mapStateToProps, { editMedia })(EditBoardGameForm))

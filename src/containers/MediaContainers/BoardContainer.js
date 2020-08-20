@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import BoardGameHome from '../../components/mediahomes/BoardGameHome.js'
 import BoardGameSidebar from '../../components/sidebars/BoardGameSidebar.js'
 import BoardGameReviewCard from '../../components/cards/BoardGameReviewCard.js'
-import { getBoardGames } from '../../components/actions/boardGameActions'
-import { connect } from 'react-redux'
+import { getMedia } from '../../components/actions/mediaActions'
+import { GET_BOARD_GAMES } from '../../components/actions/types'
 import './container.scss'
 
 export class BoardContainer extends Component {
@@ -11,7 +12,7 @@ export class BoardContainer extends Component {
     state = { media: null }
 
     componentDidMount() {
-        this.props.getBoardGames()
+        this.props.getMedia("boards", GET_BOARD_GAMES)
     }
 
     mediaClickHandler = (mediaClicked) => {
@@ -39,4 +40,4 @@ const mapStateToProps = state => ({
     boardGames: state.boardGames
 })
 
-export default connect(mapStateToProps, { getBoardGames })(BoardContainer)
+export default connect(mapStateToProps, { getMedia })(BoardContainer)
