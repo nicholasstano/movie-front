@@ -1,28 +1,31 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addMedia } from '../../actions/mediaActions'
-import { ADD_VIDEO_GAME } from '../../actions/types'
+import { withRouter } from 'react-router-dom'
+import { editMedia } from '../../actions/mediaActions'
+import { EDIT_VIDEO_GAME } from '../../actions/types'
 
-export class VideoForm extends Component {
+export class EditVideoGameForm extends Component {
 
     state = {
-        monthPlayed: "",
-        yearPlayed: "",
-        name: "",
-        notes: "",
-        year: "",
-        rating: "",
-        image: "",
-        improveNotes: ""
+        id: this.props.videoGame.id,
+        monthPlayed: this.props.videoGame.month_day_played,
+        yearPlayed: this.props.videoGame.year_played,
+        name: this.props.videoGame.name,
+        notes: this.props.videoGame.notes,
+        year: this.props.videoGame.year,
+        rating: this.props.videoGame.rating,
+        image: this.props.videoGame.image,
+        improveNotes: this.props.videoGame.improve_notes
     }
 
     handleTextChange = (event) => {
         this.setState({ [event.target.name]: event.target.value })
     }
 
-    handleSubmitNewReview = event => {
+    handleSubmitEditReview = event => {
         event.preventDefault()
-        const newVideoGame = {
+        const editedVideoGame = {
+            id: this.state.id,
             name: this.state.name,
             month_day_played: this.state.monthPlayed,
             year_played: this.state.yearPlayed,
@@ -32,23 +35,13 @@ export class VideoForm extends Component {
             image: this.state.image,
             improve_notes: this.state.improveNotes
         }
-        this.props.addMedia(newVideoGame, "videos", ADD_VIDEO_GAME)
-        this.setState({
-            monthPlayed: "",
-            yearPlayed: "",
-            name: "",
-            notes: "",
-            year: "",
-            rating: "",
-            image: "",
-            artist: "",
-            improveNotes: ""
-        })
+        this.props.editMedia(editedVideoGame, "videos", EDIT_VIDEO_GAME)
+        this.props.history.push('/')
     }
 
     render() {
         return (
-            <form className="mediaForm" onSubmit={this.handleSubmitNewReview}>
+            <form className="mediaForm" onSubmit={this.handleSubmitEditReview}>
                 <ul>
                     <input type="text" name="monthPlayed" value={this.state.monthPlayed} placeholder="Month/Day Played (ex: 03/22)" onChange={this.handleTextChange} />
                 </ul>
@@ -85,4 +78,4 @@ const mapStateToProps = state => ({
     videoGames: state.videoGames
 })
 
-export default connect(mapStateToProps, { addMedia })(VideoForm)
+export default withRouter(connect(mapStateToProps, { editMedia })(EditVideoGameForm))

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import VideoGameHome from '../../components/mediahomes/VideoGameHome.js'
 import VideoGameSidebar from '../../components/sidebars/VideoGameSidebar.js'
 import VideoGameReviewCard from '../../components/cards/VideoGameReviewCard.js'
-import { getVideoGames } from '../../components/actions/videoGameActions.js'
-import { connect } from 'react-redux'
+import { getMedia } from '../../components/actions/mediaActions.js'
+import { GET_VIDEO_GAMES } from '../../components/actions/types'
 import './container.scss'
 
 export class VideoContainer extends Component {
@@ -11,7 +12,7 @@ export class VideoContainer extends Component {
     state = { media: null }
 
     componentDidMount() {
-        this.props.getVideoGames()
+        this.props.getMedia("videos", GET_VIDEO_GAMES)
     }
 
     mediaClickHandler = (mediaClicked) => {
@@ -39,4 +40,4 @@ const mapStateToProps = state => ({
     videoGames: state.videoGames
 })
 
-export default connect(mapStateToProps, { getVideoGames })(VideoContainer)
+export default connect(mapStateToProps, { getMedia })(VideoContainer)
