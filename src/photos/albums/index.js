@@ -32,5 +32,7 @@ import operationivy from './operationivy.jpg'
 import redmedicine from './redmedicine.jpg'
 import birdsoffire from './birdsoffire.jpg'
 import rancid2000 from './rancid2000.jpg'
+import illcommunication from './illcommunication.jpg'
+import wereonlyinitforthemoney from './wereonlyinitforthemoney.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant, operationivy, redmedicine, birdsoffire, rancid2000 }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant, operationivy, redmedicine, birdsoffire, rancid2000, illcommunication, wereonlyinitforthemoney }
