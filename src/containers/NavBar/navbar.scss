@@ -11,17 +11,14 @@ div.navBarHome {
     border-radius: 5px;
     border-color: lightskyblue;
     background-color: white;
-    @include media ('>911px') {
+    @include media ('>612px') {
         height: 145px;
     }
-    @include media('<=911px', '>461px') {
+    @include media('<=612px', '>311px') {
         height: 255px;
     }   
-    @include media('<=461px', '>311px') {
-        height: 365px;
-    }
     @include media('<=311px') {
-        height: 675px;
+        height: 315px;
     }  
     .navBarHeader {
         display: grid; 
@@ -32,7 +29,7 @@ div.navBarHome {
     }   
     div.navBarMediaIcons {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         justify-content: space-evenly;
         justify-items: center;
         div.mediaLink {
@@ -44,8 +41,11 @@ div.navBarHome {
             height: 80px;
             padding: 15px;
             margin: 15px;
+            @include media('<=911px') {
+                border: none;
+            }  
             .mediaIcon {
-                @include media('<=311px') {
+                @include media('<=911px') {
                     display: none;
                 }  
             }

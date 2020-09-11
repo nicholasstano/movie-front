@@ -12,19 +12,15 @@ div.mediaSidebar {
     color: #f8f8f8;
     padding: 1.5%;
     background-color: white;
-    @include media ('>911px') {
+    @include media ('>612px') {
       top: 144px;
     }
-    @include media('<=911px', '>461px') {
-      top: 254px;
+    @include media('<=612px', '>311px') {
+        top: 254px;
     }   
-    @include media('<=461px', '>311px') {
-      top: 364px;
-    } 
     @include media('<=311px') {
-      top: 675px;
-    } 
-
+        top: 314px;
+    }  
 
     div.mediaSearch {
       display: grid;

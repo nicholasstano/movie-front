@@ -10,18 +10,15 @@
     border-width: thin;
     border-color: lightskyblue;
     padding-bottom: 0px; 
-    @include media ('>911px') {
+    @include media ('>612px') {
         top: 144px;
     }
-    @include media('<=911px', '>461px') {
+    @include media('<=612px', '>311px') {
         top: 254px;
     }   
-    @include media('<=461px', '>311px') {
-        top: 364px;
-    } 
     @include media('<=311px') {
-        top: 675px;
-    }    
+        top: 314px;
+    }   
     .homeComponents {
         padding: 15px;
         display: grid;
@@ -29,7 +26,7 @@
         @include media ('>911px') {
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         }
-        @include media('<=911px', '>461px') {
+        @include media('<=911px', '>612') {
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         }   
         @include media('<=461px', '>311px') {
