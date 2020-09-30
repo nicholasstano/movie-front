@@ -13,5 +13,6 @@ import drrobotniksmeanbeanmachine from './drrobotniksmeanbeanmachine.jpg'
 import sonicthehedgehog3 from './sonicthehedgehog3.jpg'
 import sonicmania from './sonicmania.jpg'
 import supermariobros3 from './supermariobros3.png'
+import mariokart8deluxe from './mariokart8deluxe.png'
 
-export default { nhl94, warcraft3reforged, newsupermariobrosudeluxe, supermarioworld, breathoffireii, baldursgate, baldursgatesiegeofdragonspear, baldursgateiienhancededition, supermario64, diddykongracing, sonicthehedgehog2, drrobotniksmeanbeanmachine, sonicthehedgehog3, sonicmania, supermariobros3 }
+export default { nhl94, warcraft3reforged, newsupermariobrosudeluxe, supermarioworld, breathoffireii, baldursgate, baldursgatesiegeofdragonspear, baldursgateiienhancededition, supermario64, diddykongracing, sonicthehedgehog2, drrobotniksmeanbeanmachine, sonicthehedgehog3, sonicmania, supermariobros3, mariokart8deluxe }
