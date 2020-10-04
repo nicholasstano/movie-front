@@ -38,5 +38,7 @@ import signals from './signals.jpg'
 import highway61revisited from './highway61revisited.jpg'
 import ittakesanationofmillionstoholdusback from './ittakesanationofmillionstoholdusback.jpg'
 import diemenschmaschine from './diemenschmaschine.png'
+import whatsgoingon from './whatsgoingon.jpg'
+import electriccafe from './electriccafe.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant, operationivy, redmedicine, birdsoffire, rancid2000, illcommunication, wereonlyinitforthemoney, signals, highway61revisited, ittakesanationofmillionstoholdusback, diemenschmaschine }
+export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant, operationivy, redmedicine, birdsoffire, rancid2000, illcommunication, wereonlyinitforthemoney, signals, highway61revisited, ittakesanationofmillionstoholdusback, diemenschmaschine, electriccafe, whatsgoingon }
