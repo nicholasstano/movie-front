@@ -17,5 +17,6 @@ import whoselineisitanyway1 from './whoselineisitanyway1.jpeg'
 import whoselineisitanyway2 from './whoselineisitanyway2.jpeg'
 import entourage1 from './entourage1.jpg'
 import whoselineisitanyway14 from './whoselineisitanyway14.jpeg'
+import whoselineisitanyway3 from './whoselineisitanyway3.jpeg'
 
-export default { entourage5, entourage6, entourage7, entourage8, flightoftheconchords1, flightoftheconchords2, agentcarter1, dragonballzkai1, dragonballsuper1, dragonballzkai2, dragonballzkai3, shaqlife, themandalorian1, whoselineisitanywayaisha, thebestofwhoselineisitanyway, whoselineisitanyway1, whoselineisitanyway2, entourage1, whoselineisitanyway14 }
+export default { entourage5, entourage6, entourage7, entourage8, flightoftheconchords1, flightoftheconchords2, agentcarter1, dragonballzkai1, dragonballsuper1, dragonballzkai2, dragonballzkai3, shaqlife, themandalorian1, whoselineisitanywayaisha, thebestofwhoselineisitanyway, whoselineisitanyway1, whoselineisitanyway2, entourage1, whoselineisitanyway14, whoselineisitanyway3 }
