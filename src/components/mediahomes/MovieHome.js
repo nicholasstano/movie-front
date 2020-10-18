@@ -5,7 +5,7 @@ export default function MovieHome() {
 
     const mediaNames = ["Pulp Fiction", "Taxi Driver", "Chinatown", "The Godfather", "The Usual Suspects"]
 
-    const mediaIntro = "-----Rewatch Watchlist: \n -Star Wars \n -The Empire Strikes Back \n -Return of the Jedi \n -Raging Bull \n -The Shining \n -Scarface \n -Once Upon a Time in America \n -Die Hard"
+    const mediaIntro = "-----Rewatch Watchlist: \n -Seven Samurai \n -The Sound of Music \n -Star Wars \n -The Empire Strikes Back \n -Return of the Jedi \n -Raging Bull \n -The Shining \n -Scarface \n -Die Hard \n -Back to the Future Part III"
 
     return (
         HomeTemplate(mediaNames, photos.movies, "Movies", mediaIntro)
