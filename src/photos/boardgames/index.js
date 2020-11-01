@@ -4,5 +4,7 @@ import castlesofburgundy from './castlesofburgundy.jpg'
 import kingdombuilder from './kingdombuilder.jpg'
 import kingdomino from './kingdomino.png'
 import paperback from './paperback.jpg'
+import quiddler from './quiddler.jpg'
+import throwthrowburrito from './throwthrowburrito.jpg'
 
-export default { concordia, tapestry, castlesofburgundy, kingdombuilder, kingdomino, paperback }
+export default { concordia, tapestry, castlesofburgundy, kingdombuilder, kingdomino, paperback, quiddler, throwthrowburrito }
