@@ -1,57 +1,59 @@
-@import "../../sass/breakpoints.scss";
-
-div.navBarHome {
-    padding: 5px;
-    position: fixed;
+.navbar {
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    border: solid;
-    border-width: thin;
-    border-radius: 5px;
-    border-color: lightskyblue;
-    background-color: white;
-    @include media ('>612px') {
-        height: 145px;
-    }
-    @include media('<=612px', '>311px') {
-        height: 255px;
-    }   
-    @include media('<=311px') {
-        height: 315px;
-    }  
-    .navBarHeader {
-        display: grid; 
-        grid-template-columns: 1fr 1fr;
-        p {
+    position: fixed;
+    background-color: #31312E;
+    height: 56px;
+
+    .navbarNavigation {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+
+        a p {
+            color:white;
+            padding: 0px;
             margin: 0px;
         }
-    }   
-    div.navBarMediaIcons {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        justify-content: space-evenly;
-        justify-items: center;
-        div.mediaLink {
-            text-align: center;
-            border: solid;
-            border-color: lightskyblue;
-            border-width: thin;
-            width: 145px;
-            height: 80px;
-            padding: 15px;
-            margin: 15px;
-            @include media('<=911px') {
-                border: none;
-            }  
-            .mediaIcon {
-                @include media('<=911px') {
-                    display: none;
-                }  
+
+        a p:hover, a p:active {
+            color: #FFDD83;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+        .navbarHamburgerIcon {
+            @media (min-width: 800px) {
+                display: none;
             }
+        }
+
+        .navbarName {
+            margin-left: 20px;
+            display: flex;
+
+            a {
+                margin-right: 10px;
+            }
+            @media (max-width: 799px) {
+                display: none;
+            }
+        }
+
+        .navbarNavigationItems {
+            margin: 0;
+            padding: 0;
+            display: flex;
             p {
-                margin: 0px;
-            }   
-        }        
+                padding: 0 15px;
+            }     
+            @media (max-width: 799px) {
+                display: none;
+            }
+        }
     }
 }

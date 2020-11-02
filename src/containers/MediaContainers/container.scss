@@ -7,16 +7,7 @@ div.mediaContainer {
     background-color: #FFFFFF;
     padding-bottom: 0px; 
     min-height: 100vh;
-
-    @include media ('>612px') {
-        padding-top: 144px;
-    }
-    @include media('<=612px', '>311px') {
-        padding-top: 254px;
-    }   
-    @include media('<=311px') {
-        padding-top: 314px;
-    }  
+    margin-top: 60px;
 
     div.mediaContent {
         border: solid;

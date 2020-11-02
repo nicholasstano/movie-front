@@ -1,0 +1,28 @@
+.sidebar {
+    height: 100%;
+    position: fixed;
+    background-color: #31312E;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 200px;
+    z-index: 200;
+    padding: 20px;
+    justify-content: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.sidebar.open {
+    transform: translateX(0%);
+
+    a p {
+        color:white;
+        padding: 0px;
+        margin: 5px;
+    }
+
+    a p:hover, a p:active {
+        color:#FFDD83;
+    }
+}

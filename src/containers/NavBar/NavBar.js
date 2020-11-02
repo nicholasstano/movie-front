@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import AlbumIcon from '@material-ui/icons/Album';
-import DonutSmallIcon from '@material-ui/icons/DonutSmall';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
-import TheatersIcon from '@material-ui/icons/Theaters';
-import LiveTvIcon from '@material-ui/icons/LiveTv';
-import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
+import HamburgerButtonIcon from '../Sidebar/HamburgerButtonIcon'
 import { logout } from '../../components/actions/userActions'
 import './navbar.scss'
 
@@ -15,58 +10,44 @@ const NavBar = (props) => {
     const { user } = props.user
 
     return (
-        <div className="navBarHome">
-            <div className="navBarHeader">
-                <div>
+        <header className="navbar">
+            <nav className="navbarNavigation">
+                <div className="navbarHamburgerIcon">
+                    <HamburgerButtonIcon show={props.show} toggleSidebar={props.toggleSidebar}/>
+                </div>
+                <div className="navbarName">
                     <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                         <p>Nick Stano</p>
                     </Link>
+                    {user && Object.keys(user).length > 0 &&
+                            <Link to="/" onClick={() => props.logout()}>
+                                <p>Log Out</p>
+                            </Link>
+                    }
                 </div>
-                {user && Object.keys(user).length > 0 &&
-                    <div>
-                        <button onClick={() => props.logout()}>Log Out</button>
-                    </div>
-                }
-            </div>
-            <div className="navBarMediaIcons" >
-                <Link to="/albums" onClick={() => window.scrollTo(0, 0)}>
-                    <div className="mediaLink">
-                        <AlbumIcon className="mediaIcon" />
+                <div className="spacer" />
+                <div className="navbarNavigationItems">
+                    <Link to="/albums" onClick={() => window.scrollTo(0, 0)}>
                         <p>albums</p>
-                    </div>
-                </Link>
-                <Link to="/boards" onClick={() => window.scrollTo(0, 0)}>
-                    <div className="mediaLink">
-                        <DonutSmallIcon className="mediaIcon" />
+                    </Link>
+                    <Link to="/boards" onClick={() => window.scrollTo(0, 0)}>
                         <p>board games</p>
-                    </div>
-                </Link>
-                <Link to="/books" onClick={() => window.scrollTo(0, 0)}>
-                    <div className="mediaLink">
-                        <MenuBookIcon className="mediaIcon" />
+                    </Link>
+                    <Link to="/books" onClick={() => window.scrollTo(0, 0)}>
                         <p>books</p>
-                    </div>
-                </Link>
-                <Link to="/movies" onClick={() => window.scrollTo(0, 0)}>
-                    <div className="mediaLink">
-                        <TheatersIcon className="mediaIcon" />
+                    </Link>
+                    <Link to="/movies" onClick={() => window.scrollTo(0, 0)}>
                         <p>movies</p>
-                    </div>
-                </Link>
-                <Link to="/television" onClick={() => window.scrollTo(0, 0)}>
-                    <div className="mediaLink">
-                        <LiveTvIcon className="mediaIcon" />
+                    </Link>
+                    <Link to="/television" onClick={() => window.scrollTo(0, 0)}>
                         <p>television</p>
-                    </div>
-                </Link>
-                <Link to="/videos" onClick={() => window.scrollTo(0, 0)}>
-                    <div className="mediaLink">
-                        <VideogameAssetIcon className="mediaIcon" />
+                    </Link>
+                    <Link to="/videos" onClick={() => window.scrollTo(0, 0)}>
                         <p>video games</p>
-                    </div>
-                </Link>
-            </div>
-        </div >
+                    </Link>
+                </div>
+            </nav>
+        </header >
     )
 }
 

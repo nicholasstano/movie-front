@@ -14,10 +14,16 @@ import { connect } from 'react-redux'
 import { basicUrl } from '../src/config'
 import { AUTO_LOGIN } from '../src/components/actions/types'
 import { setLogin } from '../src/components/actions/userActions.js'
-
+import SidebarPopup from './containers/Sidebar/SidebarPopup.js'
 import './App.css';
 
 export class App extends Component {
+
+  state = { sidebarOpen: false }
+
+  toggleSidebar = () => {
+    this.setState({sidebarOpen: !this.state.sidebarOpen})
+  }
 
   componentDidMount() {
     this.autoLogin()
@@ -44,7 +50,8 @@ export class App extends Component {
     const { user } = this.props.user
     return (
       <div className="app">
-        <NavBar />
+        <SidebarPopup toggleSidebar={this.toggleSidebar} show={this.state.sidebarOpen}/>
+        <NavBar toggleSidebar={this.toggleSidebar} show={this.state.sidebarOpen}/>
         <Switch>
           {user && user.username === 'admin' &&
             <Route path="/forms" render={() => { return (<div><FormsContainer /></div>) }} />}

@@ -10,17 +10,9 @@ div.mediaSidebar {
     border-radius: 6px;
     border-width: thin;
     color: #f8f8f8;
-    padding: 1.5%;
+    padding: 5px;
     background-color: white;
-    @include media ('>612px') {
-      top: 144px;
-    }
-    @include media('<=612px', '>311px') {
-        top: 254px;
-    }   
-    @include media('<=311px') {
-        top: 314px;
-    }  
+    top: 60px;
 
     div.loading {
       padding: 5px;

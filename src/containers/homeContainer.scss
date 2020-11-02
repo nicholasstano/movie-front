@@ -2,23 +2,14 @@
 
 .homeContainer {
     display: grid;
-    position: fixed;
+    margin-top: 60px;
     overflow-y: scroll;
-    bottom: 0px;
     border-style: solid;
     border-radius: 5px;
     border-width: thin;
     border-color: lightskyblue;
     padding-bottom: 0px; 
-    @include media ('>612px') {
-        top: 144px;
-    }
-    @include media('<=612px', '>311px') {
-        top: 254px;
-    }   
-    @include media('<=311px') {
-        top: 314px;
-    }   
+      
     .homeComponents {
         padding: 15px;
         display: grid;
