@@ -44,37 +44,40 @@ export class FavoriteMedia extends Component {
 
     render() {
         return (
-            <div className="homeFavoriteSix">
-                {this.state.hoverAlbums ?
-                    <div className="homeFavoriteMedia"><p>Computerwelt</p><img src={photos.albums[0]} alt="computerwelt" onMouseEnter={this.onMouseAlbumsEnterHandler} /></div>
-                    :
-                    <div className="homeFavoriteMediaHover"><p>Favorite Album</p><img src={photos.albums[0]} alt="computerwelt" onMouseLeave={this.onMouseAlbumsLeaveHandler} /></div>
-                }
-                {this.state.hoverBoardGames ?
-                    <div className="homeFavoriteMedia"><p>Terra Mystica</p><img src={photos.boardGames[0]} alt="terramystica" onMouseEnter={this.onMouseBoardGamesEnterHandler} /></div>
-                    :
-                    <div className="homeFavoriteMediaHover"><p>Favorite Board Game</p><img src={photos.boardGames[0]} alt="terramystica" onMouseLeave={this.onMouseBoardGamesLeaveHandler} /></div>
-                }
-                {this.state.hoverBooks ?
-                    <div className="homeFavoriteMedia"><p>Order of the Phoenix</p><img src={photos.books[0]} alt="orderofthephoenix" onMouseEnter={this.onMouseBooksEnterHandler} /></div>
-                    :
-                    <div className="homeFavoriteMediaHover"><p>Favorite Book</p><img src={photos.books[0]} alt="orderofthephoenix" onMouseLeave={this.onMouseBooksLeaveHandler} /></div>
-                }
-                {this.state.hoverMovies ?
-                    <div className="homeFavoriteMedia"><p>Pulp Fiction</p><img src={photos.movies[0]} alt="pulpfiction" onMouseEnter={this.onMouseMoviesEnterHandler} /></div>
-                    :
-                    <div className="homeFavoriteMediaHover"><p>Favorite Movie</p><img src={photos.movies[0]} alt="pulpfiction" onMouseLeave={this.onMouseMoviesLeaveHandler} /></div>
-                }
-                {this.state.hoverTVShows ?
-                    <div className="homeFavoriteMedia"><p>Whose Line Is It Anyway?</p><img src={photos.tvShows[0]} alt="whoseline" onMouseEnter={this.onMouseTVShowsEnterHandler} /></div>
-                    :
-                    <div className="homeFavoriteMediaHover"><p>Favorite TV Show</p><img src={photos.tvShows[0]} alt="whoseline" onMouseLeave={this.onMouseTVShowsLeaveHandler} /></div>
-                }
-                {this.state.hoverVideoGames ?
-                    <div className="homeFavoriteMedia"><p>Warcraft 3: The Frozen Throne</p><img src={photos.videoGames[0]} alt="warcraft3tft" onMouseEnter={this.onMouseVideoGamesEnterHandler} /></div>
-                    :
-                    <div className="homeFavoriteMediaHover"><p>Favorite Video Game</p><img src={photos.videoGames[0]} alt="warcraft3tft" onMouseLeave={this.onMouseVideoGamesLeaveHandler} /></div>
-                }
+            <div className="favoriteMedia">
+                <h1 className="favoriteMediaHeader">Favorite Media</h1>
+                <div className="homeFavoriteSix">
+                    {this.state.hoverAlbums ?
+                        <div className="homeFavoriteMedia"><p>Computerwelt</p><img src={photos.albums[0]} alt="computerwelt" onMouseEnter={this.onMouseAlbumsEnterHandler} /></div>
+                        :
+                        <div className="homeFavoriteMediaHover"><p>Favorite Album</p><img src={photos.albums[0]} alt="computerwelt" onMouseLeave={this.onMouseAlbumsLeaveHandler} /></div>
+                    }
+                    {this.state.hoverBoardGames ?
+                        <div className="homeFavoriteMedia"><p>Terra Mystica</p><img src={photos.boardGames[0]} alt="terramystica" onMouseEnter={this.onMouseBoardGamesEnterHandler} /></div>
+                        :
+                        <div className="homeFavoriteMediaHover"><p>Favorite Board Game</p><img src={photos.boardGames[0]} alt="terramystica" onMouseLeave={this.onMouseBoardGamesLeaveHandler} /></div>
+                    }
+                    {this.state.hoverBooks ?
+                        <div className="homeFavoriteMedia"><p>Order of the Phoenix</p><img src={photos.books[0]} alt="orderofthephoenix" onMouseEnter={this.onMouseBooksEnterHandler} /></div>
+                        :
+                        <div className="homeFavoriteMediaHover"><p>Favorite Book</p><img src={photos.books[0]} alt="orderofthephoenix" onMouseLeave={this.onMouseBooksLeaveHandler} /></div>
+                    }
+                    {this.state.hoverMovies ?
+                        <div className="homeFavoriteMedia"><p>Pulp Fiction</p><img src={photos.movies[0]} alt="pulpfiction" onMouseEnter={this.onMouseMoviesEnterHandler} /></div>
+                        :
+                        <div className="homeFavoriteMediaHover"><p>Favorite Movie</p><img src={photos.movies[0]} alt="pulpfiction" onMouseLeave={this.onMouseMoviesLeaveHandler} /></div>
+                    }
+                    {this.state.hoverTVShows ?
+                        <div className="homeFavoriteMedia"><p>Whose Line Is It Anyway?</p><img src={photos.tvShows[0]} alt="whoseline" onMouseEnter={this.onMouseTVShowsEnterHandler} /></div>
+                        :
+                        <div className="homeFavoriteMediaHover"><p>Favorite TV Show</p><img src={photos.tvShows[0]} alt="whoseline" onMouseLeave={this.onMouseTVShowsLeaveHandler} /></div>
+                    }
+                    {this.state.hoverVideoGames ?
+                        <div className="homeFavoriteMedia"><p>Warcraft 3: The Frozen Throne</p><img src={photos.videoGames[0]} alt="warcraft3tft" onMouseEnter={this.onMouseVideoGamesEnterHandler} /></div>
+                        :
+                        <div className="homeFavoriteMediaHover"><p>Favorite Video Game</p><img src={photos.videoGames[0]} alt="warcraft3tft" onMouseLeave={this.onMouseVideoGamesLeaveHandler} /></div>
+                    }
+                </div>
             </div>
         )
     }

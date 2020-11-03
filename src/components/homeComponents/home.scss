@@ -1,72 +1,139 @@
-.nameAndPhotoHome {
-    border:solid;
-    border-width: thin;
-    border-color: gray;
-    padding: 15px;
-    margin: 15px;
-    .myName {
-        text-align: center;
-    }
-    .myPhoto {
-        text-align: center;
-        padding-bottom: 25px;
-    }
-    img {
-        width: 30%;
-        height: auto;
-    }
-    .wikiColumns {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        img {
-            width: 30px;
-            height: 30px;
-        }
-        p {
-            font-weight: bold;
-        }
-        a:hover {
-            opacity: .5;
-          }
-    }
-}
-
 .aboutMeParagraph {
     padding: 15px;
+    display: grid;
+    justify-items: center;
+
+    div {
+        width: 275px;
+        padding: 15px 0px;
+        margin: 15px 0px;
+        border: solid;
+        background-color: #31312E;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+
+        p {
+            padding: 15px;
+            color: white;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            width: 260px;
+            height: auto;
+            border-radius: 5px;
+            @media (min-width: 600px) {
+                width: 450px;
+                height: auto;
+            }
+            @media (min-width: 800px) {
+                width: 600px;
+                height: auto;
+            }
+            @media (min-width: 1000px) {
+                width: 800px;
+                height: auto;
+            }
+        }
+        @media (min-width: 600px) {
+            width: 500px;
+        }
+        @media (min-width: 800px) {
+            width: 700px;
+        }
+        @media (min-width: 1000px) {
+            width: 900px;
+        }
+    }   
+
+    .contactMe {
+        h1 {
+            text-align: center;
+            color: #FFDD83;
+        }
+
+        ul {
+            display: grid;
+            text-align: center;
+
+            a {
+                padding: 15px;
+                color: white;
+            }
+
+            a:hover {
+                color: #FFDD83;
+            }
+        }
+    }
 }
 
-.homeFavoriteSix {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-    grid-gap: 1rem;
-    img {
-        height: 181px;
-        width: 131px;
-        border: solid;
-        border-width: 1px;
-        border-color: black;
+
+.favoriteMedia {
+    width: 275px;
+    padding: 15px 0px;
+    margin: 15px 0px;
+    border: solid;
+    background-color: #31312E;
+    margin: auto;
+    
+    .favoriteMediaHeader {
+        text-align: center;
+        color: white;
     }
-    .homeFavoriteMedia {
+
+    .homeFavoriteSix {
         display: grid;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 10px;
-        p {
-            font-size: 10px;
-            text-align: center;
-            margin: 0px;
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+        grid-gap: 1rem;
+        margin: auto;
+        width: 300px;
+        color: white;
+        img {
+            height: 181px;
+            width: 131px;
         }
-    }      
-    .homeFavoriteMediaHover {
-        display: grid;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 10px;
-        opacity: 0.5;
-        p {
-            font-size: 10px;
-            text-align: center;
-            margin: 0px;
+        .homeFavoriteMedia {
+            display: grid;
+            padding: 10px;
+            margin: auto;
+            p {
+                font-size: 10px;
+                text-align: center;
+                margin: 0px;
+            }
+        }      
+        .homeFavoriteMediaHover {
+            display: grid;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+            opacity: 0.5;
+            p {
+                font-size: 10px;
+                text-align: center;
+                margin: 0px;
+            }
         }
+        @media (min-width: 600px) {
+            width: 450px;
+        }
+        @media (min-width: 800px) {
+            width: 650px;
+        }
+        @media (min-width: 1000px) {
+            width: 850px;
+            grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+        }
+    }
+    @media (min-width: 600px) {
+        width: 500px;
+    }
+    @media (min-width: 800px) {
+        width: 700px;
+    }
+    @media (min-width: 1000px) {
+        width: 900px;
     }
 }
+

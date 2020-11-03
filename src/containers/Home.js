@@ -11,7 +11,7 @@ export class Home extends Component {
             <div className="homeContainer">
                 <div className="homeComponents">
                     <AboutMe />
-                    <NameAndPhoto />
+                    {/* <NameAndPhoto /> */}
                 </div>
                 <div>
                     <FavoriteMedia />
