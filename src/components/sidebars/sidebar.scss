@@ -3,24 +3,21 @@
 div.mediaSidebar {
     position: fixed;
     overflow-y: scroll;
-    width: 20%;
+    width: 300px;
     bottom: 0px;
-    border: solid;
-    border-color: lightskyblue;
-    border-radius: 6px;
-    border-width: thin;
-    color: #f8f8f8;
     padding: 5px;
-    background-color: white;
-    top: 60px;
+    background-color: #31312E;
+    top: 56px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
 
     div.loading {
       padding: 5px;
-      color: black;
+      color: white;
     }
 
     div.mediaSearch {
-      display: grid;
+      display: flex;
       align-items: center;
 
       .mediaSearchBox {
@@ -33,54 +30,83 @@ div.mediaSidebar {
       }
     }
     div.mediaTitles {
-      padding: 1%;
-      @include media ('>911px') {
-        font-size: 75%;
-      }
-      @include media('<=911px', '>461px') {
-        font-size: 56.25%;
-      }   
-      @include media('<=461px', '>311px') {
-        font-size: 50%;
-      } 
-      @include media('<=311px') {
-        font-size: 40%;
-      } 
+      padding: 2px;
+      font-size: 16px;
+      // @include media ('>911px') {
+      //   font-size: 75%;
+      // }
+      // @include media('<=911px', '>461px') {
+      //   font-size: 56.25%;
+      // }   
+      // @include media('<=461px', '>311px') {
+      //   font-size: 50%;
+      // } 
+      // @include media('<=311px') {
+      //   font-size: 40%;
+      // } 
   
     }
       
     div.mediaTitles button {
         border-width: 1px;
-        border-color: black;
+        border-color: white;
         border-style: solid;
-        background-color: white;
-        color: black;
+        background-color:  #31312E;;
+        color: white;
         text-align: left;
         width: 100%;
+
+        &:hover {
+          color: #FFDD83;
+        }
       }
+    
+    // .Albums:hover {
+    //   color:red;
+    // }
 
-    .Albums:hover {
-      color:red;
-    }
-
-    .Board.Games:hover {
-      color:blue;
-    }
+    // .Board.Games:hover {
+    //   color:blue;
+    // }
     
-    .Books:hover {
-      color: #CCCC00;
-    }
+    // .Books:hover {
+    //   color: #CCCC00;
+    // }
     
-    .Movies:hover {
-      color: orange;
-    }
+    // .Movies:hover {
+    //   color: orange;
+    // }
     
-    .TV.Shows:hover {
-      color: green;
-    }
+    // .TV.Shows:hover {
+    //   color: green;
+    // }
     
-    .Video.Games:hover {
-      color: purple;
-    }
-
+    // .Video.Games:hover {
+    //   color: purple;
+    // }
   }  
+
+  .mediaSidebar.open {
+    transform: translateX(0%);
+  }
+
+  div.toggleMediaReviews {
+    width: 50px;
+    height: 400px;
+    button {
+      border-width: 1px;
+      border-color: white;
+      border-style: solid;
+      background-color:  #31312E;;
+      color: white;
+      text-align: left;
+      font-size: 16px;
+      padding: 2px;
+      p {
+        margin: 0px;
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        white-space: nowrap;
+      }
+    }
+  }
