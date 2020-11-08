@@ -49,7 +49,7 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
                     <p>View Media Reviews</p>
                 </button>
             </div>
-            <div className={sidebarLeft ? 'mediaSidebar open': 'mediaSidebar'} style={{left: `${sidebarLeft ? '0px' : '-300px'}`}}>
+            <div className={sidebarLeft ? 'mediaSidebar open': 'mediaSidebar'}>
                 <div className="mediaSearch">
                     <MediaSearch onChange={handleSearchTermChange} mediaName={mediaTitle} />
                     <button onClick={() => setSidebarLeft(false)}>Close</button>
