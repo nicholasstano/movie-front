@@ -13,6 +13,10 @@ const HamburgerButtonIcon = (props) => {
             <div className={sidebarClass} />
             <div className={sidebarClass} />
             <div className={sidebarClass} />
+            {/* <span className={sidebarClass}></span>
+            <span className={sidebarClass}></span>
+            <span className={sidebarClass}></span>
+            <span className={sidebarClass}></span> */}
         </button>
     )
 }

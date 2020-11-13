@@ -54,11 +54,9 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
                     <MediaSearch onChange={handleSearchTermChange} mediaName={mediaTitle} />
                     <button className="toggleButton" onClick={() => setSidebarLeft(false)}>
                         <div className="buttonLine"/> 
-                        <div className="buttonLine"/>
-                        <div className="buttonLine"/>
                     </button>
                 </div>
-                {mediaReviews.length ? mediaReviews : <div className="loading">Loading</div>}
+                {mediaReviews.length ? mediaReviews : null}
             </div>
         </div>
     )

@@ -48,20 +48,8 @@ div.mediaSidebar {
         }
         
         .buttonLine {
-          width: 30px;
+          width: 25px;
           border: solid 1px white;
-        }
-
-        .buttonLine:nth-child(1) {
-          transform: rotate(45deg) translate(5px, 5px)
-        }
-
-        .buttonLine:nth-child(2) {
-          opacity: 0;
-        }
-
-        .buttonLine:nth-child(3) {
-          transform: rotate(-45deg) translate(5px, -5px); 
         }
     }
   
@@ -75,20 +63,7 @@ div.mediaSidebar {
     }
     div.mediaTitles {
       padding: 2px;
-      font-size: 16px;
-      // @include media ('>911px') {
-      //   font-size: 75%;
-      // }
-      // @include media('<=911px', '>461px') {
-      //   font-size: 56.25%;
-      // }   
-      // @include media('<=461px', '>311px') {
-      //   font-size: 50%;
-      // } 
-      // @include media('<=311px') {
-      //   font-size: 40%;
-      // } 
-  
+      font-size: 16px;  
     }
       
     div.mediaTitles button {
@@ -132,12 +107,15 @@ div.mediaSidebar {
 
   .mediaSidebar.open {
     transform: translateX(0%);
-    position: absolute;
+    position: fixed;
+    
   }
 
   div.toggleMediaReviews {
     width: 50px;
     height: 400px;
+    position: fixed;
+
     button {
       border-width: 1px;
       border-color: white;
