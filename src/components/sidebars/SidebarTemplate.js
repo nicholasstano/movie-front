@@ -6,7 +6,7 @@ import './sidebar.scss'
 const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
 
     const [mediaSearch, setMediaSearch] = useState("")
-    const [sidebarLeft, setSidebarLeft] = useState(false)
+    const [sidebarLeft, setSidebarLeft] = useState(true)
 
     const handleSearchTermChange = (search) => {
         setMediaSearch(search)
@@ -44,7 +44,7 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
 
     return (
         <div>
-            <div className="toggleMediaReviews" style={{marginLeft: `${sidebarLeft ? '-300px': '0px'}`}}>
+            <div className="toggleMediaReviews" style={{marginLeft: `${sidebarLeft ? '-300px': '1rem'}`}}>
                 <button onClick={() => setSidebarLeft(true)}>
                     <p>View Media Reviews</p>
                 </button>
@@ -52,7 +52,11 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
             <div className={sidebarLeft ? 'mediaSidebar open': 'mediaSidebar'}>
                 <div className="mediaSearch">
                     <MediaSearch onChange={handleSearchTermChange} mediaName={mediaTitle} />
-                    <button onClick={() => setSidebarLeft(false)}>Close</button>
+                    <button className="toggleButton" onClick={() => setSidebarLeft(false)}>
+                        <div className="buttonLine"/> 
+                        <div className="buttonLine"/>
+                        <div className="buttonLine"/>
+                    </button>
                 </div>
                 {mediaReviews.length ? mediaReviews : <div className="loading">Loading</div>}
             </div>

@@ -9,13 +9,36 @@
     cursor: pointer;
     box-sizing: border-box;
 
+    &:hover {
+        div {
+          border: solid 1px #FFDD83;
+        }
+    }
+
     .buttonLine {
         width: 30px;
         height: 2px;
         background-color: white;
+        transition: transform 0.3s ease-out;
     }
+
+    .buttonLine.open:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        transition: transform 0.3s ease-out;
+      }
+
+      .buttonLine.open:nth-child(2) {
+        opacity: 0;
+        transition: transform 0.3s ease-out;
+      }
+
+      .buttonLine.open:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px); 
+        transition: transform 0.3s ease-out;
+      }
 }
 
 .toggleButton:focus {
     outline: none;
 }
+

@@ -23,10 +23,54 @@ div.mediaSidebar {
       .mediaSearchBox {
         width: 100%;
         height: auto;
-        padding: 1%;
+        margin: 0px 0px 5px 0px;
         border-style: solid;
         border-width: thin;
         border-radius: 0px;
+      }
+
+      .toggleButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 24px;
+        width: 24px;
+        margin: 0px 0px 5px 100px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+        
+        &:hover {
+          div {
+            border: solid 1px #FFDD83;
+          }
+        }
+        
+        .buttonLine {
+          width: 30px;
+          border: solid 1px white;
+        }
+
+        .buttonLine:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px)
+        }
+
+        .buttonLine:nth-child(2) {
+          opacity: 0;
+        }
+
+        .buttonLine:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px); 
+        }
+    }
+  
+      .toggleButton:focus {
+          outline: none;
+      }
+
+      .toggleButton:hover {
+        color: orange;
       }
     }
     div.mediaTitles {
@@ -88,6 +132,7 @@ div.mediaSidebar {
 
   .mediaSidebar.open {
     transform: translateX(0%);
+    position: absolute;
   }
 
   div.toggleMediaReviews {
