@@ -147,6 +147,13 @@ div.mediaSidebar {
       text-align: left;
       font-size: 16px;
       padding: 2px;
+      width: 30px;
+      height: 350px;
+
+      &:hover {
+        color: #FFDD83;
+      }
+
       p {
         margin: 0px;
         text-orientation: upright;

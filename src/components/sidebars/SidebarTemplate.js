@@ -45,7 +45,7 @@ const SidebarTemplate = (reviews, mediaTitle, clickHandler) => {
     return (
         <div>
             <div className="toggleMediaReviews" style={{marginLeft: `${sidebarLeft ? '-300px': '1rem'}`}}>
-                <button onClick={() => setSidebarLeft(true)}>
+                <button className="viewMediaReviewsButton" onClick={() => setSidebarLeft(true)}>
                     <p>View Media Reviews</p>
                 </button>
             </div>
