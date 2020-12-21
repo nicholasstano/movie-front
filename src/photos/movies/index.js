@@ -96,8 +96,12 @@ import returnofthejedi from './returnofthejedi.jpg'
 import spaceodyssey from './spaceodyssey.png'
 import backtothefuturepartiii from './backtothefuturepartiii.jpg'
 import thebiglebowski from './thebiglebowski.jpg'
+import trueromance from './trueromance.jpg'
+import reservoirdogs from './reservoirdogs.png'
 
 export default { 
+    reservoirdogs,
+    trueromance,
     parasite, 
     bruteforce, 
     crisscross, 
