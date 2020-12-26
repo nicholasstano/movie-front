@@ -98,8 +98,10 @@ import backtothefuturepartiii from './backtothefuturepartiii.jpg'
 import thebiglebowski from './thebiglebowski.jpg'
 import trueromance from './trueromance.jpg'
 import reservoirdogs from './reservoirdogs.png'
+import wonderwoman1984 from './wonderwoman1984.png'
 
 export default { 
+    wonderwoman1984,
     reservoirdogs,
     trueromance,
     parasite, 
