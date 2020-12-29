@@ -20,8 +20,10 @@ import whoselineisitanyway14 from './whoselineisitanyway14.jpeg'
 import whoselineisitanyway3 from './whoselineisitanyway3.jpeg'
 import whoselineisitanyway4 from './whoselineisitanyway4.jpeg'
 import themandalorian2 from './themandalorian2.jpg'
+import thequeensgambit from './thequeensgambit.jpg'
 
 export default { 
+    thequeensgambit,
     themandalorian2,
     entourage5, 
     entourage6, 
