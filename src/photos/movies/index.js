@@ -99,8 +99,10 @@ import thebiglebowski from './thebiglebowski.jpg'
 import trueromance from './trueromance.jpg'
 import reservoirdogs from './reservoirdogs.png'
 import wonderwoman1984 from './wonderwoman1984.png'
+import commando from './commando.jpg'
 
 export default { 
+    commando,
     wonderwoman1984,
     reservoirdogs,
     trueromance,
