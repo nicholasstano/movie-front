@@ -100,8 +100,10 @@ import trueromance from './trueromance.jpg'
 import reservoirdogs from './reservoirdogs.png'
 import wonderwoman1984 from './wonderwoman1984.png'
 import commando from './commando.jpg'
+import theusualsuspects from './theusualsuspects.jpg'
 
 export default { 
+    theusualsuspects,
     commando,
     wonderwoman1984,
     reservoirdogs,

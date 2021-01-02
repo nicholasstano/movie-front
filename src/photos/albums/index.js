@@ -47,5 +47,17 @@ import safeasmilk from './safeasmilk.jpg'
 import computerwelt from './computerwelt.png'
 import flightoftheconchords from './flightoftheconchords.jpg'
 import tarkus from './tarkus.jpg'
+import sayitoutloud from './sayitoutloud.jpg'
 
-export default { bandofgypsys, sgtpeppers, thirteensongs, shocktroops, theinterrupters, apostrophe, brownalbum, foxtrot, larkstongues, qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant, operationivy, redmedicine, birdsoffire, rancid2000, illcommunication, wereonlyinitforthemoney, signals, highway61revisited, ittakesanationofmillionstoholdusback, diemenschmaschine, electriccafe, whatsgoingon, abouttime, porksoda, fearofmusic, safeasmilk, computerwelt, flightoftheconchords, tarkus }
+export default { 
+    sayitoutloud, 
+    bandofgypsys, 
+    sgtpeppers, 
+    thirteensongs, 
+    shocktroops, 
+    theinterrupters, 
+    apostrophe, 
+    brownalbum, 
+    foxtrot, 
+    larkstongues, 
+    qarewenotmenawearedevo, freedomofchoice, pointofknowreturn, minimummaximum, thegrandwazoo, enemaofthestate, licensedtoill, letthedominoesfall, exileonmainst, rageagainstthemachine, strictlybusiness, paulsboutique, somethingforeverybody, beggarsbanquet, rubbersoul, leavehome, ramones, foghatlive, londoncalling, acquiringthetaste, gentlegiant, operationivy, redmedicine, birdsoffire, rancid2000, illcommunication, wereonlyinitforthemoney, signals, highway61revisited, ittakesanationofmillionstoholdusback, diemenschmaschine, electriccafe, whatsgoingon, abouttime, porksoda, fearofmusic, safeasmilk, computerwelt, flightoftheconchords, tarkus }
