@@ -101,8 +101,30 @@ import reservoirdogs from './reservoirdogs.png'
 import wonderwoman1984 from './wonderwoman1984.png'
 import commando from './commando.jpg'
 import theusualsuspects from './theusualsuspects.jpg'
+import se7en from './se7en.jpg'
+import americanbeauty from './americanbeauty.jpg'
+import laconfidential from './laconfidential.jpg'
+import thematrix from './thematrix.jpg'
+import fargo from './fargo.jpg'
+import thesilenceofthelambs from './thesilenceofthelambs.jpg'
+import casino from './casino.jpg'
+import goodfellas from './goodfellas.jpg'
+import pulpfiction from './pulpfiction.jpg'
+import abronxtale from './abronxtale.jpg'
+import goodwillhunting from './goodwillhunting.png'
 
 export default { 
+    goodwillhunting,
+    abronxtale,
+    pulpfiction,
+    goodfellas,
+    casino,
+    thesilenceofthelambs,
+    fargo,
+    thematrix,
+    laconfidential,
+    americanbeauty,
+    se7en,
     theusualsuspects,
     commando,
     wonderwoman1984,
