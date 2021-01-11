@@ -112,8 +112,10 @@ import goodfellas from './goodfellas.jpg'
 import pulpfiction from './pulpfiction.jpg'
 import abronxtale from './abronxtale.jpg'
 import goodwillhunting from './goodwillhunting.png'
+import shane from './shane.jpg'
 
 export default { 
+    shane,
     goodwillhunting,
     abronxtale,
     pulpfiction,
