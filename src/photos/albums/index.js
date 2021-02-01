@@ -49,8 +49,12 @@ import flightoftheconchords from './flightoftheconchords.jpg'
 import tarkus from './tarkus.jpg'
 import sayitoutloud from './sayitoutloud.jpg'
 import sellingenglandbythepound from './sellingenglandbythepound.jpg'
+import punkindrublic from './punkindrublic.jpg'
+import lifewontwait from './lifewontwait.jpg'
 
 export default { 
+    lifewontwait,
+    punkindrublic,
     sellingenglandbythepound,
     sayitoutloud, 
     bandofgypsys, 

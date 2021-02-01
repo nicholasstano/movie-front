@@ -113,8 +113,10 @@ import pulpfiction from './pulpfiction.jpg'
 import abronxtale from './abronxtale.jpg'
 import goodwillhunting from './goodwillhunting.png'
 import shane from './shane.jpg'
+import memoriesofmurder from './memoriesofmurder.jpg'
 
 export default { 
+    memoriesofmurder,
     shane,
     goodwillhunting,
     abronxtale,
