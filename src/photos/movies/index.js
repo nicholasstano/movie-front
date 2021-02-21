@@ -114,8 +114,28 @@ import abronxtale from './abronxtale.jpg'
 import goodwillhunting from './goodwillhunting.png'
 import shane from './shane.jpg'
 import memoriesofmurder from './memoriesofmurder.jpg'
+import thebourneidentity from './thebourneidentity.jpg'
+import thebournesupremacy from './thebournesupremacy.jpg'
+import thebourneultimatum from './thebourneultimatum.jpg'
+import mulhollanddrive from './mulhollanddrive.png'
+import batmanbegins from './batmanbegins.jpg'
+import thedarkknight from './thedarkknight.jpg'
+import superbad from './superbad.png'
+import thelordoftheringsthefellowshipofthering from './thelordoftheringsthefellowshipofthering.jpg'
+import thelordoftheringsthetwotowers from './thelordoftheringsthetwotowers.jpg'
+import thelordoftheringsthereturnoftheking from './thelordoftheringsthereturnoftheking.jpg'
 
 export default { 
+    thelordoftheringsthereturnoftheking,
+    thelordoftheringsthetwotowers,
+    thelordoftheringsthefellowshipofthering,
+    superbad,
+    thedarkknight,
+    batmanbegins,
+    mulhollanddrive,
+    thebourneultimatum,
+    thebournesupremacy,
+    thebourneidentity,
     memoriesofmurder,
     shane,
     goodwillhunting,
