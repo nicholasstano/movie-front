@@ -124,8 +124,12 @@ import superbad from './superbad.png'
 import thelordoftheringsthefellowshipofthering from './thelordoftheringsthefellowshipofthering.jpg'
 import thelordoftheringsthetwotowers from './thelordoftheringsthetwotowers.jpg'
 import thelordoftheringsthereturnoftheking from './thelordoftheringsthereturnoftheking.jpg'
+import casinoroyale from './casinoroyale.jpg'
+import quantumofsolace from './quantumofsolace.jpg'
 
 export default { 
+    quantumofsolace,
+    casinoroyale,
     thelordoftheringsthereturnoftheking,
     thelordoftheringsthetwotowers,
     thelordoftheringsthefellowshipofthering,
