@@ -51,8 +51,12 @@ import sayitoutloud from './sayitoutloud.jpg'
 import sellingenglandbythepound from './sellingenglandbythepound.jpg'
 import punkindrublic from './punkindrublic.jpg'
 import lifewontwait from './lifewontwait.jpg'
+import killemall from './killemall.jpg'
+import byosplitseriesvolumeiii from './byosplitseriesvolumeiii.jpg'
 
 export default { 
+    killemall,
+    byosplitseriesvolumeiii,
     lifewontwait,
     punkindrublic,
     sellingenglandbythepound,

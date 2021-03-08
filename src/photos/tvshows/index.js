@@ -21,8 +21,10 @@ import whoselineisitanyway3 from './whoselineisitanyway3.jpeg'
 import whoselineisitanyway4 from './whoselineisitanyway4.jpeg'
 import themandalorian2 from './themandalorian2.jpg'
 import thequeensgambit from './thequeensgambit.jpg'
+import wandavision from './wandavision.jpg'
 
 export default { 
+    wandavision,
     thequeensgambit,
     themandalorian2,
     entourage5, 
