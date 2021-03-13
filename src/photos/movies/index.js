@@ -126,8 +126,14 @@ import thelordoftheringsthetwotowers from './thelordoftheringsthetwotowers.jpg'
 import thelordoftheringsthereturnoftheking from './thelordoftheringsthereturnoftheking.jpg'
 import casinoroyale from './casinoroyale.jpg'
 import quantumofsolace from './quantumofsolace.jpg'
+import inglouriousbasterds from './inglouriousbasterds.jpg'
+import nocountryforoldmen from './nocountryforoldmen.jpg'
+import deathproof from './deathproof.png'
 
 export default { 
+    deathproof,
+    nocountryforoldmen,
+    inglouriousbasterds,
     quantumofsolace,
     casinoroyale,
     thelordoftheringsthereturnoftheking,
