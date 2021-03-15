@@ -129,8 +129,10 @@ import quantumofsolace from './quantumofsolace.jpg'
 import inglouriousbasterds from './inglouriousbasterds.jpg'
 import nocountryforoldmen from './nocountryforoldmen.jpg'
 import deathproof from './deathproof.png'
+import toystory3 from './toystory3.jpg'
 
 export default { 
+    toystory3,
     deathproof,
     nocountryforoldmen,
     inglouriousbasterds,
