@@ -130,8 +130,10 @@ import inglouriousbasterds from './inglouriousbasterds.jpg'
 import nocountryforoldmen from './nocountryforoldmen.jpg'
 import deathproof from './deathproof.png'
 import toystory3 from './toystory3.jpg'
+import lifeisbeautiful from './lifeisbeautiful.jpg'
 
 export default { 
+    lifeisbeautiful,
     toystory3,
     deathproof,
     nocountryforoldmen,
