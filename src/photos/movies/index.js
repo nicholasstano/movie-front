@@ -131,8 +131,12 @@ import nocountryforoldmen from './nocountryforoldmen.jpg'
 import deathproof from './deathproof.png'
 import toystory3 from './toystory3.jpg'
 import lifeisbeautiful from './lifeisbeautiful.jpg'
+import saw from './saw.jpg'
+import ironman from './ironman.jpg'
 
 export default { 
+    ironman, 
+    saw,
     lifeisbeautiful,
     toystory3,
     deathproof,
