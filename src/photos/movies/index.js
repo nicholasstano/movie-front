@@ -133,8 +133,10 @@ import toystory3 from './toystory3.jpg'
 import lifeisbeautiful from './lifeisbeautiful.jpg'
 import saw from './saw.jpg'
 import ironman from './ironman.jpg'
+import anotherearth from './anotherearth.jpg'
 
 export default { 
+    anotherearth,
     ironman, 
     saw,
     lifeisbeautiful,
