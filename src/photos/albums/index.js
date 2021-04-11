@@ -53,8 +53,10 @@ import punkindrublic from './punkindrublic.jpg'
 import lifewontwait from './lifewontwait.jpg'
 import killemall from './killemall.jpg'
 import byosplitseriesvolumeiii from './byosplitseriesvolumeiii.jpg'
+import minorityrules from './minorityrules.jpeg'
 
 export default { 
+    minorityrules,
     killemall,
     byosplitseriesvolumeiii,
     lifewontwait,

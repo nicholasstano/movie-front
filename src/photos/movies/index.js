@@ -134,8 +134,10 @@ import lifeisbeautiful from './lifeisbeautiful.jpg'
 import saw from './saw.jpg'
 import ironman from './ironman.jpg'
 import anotherearth from './anotherearth.jpg'
+import hisgirlfriday from './hisgirlfriday.jpg'
 
 export default { 
+    hisgirlfriday,
     anotherearth,
     ironman, 
     saw,
