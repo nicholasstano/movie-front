@@ -135,8 +135,10 @@ import saw from './saw.jpg'
 import ironman from './ironman.jpg'
 import anotherearth from './anotherearth.jpg'
 import hisgirlfriday from './hisgirlfriday.jpg'
+import captainamericathewintersoldier from './captainamericathewintersoldier.jpg'
 
 export default { 
+    captainamericathewintersoldier,
     hisgirlfriday,
     anotherearth,
     ironman, 

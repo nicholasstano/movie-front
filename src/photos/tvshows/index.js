@@ -24,8 +24,10 @@ import thequeensgambit from './thequeensgambit.jpg'
 import wandavision from './wandavision.jpg'
 import entourage2 from './entourage2.jpg'
 import starwarstheclonewars1to5 from './starwarstheclonewars1to5.jpg'
+import thefalconandthewintersoldier from './thefalconandthewintersoldier.jpg'
 
 export default { 
+    thefalconandthewintersoldier,
     starwarstheclonewars1to5,
     entourage2,
     wandavision,
