@@ -136,8 +136,10 @@ import ironman from './ironman.jpg'
 import anotherearth from './anotherearth.jpg'
 import hisgirlfriday from './hisgirlfriday.jpg'
 import captainamericathewintersoldier from './captainamericathewintersoldier.jpg'
+import babydriver from './babydriver.jpg'
 
 export default { 
+    babydriver,
     captainamericathewintersoldier,
     hisgirlfriday,
     anotherearth,
