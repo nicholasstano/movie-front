@@ -137,8 +137,10 @@ import anotherearth from './anotherearth.jpg'
 import hisgirlfriday from './hisgirlfriday.jpg'
 import captainamericathewintersoldier from './captainamericathewintersoldier.jpg'
 import babydriver from './babydriver.jpg'
+import guardiansofthegalaxy from './guardiansofthegalaxy.jpg'
 
 export default { 
+    guardiansofthegalaxy,
     babydriver,
     captainamericathewintersoldier,
     hisgirlfriday,
