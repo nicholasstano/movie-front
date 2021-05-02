@@ -138,8 +138,10 @@ import hisgirlfriday from './hisgirlfriday.jpg'
 import captainamericathewintersoldier from './captainamericathewintersoldier.jpg'
 import babydriver from './babydriver.jpg'
 import guardiansofthegalaxy from './guardiansofthegalaxy.jpg'
+import deadpool from './deadpool.png'
 
 export default { 
+    deadpool,
     guardiansofthegalaxy,
     babydriver,
     captainamericathewintersoldier,
