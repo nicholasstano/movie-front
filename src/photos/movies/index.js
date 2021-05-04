@@ -139,8 +139,10 @@ import captainamericathewintersoldier from './captainamericathewintersoldier.jpg
 import babydriver from './babydriver.jpg'
 import guardiansofthegalaxy from './guardiansofthegalaxy.jpg'
 import deadpool from './deadpool.png'
+import sideways from './sideways.jpeg'
 
 export default { 
+    sideways,
     deadpool,
     guardiansofthegalaxy,
     babydriver,
