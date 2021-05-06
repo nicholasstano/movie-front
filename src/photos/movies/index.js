@@ -140,8 +140,10 @@ import babydriver from './babydriver.jpg'
 import guardiansofthegalaxy from './guardiansofthegalaxy.jpg'
 import deadpool from './deadpool.png'
 import sideways from './sideways.jpeg'
+import theavengers from './theavengers.jpeg'
 
 export default { 
+    theavengers,
     sideways,
     deadpool,
     guardiansofthegalaxy,
