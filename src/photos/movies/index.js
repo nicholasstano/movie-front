@@ -142,8 +142,10 @@ import deadpool from './deadpool.png'
 import sideways from './sideways.jpeg'
 import theavengers from './theavengers.jpeg'
 import mortalkombat2021 from './mortalkombat2021.png'
+import thecaininthewoods from './thecaininthewoods.jpeg'
 
 export default { 
+    thecaininthewoods,
     mortalkombat2021,
     theavengers,
     sideways,
