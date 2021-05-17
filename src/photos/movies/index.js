@@ -144,8 +144,10 @@ import theavengers from './theavengers.jpeg'
 import mortalkombat2021 from './mortalkombat2021.png'
 import thecabininthewoods from './thecabininthewoods.jpeg'
 import goldfinger from './goldfinger.jpg'
+import skyfall from './skyfall.jpg'
 
 export default { 
+    skyfall,
     goldfinger,
     thecabininthewoods,
     mortalkombat2021,
