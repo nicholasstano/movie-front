@@ -54,8 +54,10 @@ import lifewontwait from './lifewontwait.jpg'
 import killemall from './killemall.jpg'
 import byosplitseriesvolumeiii from './byosplitseriesvolumeiii.jpg'
 import minorityrules from './minorityrules.jpeg'
+import sandinista from './sandinista.jpeg'
 
 export default { 
+    sandinista,
     minorityrules,
     killemall,
     byosplitseriesvolumeiii,
