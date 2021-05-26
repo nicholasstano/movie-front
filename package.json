@@ -13,7 +13,7 @@
     "dot-prop": "^5.2.0",
     "firebase": "^7.19.0",
     "include-media": "^1.4.9",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "minimist": ">=1.2.3",
     "node-forge": ">=0.10.0",
     "node-sass": "^4.14.1",
