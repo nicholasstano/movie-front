@@ -1,3 +1,7 @@
 import xenocide from './xenocide.jpg'
+import childrenofthemind from './childrenofthemind.jpeg'
 
-export default { xenocide }
+export default { 
+    xenocide, 
+    childrenofthemind 
+}
