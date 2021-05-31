@@ -145,8 +145,10 @@ import mortalkombat2021 from './mortalkombat2021.png'
 import thecabininthewoods from './thecabininthewoods.jpeg'
 import goldfinger from './goldfinger.jpg'
 import skyfall from './skyfall.jpg'
+import blackswan from './blackswan.jpeg'
 
 export default { 
+    blackswan,
     skyfall,
     goldfinger,
     thecabininthewoods,
