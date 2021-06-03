@@ -146,8 +146,10 @@ import thecabininthewoods from './thecabininthewoods.jpeg'
 import goldfinger from './goldfinger.jpg'
 import skyfall from './skyfall.jpg'
 import blackswan from './blackswan.jpeg'
+import mammamia from './mammamia.jpeg'
 
 export default { 
+    mammamia,
     blackswan,
     skyfall,
     goldfinger,
