@@ -147,8 +147,10 @@ import goldfinger from './goldfinger.jpg'
 import skyfall from './skyfall.jpg'
 import blackswan from './blackswan.jpeg'
 import mammamia from './mammamia.jpeg'
+import djangounchained from './djangounchained.jpeg'
 
 export default { 
+    djangounchained,
     mammamia,
     blackswan,
     skyfall,
