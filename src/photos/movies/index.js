@@ -148,8 +148,10 @@ import skyfall from './skyfall.jpg'
 import blackswan from './blackswan.jpeg'
 import mammamia from './mammamia.jpeg'
 import djangounchained from './djangounchained.jpeg'
+import madmaxfuryroad from './madmaxfuryroad.jpeg'
 
 export default { 
+    madmaxfuryroad,
     djangounchained,
     mammamia,
     blackswan,
