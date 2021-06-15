@@ -149,8 +149,10 @@ import blackswan from './blackswan.jpeg'
 import mammamia from './mammamia.jpeg'
 import djangounchained from './djangounchained.jpeg'
 import madmaxfuryroad from './madmaxfuryroad.jpeg'
+import reefermadnessthemoviemusical from './reefermadnessthemoviemusical.jpeg'
 
 export default { 
+    reefermadnessthemoviemusical,
     madmaxfuryroad,
     djangounchained,
     mammamia,
