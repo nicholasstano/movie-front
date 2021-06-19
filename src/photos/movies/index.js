@@ -150,8 +150,10 @@ import mammamia from './mammamia.jpeg'
 import djangounchained from './djangounchained.jpeg'
 import madmaxfuryroad from './madmaxfuryroad.jpeg'
 import reefermadnessthemoviemusical from './reefermadnessthemoviemusical.jpeg'
+import onceuponatimeinhollywood from './onceuponatimeinhollywood.png'
 
 export default { 
+    onceuponatimeinhollywood,
     reefermadnessthemoviemusical,
     madmaxfuryroad,
     djangounchained,

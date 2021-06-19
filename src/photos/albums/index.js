@@ -55,8 +55,10 @@ import killemall from './killemall.jpg'
 import byosplitseriesvolumeiii from './byosplitseriesvolumeiii.jpg'
 import minorityrules from './minorityrules.jpeg'
 import sandinista from './sandinista.jpeg'
+import moondance from './moondance.jpeg'
 
 export default { 
+    moondance,
     sandinista,
     minorityrules,
     killemall,
