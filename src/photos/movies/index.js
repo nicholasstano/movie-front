@@ -151,8 +151,10 @@ import djangounchained from './djangounchained.jpeg'
 import madmaxfuryroad from './madmaxfuryroad.jpeg'
 import reefermadnessthemoviemusical from './reefermadnessthemoviemusical.jpeg'
 import onceuponatimeinhollywood from './onceuponatimeinhollywood.png'
+import shutterisland from './shutterisland.jpeg'
 
 export default { 
+    shutterisland,
     onceuponatimeinhollywood,
     reefermadnessthemoviemusical,
     madmaxfuryroad,
