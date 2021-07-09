@@ -56,8 +56,10 @@ import byosplitseriesvolumeiii from './byosplitseriesvolumeiii.jpg'
 import minorityrules from './minorityrules.jpeg'
 import sandinista from './sandinista.jpeg'
 import moondance from './moondance.jpeg'
+import letsgo from './letsgo.jpeg'
 
 export default { 
+    letsgo,
     moondance,
     sandinista,
     minorityrules,
