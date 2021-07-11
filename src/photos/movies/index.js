@@ -152,8 +152,10 @@ import madmaxfuryroad from './madmaxfuryroad.jpeg'
 import reefermadnessthemoviemusical from './reefermadnessthemoviemusical.jpeg'
 import onceuponatimeinhollywood from './onceuponatimeinhollywood.png'
 import shutterisland from './shutterisland.jpeg'
+import blackwidow from './blackwidow.jpeg'
 
 export default { 
+    blackwidow,
     shutterisland,
     onceuponatimeinhollywood,
     reefermadnessthemoviemusical,
