@@ -25,8 +25,10 @@ import wandavision from './wandavision.jpg'
 import entourage2 from './entourage2.jpg'
 import starwarstheclonewars1to5 from './starwarstheclonewars1to5.jpg'
 import thefalconandthewintersoldier from './thefalconandthewintersoldier.jpg'
+import loki1 from './loki1.jpeg'
 
 export default { 
+    loki1,
     thefalconandthewintersoldier,
     starwarstheclonewars1to5,
     entourage2,
