@@ -153,8 +153,10 @@ import reefermadnessthemoviemusical from './reefermadnessthemoviemusical.jpeg'
 import onceuponatimeinhollywood from './onceuponatimeinhollywood.png'
 import shutterisland from './shutterisland.jpeg'
 import blackwidow from './blackwidow.jpeg'
+import donttellmomthebabysittersdead from './donttellmomthebabysittersdead.jpeg'
 
 export default { 
+    donttellmomthebabysittersdead,
     blackwidow,
     shutterisland,
     onceuponatimeinhollywood,

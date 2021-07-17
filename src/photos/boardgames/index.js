@@ -7,5 +7,16 @@ import paperback from './paperback.jpg'
 import quiddler from './quiddler.jpg'
 import throwthrowburrito from './throwthrowburrito.jpg'
 import azul from './azul.jpg'
+import ethnos from './ethnos.png'
 
-export default { concordia, tapestry, castlesofburgundy, kingdombuilder, kingdomino, paperback, quiddler, throwthrowburrito, azul }
+export default { 
+    ethnos,
+    concordia, 
+    tapestry, 
+    castlesofburgundy, 
+    kingdombuilder, 
+    kingdomino, 
+    paperback, 
+    quiddler, 
+    throwthrowburrito, 
+    azul }
