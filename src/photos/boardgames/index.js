@@ -8,8 +8,12 @@ import quiddler from './quiddler.jpg'
 import throwthrowburrito from './throwthrowburrito.jpg'
 import azul from './azul.jpg'
 import ethnos from './ethnos.png'
+import pipeline from './pipeline.jpeg'
+
+
 
 export default { 
+    pipeline,
     ethnos,
     concordia, 
     tapestry, 
