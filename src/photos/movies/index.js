@@ -154,8 +154,10 @@ import onceuponatimeinhollywood from './onceuponatimeinhollywood.png'
 import shutterisland from './shutterisland.jpeg'
 import blackwidow from './blackwidow.jpeg'
 import donttellmomthebabysittersdead from './donttellmomthebabysittersdead.jpeg'
+import logan from './logan.jpeg'
 
 export default { 
+    logan,
     donttellmomthebabysittersdead,
     blackwidow,
     shutterisland,
