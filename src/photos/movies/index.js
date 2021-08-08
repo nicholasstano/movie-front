@@ -155,8 +155,10 @@ import shutterisland from './shutterisland.jpeg'
 import blackwidow from './blackwidow.jpeg'
 import donttellmomthebabysittersdead from './donttellmomthebabysittersdead.jpeg'
 import logan from './logan.jpeg'
+import dangerouscrossing from './dangerouscrossing.jpeg'
 
 export default { 
+    dangerouscrossing,
     logan,
     donttellmomthebabysittersdead,
     blackwidow,
