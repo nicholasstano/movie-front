@@ -156,8 +156,10 @@ import blackwidow from './blackwidow.jpeg'
 import donttellmomthebabysittersdead from './donttellmomthebabysittersdead.jpeg'
 import logan from './logan.jpeg'
 import dangerouscrossing from './dangerouscrossing.jpeg'
+import pickuponsouthstreet from './pickuponsouthstreet.jpeg'
 
 export default { 
+    pickuponsouthstreet,
     dangerouscrossing,
     logan,
     donttellmomthebabysittersdead,
