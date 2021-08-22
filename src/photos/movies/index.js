@@ -157,8 +157,18 @@ import donttellmomthebabysittersdead from './donttellmomthebabysittersdead.jpeg'
 import logan from './logan.jpeg'
 import dangerouscrossing from './dangerouscrossing.jpeg'
 import pickuponsouthstreet from './pickuponsouthstreet.jpeg'
+import tohaveandhavenot from './tohaveandhavenot.jpeg'
+import thebigsleep from './thebigsleep.jpeg'
+import darkpassage from './darkpassage.jpeg'
+import keylargo from './keylargo.jpeg'
+import nightandthecity from './nightandthecity.jpeg'
 
 export default { 
+    nightandthecity,
+    keylargo,
+    darkpassage,
+    thebigsleep,
+    tohaveandhavenot,
     pickuponsouthstreet,
     dangerouscrossing,
     logan,
