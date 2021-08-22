@@ -164,6 +164,7 @@ import keylargo from './keylargo.jpeg'
 import nightandthecity from './nightandthecity.jpeg'
 
 export default { 
+    nightandthecity,
     keylargo,
     darkpassage,
     thebigsleep,
