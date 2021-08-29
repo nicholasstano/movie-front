@@ -17,7 +17,7 @@ export default function ReviewCardTemplate(name, photos, rating, image, monthDay
     }
 
     return (
-        <>
+        <div>
             <div className="pictureAndDate">
                 <p className="mediaPicture">
                     <img src={photos[image]} alt={name} />
@@ -29,6 +29,6 @@ export default function ReviewCardTemplate(name, photos, rating, image, monthDay
             <p className='goodContent'>{notes}</p>
             <h5 className='betterHeader'>The Could Be Better</h5>
             <p className='betterContent'>{improveNotes}</p>
-        </>
+        </div>
     )
 }

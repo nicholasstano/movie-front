@@ -23,10 +23,10 @@ const MovieReviewCard = (props) => {
         <div className="mediaReviewCard">
             <div className='mediaReviewCardHeader'>
                 <h5>{name} directed by {director} ({year}) {props.user && props.user.user.username === 'admin' &&
-                    <><button onClick={() => setEditMedia(!editMedia)}>Edit</button>
+                    <div><button onClick={() => setEditMedia(!editMedia)}>Edit</button>
                         <button onClick={() => setShowDeleteButton(!showDeleteButton)}>Show Delete Button</button>
                         {showDeleteButton ? null : <button onClick={() => removeMedia()}>Delete</button>}
-                    </>
+                    </div>
                 }
                 </h5>
             </div>
