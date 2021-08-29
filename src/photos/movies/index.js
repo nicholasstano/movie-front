@@ -162,8 +162,10 @@ import thebigsleep from './thebigsleep.jpeg'
 import darkpassage from './darkpassage.jpeg'
 import keylargo from './keylargo.jpeg'
 import nightandthecity from './nightandthecity.jpeg'
+import thesuicidesquad from './thesuicidesquad.jpeg'
 
 export default { 
+    thesuicidesquad,
     nightandthecity,
     keylargo,
     darkpassage,
