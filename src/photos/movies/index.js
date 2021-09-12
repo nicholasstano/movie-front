@@ -163,8 +163,10 @@ import darkpassage from './darkpassage.jpeg'
 import keylargo from './keylargo.jpeg'
 import nightandthecity from './nightandthecity.jpeg'
 import thesuicidesquad from './thesuicidesquad.jpeg'
+import somevelvetmorning from './somevelvetmorning.jpeg'
 
 export default { 
+    somevelvetmorning,
     thesuicidesquad,
     nightandthecity,
     keylargo,
