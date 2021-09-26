@@ -164,8 +164,10 @@ import keylargo from './keylargo.jpeg'
 import nightandthecity from './nightandthecity.jpeg'
 import thesuicidesquad from './thesuicidesquad.jpeg'
 import somevelvetmorning from './somevelvetmorning.jpeg'
+import kramervskramer from './kramervskramer.jpeg'
 
-export default { 
+const exportedMoviePosts = { 
+    kramervskramer,
     somevelvetmorning,
     thesuicidesquad,
     nightandthecity,
@@ -333,3 +335,5 @@ export default {
     backtothefuturepartiii, 
     thebiglebowski 
 }
+
+export default exportedMoviePosts;
