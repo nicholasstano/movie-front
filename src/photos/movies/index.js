@@ -165,8 +165,10 @@ import nightandthecity from './nightandthecity.jpeg'
 import thesuicidesquad from './thesuicidesquad.jpeg'
 import somevelvetmorning from './somevelvetmorning.jpeg'
 import kramervskramer from './kramervskramer.jpeg'
+import spectre from './spectre.jpeg'
 
 const exportedMoviePosts = { 
+    spectre,
     kramervskramer,
     somevelvetmorning,
     thesuicidesquad,
