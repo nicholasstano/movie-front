@@ -166,8 +166,12 @@ import thesuicidesquad from './thesuicidesquad.jpeg'
 import somevelvetmorning from './somevelvetmorning.jpeg'
 import kramervskramer from './kramervskramer.jpeg'
 import spectre from './spectre.jpeg'
+import notimetodie from './notimetodie.jpeg'
+import imthinkingofendingthings from './imthinkingofendingthings.jpeg'
 
 const exportedMoviePosts = { 
+    imthinkingofendingthings,
+    notimetodie,
     spectre,
     kramervskramer,
     somevelvetmorning,
