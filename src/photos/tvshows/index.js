@@ -26,8 +26,12 @@ import entourage2 from './entourage2.jpg'
 import starwarstheclonewars1to5 from './starwarstheclonewars1to5.jpg'
 import thefalconandthewintersoldier from './thefalconandthewintersoldier.jpg'
 import loki1 from './loki1.jpeg'
+import whatif from './whatif.png'
+import entourage3part1 from './entourage3part1.jpeg'
 
-export default { 
+const exportedTVShowsPosts = { 
+    entourage3part1,
+    whatif,
     loki1,
     thefalconandthewintersoldier,
     starwarstheclonewars1to5,
@@ -57,3 +61,5 @@ export default {
     whoselineisitanyway3, 
     whoselineisitanyway4
 }
+
+export default exportedTVShowsPosts

@@ -168,8 +168,12 @@ import kramervskramer from './kramervskramer.jpeg'
 import spectre from './spectre.jpeg'
 import notimetodie from './notimetodie.jpeg'
 import imthinkingofendingthings from './imthinkingofendingthings.jpeg'
+import bohemianrhapsody from './bohemianrhapsody.png'
+import panslabyrinth from './panslabyrinth.jpeg'
 
 const exportedMoviePosts = { 
+    panslabyrinth,
+    bohemianrhapsody,
     imthinkingofendingthings,
     notimetodie,
     spectre,
