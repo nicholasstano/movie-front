@@ -170,8 +170,10 @@ import notimetodie from './notimetodie.jpeg'
 import imthinkingofendingthings from './imthinkingofendingthings.jpeg'
 import bohemianrhapsody from './bohemianrhapsody.png'
 import panslabyrinth from './panslabyrinth.jpeg'
+import shangchiandthelegendofthetenrings from './shangchiandthelegendofthetenrings.jpeg'
 
 const exportedMoviePosts = { 
+    shangchiandthelegendofthetenrings,
     panslabyrinth,
     bohemianrhapsody,
     imthinkingofendingthings,
