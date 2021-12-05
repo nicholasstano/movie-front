@@ -171,8 +171,14 @@ import imthinkingofendingthings from './imthinkingofendingthings.jpeg'
 import bohemianrhapsody from './bohemianrhapsody.png'
 import panslabyrinth from './panslabyrinth.jpeg'
 import shangchiandthelegendofthetenrings from './shangchiandthelegendofthetenrings.jpeg'
+import framingbritneyspears from './framingbritneyspears.jpeg'
+import spidermanhomecoming from './spidermanhomecoming.jpeg'
+import avengersinfinitywar from './avengersinfinitywar.jpeg'
 
 const exportedMoviePosts = { 
+    avengersinfinitywar,
+    spidermanhomecoming,
+    framingbritneyspears,
     shangchiandthelegendofthetenrings,
     panslabyrinth,
     bohemianrhapsody,
