@@ -174,8 +174,14 @@ import shangchiandthelegendofthetenrings from './shangchiandthelegendofthetenrin
 import framingbritneyspears from './framingbritneyspears.jpeg'
 import spidermanhomecoming from './spidermanhomecoming.jpeg'
 import avengersinfinitywar from './avengersinfinitywar.jpeg'
+import spidermanfarfromhome from './spidermanfarfromhome.jpeg'
+import theseventhseal from './theseventhseal.jpeg'
+import spidermannowayhome from './spidermannowayhome.jpeg'
 
 const exportedMoviePosts = { 
+    spidermannowayhome,
+    theseventhseal,
+    spidermanfarfromhome,
     avengersinfinitywar,
     spidermanhomecoming,
     framingbritneyspears,
