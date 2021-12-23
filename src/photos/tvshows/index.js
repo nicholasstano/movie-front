@@ -28,8 +28,10 @@ import thefalconandthewintersoldier from './thefalconandthewintersoldier.jpg'
 import loki1 from './loki1.jpeg'
 import whatif from './whatif.png'
 import entourage3part1 from './entourage3part1.jpeg'
+import hawkeye from './hawkeye.png'
 
 const exportedTVShowsPosts = { 
+    hawkeye,
     entourage3part1,
     whatif,
     loki1,
