@@ -9,10 +9,12 @@ import throwthrowburrito from './throwthrowburrito.jpg'
 import azul from './azul.jpg'
 import ethnos from './ethnos.png'
 import pipeline from './pipeline.jpeg'
-
-
+import dominion from './dominion.jpeg'
+import sevenwonders from './sevenwonders.png'
 
 export default { 
+    sevenwonders,
+    dominion,
     pipeline,
     ethnos,
     concordia, 
