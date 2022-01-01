@@ -178,8 +178,10 @@ import spidermanfarfromhome from './spidermanfarfromhome.jpeg'
 import theseventhseal from './theseventhseal.jpeg'
 import spidermannowayhome from './spidermannowayhome.jpeg'
 import thematrixresurrections from './thematrixresurrections.jpeg'
+import captainmarvel from './captainmarvel.jpeg'
 
 const exportedMoviePosts = { 
+    captainmarvel,
     thematrixresurrections,
     spidermannowayhome,
     theseventhseal,
