@@ -179,8 +179,10 @@ import theseventhseal from './theseventhseal.jpeg'
 import spidermannowayhome from './spidermannowayhome.jpeg'
 import thematrixresurrections from './thematrixresurrections.jpeg'
 import captainmarvel from './captainmarvel.jpeg'
+import avengersendgame from './avengersendgame.jpeg'
 
 const exportedMoviePosts = { 
+    avengersendgame,
     captainmarvel,
     thematrixresurrections,
     spidermannowayhome,
