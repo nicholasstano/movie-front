@@ -180,8 +180,10 @@ import spidermannowayhome from './spidermannowayhome.jpeg'
 import thematrixresurrections from './thematrixresurrections.jpeg'
 import captainmarvel from './captainmarvel.jpeg'
 import avengersendgame from './avengersendgame.jpeg'
+import idiocracy from './idiocracy.jpeg'
 
 const exportedMoviePosts = { 
+    idiocracy,
     avengersendgame,
     captainmarvel,
     thematrixresurrections,
