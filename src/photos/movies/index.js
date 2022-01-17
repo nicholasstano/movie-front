@@ -181,8 +181,10 @@ import thematrixresurrections from './thematrixresurrections.jpeg'
 import captainmarvel from './captainmarvel.jpeg'
 import avengersendgame from './avengersendgame.jpeg'
 import idiocracy from './idiocracy.jpeg'
+import eternals from './eternals.jpeg'
 
 const exportedMoviePosts = { 
+    eternals,
     idiocracy,
     avengersendgame,
     captainmarvel,
