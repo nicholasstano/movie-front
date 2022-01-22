@@ -182,8 +182,10 @@ import captainmarvel from './captainmarvel.jpeg'
 import avengersendgame from './avengersendgame.jpeg'
 import idiocracy from './idiocracy.jpeg'
 import eternals from './eternals.jpeg'
+import nightmarealley from './nightmarealley.jpeg'
 
 const exportedMoviePosts = { 
+    nightmarealley,
     eternals,
     idiocracy,
     avengersendgame,

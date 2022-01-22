@@ -59,8 +59,12 @@ import moondance from './moondance.jpeg'
 import letsgo from './letsgo.jpeg'
 import systemofadown from './systemofadown.jpeg'
 import wildcardawordfromthewise from './wildcardawordfromthewise.jpg'
+import carnegiehall from './carnegiehall.jpeg'
+import letitbleed from './letitbleed.jpeg'
 
 export default { 
+    letitbleed,
+    carnegiehall,
     wildcardawordfromthewise,
     systemofadown,
     letsgo,
