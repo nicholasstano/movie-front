@@ -183,8 +183,10 @@ import avengersendgame from './avengersendgame.jpeg'
 import idiocracy from './idiocracy.jpeg'
 import eternals from './eternals.jpeg'
 import nightmarealley from './nightmarealley.jpeg'
+import antman from './antman.jpeg'
 
-const exportedMoviePosts = { 
+const exportedMoviePosts = {
+    antman,
     nightmarealley,
     eternals,
     idiocracy,
