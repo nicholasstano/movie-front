@@ -184,8 +184,10 @@ import idiocracy from './idiocracy.jpeg'
 import eternals from './eternals.jpeg'
 import nightmarealley from './nightmarealley.jpeg'
 import antman from './antman.jpeg'
+import thelmaandlouise from './thelmaandlouise.png'
 
 const exportedMoviePosts = {
+    thelmaandlouise,
     antman,
     nightmarealley,
     eternals,
