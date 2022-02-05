@@ -185,8 +185,10 @@ import eternals from './eternals.jpeg'
 import nightmarealley from './nightmarealley.jpeg'
 import antman from './antman.jpeg'
 import thelmaandlouise from './thelmaandlouise.png'
+import capefear1962 from './capefear1962.jpeg'
 
 const exportedMoviePosts = {
+    capefear1962,
     thelmaandlouise,
     antman,
     nightmarealley,
