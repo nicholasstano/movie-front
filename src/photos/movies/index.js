@@ -186,8 +186,12 @@ import nightmarealley from './nightmarealley.jpeg'
 import antman from './antman.jpeg'
 import thelmaandlouise from './thelmaandlouise.png'
 import capefear1962 from './capefear1962.jpeg'
+import thepowerofthedog from './thepowerofthedog.jpeg'
+import avengersageofultron from './avengersageofultron.jpeg'
 
 const exportedMoviePosts = {
+    avengersageofultron,
+    thepowerofthedog,
     capefear1962,
     thelmaandlouise,
     antman,
