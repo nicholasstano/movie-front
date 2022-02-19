@@ -61,8 +61,10 @@ import systemofadown from './systemofadown.jpeg'
 import wildcardawordfromthewise from './wildcardawordfromthewise.jpg'
 import carnegiehall from './carnegiehall.jpeg'
 import letitbleed from './letitbleed.jpeg'
+import thehardertheycome from './thehardertheycome.jpeg'
 
 export default { 
+    thehardertheycome,
     letitbleed,
     carnegiehall,
     wildcardawordfromthewise,

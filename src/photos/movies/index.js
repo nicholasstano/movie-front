@@ -188,8 +188,10 @@ import thelmaandlouise from './thelmaandlouise.png'
 import capefear1962 from './capefear1962.jpeg'
 import thepowerofthedog from './thepowerofthedog.jpeg'
 import avengersageofultron from './avengersageofultron.jpeg'
+import captainamericacivilwar from './captainamericacivilwar.jpeg'
 
 const exportedMoviePosts = {
+    captainamericacivilwar,
     avengersageofultron,
     thepowerofthedog,
     capefear1962,
