@@ -190,8 +190,10 @@ import thepowerofthedog from './thepowerofthedog.jpeg'
 import avengersageofultron from './avengersageofultron.jpeg'
 import captainamericacivilwar from './captainamericacivilwar.jpeg'
 import thesetup from './thesetup.jpeg'
+import therulesofthegame from './therulesofthegame.jpeg'
 
 const exportedMoviePosts = {
+    therulesofthegame,
     thesetup,
     captainamericacivilwar,
     avengersageofultron,
