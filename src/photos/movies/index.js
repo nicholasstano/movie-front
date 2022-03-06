@@ -191,8 +191,10 @@ import avengersageofultron from './avengersageofultron.jpeg'
 import captainamericacivilwar from './captainamericacivilwar.jpeg'
 import thesetup from './thesetup.jpeg'
 import therulesofthegame from './therulesofthegame.jpeg'
+import antmanandthewasp from './antmanandthewasp.jpeg'
 
 const exportedMoviePosts = {
+    antmanandthewasp,
     therulesofthegame,
     thesetup,
     captainamericacivilwar,
