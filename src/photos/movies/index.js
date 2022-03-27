@@ -192,8 +192,10 @@ import captainamericacivilwar from './captainamericacivilwar.jpeg'
 import thesetup from './thesetup.jpeg'
 import therulesofthegame from './therulesofthegame.jpeg'
 import antmanandthewasp from './antmanandthewasp.jpeg'
+import irreversible from './irreversible.jpeg'
 
 const exportedMoviePosts = {
+    irreversible,
     antmanandthewasp,
     therulesofthegame,
     thesetup,
