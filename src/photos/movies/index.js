@@ -194,8 +194,10 @@ import therulesofthegame from './therulesofthegame.jpeg'
 import antmanandthewasp from './antmanandthewasp.jpeg'
 import irreversible from './irreversible.jpeg'
 import thebatman from './thebatman.jpeg'
+import afewgoodmen from './afewgoodmen.jpeg'
 
 const exportedMoviePosts = {
+    afewgoodmen,
     thebatman,
     irreversible,
     antmanandthewasp,
