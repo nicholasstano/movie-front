@@ -196,8 +196,12 @@ import irreversible from './irreversible.jpeg'
 import thebatman from './thebatman.jpeg'
 import afewgoodmen from './afewgoodmen.jpeg'
 import doctorstrange from './doctorstrange.jpeg'
+import doctorstrangeinthemultiverseofmadness from './doctorstrangeinthemultiverseofmadness.jpeg'
+import rec from './rec.jpeg'
 
 const exportedMoviePosts = {
+    rec,
+    doctorstrangeinthemultiverseofmadness,
     doctorstrange,
     afewgoodmen,
     thebatman,
