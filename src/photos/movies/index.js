@@ -198,8 +198,10 @@ import afewgoodmen from './afewgoodmen.jpeg'
 import doctorstrange from './doctorstrange.jpeg'
 import doctorstrangeinthemultiverseofmadness from './doctorstrangeinthemultiverseofmadness.jpeg'
 import rec from './rec.jpeg'
+import araisininthesun from './araisininthesun.jpeg'
 
 const exportedMoviePosts = {
+    araisininthesun,
     rec,
     doctorstrangeinthemultiverseofmadness,
     doctorstrange,
