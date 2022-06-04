@@ -200,8 +200,10 @@ import doctorstrangeinthemultiverseofmadness from './doctorstrangeinthemultivers
 import rec from './rec.jpeg'
 import araisininthesun from './araisininthesun.jpeg'
 import blackpanther from './blackpanther.jpeg'
+import theracket from './theracket.jpeg'
 
 const exportedMoviePosts = {
+    theracket,
     blackpanther,
     araisininthesun,
     rec,
