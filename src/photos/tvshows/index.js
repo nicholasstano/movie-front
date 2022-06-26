@@ -30,8 +30,10 @@ import whatif from './whatif.png'
 import entourage3part1 from './entourage3part1.jpeg'
 import hawkeye from './hawkeye.png'
 import thebookofbobafett1 from './thebookofbobafett1.jpeg'
+import obiwankenobi from './obiwankenobi.jpeg'
 
 const exportedTVShowsPosts = { 
+    obiwankenobi,
     thebookofbobafett1,
     hawkeye,
     entourage3part1,
