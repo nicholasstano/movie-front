@@ -205,8 +205,10 @@ import somelikeithot from './somelikeithot.png'
 import ondangerousground from './ondangerousground.jpeg'
 import kissmedeadly from './kissmedeadly.jpeg'
 import guncrazy from './guncrazy.jpeg'
+import kissofdeath from './kissofdeath.jpeg'
 
 const exportedMoviePosts = {
+    kissofdeath,
     guncrazy,
     kissmedeadly,
     ondangerousground,
