@@ -208,8 +208,10 @@ import guncrazy from './guncrazy.jpeg'
 import kissofdeath from './kissofdeath.jpeg'
 import thorragnarok from './thorragnarok.jpeg'
 import murdermysweet from './murdermysweet.jpeg'
+import thelostweekend from './thelostweekend.jpeg'
 
 const exportedMoviePosts = {
+    thelostweekend,
     murdermysweet,
     thorragnarok,
     kissofdeath,
