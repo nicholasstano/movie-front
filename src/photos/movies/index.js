@@ -211,8 +211,10 @@ import murdermysweet from './murdermysweet.jpeg'
 import thelostweekend from './thelostweekend.jpeg'
 import missing from './missing.jpeg'
 import spellbound from './spellbound.jpeg'
+import apocalypsenow from './apocalypsenow.jpeg'
 
 const exportedMoviePosts = {
+    apocalypsenow,
     spellbound,
     missing,
     thelostweekend,
