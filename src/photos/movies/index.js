@@ -213,8 +213,10 @@ import missing from './missing.jpeg'
 import spellbound from './spellbound.jpeg'
 import apocalypsenow from './apocalypsenow.jpeg'
 import notorious1946 from './notorious1946.jpeg'
+import steelmagnolias from './steelmagnolias.jpeg'
 
 const exportedMoviePosts = {
+    steelmagnolias,
     notorious1946,
     apocalypsenow,
     spellbound,
