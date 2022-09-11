@@ -32,9 +32,13 @@ import hawkeye from './hawkeye.png'
 import thebookofbobafett1 from './thebookofbobafett1.jpeg'
 import obiwankenobi from './obiwankenobi.jpeg'
 import schittscreek1 from './schittscreek1.jpeg'
+import entourageseason3part2 from './entourageseason3part2.jpg'
+import moonknight from './moonknight.jpeg'
 
 const exportedTVShowsPosts = { 
+    moonknight,
     schittscreek1,
+    entourageseason3part2,
     obiwankenobi,
     thebookofbobafett1,
     hawkeye,
