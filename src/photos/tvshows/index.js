@@ -34,8 +34,10 @@ import obiwankenobi from './obiwankenobi.jpeg'
 import schittscreek1 from './schittscreek1.jpeg'
 import entourageseason3part2 from './entourageseason3part2.jpg'
 import moonknight from './moonknight.jpeg'
+import schittscreek2 from './schittscreek2.jpeg'
 
 const exportedTVShowsPosts = { 
+    schittscreek2,
     moonknight,
     schittscreek1,
     entourageseason3part2,
