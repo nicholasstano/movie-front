@@ -214,8 +214,10 @@ import spellbound from './spellbound.jpeg'
 import apocalypsenow from './apocalypsenow.jpeg'
 import notorious1946 from './notorious1946.jpeg'
 import steelmagnolias from './steelmagnolias.jpeg'
+import the400blows from './the400blows.jpeg'
 
 const exportedMoviePosts = {
+    the400blows,
     steelmagnolias,
     notorious1946,
     apocalypsenow,
