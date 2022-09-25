@@ -36,8 +36,10 @@ import entourageseason3part2 from './entourageseason3part2.jpg'
 import moonknight from './moonknight.jpeg'
 import schittscreek2 from './schittscreek2.jpeg'
 import schittscreek3 from './schittscreek3.jpeg'
+import schittscreek from './schittscreek.png'
 
 const exportedTVShowsPosts = { 
+    schittscreek,
     schittscreek3,
     schittscreek2,
     moonknight,
