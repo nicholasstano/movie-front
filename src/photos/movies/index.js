@@ -216,8 +216,14 @@ import notorious1946 from './notorious1946.jpeg'
 import steelmagnolias from './steelmagnolias.jpeg'
 import the400blows from './the400blows.jpeg'
 import us from './us.png'
+import strictlyballroom from './strictlyballroom.jpeg'
+import killbillvolume1 from './killbillvolume1.png'
+import killbillvolume2 from './killbillvolume2.png'
 
 const exportedMoviePosts = {
+    killbillvolume2,
+    killbillvolume1,
+    strictlyballroom,
     us,
     the400blows,
     steelmagnolias,
