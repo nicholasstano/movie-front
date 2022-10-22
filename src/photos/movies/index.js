@@ -215,8 +215,10 @@ import apocalypsenow from './apocalypsenow.jpeg'
 import notorious1946 from './notorious1946.jpeg'
 import steelmagnolias from './steelmagnolias.jpeg'
 import the400blows from './the400blows.jpeg'
+import us from './us.png'
 
 const exportedMoviePosts = {
+    us,
     the400blows,
     steelmagnolias,
     notorious1946,
