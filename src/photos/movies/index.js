@@ -220,8 +220,10 @@ import strictlyballroom from './strictlyballroom.jpeg'
 import killbillvolume1 from './killbillvolume1.png'
 import killbillvolume2 from './killbillvolume2.png'
 import romeoandjuliet from './romeoandjuliet.jpeg'
+import moulinrouge from './moulinrouge.jpeg'
 
 const exportedMoviePosts = {
+    moulinrouge,
     romeoandjuliet,
     killbillvolume2,
     killbillvolume1,
