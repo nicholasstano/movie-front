@@ -221,8 +221,10 @@ import killbillvolume1 from './killbillvolume1.png'
 import killbillvolume2 from './killbillvolume2.png'
 import romeoandjuliet from './romeoandjuliet.jpeg'
 import moulinrouge from './moulinrouge.jpeg'
+import repothegeneticopera from './repothegeneticopera.jpeg'
 
 const exportedMoviePosts = {
+    repothegeneticopera,
     moulinrouge,
     romeoandjuliet,
     killbillvolume2,
