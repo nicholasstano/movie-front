@@ -37,8 +37,12 @@ import moonknight from './moonknight.jpeg'
 import schittscreek2 from './schittscreek2.jpeg'
 import schittscreek3 from './schittscreek3.jpeg'
 import schittscreek from './schittscreek.png'
+import theguardiansofthegalaxyholidayspecial from './theguardiansofthegalaxyholidayspecial.jpeg'
+import werewolfbynight from './werewolfbynight.jpeg'
 
 const exportedTVShowsPosts = { 
+    werewolfbynight,
+    theguardiansofthegalaxyholidayspecial,
     schittscreek,
     schittscreek3,
     schittscreek2,
